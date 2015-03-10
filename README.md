@@ -1,4 +1,4 @@
-# WholeCell Summer School
+# Replication Initiation
 
 This represents the *Replication Initiation* module of the whole-cell model published by [Karr *et al.*](http://www.ncbi.nlm.nih.gov/pubmed/22817898)
 
