@@ -1,0 +1,19 @@
+function stochasticRound(x)
+floor(x)+floor(2*random());
+end
+function minFunc(x,y)
+piecewise(x,x<y,y);
+end
+model RepInit_Reactivation()
+   var ATP, DnaA_1mer_ADP, K_Regen_P4, k_Regen, membraneConc, numRegenerations, reactivation, x, y;
+
+   numRegenerations = minFunc(ATP,minFunc(DnaA_1mer_ADP,stochasticRound(DnaA_1mer_ADP*(k_Regen/3600*membraneConc)/(K_Regen_P4+membraneConc))));
+
+   endReactivation: at numRegenerations<=0&&reactivation==1, t0 = false : reactivation = 0;
+   reactivationEvent: at numRegenerations>0&&reactivation==1, t0 = false : DnaA_1mer_ADP = DnaA_1mer_ADP-numRegenerations: DnaA_1mer_ATP = DnaA_1mer_ATP+numRegenerations: ATP = ATP-numRegenerations: ADP = ADP+numRegenerations;
+   var DnaA_1mer_ATP, ADP;
+   K_Regen_P4 = 0.018;
+   k_Regen = 2.3026;
+   var unknown, m_membrane, cell_Volume;
+   membraneConc := m_membrane/cell_Volume;
+end
