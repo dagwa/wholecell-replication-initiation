@@ -1,0 +1,21 @@
+model RepInit_Dissociation()
+   var DnaA_1mer_ADP, DnaA_2mer_ATP, DnaA_2mer_ATP_internal, DnaA_3mer_ATP, DnaA_3mer_ATP_internal, DnaA_4mer_ATP, DnaA_4mer_ATP_internal, DnaA_5mer_ATP, DnaA_5mer_ATP_internal, DnaA_6mer_ATP, DnaA_6mer_ATP_internal, DnaA_7mer_ATP, DnaA_7mer_ATP_internal, DnaA_ADP, H, Pi, dissociation, nMonomers, number, unknown, water;
+
+
+   DnaA_2mer_ATP_internal = DnaA_2mer_ATP;
+   DnaA_3mer_ATP_internal = DnaA_3mer_ATP;
+   DnaA_4mer_ATP_internal = DnaA_4mer_ATP;
+   DnaA_5mer_ATP_internal = DnaA_5mer_ATP;
+   DnaA_6mer_ATP_internal = DnaA_6mer_ATP;
+   DnaA_7mer_ATP_internal = DnaA_7mer_ATP;
+   nMonomers := 2*DnaA_2mer_ATP_internal+3*DnaA_3mer_ATP_internal+4*DnaA_4mer_ATP_internal+4*DnaA_4mer_ATP_internal+5*DnaA_5mer_ATP_internal+6*DnaA_6mer_ATP_internal+7*DnaA_7mer_ATP_internal;
+
+   dissociationEvent: at (water>=nMonomers||nMonomers==0)&&dissociation==1 : dissociation = 0 : water = water-nMonomers : Pi = Pi+nMonomers : H = H+nMonomers : DnaA_ADP = DnaA_1mer_ADP+nMonomers : DnaA_2mer_ATP = DnaA_2mer_ATP-DnaA_2mer_ATP_internal : DnaA_3mer_ATP = DnaA_3mer_ATP-DnaA_3mer_ATP_internal : DnaA_4mer_ATP = DnaA_4mer_ATP-DnaA_4mer_ATP_internal : DnaA_5mer_ATP = DnaA_5mer_ATP-DnaA_5mer_ATP_internal : DnaA_6mer_ATP = DnaA_6mer_ATP-DnaA_6mer_ATP_internal : DnaA_7mer_ATP = DnaA_7mer_ATP-DnaA_7mer_ATP_internal;
+   numberGenerator: at number==0, t0 = true : number = floor(6*random())+1;
+   remove2mer: at number==1&&dissociation==1 : DnaA_2mer_ATP_internal = DnaA_2mer_ATP_internal-1: number = 0;
+   remove3mer: at number==2&&dissociation==1 : DnaA_3mer_ATP_internal = DnaA_3mer_ATP_internal-1: number = 0;
+   remove4mer: at number==3&&dissociation==1 : DnaA_4mer_ATP_internal = DnaA_4mer_ATP_internal-1: number = 0;
+   remove5mer: at number==4&&dissociation==1 : DnaA_5mer_ATP_internal = DnaA_5mer_ATP_internal-1: number = 0;
+   remove6mer: at number==5&&dissociation==1 : DnaA_6mer_ATP_internal = DnaA_6mer_ATP_internal-1: number = 0;
+   remove7mer: at number==6&&dissociation==1 : DnaA_7mer_ATP_internal = DnaA_7mer_ATP_internal-1: number = 0;
+end
