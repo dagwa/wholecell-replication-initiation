@@ -166,7 +166,7 @@
       </functionDefinition>
     </listOfFunctionDefinitions>
     <listOfCompartments>
-      <compartment constant="false" id="default" name="RepInit_Reactivation" spatialDimensions="3"/>
+      <compartment constant="false" id="default" name="RepInit_Reactivation" spatialDimensions="3" size="1"/>
     </listOfCompartments>
     <listOfSpecies>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="ADP__c" initialAmount="0.0">

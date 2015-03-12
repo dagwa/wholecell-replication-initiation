@@ -84,43 +84,37 @@
     </rdf:RDF>
   </annotation>
   <model name="RepInit_Dissociation" id="RepInit_Dissociation">
-    <listOfParameters>
-      <parameter id="a" value="1" constant="true"/>
-      <parameter id="b" value="6" constant="true"/>
-      <parameter id="random" value="0" constant="false"/>
-      <parameter id="state" value="0" constant="false"/>
-      <parameter id="L" value="0" constant="false"/>
-      <parameter id="HK" value="1" constant="false"/>
-      <parameter id="M" value="0" constant="false"/>
-      <parameter id="i" value="0" constant="false"/>
-      <parameter id="maxiter" value="50" constant="true"/>
-      <parameter constant="false" id="DnaA_1mer_ADP" value="0"/>
-      <parameter constant="false" id="DnaA_2mer_ATP" value="0"/>
-      <parameter constant="false" id="DnaA_2mer_ATP_internal" value="0"/>
-      <parameter constant="false" id="DnaA_3mer_ATP" value="0"/>
-      <parameter constant="false" id="DnaA_3mer_ATP_internal" value="0"/>
-      <parameter constant="false" id="DnaA_4mer_ATP" value="0"/>
-      <parameter constant="false" id="DnaA_4mer_ATP_internal" value="0"/>
-      <parameter constant="false" id="DnaA_5mer_ATP" value="0"/>
-      <parameter constant="false" id="DnaA_5mer_ATP_internal" value="0"/>
-      <parameter constant="false" id="DnaA_6mer_ATP" value="0"/>
-      <parameter constant="false" id="DnaA_6mer_ATP_internal" value="0"/>
-      <parameter constant="false" id="DnaA_7mer_ATP" value="0"/>
-      <parameter constant="false" id="DnaA_7mer_ATP_internal" value="0"/>
-      <parameter constant="false" id="H" value="0">
-        <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#_7f478432-76e5-4495-a7ee-7d9d32f364f8">
-              <bqbiol:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15378"/>
-                </rdf:Bag>
-              </bqbiol:is>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </parameter>
-      <parameter constant="false" id="Pi" metaid="_c4ac822d-34e6-41df-8614-64e5e76c6134" value="0">
+   <listOfCompartments>
+      <compartment name="RepInit_Activation" constant="false" id="default" spatialDimensions="3" size="1"/>
+    </listOfCompartments>
+    <listOfSpecies>
+	<species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="DnaA_1mer_ADP"/>
+	<species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="DnaA_2mer_ATP"/>
+	<species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="DnaA_2mer_ATP_internal"/>
+	<species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="DnaA_3mer_ATP"/>
+	<species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="DnaA_3mer_ATP_internal"/>
+	<species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="DnaA_4mer_ATP"/>
+	<species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="DnaA_4mer_ATP_internal"/>
+	<species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="DnaA_5mer_ATP"/>
+	<species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="DnaA_5mer_ATP_internal"/>
+	<species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="DnaA_6mer_ATP"/>
+	<species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="DnaA_6mer_ATP_internal"/>
+	<species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="DnaA_7mer_ATP"/>
+	<species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="DnaA_7mer_ATP_internal"/>	
+	<species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="H">
+		<annotation>
+		  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+			<rdf:Description rdf:about="#_7f478432-76e5-4495-a7ee-7d9d32f364f8">
+			  <bqbiol:is>
+				<rdf:Bag>
+				  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15378"/>
+				</rdf:Bag>
+			  </bqbiol:is>
+			</rdf:Description>
+		  </rdf:RDF>
+		</annotation>
+      </species>
+	  <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="Pi">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_c4ac822d-34e6-41df-8614-64e5e76c6134">
@@ -132,11 +126,11 @@
             </rdf:Description>
           </rdf:RDF>
         </annotation>
-      </parameter>
-      <parameter constant="false" id="dissociation" value="0"/>
-      <parameter constant="false" id="nMonomers" value="0"/>
-      <parameter constant="false" id="number" value="0"/>
-      <parameter constant="false" id="water" metaid="_72d3f37c-bbef-4629-91e7-069b029b728e" value="0">
+      </species>
+	  <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="dissociation"/>
+	  <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="nMonomers"/>
+	  <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="number"/>
+	  <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="water">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_72d3f37c-bbef-4629-91e7-069b029b728e">
@@ -148,7 +142,18 @@
             </rdf:Description>
           </rdf:RDF>
         </annotation>
-      </parameter>
+       </species>
+	 </listOfSpecies>
+	<listOfParameters>
+      <parameter id="a" value="1" constant="true"/>
+      <parameter id="b" value="6" constant="true"/>
+      <parameter id="random" value="0" constant="false"/>
+      <parameter id="state" value="0" constant="false"/>
+      <parameter id="L" value="0" constant="false"/>
+      <parameter id="HK" value="1" constant="false"/>
+      <parameter id="M" value="0" constant="false"/>
+      <parameter id="i" value="0" constant="false"/>
+      <parameter id="maxiter" value="50" constant="true"/>
     </listOfParameters>
     <listOfInitialAssignments>
       <initialAssignment metaid="DnaA_2mer_ATP_internal_Initialization" symbol="DnaA_2mer_ATP_internal">
