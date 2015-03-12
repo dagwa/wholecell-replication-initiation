@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="RepInit_Displacing" name="RepInit_Displacing">
+    <listOfFunctionDefinitions>
+      <functionDefinition id="minFunc">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>x</ci>
+            </bvar>
+            <bvar>
+              <ci>y</ci>
+            </bvar>
+            <piecewise>
+              <piece>
+                <ci>x</ci>
+                <apply>
+                  <lt/>
+                  <ci>x</ci>
+                  <ci>y</ci>
+                </apply>
+              </piece>
+              <otherwise>
+                <ci>y</ci>
+              </otherwise>
+            </piecewise>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="mod">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>x</ci>
+            </bvar>
+            <bvar>
+              <ci>y</ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <ci>x</ci>
+              <apply>
+                <times/>
+                <ci>y</ci>
+                <apply>
+                  <floor/>
+                  <apply>
+                    <divide/>
+                    <ci>x</ci>
+                    <ci>y</ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="randInt">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>x</ci>
+            </bvar>
+            <apply>
+              <floor/>
+              <apply>
+                <times/>
+                <apply>
+                  <ci>random</ci>
+                </apply>
+                <ci>x</ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="stochasticRound">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>x</ci>
+            </bvar>
+            <piecewise>
+              <piece>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <floor/>
+                    <ci>x</ci>
+                  </apply>
+                  <cn>1.0</cn>
+                </apply>
+                <apply>
+                  <lt/>
+                  <apply>
+                    <ci>random</ci>
+                  </apply>
+                  <apply>
+                    <csymbol>fractionalPart</csymbol>
+                    <ci>x</ci>
+                  </apply>
+                </apply>
+              </piece>
+              <otherwise>
+                <apply>
+                  <floor/>
+                  <ci>x</ci>
+                </apply>
+              </otherwise>
+            </piecewise>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfCompartments>
+      <compartment constant="false" id="default" name="RepInit_Displacing" spatialDimensions="3"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ADP__bound" initialAmount="0.0"/>
+      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ADP__c" initialAmount="0.0"/>
+      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ATP__bound" initialAmount="0.0"/>
+      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ATP__c" initialAmount="0.0"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter constant="false" id="R1_1mer_ADP" value="2.0"/>
+      <parameter constant="false" id="R1_1mer_ATP" value="1.0"/>
+      <parameter constant="false" id="R1_2mer_ADP" value="4.0"/>
+      <parameter constant="false" id="R1_2mer_ATP" value="3.0"/>
+      <parameter constant="false" id="R1_3mer_ADP" value="6.0"/>
+      <parameter constant="false" id="R1_3mer_ATP" value="5.0"/>
+      <parameter constant="false" id="R1_4mer_ADP" value="8.0"/>
+      <parameter constant="false" id="R1_4mer_ATP" value="7.0"/>
+      <parameter constant="false" id="R1_5mer_ADP" value="10.0"/>
+      <parameter constant="false" id="R1_5mer_ATP" value="9.0"/>
+      <parameter constant="false" id="R1_6mer_ADP" value="12.0"/>
+      <parameter constant="false" id="R1_6mer_ATP" value="11.0"/>
+      <parameter constant="false" id="R1_7mer_ADP" value="14.0"/>
+      <parameter constant="false" id="R1_7mer_ATP" value="13.0"/>
+      <parameter constant="false" id="R1_free" value="0.0"/>
+      <parameter constant="false" id="R2_1mer_ADP" value="2.0"/>
+      <parameter constant="false" id="R2_1mer_ATP" value="1.0"/>
+      <parameter constant="false" id="R2_2mer_ADP" value="4.0"/>
+      <parameter constant="false" id="R2_2mer_ATP" value="3.0"/>
+      <parameter constant="false" id="R2_3mer_ADP" value="6.0"/>
+      <parameter constant="false" id="R2_3mer_ATP" value="5.0"/>
+      <parameter constant="false" id="R2_4mer_ADP" value="8.0"/>
+      <parameter constant="false" id="R2_4mer_ATP" value="7.0"/>
+      <parameter constant="false" id="R2_5mer_ADP" value="10.0"/>
+      <parameter constant="false" id="R2_5mer_ATP" value="9.0"/>
+      <parameter constant="false" id="R2_6mer_ADP" value="12.0"/>
+      <parameter constant="false" id="R2_6mer_ATP" value="11.0"/>
+      <parameter constant="false" id="R2_7mer_ADP" value="14.0"/>
+      <parameter constant="false" id="R2_7mer_ATP" value="13.0"/>
+      <parameter constant="false" id="R2_free" value="0.0"/>
+      <parameter constant="false" id="R3_1mer_ADP" value="2.0"/>
+      <parameter constant="false" id="R3_1mer_ATP" value="1.0"/>
+      <parameter constant="false" id="R3_2mer_ADP" value="4.0"/>
+      <parameter constant="false" id="R3_2mer_ATP" value="3.0"/>
+      <parameter constant="false" id="R3_3mer_ADP" value="6.0"/>
+      <parameter constant="false" id="R3_3mer_ATP" value="5.0"/>
+      <parameter constant="false" id="R3_4mer_ADP" value="8.0"/>
+      <parameter constant="false" id="R3_4mer_ATP" value="7.0"/>
+      <parameter constant="false" id="R3_5mer_ADP" value="10.0"/>
+      <parameter constant="false" id="R3_5mer_ATP" value="9.0"/>
+      <parameter constant="false" id="R3_6mer_ADP" value="12.0"/>
+      <parameter constant="false" id="R3_6mer_ATP" value="11.0"/>
+      <parameter constant="false" id="R3_7mer_ADP" value="14.0"/>
+      <parameter constant="false" id="R3_7mer_ATP" value="13.0"/>
+      <parameter constant="false" id="R3_free" value="0.0"/>
+      <parameter constant="false" id="R4_1mer_ADP" value="2.0"/>
+      <parameter constant="false" id="R4_1mer_ATP" value="1.0"/>
+      <parameter constant="false" id="R4_2mer_ADP" value="4.0"/>
+      <parameter constant="false" id="R4_2mer_ATP" value="3.0"/>
+      <parameter constant="false" id="R4_3mer_ADP" value="6.0"/>
+      <parameter constant="false" id="R4_3mer_ATP" value="5.0"/>
+      <parameter constant="false" id="R4_4mer_ADP" value="8.0"/>
+      <parameter constant="false" id="R4_4mer_ATP" value="7.0"/>
+      <parameter constant="false" id="R4_5mer_ADP" value="10.0"/>
+      <parameter constant="false" id="R4_5mer_ATP" value="9.0"/>
+      <parameter constant="false" id="R4_6mer_ADP" value="12.0"/>
+      <parameter constant="false" id="R4_6mer_ATP" value="11.0"/>
+      <parameter constant="false" id="R4_7mer_ADP" value="14.0"/>
+      <parameter constant="false" id="R4_7mer_ATP" value="13.0"/>
+      <parameter constant="false" id="R4_free" value="0.0"/>
+      <parameter constant="false" id="chromosmoe_R2" value="0.0"/>
+      <parameter constant="false" id="chromosome_R1" value="0.0"/>
+      <parameter constant="false" id="chromosome_R2" value="0.0"/>
+      <parameter constant="false" id="chromosome_R3" value="0.0"/>
+      <parameter constant="false" id="chromosome_R4" value="0.0"/>
+      <parameter constant="false" id="displacingDnaAADP" value="0.0"/>
+      <parameter constant="false" id="displacingDnaAATP" value="0.0"/>
+      <parameter constant="false" id="expectedDisplacingDnaAADP" value="0.0"/>
+      <parameter constant="false" id="expectedDisplacingDnaAATP" value="0.0"/>
+      <parameter constant="false" id="kd1ADP" value="20.0"/>
+      <parameter constant="false" id="kd1ATP" value="20.0"/>
+      <parameter constant="false" id="minRxState" value="0.0"/>
+      <parameter constant="false" id="numBindingSites" value="0.0"/>
+      <parameter constant="false" id="removeR1" value="0.0"/>
+      <parameter constant="false" id="removeR2" value="0.0"/>
+      <parameter constant="false" id="removeR3" value="0.0"/>
+      <parameter constant="false" id="removeR4" value="0.0"/>
+      <parameter constant="false" id="stochRoundR1" value="0.0"/>
+      <parameter constant="false" id="stochRoundR2" value="0.0"/>
+      <parameter constant="false" id="stochRoundR3" value="0.0"/>
+      <parameter constant="false" id="stochRoundR4" value="0.0"/>
+      <parameter constant="false" id="testR1" value="0.0"/>
+      <parameter constant="false" id="testR2" value="0.0"/>
+      <parameter constant="false" id="testR3" value="0.0"/>
+      <parameter constant="false" id="testR4" value="0.0"/>
+      <parameter constant="false" id="testRState" value="0.0"/>
+      <parameter constant="false" id="x" value="0.0"/>
+      <parameter constant="false" id="y" value="0.0"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="MG_469_1MER_ADP__bound_Assignment_rule" variable="MG_469_1MER_ADP__bound">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <ci>MG_469_1MER_ADP__bound</ci>
+            <ci>displacingDnaAADP</ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="MG_469_1MER_ADP__c_Assignment_rule" variable="MG_469_1MER_ADP__c">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci>MG_469_1MER_ADP__c</ci>
+            <ci>displacingDnaAADP</ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="MG_469_1MER_ATP__bound_Assignment_rule" variable="MG_469_1MER_ATP__bound">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <ci>MG_469_1MER_ATP__bound</ci>
+            <ci>displacingDnaAATP</ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="MG_469_1MER_ATP__c_Assignment_rule" variable="MG_469_1MER_ATP__c">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci>MG_469_1MER_ATP__c</ci>
+            <ci>displacingDnaAATP</ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="displacingDnaAADP_Assignment_rule" variable="displacingDnaAADP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <ci>stochasticRound</ci>
+            <apply>
+              <times/>
+              <apply>
+                <divide/>
+                <ci>kd1ADP</ci>
+                <cn>3600</cn>
+              </apply>
+              <ci>MG_469_1MER_ADP__bound</ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="displacingDnaAATP_Assignment_rule" variable="displacingDnaAATP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <ci>stochasticRound</ci>
+            <apply>
+              <times/>
+              <apply>
+                <divide/>
+                <ci>kd1ATP</ci>
+                <cn>3600</cn>
+              </apply>
+              <ci>MG_469_1MER_ATP__bound</ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="expectedDisplacingDnaAADP_Assignment_rule" variable="expectedDisplacingDnaAADP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <ci>stochasticRound</ci>
+            <apply>
+              <divide/>
+              <ci>kd1ADP</ci>
+              <cn>3600</cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="expectedDisplacingDnaAATP_Assignment_rule" variable="expectedDisplacingDnaAATP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <ci>stochasticRound</ci>
+            <apply>
+              <divide/>
+              <ci>kd1ATP</ci>
+              <cn>3600</cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="minRxState_Assignment_rule" variable="minRxState">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <ci>min</ci>
+            <ci>chromosome_R1</ci>
+            <apply>
+              <ci>min</ci>
+              <ci>chromosome_R2</ci>
+              <apply>
+                <ci>min</ci>
+                <ci>chromosome_R3</ci>
+                <ci>chromosome_R4</ci>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="removeR1_Assignment_rule" variable="removeR1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <cn>0</cn>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="stochRoundR1_Assignment_rule" variable="stochRoundR1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <csymbol>stochRound</csymbol>
+            <apply>
+              <divide/>
+              <ci>kd1ATP</ci>
+              <cn>3600</cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="stochRoundR2_Assignment_rule" variable="stochRoundR2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <csymbol>stochRound</csymbol>
+            <apply>
+              <divide/>
+              <ci>kd1ATP</ci>
+              <cn>3600</cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="stochRoundR3_Assignment_rule" variable="stochRoundR3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <csymbol>stochRound</csymbol>
+            <apply>
+              <divide/>
+              <ci>kd1ATP</ci>
+              <cn>3600</cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="stochRoundR4_Assignment_rule" variable="stochRoundR4">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <csymbol>stochRound</csymbol>
+            <apply>
+              <divide/>
+              <ci>kd1ATP</ci>
+              <cn>3600</cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="testR1_Assignment_rule" variable="testR1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <cn>1</cn>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="testRState_Assignment_rule" variable="testRState">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <cn>1</cn>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfEvents>
+      <event id="CheckR1" useValuesFromTriggerTime="true">
+        <trigger initialValue="true" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <gt/>
+                <ci>testR1</ci>
+                <cn>0</cn>
+              </apply>
+              <apply>
+                <or/>
+                <apply>
+                  <gt/>
+                  <ci>chromosome_R1</ci>
+                  <ci>minRxState</ci>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci>chromosome_R1</ci>
+                    <ci>minRxState</ci>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <apply>
+                      <ci>mod</ci>
+                      <ci>chromosome_R1</ci>
+                      <cn>2</cn>
+                    </apply>
+                    <cn>1</cn>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="testR1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="removeR1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>1</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="MinRxState" useValuesFromTriggerTime="true">
+        <trigger initialValue="true" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <gt/>
+                    <ci>testRState</ci>
+                    <cn>0.0</cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci>chromosome_R1</ci>
+                    <ci>chromosome_R2</ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci>chromosome_R1</ci>
+                  <ci>chromosome_R3</ci>
+                </apply>
+              </apply>
+              <apply>
+                <eq/>
+                <ci>chromosome_R1</ci>
+                <ci>chromosome_R4</ci>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="testRState">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="RemoveR1ADP" useValuesFromTriggerTime="true">
+        <trigger initialValue="true" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci>testR1</ci>
+                  <cn>0</cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci>removeR1</ci>
+                  <cn>1</cn>
+                </apply>
+              </apply>
+              <apply>
+                <eq/>
+                <apply>
+                  <ci>mod</ci>
+                  <ci>chromosome_R1</ci>
+                  <cn>2</cn>
+                </apply>
+                <cn>1</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="MG_469_1MER_ADP__c">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci>MG_469_1MER_ADP__c</ci>
+                <ci>stochRoundR1</ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_1MER_ADP__bound">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>MG_469_1MER_ADP__bound</ci>
+                <ci>stochRoundR1</ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="removeR1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="RemoveR1ATP" useValuesFromTriggerTime="true">
+        <trigger initialValue="true" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci>testR1</ci>
+                  <cn>0</cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci>removeR1</ci>
+                  <cn>1</cn>
+                </apply>
+              </apply>
+              <apply>
+                <eq/>
+                <apply>
+                  <ci>mod</ci>
+                  <ci>chromosome_R1</ci>
+                  <cn>2</cn>
+                </apply>
+                <cn>0</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="testR1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>1</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="removeR1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>1</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="RemoveR2ADP" useValuesFromTriggerTime="true">
+        <trigger initialValue="true" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci>testR2</ci>
+                  <cn>0</cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci>removeR2</ci>
+                  <cn>1</cn>
+                </apply>
+              </apply>
+              <apply>
+                <eq/>
+                <apply>
+                  <ci>mod</ci>
+                  <ci>chromosome_R2</ci>
+                  <cn>2</cn>
+                </apply>
+                <cn>1</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="MG_469_1MER_ADP__c">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci>MG_469_1MER_ADP__c</ci>
+                <ci>stochRoundR2</ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_1MER_ADP__bound">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>MG_469_1MER_ADP__bound</ci>
+                <ci>stochRoundR2</ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="removeR2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="RemoveR3ADP" useValuesFromTriggerTime="true">
+        <trigger initialValue="true" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci>testR3</ci>
+                  <cn>0</cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci>removeR3</ci>
+                  <cn>1</cn>
+                </apply>
+              </apply>
+              <apply>
+                <eq/>
+                <apply>
+                  <ci>mod</ci>
+                  <ci>chromosome_R3</ci>
+                  <cn>2</cn>
+                </apply>
+                <cn>1</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="MG_469_1MER_ADP__c">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci>MG_469_1MER_ADP__c</ci>
+                <ci>stochRoundR3</ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_1MER_ADP__bound">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>MG_469_1MER_ADP__bound</ci>
+                <ci>stochRoundR3</ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="removeR3">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="RemoveR4ADP" useValuesFromTriggerTime="true">
+        <trigger initialValue="true" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci>testR4</ci>
+                  <cn>0</cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci>removeR4</ci>
+                  <cn>1</cn>
+                </apply>
+              </apply>
+              <apply>
+                <eq/>
+                <apply>
+                  <ci>mod</ci>
+                  <ci>chromosome_R4</ci>
+                  <cn>2</cn>
+                </apply>
+                <cn>1</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="MG_469_1MER_ADP__c">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci>MG_469_1MER_ADP__c</ci>
+                <ci>stochRoundR4</ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_1MER_ADP__bound">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>MG_469_1MER_ADP__bound</ci>
+                <ci>stochRoundR4</ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="removeR4">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+    </listOfEvents>
+  </model>
+</sbml>

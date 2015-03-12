@@ -1,0 +1,217 @@
+
+function mod(x,y)
+          x - y * floor(x / y)
+end
+
+function minFunc(x,y)
+piecewise(x,x<y,y);
+end
+
+function randInt(x)
+  floor(random()*x);
+end
+
+function stochasticRound(x)
+piecewise(floor(x)+1.0,random()<fractionalPart(x),floor(x));
+end
+
+
+model RepInit_Displacing()
+  
+   species MG_469_1MER_ADP__c, MG_469_1MER_ATP__c, MG_469_1MER_ADP__bound, MG_469_1MER_ATP__bound;
+    var kd1ATP, kd1ADP, numBindingSites, testRState, chromosome_R1, chromosmoe_R2, chromosome_R3, chromosome_R4;
+
+var R1_free;
+var R1_1mer_ATP;
+var R1_1mer_ADP;
+var R1_2mer_ATP;
+var R1_2mer_ADP;
+var R1_3mer_ATP;
+var R1_3mer_ADP;
+var R1_4mer_ATP;
+var R1_4mer_ADP;
+var R1_5mer_ATP;
+var R1_5mer_ADP;
+var R1_6mer_ATP;
+var R1_6mer_ADP;
+var R1_7mer_ATP;
+var R1_7mer_ADP;
+
+var R2_free;
+var R2_1mer_ATP;
+var R2_1mer_ADP;
+var R2_2mer_ATP;
+var R2_2mer_ADP;
+var R2_3mer_ATP;
+var R2_3mer_ADP;
+var R2_4mer_ATP;
+var R2_4mer_ADP;
+var R2_5mer_ATP;
+var R2_5mer_ADP;
+var R2_6mer_ATP;
+var R2_6mer_ADP;
+var R2_7mer_ATP;
+var R2_7mer_ADP;
+
+var R3_free;
+var R3_1mer_ATP;
+var R3_1mer_ADP;
+var R3_2mer_ATP;
+var R3_2mer_ADP;
+var R3_3mer_ATP;
+var R3_3mer_ADP;
+var R3_4mer_ATP;
+var R3_4mer_ADP;
+var R3_5mer_ATP;
+var R3_5mer_ADP;
+var R3_6mer_ATP;
+var R3_6mer_ADP;
+var R3_7mer_ATP;
+var R3_7mer_ADP;
+
+var R4_free;
+var R4_1mer_ATP;
+var R4_1mer_ADP;
+var R4_2mer_ATP;
+var R4_2mer_ADP;
+var R4_3mer_ATP;
+var R4_3mer_ADP;
+var R4_4mer_ATP;
+var R4_4mer_ADP;
+var R4_5mer_ATP;
+var R4_5mer_ADP;
+var R4_6mer_ATP;
+var R4_6mer_ADP;
+var R4_7mer_ATP;
+var R4_7mer_ADP;
+
+    kd1ADP = 20;
+    kd1ATP = 20;
+
+R1_free = 0;
+R1_1mer_ATP = 1;
+R1_1mer_ADP = 2;
+R1_2mer_ATP = 3;
+R1_2mer_ADP = 4;
+R1_3mer_ATP = 5;
+R1_3mer_ADP = 6;
+R1_4mer_ATP = 7;
+R1_4mer_ADP = 8;
+R1_5mer_ATP = 9;
+R1_5mer_ADP = 10;
+R1_6mer_ATP = 11;
+R1_6mer_ADP = 12;
+R1_7mer_ATP = 13;
+R1_7mer_ADP = 14;
+
+R2_free = 0;
+R2_1mer_ATP = 1;
+R2_1mer_ADP = 2;
+R2_2mer_ATP = 3;
+R2_2mer_ADP = 4;
+R2_3mer_ATP = 5;
+R2_3mer_ADP = 6;
+R2_4mer_ATP = 7;
+R2_4mer_ADP = 8;
+R2_5mer_ATP = 9;
+R2_5mer_ADP = 10;
+R2_6mer_ATP = 11;
+R2_6mer_ADP = 12;
+R2_7mer_ATP = 13;
+R2_7mer_ADP = 14;
+
+R3_free = 0;
+R3_1mer_ATP = 1;
+R3_1mer_ADP = 2;
+R3_2mer_ATP = 3;
+R3_2mer_ADP = 4;
+R3_3mer_ATP = 5;
+R3_3mer_ADP = 6;
+R3_4mer_ATP = 7;
+R3_4mer_ADP = 8;
+R3_5mer_ATP = 9;
+R3_5mer_ADP = 10;
+R3_6mer_ATP = 11;
+R3_6mer_ADP = 12;
+R3_7mer_ATP = 13;
+R3_7mer_ADP = 14;
+
+R4_free = 0;
+R4_1mer_ATP = 1;
+R4_1mer_ADP = 2;
+R4_2mer_ATP = 3;
+R4_2mer_ADP = 4;
+R4_3mer_ATP = 5;
+R4_3mer_ADP = 6;
+R4_4mer_ATP = 7;
+R4_4mer_ADP = 8;
+R4_5mer_ATP = 9;
+R4_5mer_ADP = 10;
+R4_6mer_ATP = 11;
+R4_6mer_ADP = 12;
+R4_7mer_ATP = 13;
+R4_7mer_ADP = 14;
+
+
+testRState := 1;
+
+   expectedDisplacingDnaAATP := stochasticRound(kd1ATP / 3600);
+   expectedDisplacingDnaAADP := stochasticRound(kd1ADP / 3600);
+
+   minRxState := min(chromosome_R1, min(chromosome_R2, min(chromosome_R3, chromosome_R4)));
+
+
+
+   MinRxState: at testRState > 0.0 && chromosome_R1 == chromosome_R2 && chromosome_R1 == chromosome_R3 && chromosome_R1 == chromosome_R4: testRState = 0;
+
+CheckR1: at test > 0 && chromosome_R1 > minRxState : test = 0;
+
+var displacingDnaAATP;
+displacingDnaAATP := stochasticRound(kd1ATP /3600 * MG_469_1MER_ATP__bound);
+
+MG_469_1MER_ATP__c := MG_469_1MER_ATP__c + displacingDnaAATP;
+MG_469_1MER_ATP__bound := MG_469_1MER_ATP__bound - displacingDnaAATP;
+
+
+var displacingDnaAADP;
+displacingDnaAADP := stochasticRound(kd1ADP /3600 * MG_469_1MER_ADP__bound);
+
+MG_469_1MER_ADP__c := MG_469_1MER_ADP__c + displacingDnaAADP;
+MG_469_1MER_ADP__bound := MG_469_1MER_ADP__bound - displacingDnaAADP;
+
+
+var testR1;
+testR1 := 1;
+var removeR1;
+removeR1 := 0;
+
+CheckR1: at testR1 > 0 && (chromosome_R1 > minRxState || (chromosome_R1 == minRxState && mod(chromosome_R1, 2) == 1)) : testR1 = 0 : removeR1 = 1;
+
+
+var stochRoundR1;
+stochRoundR1 := stochRound(kd1ATP / 3600);
+
+RemoveR1ADP: at testR1 == 0 && removeR1 == 1 && mod(chromosome_R1,2) == 1 : MG_469_1MER_ADP__c = MG_469_1MER_ADP__c + stochRoundR1 : MG_469_1MER_ADP__bound = MG_469_1MER_ADP__bound - stochRoundR1 : removeR1 = 0;
+
+
+var stochRoundR2;
+stochRoundR2 := stochRound(kd1ATP / 3600);
+
+RemoveR2ADP: at testR2 == 0 && removeR2 == 1 && mod(chromosome_R2,2) == 1 : MG_469_1MER_ADP__c = MG_469_1MER_ADP__c + stochRoundR2 : MG_469_1MER_ADP__bound = MG_469_1MER_ADP__bound - stochRoundR2 : removeR2 = 0;
+
+
+var stochRoundR3;
+stochRoundR3 := stochRound(kd1ATP / 3600);
+
+RemoveR3ADP: at testR3 == 0 && removeR3 == 1 && mod(chromosome_R3,2) == 1 : MG_469_1MER_ADP__c = MG_469_1MER_ADP__c + stochRoundR3 : MG_469_1MER_ADP__bound = MG_469_1MER_ADP__bound - stochRoundR3 : removeR3 = 0;
+
+
+var stochRoundR4;
+stochRoundR4 := stochRound(kd1ATP / 3600);
+
+RemoveR4ADP: at testR4 == 0 && removeR4 == 1 && mod(chromosome_R4,2) == 1 : MG_469_1MER_ADP__c = MG_469_1MER_ADP__c + stochRoundR4 : MG_469_1MER_ADP__bound = MG_469_1MER_ADP__bound - stochRoundR4 : removeR4 = 0;
+
+
+RemoveR1ATP: at testR1 == 0 && removeR1 == 1 && mod(chromosome_R1,2) == 0 : testR1 = 1 : removeR1 = 1;
+
+end
