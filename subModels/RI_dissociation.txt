@@ -1,6 +1,5 @@
 model RepInit_Dissociation()
-   var DnaA_1mer_ADP, DnaA_2mer_ATP, DnaA_2mer_ATP_internal, DnaA_3mer_ATP, DnaA_3mer_ATP_internal, DnaA_4mer_ATP, DnaA_4mer_ATP_internal, DnaA_5mer_ATP, DnaA_5mer_ATP_internal, DnaA_6mer_ATP, DnaA_6mer_ATP_internal, DnaA_7mer_ATP, DnaA_7mer_ATP_internal, DnaA_ADP, H, Pi, dissociation, nMonomers, number, unknown, water;
-
+   var DnaA_1mer_ADP, DnaA_2mer_ATP, DnaA_2mer_ATP_internal, DnaA_3mer_ATP, DnaA_3mer_ATP_internal, DnaA_4mer_ATP, DnaA_4mer_ATP_internal, DnaA_5mer_ATP, DnaA_5mer_ATP_internal, DnaA_6mer_ATP, DnaA_6mer_ATP_internal, DnaA_7mer_ATP, DnaA_7mer_ATP_internal, H, Pi, dissociation, nMonomers, number, water;
 
    DnaA_2mer_ATP_internal = DnaA_2mer_ATP;
    DnaA_3mer_ATP_internal = DnaA_3mer_ATP;
@@ -8,14 +7,15 @@ model RepInit_Dissociation()
    DnaA_5mer_ATP_internal = DnaA_5mer_ATP;
    DnaA_6mer_ATP_internal = DnaA_6mer_ATP;
    DnaA_7mer_ATP_internal = DnaA_7mer_ATP;
-   nMonomers := 2*DnaA_2mer_ATP_internal+3*DnaA_3mer_ATP_internal+4*DnaA_4mer_ATP_internal+4*DnaA_4mer_ATP_internal+5*DnaA_5mer_ATP_internal+6*DnaA_6mer_ATP_internal+7*DnaA_7mer_ATP_internal;
+   nMonomers = 2.0*DnaA_2mer_ATP_internal+3.0*DnaA_3mer_ATP_internal+4.0*DnaA_4mer_ATP_internal+4.0*DnaA_4mer_ATP_internal+5.0*DnaA_5mer_ATP_internal+6.0*DnaA_6mer_ATP_internal+7.0*DnaA_7mer_ATP_internal;
 
-   dissociationEvent: at (water>=nMonomers||nMonomers==0)&&dissociation==1 : dissociation = 0 : water = water-nMonomers : Pi = Pi+nMonomers : H = H+nMonomers : DnaA_ADP = DnaA_1mer_ADP+nMonomers : DnaA_2mer_ATP = DnaA_2mer_ATP-DnaA_2mer_ATP_internal : DnaA_3mer_ATP = DnaA_3mer_ATP-DnaA_3mer_ATP_internal : DnaA_4mer_ATP = DnaA_4mer_ATP-DnaA_4mer_ATP_internal : DnaA_5mer_ATP = DnaA_5mer_ATP-DnaA_5mer_ATP_internal : DnaA_6mer_ATP = DnaA_6mer_ATP-DnaA_6mer_ATP_internal : DnaA_7mer_ATP = DnaA_7mer_ATP-DnaA_7mer_ATP_internal;
-   numberGenerator: at number==0, t0 = true : number = floor(6*random())+1;
-   remove2mer: at number==1&&dissociation==1 : DnaA_2mer_ATP_internal = DnaA_2mer_ATP_internal-1: number = 0;
-   remove3mer: at number==2&&dissociation==1 : DnaA_3mer_ATP_internal = DnaA_3mer_ATP_internal-1: number = 0;
-   remove4mer: at number==3&&dissociation==1 : DnaA_4mer_ATP_internal = DnaA_4mer_ATP_internal-1: number = 0;
-   remove5mer: at number==4&&dissociation==1 : DnaA_5mer_ATP_internal = DnaA_5mer_ATP_internal-1: number = 0;
-   remove6mer: at number==5&&dissociation==1 : DnaA_6mer_ATP_internal = DnaA_6mer_ATP_internal-1: number = 0;
-   remove7mer: at number==6&&dissociation==1 : DnaA_7mer_ATP_internal = DnaA_7mer_ATP_internal-1: number = 0;
+   dissociationEvent: at dissociation==1.0&&water>=nMonomers : dissociation = 0.0 : water = water-nMonomers : Pi = Pi+nMonomers : H = H+nMonomers : DnaA_1mer_ADP = DnaA_1mer_ADP+nMonomers : DnaA_2mer_ATP = DnaA_2mer_ATP-DnaA_2mer_ATP_internal : DnaA_3mer_ATP = DnaA_3mer_ATP-DnaA_3mer_ATP_internal : DnaA_4mer_ATP = DnaA_4mer_ATP-DnaA_4mer_ATP_internal : DnaA_5mer_ATP = DnaA_5mer_ATP-DnaA_5mer_ATP_internal : DnaA_6mer_ATP = DnaA_6mer_ATP-DnaA_6mer_ATP_internal : DnaA_7mer_ATP = DnaA_7mer_ATP-DnaA_7mer_ATP_internal : nMonomers = 2.0*DnaA_2mer_ATP_internal+3.0*DnaA_3mer_ATP_internal+4.0*DnaA_4mer_ATP_internal+4.0*DnaA_4mer_ATP_internal+5.0*DnaA_5mer_ATP_internal+6.0*DnaA_6mer_ATP_internal+7.0*DnaA_7mer_ATP_internal;
+   endDissociation: at nMonomers==0&&dissociation==1 : dissociation = 0;
+   numberGenerator: at number==0.0||number==7 : number = floor(6.0*random())+1.0;
+   remove2mer: at number==1.0&&dissociation==1.0 : DnaA_2mer_ATP_internal = DnaA_2mer_ATP_internal-1.0 : number = 0.0 : nMonomers = 2.0*DnaA_2mer_ATP_internal+3.0*DnaA_3mer_ATP_internal+4.0*DnaA_4mer_ATP_internal+4.0*DnaA_4mer_ATP_internal+5.0*DnaA_5mer_ATP_internal+6.0*DnaA_6mer_ATP_internal+7.0*DnaA_7mer_ATP_internal;
+   remove3mer: at number==2.0&&dissociation==1.0 : DnaA_3mer_ATP_internal = DnaA_3mer_ATP_internal-1.0 : number = 0.0 : nMonomers = 2.0*DnaA_2mer_ATP_internal+3.0*DnaA_3mer_ATP_internal+4.0*DnaA_4mer_ATP_internal+4.0*DnaA_4mer_ATP_internal+5.0*DnaA_5mer_ATP_internal+6.0*DnaA_6mer_ATP_internal+7.0*DnaA_7mer_ATP_internal;
+   remove4mer: at number==3.0&&dissociation==1.0 : DnaA_4mer_ATP_internal = DnaA_4mer_ATP_internal-1.0 : number = 0.0 : nMonomers = 2.0*DnaA_2mer_ATP_internal+3.0*DnaA_3mer_ATP_internal+4.0*DnaA_4mer_ATP_internal+4.0*DnaA_4mer_ATP_internal+5.0*DnaA_5mer_ATP_internal+6.0*DnaA_6mer_ATP_internal+7.0*DnaA_7mer_ATP_internal;
+   remove5mer: at number==4.0&&dissociation==1.0 : DnaA_5mer_ATP_internal = DnaA_5mer_ATP_internal-1.0 : number = 0.0 : nMonomers = 2.0*DnaA_2mer_ATP_internal+3.0*DnaA_3mer_ATP_internal+4.0*DnaA_4mer_ATP_internal+4.0*DnaA_4mer_ATP_internal+5.0*DnaA_5mer_ATP_internal+6.0*DnaA_6mer_ATP_internal+7.0*DnaA_7mer_ATP_internal;
+   remove6mer: at number==5.0&&dissociation==1.0 : DnaA_6mer_ATP_internal = DnaA_6mer_ATP_internal-1.0 : number = 0.0 : nMonomers = 2.0*DnaA_2mer_ATP_internal+3.0*DnaA_3mer_ATP_internal+4.0*DnaA_4mer_ATP_internal+4.0*DnaA_4mer_ATP_internal+5.0*DnaA_5mer_ATP_internal+6.0*DnaA_6mer_ATP_internal+7.0*DnaA_7mer_ATP_internal;
+   remove7mer: at number==6.0&&dissociation==1.0 : DnaA_7mer_ATP_internal = DnaA_7mer_ATP_internal-1.0 : number = 0.0 : nMonomers = 2.0*DnaA_2mer_ATP_internal+3.0*DnaA_3mer_ATP_internal+4.0*DnaA_4mer_ATP_internal+4.0*DnaA_4mer_ATP_internal+5.0*DnaA_5mer_ATP_internal+6.0*DnaA_6mer_ATP_internal+7.0*DnaA_7mer_ATP_internal;
 end

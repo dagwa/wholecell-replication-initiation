@@ -1,5 +1,88 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <notes>
+    <p xmlns="http://www.w3.org/1999/xhtml">
+  Creation date: 12/03/2015</p>
+  </notes>
+  <annotation>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+			 xmlns:dc="http://purl.org/dc/elements/1.1/" 
+ 			 xmlns:dcterms="http://purl.org/dc/terms/"
+			 xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
+      <rdf:Description rdf:about="#_d635541f-7768-48d1-8ec5-50ae0d07523d">
+        <dc:creator>
+          <rdf:Bag>
+            <rdf:li rdf:parseType="Resource">
+              <vCard:N rdf:parseType="Resource">
+                <vCard:Family>Hucka</vCard:Family>
+                <vCard:Given>Michael</vCard:Given>
+              </vCard:N>
+              <vCard:EMAIL></vCard:EMAIL>
+              <vCard:ORG rdf:parseType="Resource">
+                <vCard:Orgname></vCard:Orgname>
+              </vCard:ORG>
+            </rdf:li>
+            <rdf:li rdf:parseType="Resource">
+              <vCard:N rdf:parseType="Resource">
+                <vCard:Family>Wendla</vCard:Family>
+                <vCard:Given>Florian</vCard:Given>
+              </vCard:N>
+              <vCard:EMAIL></vCard:EMAIL>
+              <vCard:ORG rdf:parseType="Resource">
+                <vCard:Orgname></vCard:Orgname>
+              </vCard:ORG>
+            </rdf:li>
+            <rdf:li rdf:parseType="Resource">
+              <vCard:N rdf:parseType="Resource">
+                <vCard:Family>Mandrik</vCard:Family>
+                <vCard:Given>Nikita</vCard:Given>
+              </vCard:N>
+              <vCard:EMAIL></vCard:EMAIL>
+              <vCard:ORG rdf:parseType="Resource">
+                <vCard:Orgname></vCard:Orgname>
+              </vCard:ORG>
+            </rdf:li>
+            <rdf:li rdf:parseType="Resource">
+              <vCard:N rdf:parseType="Resource">
+                <vCard:Family>Hahn</vCard:Family>
+                <vCard:Given>Jens</vCard:Given>
+              </vCard:N>
+              <vCard:EMAIL></vCard:EMAIL>
+              <vCard:ORG rdf:parseType="Resource">
+                <vCard:Orgname></vCard:Orgname>
+              </vCard:ORG>
+            </rdf:li>
+            <rdf:li rdf:parseType="Resource">
+              <vCard:N rdf:parseType="Resource">
+                <vCard:Family>Gomez</vCard:Family>
+                <vCard:Given>Harold</vCard:Given>
+              </vCard:N>
+              <vCard:EMAIL></vCard:EMAIL>
+              <vCard:ORG rdf:parseType="Resource">
+                <vCard:Orgname></vCard:Orgname>
+              </vCard:ORG>
+            </rdf:li>
+            <rdf:li rdf:parseType="Resource">
+              <vCard:N rdf:parseType="Resource">
+                <vCard:Family>Scharm</vCard:Family>
+                <vCard:Given>Martin</vCard:Given>
+              </vCard:N>
+              <vCard:EMAIL></vCard:EMAIL>
+              <vCard:ORG rdf:parseType="Resource">
+                <vCard:Orgname></vCard:Orgname>
+              </vCard:ORG>
+            </rdf:li>
+          </rdf:Bag>
+        </dc:creator>
+		<dcterms:created rdf:parseType="Resource">
+			<dcterms:W3CDTF>2015-03-12 </dcterms:W3CDTF>
+        </dcterms:created>
+        <dcterms:modified rdf:parseType="Resource">
+          <dcterms:W3CDTF>2015-03-12 </dcterms:W3CDTF>
+        </dcterms:modified>
+      </rdf:Description>
+    </rdf:RDF>
+  </annotation>
   <model id="RepInit_Reactivation" name="RepInit_Reactivation">
     <listOfFunctionDefinitions>
       <functionDefinition id="fractionalPart">
@@ -86,8 +169,32 @@
       <compartment constant="false" id="default" name="RepInit_Reactivation" spatialDimensions="3"/>
     </listOfCompartments>
     <listOfSpecies>
-      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="ADP__c" initialAmount="0.0"/>
-      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="ATP__c" initialAmount="0.0"/>
+      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="ADP__c" initialAmount="0.0">
+	  <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_3f92b9a6-6bf7-4c5f-bda0-c494a1a72598">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A16761"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+	  </species>
+      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="ATP__c" initialAmount="0.0">
+	  <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_a851f53d-d00d-46f0-9720-7d952e9b55f2">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15422"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+	  </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="DnaA_1mer_ADP__c" initialAmount="0.0"/>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="DnaA_1mer_ATP__c" initialAmount="0.0"/>
     </listOfSpecies>
@@ -179,6 +286,17 @@
         </listOfEventAssignments>
       </event>
       <event id="reactivationEvent" useValuesFromTriggerTime="true">
+		<annotation>
+              <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                <rdf:Description rdf:about="#_67a16c92-4ffb-4faf-ace5-f5f9a4f8d122">
+                  <bqbiol:is>
+                    <rdf:Bag>
+                      <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0006461"/>
+                    </rdf:Bag>
+                  </bqbiol:is>
+                </rdf:Description>
+              </rdf:RDF>
+         </annotation>
         <trigger initialValue="true" persistent="true">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
