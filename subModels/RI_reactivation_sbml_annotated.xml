@@ -260,7 +260,7 @@
     </listOfRules>
     <listOfEvents>
       <event id="endReactivation" useValuesFromTriggerTime="true">
-        <trigger initialValue="true" persistent="true">
+        <trigger initialValue="false" persistent="true">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <and/>
@@ -297,7 +297,7 @@
                 </rdf:Description>
               </rdf:RDF>
          </annotation>
-        <trigger initialValue="true" persistent="true">
+        <trigger initialValue="false" persistent="true">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <and/>

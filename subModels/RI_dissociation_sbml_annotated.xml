@@ -459,7 +459,7 @@
             </rdf:Description>
           </rdf:RDF>
         </annotation>
-              <trigger persistent="true" initialValue="true">
+              <trigger persistent="true" initialValue="false">
           <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <and/>
@@ -632,7 +632,7 @@
         </listOfEventAssignments>
       </event>
       <event useValuesFromTriggerTime="true" id="endDissociation">
-        <trigger persistent="true" initialValue="true">
+        <trigger persistent="true" initialValue="false">
           <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <and/>
@@ -658,7 +658,7 @@
         </listOfEventAssignments>
       </event>
       <event useValuesFromTriggerTime="true" id="numberGenerator">
-        <trigger persistent="true" initialValue="true">
+        <trigger persistent="true" initialValue="false">
           <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <or/>
@@ -695,7 +695,7 @@
         </listOfEventAssignments>
       </event>
       <event useValuesFromTriggerTime="true" id="remove2mer">
-        <trigger persistent="true" initialValue="true">
+        <trigger persistent="true" initialValue="false">
           <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <and/>
@@ -787,7 +787,7 @@
         </listOfEventAssignments>
       </event>
       <event useValuesFromTriggerTime="true" id="remove3mer">
-        <trigger persistent="true" initialValue="true">
+        <trigger persistent="true" initialValue="false">
           <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <and/>
@@ -879,7 +879,7 @@
         </listOfEventAssignments>
       </event>
       <event useValuesFromTriggerTime="true" id="remove4mer">
-        <trigger persistent="true" initialValue="true">
+        <trigger persistent="true" initialValue="false">
           <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <and/>
@@ -971,7 +971,7 @@
         </listOfEventAssignments>
       </event>
       <event useValuesFromTriggerTime="true" id="remove5mer">
-        <trigger persistent="true" initialValue="true">
+        <trigger persistent="true" initialValue="false">
           <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <and/>
@@ -1063,7 +1063,7 @@
         </listOfEventAssignments>
       </event>
       <event useValuesFromTriggerTime="true" id="remove6mer">
-        <trigger persistent="true" initialValue="true">
+        <trigger persistent="true" initialValue="false">
           <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <and/>
@@ -1155,7 +1155,7 @@
         </listOfEventAssignments>
       </event>
       <event useValuesFromTriggerTime="true" id="remove7mer">
-        <trigger persistent="true" initialValue="true">
+        <trigger persistent="true" initialValue="false">
           <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <and/>
