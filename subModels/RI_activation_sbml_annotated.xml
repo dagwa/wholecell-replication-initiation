@@ -115,8 +115,10 @@
       <compartment name="RepInit_Activation" constant="false" id="default" spatialDimensions="3"/>
     </listOfCompartments>
     <listOfSpecies>
-      <species boundaryCondition="false" constant="false" metaid="_61c90c6a-d1e1-4d1d-a310-d5af96ec408b" hasOnlySubstanceUnits="false" initialAmount="0" compartment="default" id="ATP__c">
-        <annotation>
+      <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="ATP__c"/>
+      <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" initialAmount="0" compartment="default" id="DnaA_1mer_ATP__c"/>
+      <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" initialAmount="0" compartment="default" id="DnaA__c">
+		<annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
             <rdf:Description rdf:about="#_61c90c6a-d1e1-4d1d-a310-d5af96ec408b">
               <bqbiol:is>
@@ -127,9 +129,7 @@
             </rdf:Description>
           </rdf:RDF>
         </annotation>
-      </species>
-      <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" initialAmount="0" compartment="default" id="DnaA_1mer_ATP__c"/>
-      <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" initialAmount="0" compartment="default" id="DnaA__c"/>
+	</species>
     </listOfSpecies>
     <listOfParameters>
       <parameter constant="false" id="activation" value="0"/>
