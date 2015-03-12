@@ -7,6 +7,6 @@ model RepInit_Activation()
 
    minActivations = minFunc(ATP__c,DnaA__c);
 
-   activationEvent: at minActivations>0.0&&activation==1.0, t0 = true : DnaA__c = DnaA__c-minActivations : ATP__c = ATP__c-minActivations : DnaA_1mer_ATP__c = DnaA_1mer_ATP__c+minActivations : minActivations = minFunc(ATP__c,DnaA__c);
-   endActivation: at minActivations<=0.0&&activation==1.0, t0 = true : activation = 0.0 : dissociation = 1.0;
+   activationEvent: at minActivations>0.0&&activation==1.0 : DnaA__c = DnaA__c-minActivations : ATP__c = ATP__c-minActivations : DnaA_1mer_ATP__c = DnaA_1mer_ATP__c+minActivations : minActivations = minFunc(ATP__c,DnaA__c);
+   endActivation: at minActivations<=0.0&&activation==1.0 : activation = 0.0 : dissociation = 1.0;
 end
