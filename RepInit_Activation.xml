@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="RepInit_Activation" name="RepInit_Activation">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml"> </body>
+    </notes>
+    <listOfFunctionDefinitions>
+      <functionDefinition id="minFunc">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>x</ci>
+            </bvar>
+            <bvar>
+              <ci>y</ci>
+            </bvar>
+            <piecewise>
+              <piece>
+                <ci>x</ci>
+                <apply>
+                  <lt/>
+                  <ci>x</ci>
+                  <ci>y</ci>
+                </apply>
+              </piece>
+              <otherwise>
+                <ci>y</ci>
+              </otherwise>
+            </piecewise>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfCompartments>
+      <compartment constant="false" id="default" name="RepInit_Activation" spatialDimensions="3"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="true" id="ATP__c" initialAmount="0.0"/>
+      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="true" id="DnaA_1mer_ATP__c" initialAmount="0.0"/>
+      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="true" id="DnaA__c" initialAmount="0.0"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter constant="false" id="activation" value="0.0"/>
+      <parameter constant="false" id="dissociation" value="0.0"/>
+      <parameter constant="false" id="minActivations" value="0.0"/>
+      <parameter constant="false" id="x" value="0.0"/>
+      <parameter constant="false" id="y" value="0.0"/>
+    </listOfParameters>
+    <listOfInitialAssignments>
+      <initialAssignment metaid="minActivations_Initialization" symbol="minActivations">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <ci>minFunc</ci>
+            <ci>ATP__c</ci>
+            <ci>DnaA__c</ci>
+          </apply>
+        </math>
+      </initialAssignment>
+    </listOfInitialAssignments>
+    <listOfEvents>
+      <event id="activationEvent" useValuesFromTriggerTime="true">
+        <trigger initialValue="true" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <gt/>
+                <ci>minActivations</ci>
+                <cn>0.0</cn>
+              </apply>
+              <apply>
+                <eq/>
+                <ci>activation</ci>
+                <cn>1.0</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="DnaA__c">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>DnaA__c</ci>
+                <ci>minActivations</ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="ATP__c">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>ATP__c</ci>
+                <ci>minActivations</ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="DnaA_1mer_ATP__c">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci>DnaA_1mer_ATP__c</ci>
+                <ci>minActivations</ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="minActivations">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <ci>minFunc</ci>
+                <ci>ATP__c</ci>
+                <ci>DnaA__c</ci>
+              </apply>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="endActivation" useValuesFromTriggerTime="true">
+        <trigger initialValue="true" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <leq/>
+                <ci>minActivations</ci>
+                <cn>0.0</cn>
+              </apply>
+              <apply>
+                <eq/>
+                <ci>activation</ci>
+                <cn>1.0</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="activation">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0.0</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="dissociation">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>1.0</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+    </listOfEvents>
+  </model>
+</sbml>
