@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <sbgn xmlns="http://sbgn.org/libsbgn/0.2">
     <map language="process description">
-        <glyph id="glyph4616270726" class="macromolecule">
-            <label text="DnaA-ATP"/>
-            <clone/>
-            <bbox y="1075.0" x="8375.0" h="70.0" w="90.0"/>
-        </glyph>
-        <glyph id="glyph17540580456" class="macromolecule">
-            <label text="DnaA-ATP"/>
-            <clone/>
-            <bbox y="2825.0" x="8335.0" h="70.0" w="90.0"/>
-        </glyph>
-        <glyph id="glyph9435405196" class="macromolecule">
-            <label text="DnaA-ATP"/>
-            <clone/>
-            <bbox y="4585.0" x="8335.0" h="70.0" w="90.0"/>
-        </glyph>
         <glyph id="glyph4276269396" class="macromolecule">
             <label text="DnaA-ATP"/>
             <clone/>
@@ -40,22 +25,6 @@
             <clone/>
             <bbox y="1075.0" x="2945.0" h="70.0" w="90.0"/>
         </glyph>
-        <glyph id="glyph61061475911" class="complex">
-            <clone/>
-            <bbox y="1170.0" x="2320.0" h="140.0" w="240.0"/>
-            <glyph id="glyph9528133419" class="nucleic acid feature">
-                <label text="R1"/>
-                <bbox y="1195.0" x="2340.0" h="70.0" w="60.0"/>
-            </glyph>
-            <glyph id="glyph19947130626" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="1195.0" x="2435.0" h="70.0" w="90.0"/>
-                <glyph id="glyph19947130626a" class="unit of information">
-                    <label text="N:1"/>
-                    <bbox y="1187.0" x="2442.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-        </glyph>
         <glyph id="glyph9018057326" class="macromolecule">
             <label text="DnaA-ATP"/>
             <clone/>
@@ -75,86 +44,6 @@
             <label text="DnaA-ATP"/>
             <clone/>
             <bbox y="1085.0" x="7295.0" h="70.0" w="90.0"/>
-        </glyph>
-        <glyph id="glyph23661499811" class="complex">
-            <clone/>
-            <bbox y="1170.0" x="3480.0" h="140.0" w="240.0"/>
-            <glyph id="glyph18495844089" class="nucleic acid feature">
-                <label text="R1"/>
-                <bbox y="1195.0" x="3500.0" h="70.0" w="60.0"/>
-            </glyph>
-            <glyph id="glyph16012348836" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="1195.0" x="3595.0" h="70.0" w="90.0"/>
-                <glyph id="glyph16012348836a" class="unit of information">
-                    <label text="N:2"/>
-                    <bbox y="1187.0" x="3602.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-        </glyph>
-        <glyph id="glyph180340303411" class="complex">
-            <clone/>
-            <bbox y="1170.0" x="4550.0" h="140.0" w="240.0"/>
-            <glyph id="glyph19243915656" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="1195.0" x="4665.0" h="70.0" w="90.0"/>
-                <glyph id="glyph19243915656a" class="unit of information">
-                    <label text="N:3"/>
-                    <bbox y="1187.0" x="4672.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-            <glyph id="glyph7361481589" class="nucleic acid feature">
-                <label text="R1"/>
-                <bbox y="1195.0" x="4570.0" h="70.0" w="60.0"/>
-            </glyph>
-        </glyph>
-        <glyph id="glyph66537175111" class="complex">
-            <clone/>
-            <bbox y="1170.0" x="6760.0" h="140.0" w="240.0"/>
-            <glyph id="glyph2006981876" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="1195.0" x="6875.0" h="70.0" w="90.0"/>
-                <glyph id="glyph2006981876a" class="unit of information">
-                    <label text="N:5"/>
-                    <bbox y="1187.0" x="6882.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-            <glyph id="glyph3174807859" class="nucleic acid feature">
-                <label text="R1"/>
-                <bbox y="1195.0" x="6780.0" h="70.0" w="60.0"/>
-            </glyph>
-        </glyph>
-        <glyph id="glyph71997820911" class="complex">
-            <clone/>
-            <bbox y="1170.0" x="7820.0" h="140.0" w="240.0"/>
-            <glyph id="glyph16730142386" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="1195.0" x="7935.0" h="70.0" w="90.0"/>
-                <glyph id="glyph16730142386a" class="unit of information">
-                    <label text="N:6"/>
-                    <bbox y="1187.0" x="7942.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-            <glyph id="glyph8141154649" class="nucleic acid feature">
-                <label text="R1"/>
-                <bbox y="1195.0" x="7840.0" h="70.0" w="60.0"/>
-            </glyph>
-        </glyph>
-        <glyph id="glyph3431489111" class="complex">
-            <clone/>
-            <bbox y="1170.0" x="5620.0" h="140.0" w="240.0"/>
-            <glyph id="glyph11217541666" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="1195.0" x="5735.0" h="70.0" w="90.0"/>
-                <glyph id="glyph11217541666a" class="unit of information">
-                    <label text="N:4"/>
-                    <bbox y="1187.0" x="5742.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-            <glyph id="glyph5735118739" class="nucleic acid feature">
-                <label text="R1"/>
-                <bbox y="1195.0" x="5640.0" h="70.0" w="60.0"/>
-            </glyph>
         </glyph>
         <glyph id="glyph193573146111" class="complex">
             <clone/>
@@ -820,11 +709,6 @@
             <bbox y="1359.0" x="8449.0" h="42.0" w="42.0"/>
             <port y="1338.0" x="8470.0" id="glyph585.1"/>
         </glyph>
-        <glyph id="glyph66869078516" class="process">
-            <bbox y="1228.0" x="8458.0" h="24.0" w="24.0"/>
-            <port y="1240.0" x="8494.0" id="glyph66869078516.2"/>
-            <port y="1240.0" x="8446.0" id="glyph66869078516.1"/>
-        </glyph>
         <glyph id="glyph637" orientation="vertical" class="and">
             <bbox y="1359.0" x="7369.0" h="42.0" w="42.0"/>
             <port y="1338.0" x="7390.0" id="glyph637.1"/>
@@ -871,22 +755,6 @@
             <clone/>
             <bbox y="2825.0" x="2905.0" h="70.0" w="90.0"/>
         </glyph>
-        <glyph id="glyph78617413711" class="complex">
-            <clone/>
-            <bbox y="2920.0" x="2280.0" h="140.0" w="240.0"/>
-            <glyph id="glyph14419076749" class="nucleic acid feature">
-                <label text="R2"/>
-                <bbox y="2945.0" x="2300.0" h="70.0" w="60.0"/>
-            </glyph>
-            <glyph id="glyph1833306086" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="2945.0" x="2395.0" h="70.0" w="90.0"/>
-                <glyph id="glyph1833306086a" class="unit of information">
-                    <label text="N:1"/>
-                    <bbox y="2937.0" x="2402.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-        </glyph>
         <glyph id="glyph5226463666" class="macromolecule">
             <label text="DnaA-ATP"/>
             <clone/>
@@ -906,86 +774,6 @@
             <label text="DnaA-ATP"/>
             <clone/>
             <bbox y="2835.0" x="7255.0" h="70.0" w="90.0"/>
-        </glyph>
-        <glyph id="glyph143287416411" class="complex">
-            <clone/>
-            <bbox y="2920.0" x="3440.0" h="140.0" w="240.0"/>
-            <glyph id="glyph14097413869" class="nucleic acid feature">
-                <label text="R2"/>
-                <bbox y="2945.0" x="3460.0" h="70.0" w="60.0"/>
-            </glyph>
-            <glyph id="glyph8365748496" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="2945.0" x="3555.0" h="70.0" w="90.0"/>
-                <glyph id="glyph8365748496a" class="unit of information">
-                    <label text="N:2"/>
-                    <bbox y="2937.0" x="3562.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-        </glyph>
-        <glyph id="glyph174635349011" class="complex">
-            <clone/>
-            <bbox y="2920.0" x="4510.0" h="140.0" w="240.0"/>
-            <glyph id="glyph15317151506" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="2945.0" x="4625.0" h="70.0" w="90.0"/>
-                <glyph id="glyph15317151506a" class="unit of information">
-                    <label text="N:3"/>
-                    <bbox y="2937.0" x="4632.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-            <glyph id="glyph6433965129" class="nucleic acid feature">
-                <label text="R2"/>
-                <bbox y="2945.0" x="4530.0" h="70.0" w="60.0"/>
-            </glyph>
-        </glyph>
-        <glyph id="glyph46220482411" class="complex">
-            <clone/>
-            <bbox y="2920.0" x="6720.0" h="140.0" w="240.0"/>
-            <glyph id="glyph3921962956" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="2945.0" x="6835.0" h="70.0" w="90.0"/>
-                <glyph id="glyph3921962956a" class="unit of information">
-                    <label text="N:5"/>
-                    <bbox y="2937.0" x="6842.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-            <glyph id="glyph15645866039" class="nucleic acid feature">
-                <label text="R2"/>
-                <bbox y="2945.0" x="6740.0" h="70.0" w="60.0"/>
-            </glyph>
-        </glyph>
-        <glyph id="glyph69431910811" class="complex">
-            <clone/>
-            <bbox y="2920.0" x="7780.0" h="140.0" w="240.0"/>
-            <glyph id="glyph7542267056" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="2945.0" x="7895.0" h="70.0" w="90.0"/>
-                <glyph id="glyph7542267056a" class="unit of information">
-                    <label text="N:6"/>
-                    <bbox y="2937.0" x="7902.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-            <glyph id="glyph17255628179" class="nucleic acid feature">
-                <label text="R2"/>
-                <bbox y="2945.0" x="7800.0" h="70.0" w="60.0"/>
-            </glyph>
-        </glyph>
-        <glyph id="glyph117134349311" class="complex">
-            <clone/>
-            <bbox y="2920.0" x="5580.0" h="140.0" w="240.0"/>
-            <glyph id="glyph650506206" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="2945.0" x="5695.0" h="70.0" w="90.0"/>
-                <glyph id="glyph650506206a" class="unit of information">
-                    <label text="N:4"/>
-                    <bbox y="2937.0" x="5702.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-            <glyph id="glyph11851914969" class="nucleic acid feature">
-                <label text="R2"/>
-                <bbox y="2945.0" x="5600.0" h="70.0" w="60.0"/>
-            </glyph>
         </glyph>
         <glyph id="glyph191202712711" class="complex">
             <clone/>
@@ -1651,11 +1439,6 @@
             <bbox y="3109.0" x="8409.0" h="42.0" w="42.0"/>
             <port y="3088.0" x="8430.0" id="glyph645.1"/>
         </glyph>
-        <glyph id="glyph121299098116" class="process">
-            <bbox y="2978.0" x="8418.0" h="24.0" w="24.0"/>
-            <port y="2990.0" x="8454.0" id="glyph121299098116.2"/>
-            <port y="2990.0" x="8406.0" id="glyph121299098116.1"/>
-        </glyph>
         <glyph id="glyph586" orientation="vertical" class="and">
             <bbox y="3109.0" x="7329.0" h="42.0" w="42.0"/>
             <port y="3088.0" x="7350.0" id="glyph586.1"/>
@@ -1702,22 +1485,6 @@
             <clone/>
             <bbox y="4585.0" x="2905.0" h="70.0" w="90.0"/>
         </glyph>
-        <glyph id="glyph106315786611" class="complex">
-            <clone/>
-            <bbox y="4680.0" x="2280.0" h="140.0" w="240.0"/>
-            <glyph id="glyph17734923269" class="nucleic acid feature">
-                <label text="R3"/>
-                <bbox y="4705.0" x="2300.0" h="70.0" w="60.0"/>
-            </glyph>
-            <glyph id="glyph13214986856" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="4705.0" x="2395.0" h="70.0" w="90.0"/>
-                <glyph id="glyph13214986856a" class="unit of information">
-                    <label text="N:1"/>
-                    <bbox y="4697.0" x="2402.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-        </glyph>
         <glyph id="glyph133993956" class="macromolecule">
             <label text="DnaA-ATP"/>
             <clone/>
@@ -1737,86 +1504,6 @@
             <label text="DnaA-ATP"/>
             <clone/>
             <bbox y="4595.0" x="7255.0" h="70.0" w="90.0"/>
-        </glyph>
-        <glyph id="glyph20548068611" class="complex">
-            <clone/>
-            <bbox y="4680.0" x="3440.0" h="140.0" w="240.0"/>
-            <glyph id="glyph6746248299" class="nucleic acid feature">
-                <label text="R3"/>
-                <bbox y="4705.0" x="3460.0" h="70.0" w="60.0"/>
-            </glyph>
-            <glyph id="glyph8996170196" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="4705.0" x="3555.0" h="70.0" w="90.0"/>
-                <glyph id="glyph8996170196a" class="unit of information">
-                    <label text="N:2"/>
-                    <bbox y="4697.0" x="3562.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-        </glyph>
-        <glyph id="glyph16408789411" class="complex">
-            <clone/>
-            <bbox y="4680.0" x="4510.0" h="140.0" w="240.0"/>
-            <glyph id="glyph14343495826" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="4705.0" x="4625.0" h="70.0" w="90.0"/>
-                <glyph id="glyph14343495826a" class="unit of information">
-                    <label text="N:3"/>
-                    <bbox y="4697.0" x="4632.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-            <glyph id="glyph11885000299" class="nucleic acid feature">
-                <label text="R3"/>
-                <bbox y="4705.0" x="4530.0" h="70.0" w="60.0"/>
-            </glyph>
-        </glyph>
-        <glyph id="glyph56104364311" class="complex">
-            <clone/>
-            <bbox y="4680.0" x="6720.0" h="140.0" w="240.0"/>
-            <glyph id="glyph11744840136" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="4705.0" x="6835.0" h="70.0" w="90.0"/>
-                <glyph id="glyph11744840136a" class="unit of information">
-                    <label text="N:5"/>
-                    <bbox y="4697.0" x="6842.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-            <glyph id="glyph7809001729" class="nucleic acid feature">
-                <label text="R3"/>
-                <bbox y="4705.0" x="6740.0" h="70.0" w="60.0"/>
-            </glyph>
-        </glyph>
-        <glyph id="glyph203512135911" class="complex">
-            <clone/>
-            <bbox y="4680.0" x="7780.0" h="140.0" w="240.0"/>
-            <glyph id="glyph12317520226" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="4705.0" x="7895.0" h="70.0" w="90.0"/>
-                <glyph id="glyph12317520226a" class="unit of information">
-                    <label text="N:6"/>
-                    <bbox y="4697.0" x="7902.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-            <glyph id="glyph11797221519" class="nucleic acid feature">
-                <label text="R3"/>
-                <bbox y="4705.0" x="7800.0" h="70.0" w="60.0"/>
-            </glyph>
-        </glyph>
-        <glyph id="glyph109608771011" class="complex">
-            <clone/>
-            <bbox y="4680.0" x="5580.0" h="140.0" w="240.0"/>
-            <glyph id="glyph8410287436" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="4705.0" x="5695.0" h="70.0" w="90.0"/>
-                <glyph id="glyph8410287436a" class="unit of information">
-                    <label text="N:4"/>
-                    <bbox y="4697.0" x="5702.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-            <glyph id="glyph17475191079" class="nucleic acid feature">
-                <label text="R3"/>
-                <bbox y="4705.0" x="5600.0" h="70.0" w="60.0"/>
-            </glyph>
         </glyph>
         <glyph id="glyph115631957311" class="complex">
             <clone/>
@@ -2482,11 +2169,6 @@
             <bbox y="4869.0" x="8409.0" h="42.0" w="42.0"/>
             <port y="4848.0" x="8430.0" id="glyph598.1"/>
         </glyph>
-        <glyph id="glyph177610555916" class="process">
-            <bbox y="4738.0" x="8418.0" h="24.0" w="24.0"/>
-            <port y="4750.0" x="8454.0" id="glyph177610555916.2"/>
-            <port y="4750.0" x="8406.0" id="glyph177610555916.1"/>
-        </glyph>
         <glyph id="glyph569" orientation="vertical" class="and">
             <bbox y="4869.0" x="7329.0" h="42.0" w="42.0"/>
             <port y="4848.0" x="7350.0" id="glyph569.1"/>
@@ -2533,22 +2215,6 @@
             <clone/>
             <bbox y="6305.0" x="2945.0" h="70.0" w="90.0"/>
         </glyph>
-        <glyph id="glyph211443447211" class="complex">
-            <clone/>
-            <bbox y="6400.0" x="2320.0" h="140.0" w="240.0"/>
-            <glyph id="glyph14589210369" class="nucleic acid feature">
-                <label text="R4"/>
-                <bbox y="6425.0" x="2340.0" h="70.0" w="60.0"/>
-            </glyph>
-            <glyph id="glyph14116234456" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="6425.0" x="2435.0" h="70.0" w="90.0"/>
-                <glyph id="glyph14116234456a" class="unit of information">
-                    <label text="N:1"/>
-                    <bbox y="6417.0" x="2442.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-        </glyph>
         <glyph id="glyph4750064036" class="macromolecule">
             <label text="DnaA-ATP"/>
             <clone/>
@@ -2568,86 +2234,6 @@
             <label text="DnaA-ATP"/>
             <clone/>
             <bbox y="6315.0" x="7295.0" h="70.0" w="90.0"/>
-        </glyph>
-        <glyph id="glyph25334418611" class="complex">
-            <clone/>
-            <bbox y="6400.0" x="3480.0" h="140.0" w="240.0"/>
-            <glyph id="glyph5450721349" class="nucleic acid feature">
-                <label text="R4"/>
-                <bbox y="6425.0" x="3500.0" h="70.0" w="60.0"/>
-            </glyph>
-            <glyph id="glyph21317523956" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="6425.0" x="3595.0" h="70.0" w="90.0"/>
-                <glyph id="glyph21317523956a" class="unit of information">
-                    <label text="N:2"/>
-                    <bbox y="6417.0" x="3602.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-        </glyph>
-        <glyph id="glyph195566200411" class="complex">
-            <clone/>
-            <bbox y="6400.0" x="4550.0" h="140.0" w="240.0"/>
-            <glyph id="glyph16423938456" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="6425.0" x="4665.0" h="70.0" w="90.0"/>
-                <glyph id="glyph16423938456a" class="unit of information">
-                    <label text="N:3"/>
-                    <bbox y="6417.0" x="4672.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-            <glyph id="glyph9688738469" class="nucleic acid feature">
-                <label text="R4"/>
-                <bbox y="6425.0" x="4570.0" h="70.0" w="60.0"/>
-            </glyph>
-        </glyph>
-        <glyph id="glyph10994231211" class="complex">
-            <clone/>
-            <bbox y="6400.0" x="6760.0" h="140.0" w="240.0"/>
-            <glyph id="glyph1892558046" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="6425.0" x="6875.0" h="70.0" w="90.0"/>
-                <glyph id="glyph1892558046a" class="unit of information">
-                    <label text="N:5"/>
-                    <bbox y="6417.0" x="6882.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-            <glyph id="glyph17276615239" class="nucleic acid feature">
-                <label text="R4"/>
-                <bbox y="6425.0" x="6780.0" h="70.0" w="60.0"/>
-            </glyph>
-        </glyph>
-        <glyph id="glyph176284896611" class="complex">
-            <clone/>
-            <bbox y="6400.0" x="7820.0" h="140.0" w="240.0"/>
-            <glyph id="glyph20883618446" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="6425.0" x="7935.0" h="70.0" w="90.0"/>
-                <glyph id="glyph20883618446a" class="unit of information">
-                    <label text="N:6"/>
-                    <bbox y="6417.0" x="7942.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-            <glyph id="glyph14312031939" class="nucleic acid feature">
-                <label text="R4"/>
-                <bbox y="6425.0" x="7840.0" h="70.0" w="60.0"/>
-            </glyph>
-        </glyph>
-        <glyph id="glyph113385501211" class="complex">
-            <clone/>
-            <bbox y="6400.0" x="5620.0" h="140.0" w="240.0"/>
-            <glyph id="glyph9615498926" class="macromolecule">
-                <label text="DnaA-ATP"/>
-                <bbox y="6425.0" x="5735.0" h="70.0" w="90.0"/>
-                <glyph id="glyph9615498926a" class="unit of information">
-                    <label text="N:4"/>
-                    <bbox y="6417.0" x="5742.0" h="16.0" w="31.0"/>
-                </glyph>
-            </glyph>
-            <glyph id="glyph15677090289" class="nucleic acid feature">
-                <label text="R4"/>
-                <bbox y="6425.0" x="5640.0" h="70.0" w="60.0"/>
-            </glyph>
         </glyph>
         <glyph id="glyph117106310711" class="complex">
             <clone/>
@@ -3484,6 +3070,7 @@
         </glyph>
         <glyph id="glyph17989658136" class="macromolecule">
             <label text="DnaA-ADP"/>
+            <clone/>
             <bbox y="1915.0" x="10355.0" h="70.0" w="90.0"/>
         </glyph>
         <glyph id="glyph12103557066" class="macromolecule">
@@ -3503,6 +3090,1128 @@
         <glyph id="glyph558" class="simple chemical">
             <label text="ADP"/>
             <bbox y="1750.0" x="10500.0" h="60.0" w="60.0"/>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="2920.0" x="5580.0" h="140.0" w="240.0"/>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="2945.0" x="5695.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:4"/>
+                    <bbox y="2937.0" x="5702.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R2"/>
+                <bbox y="2945.0" x="5600.0" h="70.0" w="60.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="2540.0" x="5790.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R2"/>
+                <bbox y="2565.0" x="5820.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="2565.0" x="5915.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:4"/>
+                    <bbox y="2557.0" x="5922.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="2565.0" x="6045.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="2765.0" x="5605.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph11851914969" class="process">
+            <bbox y="2788.0" x="5818.0" h="24.0" w="24.0"/>
+            <port y="2800.0" x="5806.0" id="glyph11851914969.1"/>
+            <port y="2800.0" x="5854.0" id="glyph11851914969.2"/>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="2510.0" x="4760.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R2"/>
+                <bbox y="2535.0" x="4790.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="2535.0" x="5015.0" h="70.0" w="90.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="2535.0" x="4885.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:3"/>
+                    <bbox y="2527.0" x="4892.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="2735.0" x="4525.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph174635349011" class="complex">
+            <clone/>
+            <bbox y="2920.0" x="4510.0" h="140.0" w="240.0"/>
+            <glyph id="glyph15317151506" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="2945.0" x="4625.0" h="70.0" w="90.0"/>
+                <glyph id="glyph15317151506a" class="unit of information">
+                    <label text="N:3"/>
+                    <bbox y="2937.0" x="4632.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph6433965129" class="nucleic acid feature">
+                <label text="R2"/>
+                <bbox y="2945.0" x="4530.0" h="70.0" w="60.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" class="process">
+            <bbox y="2758.0" x="4738.0" h="24.0" w="24.0"/>
+            <port y="2770.0" x="4774.0" id="glyph11851914969.2"/>
+            <port y="2770.0" x="4726.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="2500.0" x="3690.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R2"/>
+                <bbox y="2525.0" x="3720.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="2525.0" x="3815.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:2"/>
+                    <bbox y="2517.0" x="3822.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="2525.0" x="3945.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="2725.0" x="3455.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="2745.0" x="7815.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="2745.0" x="6745.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph9435405196" class="macromolecule">
+            <label text="DnaA-ATP"/>
+            <clone/>
+            <bbox y="4585.0" x="8335.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph177610555916" class="process">
+            <bbox y="4738.0" x="8418.0" h="24.0" w="24.0"/>
+            <port y="4750.0" x="8454.0" id="glyph177610555916.2"/>
+            <port y="4750.0" x="8406.0" id="glyph177610555916.1"/>
+        </glyph>
+        <glyph id="glyph17540580456" class="macromolecule">
+            <label text="DnaA-ATP"/>
+            <clone/>
+            <bbox y="2825.0" x="8335.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph121299098116" class="process">
+            <bbox y="2978.0" x="8418.0" h="24.0" w="24.0"/>
+            <port y="2990.0" x="8454.0" id="glyph121299098116.2"/>
+            <port y="2990.0" x="8406.0" id="glyph121299098116.1"/>
+        </glyph>
+        <glyph id="glyph4616270726" class="macromolecule">
+            <label text="DnaA-ATP"/>
+            <clone/>
+            <bbox y="1075.0" x="8375.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph66869078516" class="process">
+            <bbox y="1228.0" x="8458.0" h="24.0" w="24.0"/>
+            <port y="1240.0" x="8494.0" id="glyph66869078516.2"/>
+            <port y="1240.0" x="8446.0" id="glyph66869078516.1"/>
+        </glyph>
+        <glyph id="glyph69431910811" class="complex">
+            <clone/>
+            <bbox y="2920.0" x="7780.0" h="140.0" w="240.0"/>
+            <glyph id="glyph7542267056" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="2945.0" x="7895.0" h="70.0" w="90.0"/>
+                <glyph id="glyph7542267056a" class="unit of information">
+                    <label text="N:6"/>
+                    <bbox y="2937.0" x="7902.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph17255628179" class="nucleic acid feature">
+                <label text="R2"/>
+                <bbox y="2945.0" x="7800.0" h="70.0" w="60.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph46220482411" class="complex">
+            <clone/>
+            <bbox y="2920.0" x="6720.0" h="140.0" w="240.0"/>
+            <glyph id="glyph3921962956" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="2945.0" x="6835.0" h="70.0" w="90.0"/>
+                <glyph id="glyph3921962956a" class="unit of information">
+                    <label text="N:5"/>
+                    <bbox y="2937.0" x="6842.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph15645866039" class="nucleic acid feature">
+                <label text="R2"/>
+                <bbox y="2945.0" x="6740.0" h="70.0" w="60.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph143287416411" class="complex">
+            <clone/>
+            <bbox y="2920.0" x="3440.0" h="140.0" w="240.0"/>
+            <glyph id="glyph14097413869" class="nucleic acid feature">
+                <label text="R2"/>
+                <bbox y="2945.0" x="3460.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph8365748496" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="2945.0" x="3555.0" h="70.0" w="90.0"/>
+                <glyph id="glyph8365748496a" class="unit of information">
+                    <label text="N:2"/>
+                    <bbox y="2937.0" x="3562.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" class="process">
+            <bbox y="2748.0" x="3668.0" h="24.0" w="24.0"/>
+            <port y="2760.0" x="3704.0" id="glyph11851914969.2"/>
+            <port y="2760.0" x="3656.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph11851914969" class="process">
+            <bbox y="2768.0" x="8028.0" h="24.0" w="24.0"/>
+            <port y="2780.0" x="8016.0" id="glyph11851914969.1"/>
+            <port y="2780.0" x="8064.0" id="glyph11851914969.2"/>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="2520.0" x="8050.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R2"/>
+                <bbox y="2545.0" x="8080.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="2545.0" x="8175.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:6"/>
+                    <bbox y="2537.0" x="8182.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="2545.0" x="8305.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" class="process">
+            <bbox y="2768.0" x="6958.0" h="24.0" w="24.0"/>
+            <port y="2780.0" x="6946.0" id="glyph11851914969.1"/>
+            <port y="2780.0" x="6994.0" id="glyph11851914969.2"/>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="2520.0" x="6980.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R2"/>
+                <bbox y="2545.0" x="7010.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="2545.0" x="7105.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:5"/>
+                    <bbox y="2537.0" x="7112.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="2545.0" x="7235.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="2530.0" x="2530.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R2"/>
+                <bbox y="2555.0" x="2560.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="2555.0" x="2655.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:1"/>
+                    <bbox y="2547.0" x="2662.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="2555.0" x="2785.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="2755.0" x="2295.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph78617413711" class="complex">
+            <clone/>
+            <bbox y="2920.0" x="2280.0" h="140.0" w="240.0"/>
+            <glyph id="glyph14419076749" class="nucleic acid feature">
+                <label text="R2"/>
+                <bbox y="2945.0" x="2300.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph1833306086" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="2945.0" x="2395.0" h="70.0" w="90.0"/>
+                <glyph id="glyph1833306086a" class="unit of information">
+                    <label text="N:1"/>
+                    <bbox y="2937.0" x="2402.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" class="process">
+            <bbox y="2778.0" x="2508.0" h="24.0" w="24.0"/>
+            <port y="2790.0" x="2544.0" id="glyph11851914969.2"/>
+            <port y="2790.0" x="2496.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="750.0" x="4810.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R1"/>
+                <bbox y="775.0" x="4840.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="775.0" x="4935.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:3"/>
+                    <bbox y="767.0" x="4942.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="775.0" x="5065.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="760.0" x="8100.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R1"/>
+                <bbox y="785.0" x="8130.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="785.0" x="8225.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:6"/>
+                    <bbox y="777.0" x="8232.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="785.0" x="8355.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="780.0" x="5840.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R1"/>
+                <bbox y="805.0" x="5870.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="805.0" x="6095.0" h="70.0" w="90.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="805.0" x="5965.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:4"/>
+                    <bbox y="797.0" x="5972.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="740.0" x="3740.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R1"/>
+                <bbox y="765.0" x="3770.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="765.0" x="3865.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:2"/>
+                    <bbox y="757.0" x="3872.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="765.0" x="3995.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="760.0" x="7030.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R1"/>
+                <bbox y="785.0" x="7060.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="785.0" x="7155.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:5"/>
+                    <bbox y="777.0" x="7162.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="785.0" x="7285.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="770.0" x="2580.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R1"/>
+                <bbox y="795.0" x="2610.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="795.0" x="2705.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:1"/>
+                    <bbox y="787.0" x="2712.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="795.0" x="2835.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="995.0" x="2345.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="985.0" x="7865.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="1005.0" x="5655.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="965.0" x="3505.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="985.0" x="6795.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="975.0" x="4575.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="4250.0" x="4770.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R3"/>
+                <bbox y="4275.0" x="4800.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="4275.0" x="4895.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:3"/>
+                    <bbox y="4267.0" x="4902.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="4275.0" x="5025.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="4260.0" x="8060.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R3"/>
+                <bbox y="4285.0" x="8090.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="4285.0" x="8185.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:6"/>
+                    <bbox y="4277.0" x="8192.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="4285.0" x="8315.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="4280.0" x="5800.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R3"/>
+                <bbox y="4305.0" x="5830.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="4305.0" x="6055.0" h="70.0" w="90.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="4305.0" x="5925.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:4"/>
+                    <bbox y="4297.0" x="5932.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="4240.0" x="3700.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R3"/>
+                <bbox y="4265.0" x="3730.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="4265.0" x="3825.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:2"/>
+                    <bbox y="4257.0" x="3832.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="4265.0" x="3955.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="4260.0" x="6990.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R3"/>
+                <bbox y="4285.0" x="7020.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="4285.0" x="7115.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:5"/>
+                    <bbox y="4277.0" x="7122.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="4285.0" x="7245.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="4270.0" x="2540.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R3"/>
+                <bbox y="4295.0" x="2570.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="4295.0" x="2665.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:1"/>
+                    <bbox y="4287.0" x="2672.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="4295.0" x="2795.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="4495.0" x="2305.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="4485.0" x="7825.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="4505.0" x="5615.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="4465.0" x="3465.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="4485.0" x="6755.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="4475.0" x="4535.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="5960.0" x="4810.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R4"/>
+                <bbox y="5985.0" x="4840.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="5985.0" x="4935.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:3"/>
+                    <bbox y="5977.0" x="4942.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="5985.0" x="5065.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="5970.0" x="8100.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R4"/>
+                <bbox y="5995.0" x="8130.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="5995.0" x="8225.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:6"/>
+                    <bbox y="5987.0" x="8232.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="5995.0" x="8355.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="5990.0" x="5840.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R4"/>
+                <bbox y="6015.0" x="5870.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="6015.0" x="6095.0" h="70.0" w="90.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="6015.0" x="5965.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:4"/>
+                    <bbox y="6007.0" x="5972.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="5950.0" x="3740.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R4"/>
+                <bbox y="5975.0" x="3770.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="5975.0" x="3865.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:2"/>
+                    <bbox y="5967.0" x="3872.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="5975.0" x="3995.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="5970.0" x="7030.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R4"/>
+                <bbox y="5995.0" x="7060.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="5995.0" x="7155.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:5"/>
+                    <bbox y="5987.0" x="7162.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="5995.0" x="7285.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph117134349311" class="complex">
+            <clone/>
+            <bbox y="5980.0" x="2580.0" h="140.0" w="400.0"/>
+            <glyph id="glyph11851914969" class="nucleic acid feature">
+                <label text="R4"/>
+                <bbox y="6005.0" x="2610.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="6005.0" x="2705.0" h="70.0" w="90.0"/>
+                <glyph id="glyph650506206a" class="unit of information">
+                    <label text="N:1"/>
+                    <bbox y="5997.0" x="2712.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph650506206" class="macromolecule">
+                <label text="DnaA-ADP"/>
+                <bbox y="6005.0" x="2835.0" h="70.0" w="90.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="6205.0" x="2345.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="6195.0" x="7865.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="6215.0" x="5655.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="6175.0" x="3505.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="6195.0" x="6795.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph15976189666" class="macromolecule">
+            <label text="DnaA-ADP"/>
+            <clone/>
+            <bbox y="6185.0" x="4575.0" h="70.0" w="90.0"/>
+        </glyph>
+        <glyph id="glyph211443447211" class="complex">
+            <clone/>
+            <bbox y="6400.0" x="2320.0" h="140.0" w="240.0"/>
+            <glyph id="glyph14589210369" class="nucleic acid feature">
+                <label text="R4"/>
+                <bbox y="6425.0" x="2340.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph14116234456" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="6425.0" x="2435.0" h="70.0" w="90.0"/>
+                <glyph id="glyph14116234456a" class="unit of information">
+                    <label text="N:1"/>
+                    <bbox y="6417.0" x="2442.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" orientation="vertical" class="process">
+            <bbox y="6228.0" x="2558.0" h="24.0" w="24.0"/>
+            <port y="2790.0" x="2544.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph25334418611" class="complex">
+            <clone/>
+            <bbox y="6400.0" x="3480.0" h="140.0" w="240.0"/>
+            <glyph id="glyph5450721349" class="nucleic acid feature">
+                <label text="R4"/>
+                <bbox y="6425.0" x="3500.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph21317523956" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="6425.0" x="3595.0" h="70.0" w="90.0"/>
+                <glyph id="glyph21317523956a" class="unit of information">
+                    <label text="N:2"/>
+                    <bbox y="6417.0" x="3602.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" orientation="vertical" class="process">
+            <bbox y="6198.0" x="3718.0" h="24.0" w="24.0"/>
+            <port y="2760.0" x="3704.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph195566200411" class="complex">
+            <clone/>
+            <bbox y="6400.0" x="4550.0" h="140.0" w="240.0"/>
+            <glyph id="glyph16423938456" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="6425.0" x="4665.0" h="70.0" w="90.0"/>
+                <glyph id="glyph16423938456a" class="unit of information">
+                    <label text="N:3"/>
+                    <bbox y="6417.0" x="4672.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph9688738469" class="nucleic acid feature">
+                <label text="R4"/>
+                <bbox y="6425.0" x="4570.0" h="70.0" w="60.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" orientation="vertical" class="process">
+            <bbox y="6208.0" x="4788.0" h="24.0" w="24.0"/>
+            <port y="2770.0" x="4774.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph113385501211" class="complex">
+            <clone/>
+            <bbox y="6400.0" x="5620.0" h="140.0" w="240.0"/>
+            <glyph id="glyph9615498926" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="6425.0" x="5735.0" h="70.0" w="90.0"/>
+                <glyph id="glyph9615498926a" class="unit of information">
+                    <label text="N:4"/>
+                    <bbox y="6417.0" x="5742.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph15677090289" class="nucleic acid feature">
+                <label text="R4"/>
+                <bbox y="6425.0" x="5640.0" h="70.0" w="60.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" orientation="vertical" class="process">
+            <bbox y="6238.0" x="5868.0" h="24.0" w="24.0"/>
+            <port y="2800.0" x="5854.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph10994231211" class="complex">
+            <clone/>
+            <bbox y="6400.0" x="6760.0" h="140.0" w="240.0"/>
+            <glyph id="glyph1892558046" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="6425.0" x="6875.0" h="70.0" w="90.0"/>
+                <glyph id="glyph1892558046a" class="unit of information">
+                    <label text="N:5"/>
+                    <bbox y="6417.0" x="6882.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph17276615239" class="nucleic acid feature">
+                <label text="R4"/>
+                <bbox y="6425.0" x="6780.0" h="70.0" w="60.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" orientation="vertical" class="process">
+            <bbox y="6218.0" x="7008.0" h="24.0" w="24.0"/>
+            <port y="2780.0" x="6994.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph176284896611" class="complex">
+            <clone/>
+            <bbox y="6400.0" x="7820.0" h="140.0" w="240.0"/>
+            <glyph id="glyph20883618446" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="6425.0" x="7935.0" h="70.0" w="90.0"/>
+                <glyph id="glyph20883618446a" class="unit of information">
+                    <label text="N:6"/>
+                    <bbox y="6417.0" x="7942.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph14312031939" class="nucleic acid feature">
+                <label text="R4"/>
+                <bbox y="6425.0" x="7840.0" h="70.0" w="60.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" orientation="vertical" class="process">
+            <bbox y="6218.0" x="8078.0" h="24.0" w="24.0"/>
+            <port y="2780.0" x="8064.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph106315786611" class="complex">
+            <clone/>
+            <bbox y="4680.0" x="2280.0" h="140.0" w="240.0"/>
+            <glyph id="glyph17734923269" class="nucleic acid feature">
+                <label text="R3"/>
+                <bbox y="4705.0" x="2300.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph13214986856" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="4705.0" x="2395.0" h="70.0" w="90.0"/>
+                <glyph id="glyph13214986856a" class="unit of information">
+                    <label text="N:1"/>
+                    <bbox y="4697.0" x="2402.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" orientation="vertical" class="process">
+            <bbox y="4518.0" x="2518.0" h="24.0" w="24.0"/>
+            <port y="2790.0" x="2544.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph20548068611" class="complex">
+            <clone/>
+            <bbox y="4680.0" x="3440.0" h="140.0" w="240.0"/>
+            <glyph id="glyph6746248299" class="nucleic acid feature">
+                <label text="R3"/>
+                <bbox y="4705.0" x="3460.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph8996170196" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="4705.0" x="3555.0" h="70.0" w="90.0"/>
+                <glyph id="glyph8996170196a" class="unit of information">
+                    <label text="N:2"/>
+                    <bbox y="4697.0" x="3562.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" orientation="vertical" class="process">
+            <bbox y="4488.0" x="3678.0" h="24.0" w="24.0"/>
+            <port y="2760.0" x="3704.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph16408789411" class="complex">
+            <clone/>
+            <bbox y="4680.0" x="4510.0" h="140.0" w="240.0"/>
+            <glyph id="glyph14343495826" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="4705.0" x="4625.0" h="70.0" w="90.0"/>
+                <glyph id="glyph14343495826a" class="unit of information">
+                    <label text="N:3"/>
+                    <bbox y="4697.0" x="4632.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph11885000299" class="nucleic acid feature">
+                <label text="R3"/>
+                <bbox y="4705.0" x="4530.0" h="70.0" w="60.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" orientation="vertical" class="process">
+            <bbox y="4498.0" x="4748.0" h="24.0" w="24.0"/>
+            <port y="2770.0" x="4774.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph109608771011" class="complex">
+            <clone/>
+            <bbox y="4680.0" x="5580.0" h="140.0" w="240.0"/>
+            <glyph id="glyph8410287436" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="4705.0" x="5695.0" h="70.0" w="90.0"/>
+                <glyph id="glyph8410287436a" class="unit of information">
+                    <label text="N:4"/>
+                    <bbox y="4697.0" x="5702.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph17475191079" class="nucleic acid feature">
+                <label text="R3"/>
+                <bbox y="4705.0" x="5600.0" h="70.0" w="60.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" orientation="vertical" class="process">
+            <bbox y="4528.0" x="5828.0" h="24.0" w="24.0"/>
+            <port y="2800.0" x="5854.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph56104364311" class="complex">
+            <clone/>
+            <bbox y="4680.0" x="6720.0" h="140.0" w="240.0"/>
+            <glyph id="glyph11744840136" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="4705.0" x="6835.0" h="70.0" w="90.0"/>
+                <glyph id="glyph11744840136a" class="unit of information">
+                    <label text="N:5"/>
+                    <bbox y="4697.0" x="6842.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph7809001729" class="nucleic acid feature">
+                <label text="R3"/>
+                <bbox y="4705.0" x="6740.0" h="70.0" w="60.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" orientation="vertical" class="process">
+            <bbox y="4508.0" x="6968.0" h="24.0" w="24.0"/>
+            <port y="2780.0" x="6994.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph203512135911" class="complex">
+            <clone/>
+            <bbox y="4680.0" x="7780.0" h="140.0" w="240.0"/>
+            <glyph id="glyph12317520226" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="4705.0" x="7895.0" h="70.0" w="90.0"/>
+                <glyph id="glyph12317520226a" class="unit of information">
+                    <label text="N:6"/>
+                    <bbox y="4697.0" x="7902.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph11797221519" class="nucleic acid feature">
+                <label text="R3"/>
+                <bbox y="4705.0" x="7800.0" h="70.0" w="60.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" orientation="vertical" class="process">
+            <bbox y="4508.0" x="8038.0" h="24.0" w="24.0"/>
+            <port y="2780.0" x="8064.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph71997820911" class="complex">
+            <clone/>
+            <bbox y="1170.0" x="7820.0" h="140.0" w="240.0"/>
+            <glyph id="glyph16730142386" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="1195.0" x="7935.0" h="70.0" w="90.0"/>
+                <glyph id="glyph16730142386a" class="unit of information">
+                    <label text="N:6"/>
+                    <bbox y="1187.0" x="7942.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph8141154649" class="nucleic acid feature">
+                <label text="R1"/>
+                <bbox y="1195.0" x="7840.0" h="70.0" w="60.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" class="process">
+            <bbox y="1008.0" x="8078.0" h="24.0" w="24.0"/>
+            <port y="1020.0" x="8114.0" id="glyph11851914969.2"/>
+            <port y="1020.0" x="8066.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph66537175111" class="complex">
+            <clone/>
+            <bbox y="1170.0" x="6760.0" h="140.0" w="240.0"/>
+            <glyph id="glyph2006981876" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="1195.0" x="6875.0" h="70.0" w="90.0"/>
+                <glyph id="glyph2006981876a" class="unit of information">
+                    <label text="N:5"/>
+                    <bbox y="1187.0" x="6882.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph3174807859" class="nucleic acid feature">
+                <label text="R1"/>
+                <bbox y="1195.0" x="6780.0" h="70.0" w="60.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" class="process">
+            <bbox y="1008.0" x="7008.0" h="24.0" w="24.0"/>
+            <port y="1020.0" x="7044.0" id="glyph11851914969.2"/>
+            <port y="1020.0" x="6996.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph3431489111" class="complex">
+            <clone/>
+            <bbox y="1170.0" x="5620.0" h="140.0" w="240.0"/>
+            <glyph id="glyph11217541666" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="1195.0" x="5735.0" h="70.0" w="90.0"/>
+                <glyph id="glyph11217541666a" class="unit of information">
+                    <label text="N:4"/>
+                    <bbox y="1187.0" x="5742.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph5735118739" class="nucleic acid feature">
+                <label text="R1"/>
+                <bbox y="1195.0" x="5640.0" h="70.0" w="60.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" class="process">
+            <bbox y="1028.0" x="5868.0" h="24.0" w="24.0"/>
+            <port y="1040.0" x="5904.0" id="glyph11851914969.2"/>
+            <port y="1040.0" x="5856.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph180340303411" class="complex">
+            <clone/>
+            <bbox y="1170.0" x="4550.0" h="140.0" w="240.0"/>
+            <glyph id="glyph19243915656" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="1195.0" x="4665.0" h="70.0" w="90.0"/>
+                <glyph id="glyph19243915656a" class="unit of information">
+                    <label text="N:3"/>
+                    <bbox y="1187.0" x="4672.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph7361481589" class="nucleic acid feature">
+                <label text="R1"/>
+                <bbox y="1195.0" x="4570.0" h="70.0" w="60.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" class="process">
+            <bbox y="998.0" x="4788.0" h="24.0" w="24.0"/>
+            <port y="1010.0" x="4824.0" id="glyph11851914969.2"/>
+            <port y="1010.0" x="4776.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph23661499811" class="complex">
+            <clone/>
+            <bbox y="1170.0" x="3480.0" h="140.0" w="240.0"/>
+            <glyph id="glyph18495844089" class="nucleic acid feature">
+                <label text="R1"/>
+                <bbox y="1195.0" x="3500.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph16012348836" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="1195.0" x="3595.0" h="70.0" w="90.0"/>
+                <glyph id="glyph16012348836a" class="unit of information">
+                    <label text="N:2"/>
+                    <bbox y="1187.0" x="3602.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" class="process">
+            <bbox y="988.0" x="3718.0" h="24.0" w="24.0"/>
+            <port y="1000.0" x="3754.0" id="glyph11851914969.2"/>
+            <port y="1000.0" x="3706.0" id="glyph11851914969.1"/>
+        </glyph>
+        <glyph id="glyph61061475911" class="complex">
+            <clone/>
+            <bbox y="1170.0" x="2320.0" h="140.0" w="240.0"/>
+            <glyph id="glyph9528133419" class="nucleic acid feature">
+                <label text="R1"/>
+                <bbox y="1195.0" x="2340.0" h="70.0" w="60.0"/>
+            </glyph>
+            <glyph id="glyph19947130626" class="macromolecule">
+                <label text="DnaA-ATP"/>
+                <bbox y="1195.0" x="2435.0" h="70.0" w="90.0"/>
+                <glyph id="glyph19947130626a" class="unit of information">
+                    <label text="N:1"/>
+                    <bbox y="1187.0" x="2442.0" h="16.0" w="31.0"/>
+                </glyph>
+            </glyph>
+        </glyph>
+        <glyph id="glyph11851914969" class="process">
+            <bbox y="1018.0" x="2558.0" h="24.0" w="24.0"/>
+            <port y="1030.0" x="2594.0" id="glyph11851914969.2"/>
+            <port y="1030.0" x="2546.0" id="glyph11851914969.1"/>
         </glyph>
         <arc target="glyph83523214116.1" source="glyph9360964829" id="arc6374582290" class="consumption">
             <start y="1240.0" x="2200.0"/>
@@ -4920,6 +5629,306 @@
         <arc target="glyph558" source="glyph679.1" id="arc341" class="production">
             <start y="1816.0" x="10410.0"/>
             <end y="1793.4164" x="10503.167"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph117134349311" id="arc645" class="consumption">
+            <start y="2920.0" x="5739.0527"/>
+            <end y="2800.0" x="5806.0"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.2" id="arc646" class="production">
+            <start y="2800.0" x="5854.0"/>
+            <end y="2680.0" x="5931.0527"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc647" class="consumption">
+            <start y="2800.0" x="5695.0"/>
+            <end y="2800.0" x="5806.0"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.2" id="arc648" class="production">
+            <start y="2770.0" x="4774.0"/>
+            <end y="2650.0" x="4882.6313"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc649" class="consumption">
+            <start y="2770.0" x="4615.0"/>
+            <end y="2770.0" x="4726.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph174635349011" id="arc650" class="consumption">
+            <start y="2920.0" x="4660.5454"/>
+            <end y="2770.0" x="4726.0"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.2" id="arc651" class="production">
+            <start y="2760.0" x="3704.0"/>
+            <end y="2640.0" x="3812.6316"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc652" class="consumption">
+            <start y="2760.0" x="3545.0"/>
+            <end y="2760.0" x="3656.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc653" class="consumption">
+            <start y="2780.0" x="7905.0"/>
+            <end y="2780.0" x="8016.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc654" class="consumption">
+            <start y="2780.0" x="6835.0"/>
+            <end y="2780.0" x="6946.0"/>
+        </arc>
+        <arc target="glyph177610555916.1" source="glyph9435405196" id="arc655" class="consumption">
+            <start y="4655.0" x="8387.0"/>
+            <end y="4750.0" x="8406.0"/>
+        </arc>
+        <arc target="glyph121299098116.1" source="glyph17540580456" id="arc656" class="consumption">
+            <start y="2895.0" x="8387.0"/>
+            <end y="2990.0" x="8406.0"/>
+        </arc>
+        <arc target="glyph66869078516.1" source="glyph4616270726" id="arc657" class="consumption">
+            <start y="1145.0" x="8427.0"/>
+            <end y="1240.0" x="8446.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph69431910811" id="arc658" class="consumption">
+            <start y="2920.0" x="7938.6665"/>
+            <end y="2780.0" x="8016.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph46220482411" id="arc659" class="consumption">
+            <start y="2920.0" x="6875.3335"/>
+            <end y="2780.0" x="6946.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph143287416411" id="arc660" class="consumption">
+            <start y="2920.0" x="3589.2173"/>
+            <end y="2760.0" x="3656.0"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.2" id="arc661" class="production">
+            <start y="2780.0" x="8064.0"/>
+            <end y="2660.0" x="8172.6313"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.2" id="arc662" class="production">
+            <start y="2780.0" x="6994.0"/>
+            <end y="2660.0" x="7102.6313"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.2" id="arc663" class="production">
+            <start y="2790.0" x="2544.0"/>
+            <end y="2670.0" x="2652.6316"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc664" class="consumption">
+            <start y="2790.0" x="2385.0"/>
+            <end y="2790.0" x="2496.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph78617413711" id="arc665" class="consumption">
+            <start y="2920.0" x="2433.6"/>
+            <end y="2790.0" x="2496.0"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.2" id="arc666" class="production">
+            <start y="1010.0" x="4824.0"/>
+            <end y="890.0" x="4932.6313"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.2" id="arc667" class="production">
+            <start y="1020.0" x="8114.0"/>
+            <end y="900.0" x="8222.632"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.2" id="arc668" class="production">
+            <start y="1040.0" x="5904.0"/>
+            <end y="920.0" x="5981.0527"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.2" id="arc669" class="production">
+            <start y="1000.0" x="3754.0"/>
+            <end y="880.0" x="3862.6316"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.2" id="arc670" class="production">
+            <start y="1020.0" x="7044.0"/>
+            <end y="900.0" x="7152.6313"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.2" id="arc671" class="production">
+            <start y="1030.0" x="2594.0"/>
+            <end y="910.0" x="2702.6316"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc672" class="consumption">
+            <start y="1030.0" x="2435.0"/>
+            <end y="1030.0" x="2546.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc673" class="consumption">
+            <start y="1020.0" x="7955.0"/>
+            <end y="1020.0" x="8066.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc674" class="consumption">
+            <start y="1040.0" x="5745.0"/>
+            <end y="1040.0" x="5856.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc675" class="consumption">
+            <start y="1000.0" x="3595.0"/>
+            <end y="1000.0" x="3706.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc676" class="consumption">
+            <start y="1020.0" x="6885.0"/>
+            <end y="1020.0" x="6996.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc677" class="consumption">
+            <start y="1010.0" x="4665.0"/>
+            <end y="1010.0" x="4776.0"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.1" id="arc678" class="consumption">
+            <start y="2770.0" x="4774.0"/>
+            <end y="4390.0" x="4892.6313"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.1" id="arc679" class="consumption">
+            <start y="2780.0" x="8064.0"/>
+            <end y="4400.0" x="8182.6313"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.1" id="arc680" class="consumption">
+            <start y="2800.0" x="5854.0"/>
+            <end y="4420.0" x="5941.0527"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.1" id="arc681" class="consumption">
+            <start y="2760.0" x="3704.0"/>
+            <end y="4380.0" x="3822.6316"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.1" id="arc682" class="consumption">
+            <start y="2780.0" x="6994.0"/>
+            <end y="4400.0" x="7112.6313"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.1" id="arc683" class="consumption">
+            <start y="2790.0" x="2544.0"/>
+            <end y="4410.0" x="2662.6316"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc684" class="consumption">
+            <start y="4530.0" x="2395.0"/>
+            <end y="4530.0" x="2506.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc685" class="consumption">
+            <start y="4520.0" x="7915.0"/>
+            <end y="4520.0" x="8026.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc686" class="consumption">
+            <start y="4540.0" x="5705.0"/>
+            <end y="4540.0" x="5816.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc687" class="consumption">
+            <start y="4500.0" x="3555.0"/>
+            <end y="4500.0" x="3666.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc688" class="consumption">
+            <start y="4520.0" x="6845.0"/>
+            <end y="4520.0" x="6956.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc689" class="consumption">
+            <start y="4510.0" x="4625.0"/>
+            <end y="4510.0" x="4736.0"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.1" id="arc690" class="consumption">
+            <start y="2770.0" x="4774.0"/>
+            <end y="6100.0" x="4932.6313"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.1" id="arc691" class="consumption">
+            <start y="2780.0" x="8064.0"/>
+            <end y="6110.0" x="8222.632"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.1" id="arc692" class="consumption">
+            <start y="2800.0" x="5854.0"/>
+            <end y="6130.0" x="5981.0527"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.1" id="arc693" class="consumption">
+            <start y="2760.0" x="3704.0"/>
+            <end y="6090.0" x="3862.6316"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.1" id="arc694" class="consumption">
+            <start y="2780.0" x="6994.0"/>
+            <end y="6110.0" x="7152.6313"/>
+        </arc>
+        <arc target="glyph117134349311" source="glyph11851914969.1" id="arc695" class="consumption">
+            <start y="2790.0" x="2544.0"/>
+            <end y="6120.0" x="2702.6316"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc696" class="consumption">
+            <start y="6240.0" x="2435.0"/>
+            <end y="6240.0" x="2546.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc697" class="consumption">
+            <start y="6230.0" x="7955.0"/>
+            <end y="6230.0" x="8066.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc698" class="consumption">
+            <start y="6250.0" x="5745.0"/>
+            <end y="6250.0" x="5856.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc699" class="consumption">
+            <start y="6210.0" x="3595.0"/>
+            <end y="6210.0" x="3706.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc700" class="consumption">
+            <start y="6230.0" x="6885.0"/>
+            <end y="6230.0" x="6996.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph15976189666" id="arc701" class="consumption">
+            <start y="6220.0" x="4665.0"/>
+            <end y="6220.0" x="4776.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph211443447211" id="arc702" class="consumption">
+            <start y="6400.0" x="2472.261"/>
+            <end y="6240.0" x="2546.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph25334418611" id="arc703" class="consumption">
+            <start y="6400.0" x="3628.5386"/>
+            <end y="6210.0" x="3706.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph195566200411" id="arc704" class="consumption">
+            <start y="6400.0" x="4699.68"/>
+            <end y="6220.0" x="4776.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph113385501211" id="arc705" class="consumption">
+            <start y="6400.0" x="5776.909"/>
+            <end y="6250.0" x="5856.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph10994231211" id="arc706" class="consumption">
+            <start y="6400.0" x="6913.8335"/>
+            <end y="6230.0" x="6996.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph176284896611" id="arc707" class="consumption">
+            <start y="6400.0" x="7976.75"/>
+            <end y="6230.0" x="8066.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph106315786611" id="arc708" class="consumption">
+            <start y="4680.0" x="2433.7273"/>
+            <end y="4530.0" x="2506.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph20548068611" id="arc709" class="consumption">
+            <start y="4680.0" x="3589.68"/>
+            <end y="4500.0" x="3666.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph16408789411" id="arc710" class="consumption">
+            <start y="4680.0" x="4660.9165"/>
+            <end y="4510.0" x="4736.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph109608771011" id="arc711" class="consumption">
+            <start y="4680.0" x="5738.6665"/>
+            <end y="4540.0" x="5816.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph56104364311" id="arc712" class="consumption">
+            <start y="4680.0" x="6875.304"/>
+            <end y="4520.0" x="6956.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph203512135911" id="arc713" class="consumption">
+            <start y="4680.0" x="7938.3477"/>
+            <end y="4520.0" x="8026.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph71997820911" id="arc714" class="consumption">
+            <start y="1170.0" x="7980.091"/>
+            <end y="1020.0" x="8066.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph66537175111" id="arc715" class="consumption">
+            <start y="1170.0" x="6916.909"/>
+            <end y="1020.0" x="6996.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph3431489111" id="arc716" class="consumption">
+            <start y="1170.0" x="5780.6"/>
+            <end y="1040.0" x="5856.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph180340303411" id="arc717" class="consumption">
+            <start y="1170.0" x="4702.2607"/>
+            <end y="1010.0" x="4776.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph23661499811" id="arc718" class="consumption">
+            <start y="1170.0" x="3630.9167"/>
+            <end y="1000.0" x="3706.0"/>
+        </arc>
+        <arc target="glyph11851914969.1" source="glyph61061475911" id="arc719" class="consumption">
+            <start y="1170.0" x="2475.3333"/>
+            <end y="1030.0" x="2546.0"/>
         </arc>
     </map>
 </sbgn>

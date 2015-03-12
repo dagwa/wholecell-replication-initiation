@@ -1,4 +1,4 @@
-# generated with VANTED V2.1.0 at Thu Mar 12 07:52:18 CET 2015
+# generated with VANTED V2.1.0 at Thu Mar 12 10:07:03 CET 2015
 graph [
   sbgn [
     role "PROCESSDESCRIPTION"
@@ -23258,7 +23258,7 @@ graph [
       fill "#FFFFFF"
       outline "#000000"
       frameThickness 2.0
-      gradient 0.0
+      gradient -0.3333333333333333
       rounding 15.0
       type "rectangle"
     ]
@@ -23396,6 +23396,4638 @@ graph [
     ]
     sbgn [
       role "SIMPLECHEMICAL"
+    ]
+  ]
+  node [
+    id 694
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 5850.0
+      y 2600.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R2"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 695
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 5960.0
+      y 2600.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:4"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 696
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 5990.0
+      y 2610.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 697
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 6090.0
+      y 2600.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 698
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 5830.0
+      y 2800.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 699
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 5650.0
+      y 2800.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 700
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 4750.0
+      y 2770.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 701
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 4820.0
+      y 2570.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R2"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 702
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 5060.0
+      y 2570.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 703
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 4570.0
+      y 2770.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 704
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 4930.0
+      y 2570.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:3"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 705
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 4960.0
+      y 2580.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 706
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 3680.0
+      y 2760.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 707
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 3750.0
+      y 2560.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R2"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 708
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 3860.0
+      y 2560.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:2"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 709
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 3990.0
+      y 2560.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 710
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 3500.0
+      y 2760.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 711
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 3890.0
+      y 2570.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 712
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 8040.0
+      y 2780.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 713
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 8110.0
+      y 2580.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R2"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 714
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 8220.0
+      y 2580.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:6"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 715
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 8350.0
+      y 2580.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 716
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 7860.0
+      y 2780.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 717
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 8250.0
+      y 2590.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 718
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 6970.0
+      y 2780.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 719
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 7040.0
+      y 2580.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R2"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 720
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 7150.0
+      y 2580.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:5"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 721
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 7280.0
+      y 2580.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 722
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 6790.0
+      y 2780.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 723
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 7180.0
+      y 2590.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 724
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 2520.0
+      y 2790.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 725
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 2590.0
+      y 2590.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R2"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 726
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 2700.0
+      y 2590.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:1"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 727
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 2340.0
+      y 2790.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 728
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 2830.0
+      y 2590.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 729
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 2730.0
+      y 2600.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 730
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 4800.0
+      y 1010.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 731
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 8090.0
+      y 1020.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 732
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 5880.0
+      y 1040.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 733
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 3730.0
+      y 1000.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 734
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 7020.0
+      y 1020.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 735
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 2570.0
+      y 1030.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 736
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 3800.0
+      y 800.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R1"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 737
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 5900.0
+      y 840.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R1"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 738
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 7090.0
+      y 820.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R1"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 739
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 4870.0
+      y 810.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R1"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 740
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 8160.0
+      y 820.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R1"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 741
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 2640.0
+      y 830.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R1"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 742
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 2390.0
+      y 1030.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 743
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 3910.0
+      y 800.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:2"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 744
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 6140.0
+      y 840.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 745
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 7910.0
+      y 1020.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 746
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 4980.0
+      y 810.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:3"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 747
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 5700.0
+      y 1040.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 748
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 6010.0
+      y 840.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:4"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 749
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 2750.0
+      y 830.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:1"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 750
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 7200.0
+      y 820.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:5"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 751
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 3550.0
+      y 1000.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 752
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 2880.0
+      y 830.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 753
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 6840.0
+      y 1020.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 754
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 5110.0
+      y 810.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 755
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 8270.0
+      y 820.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:6"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 756
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 4620.0
+      y 1010.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 757
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 4040.0
+      y 800.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 758
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 8400.0
+      y 820.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 759
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 7330.0
+      y 820.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 760
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 6040.0
+      y 850.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 761
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 7230.0
+      y 830.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 762
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 3940.0
+      y 810.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 763
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 8300.0
+      y 830.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 764
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 5010.0
+      y 820.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 765
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 2780.0
+      y 840.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 766
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 4760.0
+      y 4510.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 767
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 8050.0
+      y 4520.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 768
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 5840.0
+      y 4540.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 769
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 3690.0
+      y 4500.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 770
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 6980.0
+      y 4520.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 771
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 2530.0
+      y 4530.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 772
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 3760.0
+      y 4300.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R3"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 773
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 5860.0
+      y 4340.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R3"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 774
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 7050.0
+      y 4320.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R3"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 775
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 4830.0
+      y 4310.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R3"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 776
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 8120.0
+      y 4320.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R3"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 777
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 2600.0
+      y 4330.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R3"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 778
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 2350.0
+      y 4530.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 779
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 3870.0
+      y 4300.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:2"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 780
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 6100.0
+      y 4340.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 781
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 7870.0
+      y 4520.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 782
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 4940.0
+      y 4310.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:3"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 783
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 5660.0
+      y 4540.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 784
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 5970.0
+      y 4340.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:4"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 785
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 2710.0
+      y 4330.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:1"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 786
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 7160.0
+      y 4320.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:5"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 787
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 3510.0
+      y 4500.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 788
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 2840.0
+      y 4330.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 789
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 6800.0
+      y 4520.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 790
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 5070.0
+      y 4310.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 791
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 8230.0
+      y 4320.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:6"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 792
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 4580.0
+      y 4510.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 793
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 4000.0
+      y 4300.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 794
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 8360.0
+      y 4320.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 795
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 7290.0
+      y 4320.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 796
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 6000.0
+      y 4350.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 797
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 7190.0
+      y 4330.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 798
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 3900.0
+      y 4310.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 799
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 8260.0
+      y 4330.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 800
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 4970.0
+      y 4320.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 801
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 2740.0
+      y 4340.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 802
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 4800.0
+      y 6220.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 803
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 8090.0
+      y 6230.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 804
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 5880.0
+      y 6250.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 805
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 3730.0
+      y 6210.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 806
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 7020.0
+      y 6230.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 807
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 2570.0
+      y 6240.0
+      w 24.0
+      h 24.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 0.0
+      type "rectangle"
+    ]
+    sbgn [
+      role "PROCESS"
+    ]
+  ]
+  node [
+    id 808
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 3800.0
+      y 6010.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R4"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 809
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 5900.0
+      y 6050.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R4"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 810
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 7090.0
+      y 6030.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R4"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 811
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 4870.0
+      y 6020.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R4"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 812
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 8160.0
+      y 6030.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R4"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 813
+    zlevel -1
+
+    SBGN [
+      ID "glyph11851914969"
+    ]
+    graphics [
+      x 2640.0
+      y 6040.0
+      w 60.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.NucleicAcidFeatureShape"
+    ]
+    label "R4"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "NUCLEICACIDFEATURE"
+    ]
+  ]
+  node [
+    id 814
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 2390.0
+      y 6240.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 815
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 3910.0
+      y 6010.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:2"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 816
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 6140.0
+      y 6050.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 817
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 7910.0
+      y 6230.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 818
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 4980.0
+      y 6020.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:3"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 819
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 5700.0
+      y 6250.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 820
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 6010.0
+      y 6050.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:4"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 821
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 2750.0
+      y 6040.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:1"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 822
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 7200.0
+      y 6030.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:5"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 823
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 3550.0
+      y 6210.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 824
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 2880.0
+      y 6040.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 825
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 6840.0
+      y 6230.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 826
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 5110.0
+      y 6020.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 827
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 8270.0
+      y 6030.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ATP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    labelgraphics1 [
+      alignment "center"
+      anchor "btl"
+      color "#000000"
+      fontName "Arial"
+      fontSize 10
+      fontStyle "plain,box"
+      position [
+        localAlign 0.0
+        relHor 0.0
+        relVert 0.0
+      ]
+      text "N:6"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 828
+    zlevel -1
+
+    SBGN [
+      ID "glyph15976189666"
+    ]
+    graphics [
+      x 4620.0
+      y 6220.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.3333333333333333
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 829
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 4040.0
+      y 6010.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 830
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 8400.0
+      y 6030.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 831
+    zlevel -1
+
+    SBGN [
+      ID "glyph650506206"
+    ]
+    graphics [
+      x 7330.0
+      y 6030.0
+      w 90.0
+      h 70.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient 0.0
+      rounding 15.0
+      type "rectangle"
+    ]
+    label "DnaA-ADP"
+    labelgraphics [
+      alignment "center"
+      anchor "c"
+      color "#000000"
+      fontName "Arial"
+      fontSize 14
+      fontStyle "plain"
+      type "text"
+    ]
+    sbgn [
+      role "MACROMOLECULE"
+    ]
+  ]
+  node [
+    id 832
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 6040.0
+      y 6060.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 833
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 7230.0
+      y 6040.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 834
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 3940.0
+      y 6020.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 835
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 8300.0
+      y 6040.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 836
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 5010.0
+      y 6030.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
+    ]
+  ]
+  node [
+    id 837
+    zlevel -1
+
+    SBGN [
+      ID "glyph117134349311"
+    ]
+    graphics [
+      x 2780.0
+      y 6050.0
+      w 400.0
+      h 140.0
+      fill "#FFFFFF"
+      outline "#000000"
+      frameThickness 2.0
+      gradient -0.16666666666666666
+      rounding 0.0
+      type "de.ipk_gatersleben.ag_nw.graffiti.plugins.shapes.ComplexShape"
+    ]
+    sbgn [
+      role "COMPLEX"
     ]
   ]
   edge [
@@ -31870,6 +36502,1956 @@ graph [
     ]
     sbgn [
       role "PRODUCTION"
+    ]
+  ]
+  edge [
+    id 343
+    source 192
+    target 698
+    SBGN [
+      BendIn "5806.0;2800.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 5806.0 y 2800.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 344
+    source 698
+    target 696
+    SBGN [
+      BendOut "5854.0;2800.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 5854.0 y 2800.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "last"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "PRODUCTION"
+    ]
+  ]
+  edge [
+    id 345
+    source 699
+    target 698
+    SBGN [
+      BendIn "5806.0;2800.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 5806.0 y 2800.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 346
+    source 700
+    target 705
+    SBGN [
+      BendOut "4774.0;2770.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 4774.0 y 2770.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "last"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "PRODUCTION"
+    ]
+  ]
+  edge [
+    id 347
+    source 703
+    target 700
+    SBGN [
+      BendIn "4726.0;2770.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 4726.0 y 2770.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 348
+    source 183
+    target 700
+    SBGN [
+      BendIn "4726.0;2770.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 4726.0 y 2770.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 349
+    source 706
+    target 711
+    SBGN [
+      BendOut "3704.0;2760.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 3704.0 y 2760.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "last"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "PRODUCTION"
+    ]
+  ]
+  edge [
+    id 350
+    source 710
+    target 706
+    SBGN [
+      BendIn "3656.0;2760.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 3656.0 y 2760.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 351
+    source 716
+    target 712
+    SBGN [
+      BendIn "8016.0;2780.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 8016.0 y 2780.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 352
+    source 722
+    target 718
+    SBGN [
+      BendIn "6946.0;2780.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 6946.0 y 2780.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 353
+    source 3
+    target 490
+    SBGN [
+      BendIn "8406.0;4750.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 8406.0 y 4750.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 354
+    source 1
+    target 326
+    SBGN [
+      BendIn "8406.0;2990.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 8406.0 y 2990.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 355
+    source 4
+    target 162
+    SBGN [
+      BendIn "8446.0;1240.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 8446.0 y 1240.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 356
+    source 189
+    target 712
+    SBGN [
+      BendIn "8016.0;2780.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 8016.0 y 2780.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 357
+    source 186
+    target 718
+    SBGN [
+      BendIn "6946.0;2780.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 6946.0 y 2780.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 358
+    source 180
+    target 706
+    SBGN [
+      BendIn "3656.0;2760.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 3656.0 y 2760.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 359
+    source 712
+    target 717
+    SBGN [
+      BendOut "8064.0;2780.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 8064.0 y 2780.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "last"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "PRODUCTION"
+    ]
+  ]
+  edge [
+    id 360
+    source 718
+    target 723
+    SBGN [
+      BendOut "6994.0;2780.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 6994.0 y 2780.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "last"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "PRODUCTION"
+    ]
+  ]
+  edge [
+    id 361
+    source 724
+    target 729
+    SBGN [
+      BendOut "2544.0;2790.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 2544.0 y 2790.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "last"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "PRODUCTION"
+    ]
+  ]
+  edge [
+    id 362
+    source 727
+    target 724
+    SBGN [
+      BendIn "2496.0;2790.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 2496.0 y 2790.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 363
+    source 173
+    target 724
+    SBGN [
+      BendIn "2496.0;2790.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 2496.0 y 2790.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 364
+    source 730
+    target 764
+    SBGN [
+      BendOut "4824.0;1010.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 4824.0 y 1010.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "last"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "PRODUCTION"
+    ]
+  ]
+  edge [
+    id 365
+    source 731
+    target 763
+    SBGN [
+      BendOut "8114.0;1020.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 8114.0 y 1020.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "last"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "PRODUCTION"
+    ]
+  ]
+  edge [
+    id 366
+    source 732
+    target 760
+    SBGN [
+      BendOut "5904.0;1040.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 5904.0 y 1040.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "last"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "PRODUCTION"
+    ]
+  ]
+  edge [
+    id 367
+    source 733
+    target 762
+    SBGN [
+      BendOut "3754.0;1000.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 3754.0 y 1000.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "last"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "PRODUCTION"
+    ]
+  ]
+  edge [
+    id 368
+    source 734
+    target 761
+    SBGN [
+      BendOut "7044.0;1020.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 7044.0 y 1020.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "last"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "PRODUCTION"
+    ]
+  ]
+  edge [
+    id 369
+    source 735
+    target 765
+    SBGN [
+      BendOut "2594.0;1030.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 2594.0 y 1030.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "last"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "PRODUCTION"
+    ]
+  ]
+  edge [
+    id 370
+    source 742
+    target 735
+    SBGN [
+      BendIn "2546.0;1030.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 2546.0 y 1030.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 371
+    source 745
+    target 731
+    SBGN [
+      BendIn "8066.0;1020.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 8066.0 y 1020.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 372
+    source 747
+    target 732
+    SBGN [
+      BendIn "5856.0;1040.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 5856.0 y 1040.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 373
+    source 751
+    target 733
+    SBGN [
+      BendIn "3706.0;1000.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 3706.0 y 1000.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 374
+    source 753
+    target 734
+    SBGN [
+      BendIn "6996.0;1020.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 6996.0 y 1020.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 375
+    source 756
+    target 730
+    SBGN [
+      BendIn "4776.0;1010.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 4776.0 y 1010.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 376
+    source 766
+    target 800
+    SBGN [
+      BendOut "4774.0;2770.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 4784.0 y 4510.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 377
+    source 767
+    target 799
+    SBGN [
+      BendOut "8064.0;2780.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 8074.0 y 4520.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 378
+    source 768
+    target 796
+    SBGN [
+      BendOut "5854.0;2800.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 5864.0 y 4540.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 379
+    source 769
+    target 798
+    SBGN [
+      BendOut "3704.0;2760.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 3714.0 y 4500.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 380
+    source 770
+    target 797
+    SBGN [
+      BendOut "6994.0;2780.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 7004.0 y 4520.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 381
+    source 771
+    target 801
+    SBGN [
+      BendOut "2544.0;2790.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 2554.0 y 4530.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 382
+    source 778
+    target 771
+    SBGN [
+      BendIn "2506.0;4530.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 2506.0 y 4530.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 383
+    source 781
+    target 767
+    SBGN [
+      BendIn "8026.0;4520.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 8026.0 y 4520.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 384
+    source 783
+    target 768
+    SBGN [
+      BendIn "5816.0;4540.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 5816.0 y 4540.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 385
+    source 787
+    target 769
+    SBGN [
+      BendIn "3666.0;4500.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 3666.0 y 4500.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 386
+    source 789
+    target 770
+    SBGN [
+      BendIn "6956.0;4520.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 6956.0 y 4520.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 387
+    source 792
+    target 766
+    SBGN [
+      BendIn "4736.0;4510.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 4736.0 y 4510.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 388
+    source 802
+    target 836
+    SBGN [
+      BendOut "4774.0;2770.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 4824.0 y 6220.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 389
+    source 803
+    target 835
+    SBGN [
+      BendOut "8064.0;2780.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 8114.0 y 6230.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 390
+    source 804
+    target 832
+    SBGN [
+      BendOut "5854.0;2800.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 5904.0 y 6250.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 391
+    source 805
+    target 834
+    SBGN [
+      BendOut "3704.0;2760.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 3754.0 y 6210.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 392
+    source 806
+    target 833
+    SBGN [
+      BendOut "6994.0;2780.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 7044.0 y 6230.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 393
+    source 807
+    target 837
+    SBGN [
+      BendOut "2544.0;2790.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 2594.0 y 6240.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 394
+    source 814
+    target 807
+    SBGN [
+      BendIn "2546.0;6240.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 2546.0 y 6240.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 395
+    source 817
+    target 803
+    SBGN [
+      BendIn "8066.0;6230.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 8066.0 y 6230.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 396
+    source 819
+    target 804
+    SBGN [
+      BendIn "5856.0;6250.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 5856.0 y 6250.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 397
+    source 823
+    target 805
+    SBGN [
+      BendIn "3706.0;6210.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 3706.0 y 6210.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 398
+    source 825
+    target 806
+    SBGN [
+      BendIn "6996.0;6230.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 6996.0 y 6230.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 399
+    source 828
+    target 802
+    SBGN [
+      BendIn "4776.0;6220.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 4776.0 y 6220.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 400
+    source 501
+    target 807
+    SBGN [
+      BendIn "2546.0;6240.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 2546.0 y 6240.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 401
+    source 508
+    target 805
+    SBGN [
+      BendIn "3706.0;6210.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 3706.0 y 6210.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 402
+    source 511
+    target 802
+    SBGN [
+      BendIn "4776.0;6220.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 4776.0 y 6220.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 403
+    source 520
+    target 804
+    SBGN [
+      BendIn "5856.0;6250.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 5856.0 y 6250.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 404
+    source 514
+    target 806
+    SBGN [
+      BendIn "6996.0;6230.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 6996.0 y 6230.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 405
+    source 517
+    target 803
+    SBGN [
+      BendIn "8066.0;6230.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 8066.0 y 6230.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 406
+    source 337
+    target 771
+    SBGN [
+      BendIn "2506.0;4530.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 2506.0 y 4530.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 407
+    source 344
+    target 769
+    SBGN [
+      BendIn "3666.0;4500.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 3666.0 y 4500.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 408
+    source 347
+    target 766
+    SBGN [
+      BendIn "4736.0;4510.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 4736.0 y 4510.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 409
+    source 356
+    target 768
+    SBGN [
+      BendIn "5816.0;4540.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 5816.0 y 4540.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 410
+    source 350
+    target 770
+    SBGN [
+      BendIn "6956.0;4520.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 6956.0 y 4520.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 411
+    source 353
+    target 767
+    SBGN [
+      BendIn "8026.0;4520.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 8026.0 y 4520.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 412
+    source 25
+    target 731
+    SBGN [
+      BendIn "8066.0;1020.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 8066.0 y 1020.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 413
+    source 22
+    target 734
+    SBGN [
+      BendIn "6996.0;1020.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 6996.0 y 1020.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 414
+    source 28
+    target 732
+    SBGN [
+      BendIn "5856.0;1040.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 5856.0 y 1040.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 415
+    source 19
+    target 730
+    SBGN [
+      BendIn "4776.0;1010.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 4776.0 y 1010.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 416
+    source 16
+    target 733
+    SBGN [
+      BendIn "3706.0;1000.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 3706.0 y 1000.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
+    ]
+  ]
+  edge [
+    id 417
+    source 9
+    target 735
+    SBGN [
+      BendIn "2546.0;1030.0"
+    ]
+    graphics [
+      fill "#000000"
+      outline "#000000"
+      Line [
+        point [ x 0.0 y 0.0 ]
+        point [ x 2546.0 y 1030.0 ]
+        point [ x 0.0 y 0.0 ]
+      ]
+      arrow "none"
+      frameThickness 1.5
+      gradient 0.0
+      rounding 5.0
+      type "org.graffiti.plugins.views.defaults.PolyLineEdgeShape"
+      thickness 15.0
+    ]
+    sbgn [
+      role "CONSUMPTION"
     ]
   ]
 ]
