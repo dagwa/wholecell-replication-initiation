@@ -15,13 +15,11 @@
       <parameter constant="false" id="DnaA_6mer_ATP_internal" value="0.0"/>
       <parameter constant="false" id="DnaA_7mer_ATP" value="0.0"/>
       <parameter constant="false" id="DnaA_7mer_ATP_internal" value="0.0"/>
-      <parameter constant="false" id="DnaA_ADP" value="0.0"/>
       <parameter constant="false" id="H" value="0.0"/>
       <parameter constant="false" id="Pi" value="0.0"/>
       <parameter constant="false" id="dissociation" value="0.0"/>
       <parameter constant="false" id="nMonomers" value="0.0"/>
       <parameter constant="false" id="number" value="0.0"/>
-      <parameter constant="false" id="unknown" value="0.0"/>
       <parameter constant="false" id="water" value="0.0"/>
     </listOfParameters>
     <listOfInitialAssignments>
@@ -55,9 +53,7 @@
           <ci>DnaA_7mer_ATP</ci>
         </math>
       </initialAssignment>
-    </listOfInitialAssignments>
-    <listOfRules>
-      <assignmentRule metaid="nMonomers_Assignment_rule" variable="nMonomers">
+      <initialAssignment metaid="nMonomers_Initialization" symbol="nMonomers">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>
             <plus/>
@@ -113,8 +109,8 @@
             </apply>
           </apply>
         </math>
-      </assignmentRule>
-    </listOfRules>
+      </initialAssignment>
+    </listOfInitialAssignments>
     <listOfEvents>
       <event id="dissociationEvent" useValuesFromTriggerTime="true">
         <trigger initialValue="true" persistent="true">
@@ -127,17 +123,9 @@
                 <cn>1.0</cn>
               </apply>
               <apply>
-                <or/>
-                <apply>
-                  <geq/>
-                  <ci>water</ci>
-                  <ci>nMonomers</ci>
-                </apply>
-                <apply>
-                  <eq/>
-                  <ci>nMonomers</ci>
-                  <cn>0.0</cn>
-                </apply>
+                <geq/>
+                <ci>water</ci>
+                <ci>nMonomers</ci>
               </apply>
             </apply>
           </math>
@@ -175,7 +163,7 @@
               </apply>
             </math>
           </eventAssignment>
-          <eventAssignment variable="DnaA_ADP">
+          <eventAssignment variable="DnaA_1mer_ADP">
             <math xmlns="http://www.w3.org/1998/Math/MathML">
               <apply>
                 <plus/>
@@ -238,15 +226,106 @@
               </apply>
             </math>
           </eventAssignment>
+          <eventAssignment variable="nMonomers">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <times/>
+                            <cn>2.0</cn>
+                            <ci>DnaA_2mer_ATP_internal</ci>
+                          </apply>
+                          <apply>
+                            <times/>
+                            <cn>3.0</cn>
+                            <ci>DnaA_3mer_ATP_internal</ci>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <cn>4.0</cn>
+                          <ci>DnaA_4mer_ATP_internal</ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <cn>4.0</cn>
+                        <ci>DnaA_4mer_ATP_internal</ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn>5.0</cn>
+                      <ci>DnaA_5mer_ATP_internal</ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn>6.0</cn>
+                    <ci>DnaA_6mer_ATP_internal</ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn>7.0</cn>
+                  <ci>DnaA_7mer_ATP_internal</ci>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="endDissociation" useValuesFromTriggerTime="true">
+        <trigger initialValue="true" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <eq/>
+                <ci>nMonomers</ci>
+                <cn>0</cn>
+              </apply>
+              <apply>
+                <eq/>
+                <ci>dissociation</ci>
+                <cn>1</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="dissociation">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
         </listOfEventAssignments>
       </event>
       <event id="numberGenerator" useValuesFromTriggerTime="true">
         <trigger initialValue="true" persistent="true">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
-              <eq/>
-              <ci>number</ci>
-              <cn>0.0</cn>
+              <or/>
+              <apply>
+                <eq/>
+                <ci>number</ci>
+                <cn>0.0</cn>
+              </apply>
+              <apply>
+                <eq/>
+                <ci>number</ci>
+                <cn>7</cn>
+              </apply>
             </apply>
           </math>
         </trigger>
@@ -304,6 +383,63 @@
               <cn>0.0</cn>
             </math>
           </eventAssignment>
+          <eventAssignment variable="nMonomers">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <times/>
+                            <cn>2.0</cn>
+                            <ci>DnaA_2mer_ATP_internal</ci>
+                          </apply>
+                          <apply>
+                            <times/>
+                            <cn>3.0</cn>
+                            <ci>DnaA_3mer_ATP_internal</ci>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <cn>4.0</cn>
+                          <ci>DnaA_4mer_ATP_internal</ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <cn>4.0</cn>
+                        <ci>DnaA_4mer_ATP_internal</ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn>5.0</cn>
+                      <ci>DnaA_5mer_ATP_internal</ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn>6.0</cn>
+                    <ci>DnaA_6mer_ATP_internal</ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn>7.0</cn>
+                  <ci>DnaA_7mer_ATP_internal</ci>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
         </listOfEventAssignments>
       </event>
       <event id="remove3mer" useValuesFromTriggerTime="true">
@@ -337,6 +473,63 @@
           <eventAssignment variable="number">
             <math xmlns="http://www.w3.org/1998/Math/MathML">
               <cn>0.0</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="nMonomers">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <times/>
+                            <cn>2.0</cn>
+                            <ci>DnaA_2mer_ATP_internal</ci>
+                          </apply>
+                          <apply>
+                            <times/>
+                            <cn>3.0</cn>
+                            <ci>DnaA_3mer_ATP_internal</ci>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <cn>4.0</cn>
+                          <ci>DnaA_4mer_ATP_internal</ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <cn>4.0</cn>
+                        <ci>DnaA_4mer_ATP_internal</ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn>5.0</cn>
+                      <ci>DnaA_5mer_ATP_internal</ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn>6.0</cn>
+                    <ci>DnaA_6mer_ATP_internal</ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn>7.0</cn>
+                  <ci>DnaA_7mer_ATP_internal</ci>
+                </apply>
+              </apply>
             </math>
           </eventAssignment>
         </listOfEventAssignments>
@@ -374,6 +567,63 @@
               <cn>0.0</cn>
             </math>
           </eventAssignment>
+          <eventAssignment variable="nMonomers">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <times/>
+                            <cn>2.0</cn>
+                            <ci>DnaA_2mer_ATP_internal</ci>
+                          </apply>
+                          <apply>
+                            <times/>
+                            <cn>3.0</cn>
+                            <ci>DnaA_3mer_ATP_internal</ci>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <cn>4.0</cn>
+                          <ci>DnaA_4mer_ATP_internal</ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <cn>4.0</cn>
+                        <ci>DnaA_4mer_ATP_internal</ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn>5.0</cn>
+                      <ci>DnaA_5mer_ATP_internal</ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn>6.0</cn>
+                    <ci>DnaA_6mer_ATP_internal</ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn>7.0</cn>
+                  <ci>DnaA_7mer_ATP_internal</ci>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
         </listOfEventAssignments>
       </event>
       <event id="remove5mer" useValuesFromTriggerTime="true">
@@ -407,6 +657,63 @@
           <eventAssignment variable="number">
             <math xmlns="http://www.w3.org/1998/Math/MathML">
               <cn>0.0</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="nMonomers">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <times/>
+                            <cn>2.0</cn>
+                            <ci>DnaA_2mer_ATP_internal</ci>
+                          </apply>
+                          <apply>
+                            <times/>
+                            <cn>3.0</cn>
+                            <ci>DnaA_3mer_ATP_internal</ci>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <cn>4.0</cn>
+                          <ci>DnaA_4mer_ATP_internal</ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <cn>4.0</cn>
+                        <ci>DnaA_4mer_ATP_internal</ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn>5.0</cn>
+                      <ci>DnaA_5mer_ATP_internal</ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn>6.0</cn>
+                    <ci>DnaA_6mer_ATP_internal</ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn>7.0</cn>
+                  <ci>DnaA_7mer_ATP_internal</ci>
+                </apply>
+              </apply>
             </math>
           </eventAssignment>
         </listOfEventAssignments>
@@ -444,6 +751,63 @@
               <cn>0.0</cn>
             </math>
           </eventAssignment>
+          <eventAssignment variable="nMonomers">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <times/>
+                            <cn>2.0</cn>
+                            <ci>DnaA_2mer_ATP_internal</ci>
+                          </apply>
+                          <apply>
+                            <times/>
+                            <cn>3.0</cn>
+                            <ci>DnaA_3mer_ATP_internal</ci>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <cn>4.0</cn>
+                          <ci>DnaA_4mer_ATP_internal</ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <cn>4.0</cn>
+                        <ci>DnaA_4mer_ATP_internal</ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn>5.0</cn>
+                      <ci>DnaA_5mer_ATP_internal</ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn>6.0</cn>
+                    <ci>DnaA_6mer_ATP_internal</ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn>7.0</cn>
+                  <ci>DnaA_7mer_ATP_internal</ci>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
         </listOfEventAssignments>
       </event>
       <event id="remove7mer" useValuesFromTriggerTime="true">
@@ -477,6 +841,63 @@
           <eventAssignment variable="number">
             <math xmlns="http://www.w3.org/1998/Math/MathML">
               <cn>0.0</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="nMonomers">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <times/>
+                            <cn>2.0</cn>
+                            <ci>DnaA_2mer_ATP_internal</ci>
+                          </apply>
+                          <apply>
+                            <times/>
+                            <cn>3.0</cn>
+                            <ci>DnaA_3mer_ATP_internal</ci>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <cn>4.0</cn>
+                          <ci>DnaA_4mer_ATP_internal</ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <cn>4.0</cn>
+                        <ci>DnaA_4mer_ATP_internal</ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn>5.0</cn>
+                      <ci>DnaA_5mer_ATP_internal</ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn>6.0</cn>
+                    <ci>DnaA_6mer_ATP_internal</ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn>7.0</cn>
+                  <ci>DnaA_7mer_ATP_internal</ci>
+                </apply>
+              </apply>
             </math>
           </eventAssignment>
         </listOfEventAssignments>
