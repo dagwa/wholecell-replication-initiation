@@ -1,0 +1,11 @@
+function minFunc(x,y)
+piecewise(x,x<y,y);
+end
+model RepInit_Activation()
+   var ATP, DnaA, DnaA_1mer_ATP, activation, minActivations, unknown, x, y;
+
+   minActivations = minFunc(ATP,DnaA);
+
+   activationEvent: at minActivations>0.0&&activation==1.0, t0 = false : DnaA = DnaA-minActivations : ATP = ATP-minActivations : DnaA_1mer_ATP = DnaA_1mer_ATP+minActivations : minActivations = minFunc(ATP,DnaA);
+   endActivation: at minActivations<=0&&activation==1, t0 = false : activation = 0: dissociation = 1;
+end
