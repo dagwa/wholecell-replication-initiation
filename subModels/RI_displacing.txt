@@ -17,8 +17,8 @@ end
 
 
 model RepInit_Displacing()
-  
-   species MG_469_1MER_ADP__c, MG_469_1MER_ATP__c, MG_469_1MER_ADP__bound, MG_469_1MER_ATP__bound;
+    compartment default;
+    species MG_469_1MER_ADP__bound in default, MG_469_1MER_ADP__c in default, MG_469_1MER_ATP__bound in default, MG_469_1MER_ATP__c in default;
     var kd1ATP, kd1ADP, numBindingSites, chromosome_R1, chromosmoe_R2, chromosome_R3, chromosome_R4;
 
 var R1_free;
@@ -264,5 +264,5 @@ RemoveR4ADP: at testR4 == 0 && removeR4 == 1 && mod(chromosome_R4,2) == 1 : MG_4
 
 RemoveR4ATP: at testR4 == 0 && removeR4 == 1 && mod(chromosome_R4,2) == 0 : MG_469_1MER_ATP__c = MG_469_1MER_ATP__c + stochRoundR4ATP : chromosome_R4 = chromosome_R4 - 2*stochRoundR4ATP : removeR4 = 0;
 
-
+default is "Displacing";
 end
