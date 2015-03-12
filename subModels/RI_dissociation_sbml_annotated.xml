@@ -127,9 +127,6 @@
           </rdf:RDF>
         </annotation>
       </species>
-	  <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="dissociation"/>
-	  <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="nMonomers"/>
-	  <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="number"/>
 	  <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="water">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
@@ -153,6 +150,9 @@
       <parameter id="HK" value="1" constant="false"/>
       <parameter id="M" value="0" constant="false"/>
       <parameter id="i" value="0" constant="false"/>
+      <parameter id="nMonomers" value="0" constant="false"/>
+      <parameter id="dissociation" value="0" constant="false"/>
+      <parameter id="number" value="0" constant="false"/>
       <parameter id="maxiter" value="50" constant="true"/>
     </listOfParameters>
     <listOfInitialAssignments>
