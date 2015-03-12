@@ -8,6 +8,8 @@ Replication Initiation model can be splitted into 5 submodels. These sub models'
 4. Displacing.
 5. Reactivation.
 
+For each sub model there are 2 files: annotated sbml (.xml) and antimony (.txt).
+
 ## XML-files
 
 XML-files are annotated in %tool name% submodels of the Replication Initiation model.
