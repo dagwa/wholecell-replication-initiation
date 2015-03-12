@@ -115,7 +115,19 @@
       <compartment name="RepInit_Activation" constant="false" id="default" spatialDimensions="3"/>
     </listOfCompartments>
     <listOfSpecies>
-      <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="ATP__c"/>
+      <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits= "false" initialAmount="0" compartment="default" id="ATP__c">
+	  <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_a851f53d-d00d-46f0-9720-7d952e9b55f2">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15422"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+	  </species>
       <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" initialAmount="0" compartment="default" id="DnaA_1mer_ATP__c"/>
       <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" initialAmount="0" compartment="default" id="DnaA__c">
 		<annotation>
