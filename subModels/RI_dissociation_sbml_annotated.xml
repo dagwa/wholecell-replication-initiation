@@ -1,0 +1,1246 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <notes>
+    <p xmlns="http://www.w3.org/1999/xhtml">
+  Creation date: 12/03/2015</p>
+  </notes>
+  <annotation>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+			 xmlns:dc="http://purl.org/dc/elements/1.1/" 
+ 			 xmlns:dcterms="http://purl.org/dc/terms/"
+			 xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
+      <rdf:Description rdf:about="#_d635541f-7768-48d1-8ec5-50ae0d07523d">
+        <dc:creator>
+          <rdf:Bag>
+            <rdf:li rdf:parseType="Resource">
+              <vCard:N rdf:parseType="Resource">
+                <vCard:Family>Hucka</vCard:Family>
+                <vCard:Given>Michael</vCard:Given>
+              </vCard:N>
+              <vCard:EMAIL></vCard:EMAIL>
+              <vCard:ORG rdf:parseType="Resource">
+                <vCard:Orgname></vCard:Orgname>
+              </vCard:ORG>
+            </rdf:li>
+            <rdf:li rdf:parseType="Resource">
+              <vCard:N rdf:parseType="Resource">
+                <vCard:Family>Wendla</vCard:Family>
+                <vCard:Given>Florian</vCard:Given>
+              </vCard:N>
+              <vCard:EMAIL></vCard:EMAIL>
+              <vCard:ORG rdf:parseType="Resource">
+                <vCard:Orgname></vCard:Orgname>
+              </vCard:ORG>
+            </rdf:li>
+            <rdf:li rdf:parseType="Resource">
+              <vCard:N rdf:parseType="Resource">
+                <vCard:Family>Mandrik</vCard:Family>
+                <vCard:Given>Nikita</vCard:Given>
+              </vCard:N>
+              <vCard:EMAIL></vCard:EMAIL>
+              <vCard:ORG rdf:parseType="Resource">
+                <vCard:Orgname></vCard:Orgname>
+              </vCard:ORG>
+            </rdf:li>
+            <rdf:li rdf:parseType="Resource">
+              <vCard:N rdf:parseType="Resource">
+                <vCard:Family>Hahn</vCard:Family>
+                <vCard:Given>Jens</vCard:Given>
+              </vCard:N>
+              <vCard:EMAIL></vCard:EMAIL>
+              <vCard:ORG rdf:parseType="Resource">
+                <vCard:Orgname></vCard:Orgname>
+              </vCard:ORG>
+            </rdf:li>
+            <rdf:li rdf:parseType="Resource">
+              <vCard:N rdf:parseType="Resource">
+                <vCard:Family>Gomez</vCard:Family>
+                <vCard:Given>Harold</vCard:Given>
+              </vCard:N>
+              <vCard:EMAIL></vCard:EMAIL>
+              <vCard:ORG rdf:parseType="Resource">
+                <vCard:Orgname></vCard:Orgname>
+              </vCard:ORG>
+            </rdf:li>
+            <rdf:li rdf:parseType="Resource">
+              <vCard:N rdf:parseType="Resource">
+                <vCard:Family>Scharm</vCard:Family>
+                <vCard:Given>Martin</vCard:Given>
+              </vCard:N>
+              <vCard:EMAIL></vCard:EMAIL>
+              <vCard:ORG rdf:parseType="Resource">
+                <vCard:Orgname></vCard:Orgname>
+              </vCard:ORG>
+            </rdf:li>
+          </rdf:Bag>
+        </dc:creator>
+		<dcterms:created rdf:parseType="Resource">
+			<dcterms:W3CDTF>2015-03-12 </dcterms:W3CDTF>
+        </dcterms:created>
+        <dcterms:modified rdf:parseType="Resource">
+          <dcterms:W3CDTF>2015-03-12 </dcterms:W3CDTF>
+        </dcterms:modified>
+      </rdf:Description>
+    </rdf:RDF>
+  </annotation>
+  <model name="RepInit_Dissociation" id="RepInit_Dissociation">
+    <listOfParameters>
+      <parameter id="a" value="1" constant="true"/>
+      <parameter id="b" value="6" constant="true"/>
+      <parameter id="random" value="0" constant="false"/>
+      <parameter id="state" value="0" constant="false"/>
+      <parameter id="L" value="0" constant="false"/>
+      <parameter id="HK" value="1" constant="false"/>
+      <parameter id="M" value="0" constant="false"/>
+      <parameter id="i" value="0" constant="false"/>
+      <parameter id="maxiter" value="50" constant="true"/>
+      <parameter constant="false" id="DnaA_1mer_ADP" value="0"/>
+      <parameter constant="false" id="DnaA_2mer_ATP" value="0"/>
+      <parameter constant="false" id="DnaA_2mer_ATP_internal" value="0"/>
+      <parameter constant="false" id="DnaA_3mer_ATP" value="0"/>
+      <parameter constant="false" id="DnaA_3mer_ATP_internal" value="0"/>
+      <parameter constant="false" id="DnaA_4mer_ATP" value="0"/>
+      <parameter constant="false" id="DnaA_4mer_ATP_internal" value="0"/>
+      <parameter constant="false" id="DnaA_5mer_ATP" value="0"/>
+      <parameter constant="false" id="DnaA_5mer_ATP_internal" value="0"/>
+      <parameter constant="false" id="DnaA_6mer_ATP" value="0"/>
+      <parameter constant="false" id="DnaA_6mer_ATP_internal" value="0"/>
+      <parameter constant="false" id="DnaA_7mer_ATP" value="0"/>
+      <parameter constant="false" id="DnaA_7mer_ATP_internal" value="0"/>
+      <parameter constant="false" id="H" value="0">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_7f478432-76e5-4495-a7ee-7d9d32f364f8">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15378"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter constant="false" id="Pi" metaid="_c4ac822d-34e6-41df-8614-64e5e76c6134" value="0">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_c4ac822d-34e6-41df-8614-64e5e76c6134">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A18367"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter constant="false" id="dissociation" value="0"/>
+      <parameter constant="false" id="nMonomers" value="0"/>
+      <parameter constant="false" id="number" value="0"/>
+      <parameter constant="false" id="water" metaid="_72d3f37c-bbef-4629-91e7-069b029b728e" value="0">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_72d3f37c-bbef-4629-91e7-069b029b728e">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15377"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+    </listOfParameters>
+    <listOfInitialAssignments>
+      <initialAssignment metaid="DnaA_2mer_ATP_internal_Initialization" symbol="DnaA_2mer_ATP_internal">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> DnaA_2mer_ATP </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="DnaA_3mer_ATP_internal_Initialization" symbol="DnaA_3mer_ATP_internal">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> DnaA_3mer_ATP </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="DnaA_4mer_ATP_internal_Initialization" symbol="DnaA_4mer_ATP_internal">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> DnaA_4mer_ATP </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="DnaA_5mer_ATP_internal_Initialization" symbol="DnaA_5mer_ATP_internal">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> DnaA_5mer_ATP </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="DnaA_6mer_ATP_internal_Initialization" symbol="DnaA_6mer_ATP_internal">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> DnaA_6mer_ATP </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="DnaA_7mer_ATP_internal_Initialization" symbol="DnaA_7mer_ATP_internal">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> DnaA_7mer_ATP </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="nMonomers_Initialization" symbol="nMonomers">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <apply>
+              <plus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <times/>
+                        <cn> 2 </cn>
+                        <ci> DnaA_2mer_ATP_internal </ci>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <cn> 3 </cn>
+                        <ci> DnaA_3mer_ATP_internal </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn> 4 </cn>
+                      <ci> DnaA_4mer_ATP_internal </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn> 4 </cn>
+                    <ci> DnaA_4mer_ATP_internal </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 5 </cn>
+                  <ci> DnaA_5mer_ATP_internal </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <cn> 6 </cn>
+                <ci> DnaA_6mer_ATP_internal </ci>
+              </apply>
+            </apply>
+            <apply>
+              <times/>
+              <cn> 7 </cn>
+              <ci> DnaA_7mer_ATP_internal </ci>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+    </listOfInitialAssignments>
+    <listOfEvents>
+	   <event id="_E0" useValuesFromTriggerTime="false">
+        <trigger initialValue="false" persistent="false">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <eq/>
+                <ci> state </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+              <apply>
+                <lt/>
+                <ci> i </ci>
+                <ci> maxiter </ci>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <priority>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 1 </cn>
+          </math>
+        </priority>
+        <listOfEventAssignments>
+          <eventAssignment variable="state">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="integer"> 1 </cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="M">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <divide/>
+                <apply>
+                  <plus/>
+                  <ci> L </ci>
+                  <ci> HK </ci>
+                </apply>
+                <cn type="integer"> 2 </cn>
+              </apply>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="_E1" useValuesFromTriggerTime="false">
+        <trigger initialValue="false" persistent="false">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <eq/>
+                <ci> state </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+              <apply>
+                <lt/>
+                <ci> i </ci>
+                <ci> maxiter </ci>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <priority>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 1 </cn>
+          </math>
+        </priority>
+        <listOfEventAssignments>
+          <eventAssignment variable="state">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="integer"> 2 </cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="M">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <divide/>
+                <apply>
+                  <plus/>
+                  <ci> L </ci>
+                  <ci> HK </ci>
+                </apply>
+                <cn type="integer"> 2 </cn>
+              </apply>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="_E2" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <eq/>
+              <ci> state </ci>
+              <cn type="integer"> 1 </cn>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="state">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="integer"> 0 </cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="i">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci> i </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="HK">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> M </ci>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="_E3" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <eq/>
+              <ci> state </ci>
+              <cn type="integer"> 2 </cn>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="state">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="integer"> 0 </cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="i">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci> i </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="L">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> M </ci>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="_E4" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <eq/>
+                <ci> state </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+              <apply>
+                <geq/>
+                <ci> i </ci>
+                <ci> maxiter </ci>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="random">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <floor/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <minus/>
+                        <ci> b </ci>
+                        <ci> a </ci>
+                      </apply>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <ci> M </ci>
+                  </apply>
+                  <ci> a </ci>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="state">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="integer"> -1 </cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="dissociationEvent" metaid="_06240676-1d5e-43aa-82f2-d58a2f5138c4" useValuesFromTriggerTime="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_06240676-1d5e-43aa-82f2-d58a2f5138c4">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0005488"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <trigger persistent="true" initialValue="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <and/>
+              <apply>
+                <eq/>
+                <ci> dissociation </ci>
+                <cn> 1 </cn>
+              </apply>
+              <apply>
+                <geq/>
+                <ci> water </ci>
+                <ci> nMonomers </ci>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="dissociation">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <cn> 0 </cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="water">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <minus/>
+                <ci> water </ci>
+                <ci> nMonomers </ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="Pi">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <plus/>
+                <ci> Pi </ci>
+                <ci> nMonomers </ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="H">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <plus/>
+                <ci> H </ci>
+                <ci> nMonomers </ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="DnaA_1mer_ADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <plus/>
+                <ci> DnaA_1mer_ADP </ci>
+                <ci> nMonomers </ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="DnaA_2mer_ATP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <minus/>
+                <ci> DnaA_2mer_ATP </ci>
+                <ci> DnaA_2mer_ATP_internal </ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="DnaA_3mer_ATP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <minus/>
+                <ci> DnaA_3mer_ATP </ci>
+                <ci> DnaA_3mer_ATP_internal </ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="DnaA_4mer_ATP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <minus/>
+                <ci> DnaA_4mer_ATP </ci>
+                <ci> DnaA_4mer_ATP_internal </ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="DnaA_5mer_ATP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <minus/>
+                <ci> DnaA_5mer_ATP </ci>
+                <ci> DnaA_5mer_ATP_internal </ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="DnaA_6mer_ATP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <minus/>
+                <ci> DnaA_6mer_ATP </ci>
+                <ci> DnaA_6mer_ATP_internal </ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="DnaA_7mer_ATP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <minus/>
+                <ci> DnaA_7mer_ATP </ci>
+                <ci> DnaA_7mer_ATP_internal </ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="nMonomers">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <times/>
+                            <cn> 2 </cn>
+                            <ci> DnaA_2mer_ATP_internal </ci>
+                          </apply>
+                          <apply>
+                            <times/>
+                            <cn> 3 </cn>
+                            <ci> DnaA_3mer_ATP_internal </ci>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <cn> 4 </cn>
+                          <ci> DnaA_4mer_ATP_internal </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <cn> 4 </cn>
+                        <ci> DnaA_4mer_ATP_internal </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn> 5 </cn>
+                      <ci> DnaA_5mer_ATP_internal </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn> 6 </cn>
+                    <ci> DnaA_6mer_ATP_internal </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 7 </cn>
+                  <ci> DnaA_7mer_ATP_internal </ci>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event useValuesFromTriggerTime="true" id="endDissociation">
+        <trigger persistent="true" initialValue="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <and/>
+              <apply>
+                <eq/>
+                <ci> nMonomers </ci>
+                <cn> 0 </cn>
+              </apply>
+              <apply>
+                <eq/>
+                <ci> dissociation </ci>
+                <cn> 1 </cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="dissociation">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <cn> 0 </cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event useValuesFromTriggerTime="true" id="numberGenerator">
+        <trigger persistent="true" initialValue="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <or/>
+              <apply>
+                <eq/>
+                <ci> number </ci>
+                <cn> 0 </cn>
+              </apply>
+              <apply>
+                <eq/>
+                <ci> number </ci>
+                <cn> 7 </cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="number">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <plus/>
+                <apply>
+                  <floor/>
+                  <apply>
+                    <times/>
+                    <cn> 6 </cn>
+                    <ci> random </ci>
+                  </apply>
+                </apply>
+                <cn> 1 </cn>
+              </apply>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event useValuesFromTriggerTime="true" id="remove2mer">
+        <trigger persistent="true" initialValue="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <and/>
+              <apply>
+                <eq/>
+                <ci> number </ci>
+                <cn> 1 </cn>
+              </apply>
+              <apply>
+                <eq/>
+                <ci> dissociation </ci>
+                <cn> 1 </cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="DnaA_2mer_ATP_internal">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <minus/>
+                <ci> DnaA_2mer_ATP_internal </ci>
+                <cn> 1 </cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="number">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <cn> 0 </cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="nMonomers">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <times/>
+                            <cn> 2 </cn>
+                            <ci> DnaA_2mer_ATP_internal </ci>
+                          </apply>
+                          <apply>
+                            <times/>
+                            <cn> 3 </cn>
+                            <ci> DnaA_3mer_ATP_internal </ci>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <cn> 4 </cn>
+                          <ci> DnaA_4mer_ATP_internal </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <cn> 4 </cn>
+                        <ci> DnaA_4mer_ATP_internal </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn> 5 </cn>
+                      <ci> DnaA_5mer_ATP_internal </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn> 6 </cn>
+                    <ci> DnaA_6mer_ATP_internal </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 7 </cn>
+                  <ci> DnaA_7mer_ATP_internal </ci>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event useValuesFromTriggerTime="true" id="remove3mer">
+        <trigger persistent="true" initialValue="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <and/>
+              <apply>
+                <eq/>
+                <ci> number </ci>
+                <cn> 2 </cn>
+              </apply>
+              <apply>
+                <eq/>
+                <ci> dissociation </ci>
+                <cn> 1 </cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="DnaA_3mer_ATP_internal">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <minus/>
+                <ci> DnaA_3mer_ATP_internal </ci>
+                <cn> 1 </cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="number">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <cn> 0 </cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="nMonomers">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <times/>
+                            <cn> 2 </cn>
+                            <ci> DnaA_2mer_ATP_internal </ci>
+                          </apply>
+                          <apply>
+                            <times/>
+                            <cn> 3 </cn>
+                            <ci> DnaA_3mer_ATP_internal </ci>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <cn> 4 </cn>
+                          <ci> DnaA_4mer_ATP_internal </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <cn> 4 </cn>
+                        <ci> DnaA_4mer_ATP_internal </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn> 5 </cn>
+                      <ci> DnaA_5mer_ATP_internal </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn> 6 </cn>
+                    <ci> DnaA_6mer_ATP_internal </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 7 </cn>
+                  <ci> DnaA_7mer_ATP_internal </ci>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event useValuesFromTriggerTime="true" id="remove4mer">
+        <trigger persistent="true" initialValue="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <and/>
+              <apply>
+                <eq/>
+                <ci> number </ci>
+                <cn> 3 </cn>
+              </apply>
+              <apply>
+                <eq/>
+                <ci> dissociation </ci>
+                <cn> 1 </cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="DnaA_4mer_ATP_internal">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <minus/>
+                <ci> DnaA_4mer_ATP_internal </ci>
+                <cn> 1 </cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="number">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <cn> 0 </cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="nMonomers">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <times/>
+                            <cn> 2 </cn>
+                            <ci> DnaA_2mer_ATP_internal </ci>
+                          </apply>
+                          <apply>
+                            <times/>
+                            <cn> 3 </cn>
+                            <ci> DnaA_3mer_ATP_internal </ci>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <cn> 4 </cn>
+                          <ci> DnaA_4mer_ATP_internal </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <cn> 4 </cn>
+                        <ci> DnaA_4mer_ATP_internal </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn> 5 </cn>
+                      <ci> DnaA_5mer_ATP_internal </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn> 6 </cn>
+                    <ci> DnaA_6mer_ATP_internal </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 7 </cn>
+                  <ci> DnaA_7mer_ATP_internal </ci>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event useValuesFromTriggerTime="true" id="remove5mer">
+        <trigger persistent="true" initialValue="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <and/>
+              <apply>
+                <eq/>
+                <ci> number </ci>
+                <cn> 4 </cn>
+              </apply>
+              <apply>
+                <eq/>
+                <ci> dissociation </ci>
+                <cn> 1 </cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="DnaA_5mer_ATP_internal">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <minus/>
+                <ci> DnaA_5mer_ATP_internal </ci>
+                <cn> 1 </cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="number">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <cn> 0 </cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="nMonomers">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <times/>
+                            <cn> 2 </cn>
+                            <ci> DnaA_2mer_ATP_internal </ci>
+                          </apply>
+                          <apply>
+                            <times/>
+                            <cn> 3 </cn>
+                            <ci> DnaA_3mer_ATP_internal </ci>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <cn> 4 </cn>
+                          <ci> DnaA_4mer_ATP_internal </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <cn> 4 </cn>
+                        <ci> DnaA_4mer_ATP_internal </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn> 5 </cn>
+                      <ci> DnaA_5mer_ATP_internal </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn> 6 </cn>
+                    <ci> DnaA_6mer_ATP_internal </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 7 </cn>
+                  <ci> DnaA_7mer_ATP_internal </ci>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event useValuesFromTriggerTime="true" id="remove6mer">
+        <trigger persistent="true" initialValue="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <and/>
+              <apply>
+                <eq/>
+                <ci> number </ci>
+                <cn> 5 </cn>
+              </apply>
+              <apply>
+                <eq/>
+                <ci> dissociation </ci>
+                <cn> 1 </cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="DnaA_6mer_ATP_internal">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <minus/>
+                <ci> DnaA_6mer_ATP_internal </ci>
+                <cn> 1 </cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="number">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <cn> 0 </cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="nMonomers">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <times/>
+                            <cn> 2 </cn>
+                            <ci> DnaA_2mer_ATP_internal </ci>
+                          </apply>
+                          <apply>
+                            <times/>
+                            <cn> 3 </cn>
+                            <ci> DnaA_3mer_ATP_internal </ci>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <cn> 4 </cn>
+                          <ci> DnaA_4mer_ATP_internal </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <cn> 4 </cn>
+                        <ci> DnaA_4mer_ATP_internal </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn> 5 </cn>
+                      <ci> DnaA_5mer_ATP_internal </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn> 6 </cn>
+                    <ci> DnaA_6mer_ATP_internal </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 7 </cn>
+                  <ci> DnaA_7mer_ATP_internal </ci>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event useValuesFromTriggerTime="true" id="remove7mer">
+        <trigger persistent="true" initialValue="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <and/>
+              <apply>
+                <eq/>
+                <ci> number </ci>
+                <cn> 6 </cn>
+              </apply>
+              <apply>
+                <eq/>
+                <ci> dissociation </ci>
+                <cn> 1 </cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="DnaA_7mer_ATP_internal">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <minus/>
+                <ci> DnaA_7mer_ATP_internal </ci>
+                <cn> 1 </cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="number">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <cn> 0 </cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="nMonomers">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <times/>
+                            <cn> 2 </cn>
+                            <ci> DnaA_2mer_ATP_internal </ci>
+                          </apply>
+                          <apply>
+                            <times/>
+                            <cn> 3 </cn>
+                            <ci> DnaA_3mer_ATP_internal </ci>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <cn> 4 </cn>
+                          <ci> DnaA_4mer_ATP_internal </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <cn> 4 </cn>
+                        <ci> DnaA_4mer_ATP_internal </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn> 5 </cn>
+                      <ci> DnaA_5mer_ATP_internal </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn> 6 </cn>
+                    <ci> DnaA_6mer_ATP_internal </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 7 </cn>
+                  <ci> DnaA_7mer_ATP_internal </ci>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+    </listOfEvents>
+  </model>
+</sbml>
