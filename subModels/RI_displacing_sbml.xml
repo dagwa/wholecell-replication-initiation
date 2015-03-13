@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
-  <model id="Displacing" name="RepInit_Displacing">
+  <model id="RI_displacing" name="RepInit_Displacing">
     <listOfFunctionDefinitions>
+      <functionDefinition id="fractionalPart">
+        <annotation>
+          <distribution xmlns="http://sbml.org/annotations/distribution" defnition=""/>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>x</ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <ci>x</ci>
+              <apply>
+                <floor/>
+                <ci>x</ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
       <functionDefinition id="minFunc">
+        <annotation>
+          <distribution xmlns="http://sbml.org/annotations/distribution" defnition=""/>
+        </annotation>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <lambda>
             <bvar>
@@ -28,6 +51,9 @@
         </math>
       </functionDefinition>
       <functionDefinition id="mod">
+        <annotation>
+          <distribution xmlns="http://sbml.org/annotations/distribution" defnition=""/>
+        </annotation>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <lambda>
             <bvar>
@@ -56,6 +82,9 @@
         </math>
       </functionDefinition>
       <functionDefinition id="randInt">
+        <annotation>
+          <distribution xmlns="http://sbml.org/annotations/distribution" defnition=""/>
+        </annotation>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <lambda>
             <bvar>
@@ -66,7 +95,9 @@
               <apply>
                 <times/>
                 <apply>
-                  <ci>random</ci>
+                  <ci>uniform</ci>
+                  <cn>0</cn>
+                  <cn>1</cn>
                 </apply>
                 <ci>x</ci>
               </apply>
@@ -75,6 +106,9 @@
         </math>
       </functionDefinition>
       <functionDefinition id="stochasticRound">
+        <annotation>
+          <distribution xmlns="http://sbml.org/annotations/distribution" defnition=""/>
+        </annotation>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <lambda>
             <bvar>
@@ -93,10 +127,12 @@
                 <apply>
                   <lt/>
                   <apply>
-                    <ci>random</ci>
+                    <ci>uniform</ci>
+                    <cn>0</cn>
+                    <cn>1</cn>
                   </apply>
                   <apply>
-                    <csymbol>fractionalPart</csymbol>
+                    <ci>fractionalPart</ci>
                     <ci>x</ci>
                   </apply>
                 </apply>
@@ -111,15 +147,39 @@
           </lambda>
         </math>
       </functionDefinition>
+      <functionDefinition id="uniform">
+        <annotation>
+          <distribution xmlns="http://sbml.org/annotations/distribution" defnition="http://en.wikipedia.org/wiki/Uniform_distribution_(continous)"/>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>x</ci>
+            </bvar>
+            <bvar>
+              <ci>y</ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <plus/>
+                <ci>x</ci>
+                <ci>y</ci>
+              </apply>
+              <cn>2</cn>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
     </listOfFunctionDefinitions>
     <listOfCompartments>
-      <compartment constant="false" id="default" name="Displacing" spatialDimensions="3"/>
+      <compartment constant="false" id="default" name="Displacing" size="0.0" spatialDimensions="3"/>
     </listOfCompartments>
     <listOfSpecies>
-      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="true" id="MG_469_1MER_ADP__bound" initialAmount="0.0"/>
-      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="true" id="MG_469_1MER_ADP__c" initialAmount="0.0"/>
-      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="true" id="MG_469_1MER_ATP__bound" initialAmount="0.0"/>
-      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="true" id="MG_469_1MER_ATP__c" initialAmount="0.0"/>
+      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ADP__bound" initialAmount="0.0"/>
+      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ADP__c" initialAmount="0.0"/>
+      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ATP__bound" initialAmount="0.0"/>
+      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ATP__c" initialAmount="0.0"/>
     </listOfSpecies>
     <listOfParameters>
       <parameter constant="false" id="R1_1mer_ADP" value="1.0"/>
@@ -189,6 +249,7 @@
       <parameter constant="false" id="chromosome_R4" value="0.0"/>
       <parameter constant="false" id="displacingDnaAADP" value="0.0"/>
       <parameter constant="false" id="displacingDnaAATP" value="0.0"/>
+      <parameter constant="false" id="isInit" value="0.0"/>
       <parameter constant="false" id="kd1ADP" value="20.0"/>
       <parameter constant="false" id="kd1ATP" value="20.0"/>
       <parameter constant="false" id="minRxState" value="0.0"/>
@@ -209,7 +270,6 @@
       <parameter constant="false" id="testR2" value="0.0"/>
       <parameter constant="false" id="testR3" value="0.0"/>
       <parameter constant="false" id="testR4" value="0.0"/>
-      <parameter constant="false" id="testRState" value="0.0"/>
       <parameter constant="false" id="x" value="0.0"/>
       <parameter constant="false" id="y" value="0.0"/>
     </listOfParameters>
@@ -223,29 +283,11 @@
           </apply>
         </math>
       </assignmentRule>
-      <assignmentRule metaid="MG_469_1MER_ADP__c_Assignment_rule" variable="MG_469_1MER_ADP__c">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <plus/>
-            <ci>MG_469_1MER_ADP__c</ci>
-            <ci>displacingDnaAADP</ci>
-          </apply>
-        </math>
-      </assignmentRule>
       <assignmentRule metaid="MG_469_1MER_ATP__bound_Assignment_rule" variable="MG_469_1MER_ATP__bound">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>
             <minus/>
             <ci>MG_469_1MER_ATP__bound</ci>
-            <ci>displacingDnaAATP</ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule metaid="MG_469_1MER_ATP__c_Assignment_rule" variable="MG_469_1MER_ATP__c">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <plus/>
-            <ci>MG_469_1MER_ATP__c</ci>
             <ci>displacingDnaAATP</ci>
           </apply>
         </math>
@@ -282,195 +324,50 @@
           </apply>
         </math>
       </assignmentRule>
-      <assignmentRule metaid="minRxState_Assignment_rule" variable="minRxState">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <ci>minFunc</ci>
-            <ci>chromosome_R1</ci>
-            <apply>
-              <ci>minFunc</ci>
-              <ci>chromosome_R2</ci>
-              <apply>
-                <ci>minFunc</ci>
-                <ci>chromosome_R3</ci>
-                <ci>chromosome_R4</ci>
-              </apply>
-            </apply>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule metaid="removeR1_Assignment_rule" variable="removeR1">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <cn>0</cn>
-        </math>
-      </assignmentRule>
-      <assignmentRule metaid="removeR2_Assignment_rule" variable="removeR2">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <cn>0</cn>
-        </math>
-      </assignmentRule>
-      <assignmentRule metaid="removeR3_Assignment_rule" variable="removeR3">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <cn>0</cn>
-        </math>
-      </assignmentRule>
-      <assignmentRule metaid="removeR4_Assignment_rule" variable="removeR4">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <cn>0</cn>
-        </math>
-      </assignmentRule>
-      <assignmentRule metaid="stochRoundR1ADP_Assignment_rule" variable="stochRoundR1ADP">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <ci>stochasticRound</ci>
-            <apply>
-              <divide/>
-              <ci>kd1ADP</ci>
-              <cn>3600</cn>
-            </apply>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule metaid="stochRoundR1ATP_Assignment_rule" variable="stochRoundR1ATP">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <ci>stochasticRound</ci>
-            <apply>
-              <divide/>
-              <ci>kd1ATP</ci>
-              <cn>3600</cn>
-            </apply>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule metaid="stochRoundR2ADP_Assignment_rule" variable="stochRoundR2ADP">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <ci>stochasticRound</ci>
-            <apply>
-              <divide/>
-              <ci>kd1ADP</ci>
-              <cn>3600</cn>
-            </apply>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule metaid="stochRoundR2ATP_Assignment_rule" variable="stochRoundR2ATP">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <ci>stochasticRound</ci>
-            <apply>
-              <divide/>
-              <ci>kd1ATP</ci>
-              <cn>3600</cn>
-            </apply>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule metaid="stochRoundR3ADP_Assignment_rule" variable="stochRoundR3ADP">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <ci>stochasticRound</ci>
-            <apply>
-              <divide/>
-              <ci>kd1ADP</ci>
-              <cn>3600</cn>
-            </apply>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule metaid="stochRoundR3ATP_Assignment_rule" variable="stochRoundR3ATP">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <ci>stochasticRound</ci>
-            <apply>
-              <divide/>
-              <ci>kd1ATP</ci>
-              <cn>3600</cn>
-            </apply>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule metaid="stochRoundR4ADP_Assignment_rule" variable="stochRoundR4ADP">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <ci>stochasticRound</ci>
-            <apply>
-              <divide/>
-              <ci>kd1ADP</ci>
-              <cn>3600</cn>
-            </apply>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule metaid="stochRoundR4ATP_Assignment_rule" variable="stochRoundR4ATP">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <ci>stochasticRound</ci>
-            <apply>
-              <divide/>
-              <ci>kd1ATP</ci>
-              <cn>3600</cn>
-            </apply>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule metaid="testR1_Assignment_rule" variable="testR1">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <cn>1</cn>
-        </math>
-      </assignmentRule>
-      <assignmentRule metaid="testR2_Assignment_rule" variable="testR2">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <cn>1</cn>
-        </math>
-      </assignmentRule>
-      <assignmentRule metaid="testR3_Assignment_rule" variable="testR3">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <cn>1</cn>
-        </math>
-      </assignmentRule>
-      <assignmentRule metaid="testR4_Assignment_rule" variable="testR4">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <cn>1</cn>
-        </math>
-      </assignmentRule>
     </listOfRules>
     <listOfEvents>
       <event id="CheckR1" useValuesFromTriggerTime="true">
-        <trigger initialValue="true" persistent="true">
+        <trigger initialValue="false" persistent="true">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <and/>
               <apply>
-                <gt/>
-                <ci>testR1</ci>
-                <cn>0</cn>
-              </apply>
-              <apply>
-                <or/>
+                <and/>
                 <apply>
                   <gt/>
-                  <ci>chromosome_R1</ci>
-                  <ci>minRxState</ci>
+                  <ci>testR1</ci>
+                  <cn>0</cn>
                 </apply>
                 <apply>
-                  <and/>
+                  <or/>
                   <apply>
-                    <eq/>
+                    <gt/>
                     <ci>chromosome_R1</ci>
                     <ci>minRxState</ci>
                   </apply>
                   <apply>
-                    <eq/>
+                    <and/>
                     <apply>
-                      <ci>mod</ci>
+                      <eq/>
                       <ci>chromosome_R1</ci>
-                      <cn>2</cn>
+                      <ci>minRxState</ci>
                     </apply>
-                    <cn>1</cn>
+                    <apply>
+                      <eq/>
+                      <apply>
+                        <ci>mod</ci>
+                        <ci>chromosome_R1</ci>
+                        <cn>2</cn>
+                      </apply>
+                      <cn>1</cn>
+                    </apply>
                   </apply>
                 </apply>
+              </apply>
+              <apply>
+                <eq/>
+                <ci>isInit</ci>
+                <cn>1</cn>
               </apply>
             </apply>
           </math>
@@ -489,39 +386,47 @@
         </listOfEventAssignments>
       </event>
       <event id="CheckR2" useValuesFromTriggerTime="true">
-        <trigger initialValue="true" persistent="true">
+        <trigger initialValue="false" persistent="true">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <and/>
               <apply>
-                <gt/>
-                <ci>testR2</ci>
-                <cn>0</cn>
-              </apply>
-              <apply>
-                <or/>
+                <and/>
                 <apply>
                   <gt/>
-                  <ci>chromosome_R2</ci>
-                  <ci>minRxState</ci>
+                  <ci>testR2</ci>
+                  <cn>0</cn>
                 </apply>
                 <apply>
-                  <and/>
+                  <or/>
                   <apply>
-                    <eq/>
+                    <gt/>
                     <ci>chromosome_R2</ci>
                     <ci>minRxState</ci>
                   </apply>
                   <apply>
-                    <eq/>
+                    <and/>
                     <apply>
-                      <ci>mod</ci>
+                      <eq/>
                       <ci>chromosome_R2</ci>
-                      <cn>2</cn>
+                      <ci>minRxState</ci>
                     </apply>
-                    <cn>1</cn>
+                    <apply>
+                      <eq/>
+                      <apply>
+                        <ci>mod</ci>
+                        <ci>chromosome_R2</ci>
+                        <cn>2</cn>
+                      </apply>
+                      <cn>1</cn>
+                    </apply>
                   </apply>
                 </apply>
+              </apply>
+              <apply>
+                <eq/>
+                <ci>isInit</ci>
+                <cn>1</cn>
               </apply>
             </apply>
           </math>
@@ -540,39 +445,47 @@
         </listOfEventAssignments>
       </event>
       <event id="CheckR3" useValuesFromTriggerTime="true">
-        <trigger initialValue="true" persistent="true">
+        <trigger initialValue="false" persistent="true">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <and/>
               <apply>
-                <gt/>
-                <ci>testR3</ci>
-                <cn>0</cn>
-              </apply>
-              <apply>
-                <or/>
+                <and/>
                 <apply>
                   <gt/>
-                  <ci>chromosome_R3</ci>
-                  <ci>minRxState</ci>
+                  <ci>testR3</ci>
+                  <cn>0</cn>
                 </apply>
                 <apply>
-                  <and/>
+                  <or/>
                   <apply>
-                    <eq/>
+                    <gt/>
                     <ci>chromosome_R3</ci>
                     <ci>minRxState</ci>
                   </apply>
                   <apply>
-                    <eq/>
+                    <and/>
                     <apply>
-                      <ci>mod</ci>
+                      <eq/>
                       <ci>chromosome_R3</ci>
-                      <cn>2</cn>
+                      <ci>minRxState</ci>
                     </apply>
-                    <cn>1</cn>
+                    <apply>
+                      <eq/>
+                      <apply>
+                        <ci>mod</ci>
+                        <ci>chromosome_R3</ci>
+                        <cn>2</cn>
+                      </apply>
+                      <cn>1</cn>
+                    </apply>
                   </apply>
                 </apply>
+              </apply>
+              <apply>
+                <eq/>
+                <ci>isInit</ci>
+                <cn>1</cn>
               </apply>
             </apply>
           </math>
@@ -591,39 +504,47 @@
         </listOfEventAssignments>
       </event>
       <event id="CheckR4" useValuesFromTriggerTime="true">
-        <trigger initialValue="true" persistent="true">
+        <trigger initialValue="false" persistent="true">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <and/>
               <apply>
-                <gt/>
-                <ci>testR4</ci>
-                <cn>0</cn>
-              </apply>
-              <apply>
-                <or/>
+                <and/>
                 <apply>
                   <gt/>
-                  <ci>chromosome_R4</ci>
-                  <ci>minRxState</ci>
+                  <ci>testR4</ci>
+                  <cn>0</cn>
                 </apply>
                 <apply>
-                  <and/>
+                  <or/>
                   <apply>
-                    <eq/>
+                    <gt/>
                     <ci>chromosome_R4</ci>
                     <ci>minRxState</ci>
                   </apply>
                   <apply>
-                    <eq/>
+                    <and/>
                     <apply>
-                      <ci>mod</ci>
+                      <eq/>
                       <ci>chromosome_R4</ci>
-                      <cn>2</cn>
+                      <ci>minRxState</ci>
                     </apply>
-                    <cn>1</cn>
+                    <apply>
+                      <eq/>
+                      <apply>
+                        <ci>mod</ci>
+                        <ci>chromosome_R4</ci>
+                        <cn>2</cn>
+                      </apply>
+                      <cn>1</cn>
+                    </apply>
                   </apply>
                 </apply>
+              </apply>
+              <apply>
+                <eq/>
+                <ci>isInit</ci>
+                <cn>1</cn>
               </apply>
             </apply>
           </math>
@@ -642,30 +563,38 @@
         </listOfEventAssignments>
       </event>
       <event id="RemoveR1ADP" useValuesFromTriggerTime="true">
-        <trigger initialValue="true" persistent="true">
+        <trigger initialValue="false" persistent="true">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <and/>
               <apply>
                 <and/>
                 <apply>
-                  <eq/>
-                  <ci>testR1</ci>
-                  <cn>0</cn>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci>testR1</ci>
+                    <cn>0</cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci>removeR1</ci>
+                    <cn>1</cn>
+                  </apply>
                 </apply>
                 <apply>
                   <eq/>
-                  <ci>removeR1</ci>
+                  <apply>
+                    <ci>mod</ci>
+                    <ci>chromosome_R1</ci>
+                    <cn>2</cn>
+                  </apply>
                   <cn>1</cn>
                 </apply>
               </apply>
               <apply>
                 <eq/>
-                <apply>
-                  <ci>mod</ci>
-                  <ci>chromosome_R1</ci>
-                  <cn>2</cn>
-                </apply>
+                <ci>isInit</ci>
                 <cn>1</cn>
               </apply>
             </apply>
@@ -702,31 +631,39 @@
         </listOfEventAssignments>
       </event>
       <event id="RemoveR1ATP" useValuesFromTriggerTime="true">
-        <trigger initialValue="true" persistent="true">
+        <trigger initialValue="false" persistent="true">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <and/>
               <apply>
                 <and/>
                 <apply>
-                  <eq/>
-                  <ci>testR1</ci>
-                  <cn>0</cn>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci>testR1</ci>
+                    <cn>0</cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci>removeR1</ci>
+                    <cn>1</cn>
+                  </apply>
                 </apply>
                 <apply>
                   <eq/>
-                  <ci>removeR1</ci>
-                  <cn>1</cn>
+                  <apply>
+                    <ci>mod</ci>
+                    <ci>chromosome_R1</ci>
+                    <cn>2</cn>
+                  </apply>
+                  <cn>0</cn>
                 </apply>
               </apply>
               <apply>
                 <eq/>
-                <apply>
-                  <ci>mod</ci>
-                  <ci>chromosome_R1</ci>
-                  <cn>2</cn>
-                </apply>
-                <cn>0</cn>
+                <ci>isInit</ci>
+                <cn>1</cn>
               </apply>
             </apply>
           </math>
@@ -762,30 +699,38 @@
         </listOfEventAssignments>
       </event>
       <event id="RemoveR2ADP" useValuesFromTriggerTime="true">
-        <trigger initialValue="true" persistent="true">
+        <trigger initialValue="false" persistent="true">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <and/>
               <apply>
                 <and/>
                 <apply>
-                  <eq/>
-                  <ci>testR2</ci>
-                  <cn>0</cn>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci>testR2</ci>
+                    <cn>0</cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci>removeR2</ci>
+                    <cn>1</cn>
+                  </apply>
                 </apply>
                 <apply>
                   <eq/>
-                  <ci>removeR2</ci>
+                  <apply>
+                    <ci>mod</ci>
+                    <ci>chromosome_R2</ci>
+                    <cn>2</cn>
+                  </apply>
                   <cn>1</cn>
                 </apply>
               </apply>
               <apply>
                 <eq/>
-                <apply>
-                  <ci>mod</ci>
-                  <ci>chromosome_R2</ci>
-                  <cn>2</cn>
-                </apply>
+                <ci>isInit</ci>
                 <cn>1</cn>
               </apply>
             </apply>
@@ -822,31 +767,39 @@
         </listOfEventAssignments>
       </event>
       <event id="RemoveR2ATP" useValuesFromTriggerTime="true">
-        <trigger initialValue="true" persistent="true">
+        <trigger initialValue="false" persistent="true">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <and/>
               <apply>
                 <and/>
                 <apply>
-                  <eq/>
-                  <ci>testR2</ci>
-                  <cn>0</cn>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci>testR2</ci>
+                    <cn>0</cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci>removeR2</ci>
+                    <cn>1</cn>
+                  </apply>
                 </apply>
                 <apply>
                   <eq/>
-                  <ci>removeR2</ci>
-                  <cn>1</cn>
+                  <apply>
+                    <ci>mod</ci>
+                    <ci>chromosome_R2</ci>
+                    <cn>2</cn>
+                  </apply>
+                  <cn>0</cn>
                 </apply>
               </apply>
               <apply>
                 <eq/>
-                <apply>
-                  <ci>mod</ci>
-                  <ci>chromosome_R2</ci>
-                  <cn>2</cn>
-                </apply>
-                <cn>0</cn>
+                <ci>isInit</ci>
+                <cn>1</cn>
               </apply>
             </apply>
           </math>
@@ -882,30 +835,38 @@
         </listOfEventAssignments>
       </event>
       <event id="RemoveR3ADP" useValuesFromTriggerTime="true">
-        <trigger initialValue="true" persistent="true">
+        <trigger initialValue="false" persistent="true">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <and/>
               <apply>
                 <and/>
                 <apply>
-                  <eq/>
-                  <ci>testR3</ci>
-                  <cn>0</cn>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci>testR3</ci>
+                    <cn>0</cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci>removeR3</ci>
+                    <cn>1</cn>
+                  </apply>
                 </apply>
                 <apply>
                   <eq/>
-                  <ci>removeR3</ci>
+                  <apply>
+                    <ci>mod</ci>
+                    <ci>chromosome_R3</ci>
+                    <cn>2</cn>
+                  </apply>
                   <cn>1</cn>
                 </apply>
               </apply>
               <apply>
                 <eq/>
-                <apply>
-                  <ci>mod</ci>
-                  <ci>chromosome_R3</ci>
-                  <cn>2</cn>
-                </apply>
+                <ci>isInit</ci>
                 <cn>1</cn>
               </apply>
             </apply>
@@ -942,31 +903,39 @@
         </listOfEventAssignments>
       </event>
       <event id="RemoveR3ATP" useValuesFromTriggerTime="true">
-        <trigger initialValue="true" persistent="true">
+        <trigger initialValue="false" persistent="true">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <and/>
               <apply>
                 <and/>
                 <apply>
-                  <eq/>
-                  <ci>testR3</ci>
-                  <cn>0</cn>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci>testR3</ci>
+                    <cn>0</cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci>removeR3</ci>
+                    <cn>1</cn>
+                  </apply>
                 </apply>
                 <apply>
                   <eq/>
-                  <ci>removeR3</ci>
-                  <cn>1</cn>
+                  <apply>
+                    <ci>mod</ci>
+                    <ci>chromosome_R3</ci>
+                    <cn>2</cn>
+                  </apply>
+                  <cn>0</cn>
                 </apply>
               </apply>
               <apply>
                 <eq/>
-                <apply>
-                  <ci>mod</ci>
-                  <ci>chromosome_R3</ci>
-                  <cn>2</cn>
-                </apply>
-                <cn>0</cn>
+                <ci>isInit</ci>
+                <cn>1</cn>
               </apply>
             </apply>
           </math>
@@ -1002,30 +971,38 @@
         </listOfEventAssignments>
       </event>
       <event id="RemoveR4ADP" useValuesFromTriggerTime="true">
-        <trigger initialValue="true" persistent="true">
+        <trigger initialValue="false" persistent="true">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <and/>
               <apply>
                 <and/>
                 <apply>
-                  <eq/>
-                  <ci>testR4</ci>
-                  <cn>0</cn>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci>testR4</ci>
+                    <cn>0</cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci>removeR4</ci>
+                    <cn>1</cn>
+                  </apply>
                 </apply>
                 <apply>
                   <eq/>
-                  <ci>removeR4</ci>
+                  <apply>
+                    <ci>mod</ci>
+                    <ci>chromosome_R4</ci>
+                    <cn>2</cn>
+                  </apply>
                   <cn>1</cn>
                 </apply>
               </apply>
               <apply>
                 <eq/>
-                <apply>
-                  <ci>mod</ci>
-                  <ci>chromosome_R4</ci>
-                  <cn>2</cn>
-                </apply>
+                <ci>isInit</ci>
                 <cn>1</cn>
               </apply>
             </apply>
@@ -1062,31 +1039,39 @@
         </listOfEventAssignments>
       </event>
       <event id="RemoveR4ATP" useValuesFromTriggerTime="true">
-        <trigger initialValue="true" persistent="true">
+        <trigger initialValue="false" persistent="true">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <and/>
               <apply>
                 <and/>
                 <apply>
-                  <eq/>
-                  <ci>testR4</ci>
-                  <cn>0</cn>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci>testR4</ci>
+                    <cn>0</cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci>removeR4</ci>
+                    <cn>1</cn>
+                  </apply>
                 </apply>
                 <apply>
                   <eq/>
-                  <ci>removeR4</ci>
-                  <cn>1</cn>
+                  <apply>
+                    <ci>mod</ci>
+                    <ci>chromosome_R4</ci>
+                    <cn>2</cn>
+                  </apply>
+                  <cn>0</cn>
                 </apply>
               </apply>
               <apply>
                 <eq/>
-                <apply>
-                  <ci>mod</ci>
-                  <ci>chromosome_R4</ci>
-                  <cn>2</cn>
-                </apply>
-                <cn>0</cn>
+                <ci>isInit</ci>
+                <cn>1</cn>
               </apply>
             </apply>
           </math>
@@ -1117,6 +1102,195 @@
           <eventAssignment variable="removeR4">
             <math xmlns="http://www.w3.org/1998/Math/MathML">
               <cn>0</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="initEvent" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <eq/>
+              <ci>isInit</ci>
+              <cn>0</cn>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="isInit">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>1</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="removeR1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="testR1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>1</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="removeR2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="testR2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>1</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="removeR3">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="testR3">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>1</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="removeR4">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="testR4">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>1</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="minRxState">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <ci>minFunc</ci>
+                <ci>chromosome_R1</ci>
+                <apply>
+                  <ci>minFunc</ci>
+                  <ci>chromosome_R2</ci>
+                  <apply>
+                    <ci>minFunc</ci>
+                    <ci>chromosome_R3</ci>
+                    <ci>chromosome_R4</ci>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="stochRoundR1ATP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <ci>stochasticRound</ci>
+                <apply>
+                  <divide/>
+                  <ci>kd1ATP</ci>
+                  <cn>3600</cn>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="stochRoundR1ADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <ci>stochasticRound</ci>
+                <apply>
+                  <divide/>
+                  <ci>kd1ADP</ci>
+                  <cn>3600</cn>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="stochRoundR2ATP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <ci>stochasticRound</ci>
+                <apply>
+                  <divide/>
+                  <ci>kd1ATP</ci>
+                  <cn>3600</cn>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="stochRoundR2ADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <ci>stochasticRound</ci>
+                <apply>
+                  <divide/>
+                  <ci>kd1ADP</ci>
+                  <cn>3600</cn>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="stochRoundR3ATP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <ci>stochasticRound</ci>
+                <apply>
+                  <divide/>
+                  <ci>kd1ATP</ci>
+                  <cn>3600</cn>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="stochRoundR3ADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <ci>stochasticRound</ci>
+                <apply>
+                  <divide/>
+                  <ci>kd1ADP</ci>
+                  <cn>3600</cn>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="stochRoundR4ATP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <ci>stochasticRound</ci>
+                <apply>
+                  <divide/>
+                  <ci>kd1ATP</ci>
+                  <cn>3600</cn>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="stochRoundR4ADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <ci>stochasticRound</ci>
+                <apply>
+                  <divide/>
+                  <ci>kd1ADP</ci>
+                  <cn>3600</cn>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_1MER_ATP__c">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci>MG_469_1MER_ATP__c</ci>
+                <ci>displacingDnaAATP</ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_1MER_ADP__c">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci>MG_469_1MER_ADP__c</ci>
+                <ci>displacingDnaAADP</ci>
+              </apply>
             </math>
           </eventAssignment>
         </listOfEventAssignments>

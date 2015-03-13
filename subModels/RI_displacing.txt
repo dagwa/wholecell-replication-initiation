@@ -1,3 +1,9 @@
+function uniform(x,y)
+(x+y)/2;
+end
+function fractionalPart(x)
+x-floor(x);
+end
 
 function mod(x,y)
           x - y * floor(x / y)
@@ -8,18 +14,18 @@ piecewise(x,x<y,y);
 end
 
 function randInt(x)
-  floor(random()*x);
+  floor(uniform(0,1)*x);
 end
 
 function stochasticRound(x)
-piecewise(floor(x)+1.0,random()<fractionalPart(x),floor(x));
+piecewise(floor(x)+1.0,uniform(0,1)<fractionalPart(x),floor(x));
 end
 
 
 model RepInit_Displacing()
     compartment default;
     species MG_469_1MER_ADP__bound in default, MG_469_1MER_ADP__c in default, MG_469_1MER_ATP__bound in default, MG_469_1MER_ATP__c in default;
-    var kd1ATP, kd1ADP, numBindingSites, chromosome_R1, chromosmoe_R2, chromosome_R3, chromosome_R4;
+    var kd1ATP, kd1ADP, numBindingSites, chromosome_R1, chromosmoe_R2, chromosome_R3, chromosome_R4, isInit;
 
 var R1_free;
 var R1_1mer_ATP;
@@ -158,46 +164,32 @@ R4_7mer_ATP = 14;
 // part on unspecific ATP
 
 var displacingDnaAATP;
-displacingDnaAATP := stochasticRound(kd1ATP / 3600 * MG_469_1MER_ATP__bound);
-
-MG_469_1MER_ATP__c := MG_469_1MER_ATP__c + displacingDnaAATP;
-MG_469_1MER_ATP__bound := MG_469_1MER_ATP__bound - displacingDnaAATP;
-
-
 
 // part on unspecific ADP
 
 var displacingDnaAADP;
-displacingDnaAADP := stochasticRound(kd1ADP / 3600 * MG_469_1MER_ADP__bound);
 
-MG_469_1MER_ADP__c := MG_469_1MER_ADP__c + displacingDnaAADP;
-MG_469_1MER_ADP__bound := MG_469_1MER_ADP__bound - displacingDnaAADP;
 
 
 
 // doing work on R1 - R4
 
-minRxState := minFunc(chromosome_R1, minFunc(chromosome_R2, minFunc(chromosome_R3, chromosome_R4)));
-
-
 // part for R1
 
 var testR1;
-testR1 := 1;
+
 
 var removeR1;
-removeR1 := 0;
 
-CheckR1: at testR1 > 0 && (chromosome_R1 > minRxState || (chromosome_R1 == minRxState && mod(chromosome_R1, 2) == 1)) : testR1 = 0 : removeR1 = 1;
+CheckR1: at testR1 > 0 && (chromosome_R1 > minRxState || (chromosome_R1 == minRxState && mod(chromosome_R1, 2) == 1)) && isInit==1 : testR1 = 0 : removeR1 = 1;
 
 
 var stochRoundR1ATP, stochRoundR1ADP;
-stochRoundR1ATP := stochasticRound(kd1ATP / 3600);
-stochRoundR1ADP := stochasticRound(kd1ADP / 3600);
 
-RemoveR1ADP: at testR1 == 0 && removeR1 == 1 && mod(chromosome_R1,2) == 1 : MG_469_1MER_ADP__c = MG_469_1MER_ADP__c + stochRoundR1ADP : chromosome_R1 = chromosome_R1 - 2*stochRoundR1ATP : removeR1 = 0;
 
-RemoveR1ATP: at testR1 == 0 && removeR1 == 1 && mod(chromosome_R1,2) == 0 : MG_469_1MER_ATP__c = MG_469_1MER_ATP__c + stochRoundR1ATP : chromosome_R1 = chromosome_R1 - 2*stochRoundR1ATP : removeR1 = 0;
+RemoveR1ADP: at testR1 == 0 && removeR1 == 1 && mod(chromosome_R1,2) == 1 && isInit==1 : MG_469_1MER_ADP__c = MG_469_1MER_ADP__c + stochRoundR1ADP : chromosome_R1 = chromosome_R1 - 2*stochRoundR1ATP : removeR1 = 0;
+
+RemoveR1ATP: at testR1 == 0 && removeR1 == 1 && mod(chromosome_R1,2) == 0 && isInit==1 : MG_469_1MER_ATP__c = MG_469_1MER_ATP__c + stochRoundR1ATP : chromosome_R1 = chromosome_R1 - 2*stochRoundR1ATP : removeR1 = 0;
 
 
 
@@ -205,21 +197,20 @@ RemoveR1ATP: at testR1 == 0 && removeR1 == 1 && mod(chromosome_R1,2) == 0 : MG_4
 // part for R2
 
 var testR2;
-testR2 := 1;
+
 
 var removeR2;
-removeR2 := 0;
 
-CheckR2: at testR2 > 0 && (chromosome_R2 > minRxState || (chromosome_R2 == minRxState && mod(chromosome_R2, 2) == 1)) : testR2 = 0 : removeR2 = 1;
+
+CheckR2: at testR2 > 0 && (chromosome_R2 > minRxState || (chromosome_R2 == minRxState && mod(chromosome_R2, 2) == 1)) && isInit==1 : testR2 = 0 : removeR2 = 1;
 
 
 var stochRoundR2ATP, stochRoundR2ADP;
-stochRoundR2ATP := stochasticRound(kd1ATP / 3600);
-stochRoundR2ADP := stochasticRound(kd1ADP / 3600);
 
-RemoveR2ADP: at testR2 == 0 && removeR2 == 1 && mod(chromosome_R2,2) == 1 : MG_469_1MER_ADP__c = MG_469_1MER_ADP__c + stochRoundR2ADP : chromosome_R2 = chromosome_R2 - 2*stochRoundR2ATP : removeR2 = 0;
 
-RemoveR2ATP: at testR2 == 0 && removeR2 == 1 && mod(chromosome_R2,2) == 0 : MG_469_1MER_ATP__c = MG_469_1MER_ATP__c + stochRoundR2ATP : chromosome_R2 = chromosome_R2 - 2*stochRoundR2ATP : removeR2 = 0;
+RemoveR2ADP: at testR2 == 0 && removeR2 == 1 && mod(chromosome_R2,2) == 1 && isInit==1 : MG_469_1MER_ADP__c = MG_469_1MER_ADP__c + stochRoundR2ADP : chromosome_R2 = chromosome_R2 - 2*stochRoundR2ATP : removeR2 = 0;
+
+RemoveR2ATP: at testR2 == 0 && removeR2 == 1 && mod(chromosome_R2,2) == 0 && isInit==1 : MG_469_1MER_ATP__c = MG_469_1MER_ATP__c + stochRoundR2ATP : chromosome_R2 = chromosome_R2 - 2*stochRoundR2ATP : removeR2 = 0;
 
 
 
@@ -227,42 +218,41 @@ RemoveR2ATP: at testR2 == 0 && removeR2 == 1 && mod(chromosome_R2,2) == 0 : MG_4
 // part for R3
 
 var testR3;
-testR3 := 1;
+
 
 var removeR3;
-removeR3 := 0;
 
-CheckR3: at testR3 > 0 && (chromosome_R3 > minRxState || (chromosome_R3 == minRxState && mod(chromosome_R3, 2) == 1)) : testR3 = 0 : removeR3 = 1;
+
+CheckR3: at testR3 > 0 && (chromosome_R3 > minRxState || (chromosome_R3 == minRxState && mod(chromosome_R3, 2) == 1)) && isInit==1 : testR3 = 0 : removeR3 = 1;
 
 
 var stochRoundR3ATP, stochRoundR3ADP;
-stochRoundR3ATP := stochasticRound(kd1ATP / 3600);
-stochRoundR3ADP := stochasticRound(kd1ADP / 3600);
 
-RemoveR3ADP: at testR3 == 0 && removeR3 == 1 && mod(chromosome_R3,2) == 1 : MG_469_1MER_ADP__c = MG_469_1MER_ADP__c + stochRoundR3ADP : chromosome_R3 = chromosome_R3 - 2*stochRoundR3ATP : removeR3 = 0;
+RemoveR3ADP: at testR3 == 0 && removeR3 == 1 && mod(chromosome_R3,2) == 1 && isInit==1 : MG_469_1MER_ADP__c = MG_469_1MER_ADP__c + stochRoundR3ADP : chromosome_R3 = chromosome_R3 - 2*stochRoundR3ATP : removeR3 = 0;
 
-RemoveR3ATP: at testR3 == 0 && removeR3 == 1 && mod(chromosome_R3,2) == 0 : MG_469_1MER_ATP__c = MG_469_1MER_ATP__c + stochRoundR3ATP : chromosome_R3 = chromosome_R3 - 2*stochRoundR3ATP : removeR3 = 0;
+RemoveR3ATP: at testR3 == 0 && removeR3 == 1 && mod(chromosome_R3,2) == 0 && isInit==1 : MG_469_1MER_ATP__c = MG_469_1MER_ATP__c + stochRoundR3ATP : chromosome_R3 = chromosome_R3 - 2*stochRoundR3ATP : removeR3 = 0;
 
 
 
 // part for R4
 
-var testR4;
-testR4 := 1;
-
-var removeR4;
-removeR4 := 0;
-
-CheckR4: at testR4 > 0 && (chromosome_R4 > minRxState || (chromosome_R4 == minRxState && mod(chromosome_R4, 2) == 1)) : testR4 = 0 : removeR4 = 1;
+var testR4, removeR4, stochRoundR4ATP, stochRoundR4ADP;
 
 
-var stochRoundR4ATP, stochRoundR4ADP;
-stochRoundR4ATP := stochasticRound(kd1ATP / 3600);
-stochRoundR4ADP := stochasticRound(kd1ADP / 3600);
+CheckR4: at testR4 > 0 && (chromosome_R4 > minRxState || (chromosome_R4 == minRxState && mod(chromosome_R4, 2) == 1)) && isInit==1 : testR4 = 0 : removeR4 = 1;
 
-RemoveR4ADP: at testR4 == 0 && removeR4 == 1 && mod(chromosome_R4,2) == 1 : MG_469_1MER_ADP__c = MG_469_1MER_ADP__c + stochRoundR4ADP : chromosome_R4 = chromosome_R4 - 2*stochRoundR4ATP : removeR4 = 0;
 
-RemoveR4ATP: at testR4 == 0 && removeR4 == 1 && mod(chromosome_R4,2) == 0 : MG_469_1MER_ATP__c = MG_469_1MER_ATP__c + stochRoundR4ATP : chromosome_R4 = chromosome_R4 - 2*stochRoundR4ATP : removeR4 = 0;
+RemoveR4ADP: at testR4 == 0 && removeR4 == 1 && mod(chromosome_R4,2) == 1 && isInit==1 : MG_469_1MER_ADP__c = MG_469_1MER_ADP__c + stochRoundR4ADP : chromosome_R4 = chromosome_R4 - 2*stochRoundR4ATP : removeR4 = 0;
 
+RemoveR4ATP: at testR4 == 0 && removeR4 == 1 && mod(chromosome_R4,2) == 0 && isInit==1 : MG_469_1MER_ATP__c = MG_469_1MER_ATP__c + stochRoundR4ATP : chromosome_R4 = chromosome_R4 - 2*stochRoundR4ATP : removeR4 = 0;
+
+initEvent: at isInit==0, t0 = false : isInit = 1 : removeR1 = 0 : testR1 = 1 : removeR2 = 0 : testR2 = 1 : removeR3 = 0 : testR3 = 1 : removeR4 = 0 : testR4 = 1 : minRxState = minFunc(chromosome_R1, minFunc(chromosome_R2, minFunc(chromosome_R3, chromosome_R4))) : stochRoundR1ATP = stochasticRound(kd1ATP / 3600) : stochRoundR1ADP = stochasticRound(kd1ADP / 3600) : stochRoundR2ATP = stochasticRound(kd1ATP / 3600) : stochRoundR2ADP = stochasticRound(kd1ADP / 3600) : stochRoundR3ATP = stochasticRound(kd1ATP / 3600) : stochRoundR3ADP = stochasticRound(kd1ADP / 3600) : stochRoundR4ATP = stochasticRound(kd1ATP / 3600) : stochRoundR4ADP = stochasticRound(kd1ADP / 3600) : MG_469_1MER_ATP__c = MG_469_1MER_ATP__c + displacingDnaAATP  : MG_469_1MER_ADP__c = MG_469_1MER_ADP__c + displacingDnaAADP ;
+
+displacingDnaAATP := stochasticRound(kd1ATP / 3600 * MG_469_1MER_ATP__bound); 
+displacingDnaAADP := stochasticRound(kd1ADP / 3600 * MG_469_1MER_ADP__bound); 
+MG_469_1MER_ADP__bound := MG_469_1MER_ADP__bound - displacingDnaAADP;
+MG_469_1MER_ATP__bound := MG_469_1MER_ATP__bound - displacingDnaAATP;
+   
 default is "Displacing";
+
 end
