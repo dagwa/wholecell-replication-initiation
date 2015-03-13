@@ -4,7 +4,7 @@ This folder contains JavaScript tests for 2 of the sub models
 which have been already implemented:
 
 1. Activation.
-2. Reactivation.
+2. Dissociation.
 
 It's too difficult to create such kind of tests for other models now,
 because they use stochastic elements generators and it's impossible to cover
