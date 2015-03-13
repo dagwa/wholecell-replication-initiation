@@ -12,7 +12,7 @@ For each sub model there are 2 files: annotated sbml (.xml) and antimony (.txt).
 
 ## XML-files
 
-XML-files are annotated in %tool name% submodels of the Replication Initiation model.
+XML-files are annotated manually by [@haroldGomez](https://github.com/haroldGomez) submodels of the Replication Initiation model.
 All of them are generated via [BioUML](http://biouml.org) and checked using 
 [SBML validator](http://sbml.org/Facilities/Validator/).
 
