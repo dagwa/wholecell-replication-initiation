@@ -1,0 +1,73 @@
+﻿function min(x,y)
+piecewise(x,x<y,y);
+end
+model ReplicationInitiation()
+   compartment cell;
+   species ADP in cell, ATP in cell, DnaA in cell, DnaA_1merADP in cell, DnaA_1merATP in cell, DnaA_2merATP in cell, DnaA_3merATP in cell, DnaA_4merATP in cell, DnaA_5merATP in cell, DnaA_6merATP in cell, DnaA_7merATP in cell, H in cell, NonOriginHigh_ADP in cell, NonOriginHigh_ATP in cell, NonOriginMedium_ADP in cell, NonOriginMedium_ATP in cell, PI in cell, R1_ADP in cell, R1_ATP in cell, R2_ADP in cell, R2_ATP in cell, R3_ADP in cell, R3_ATP in cell, R4_ADP in cell, R4_ATP in cell, water in cell;
+   var K_Regen_P4, activation, binding, cooperativityFactor, displacing, dissociation, k_Regen, kb1ADP, kb1ATP, kb2ADP, kb2ATP, kd1ADP, kd1ATP, membraneConc, reactivation, sometimes;
+
+   //activation
+   reaction_1: ATP + DnaA => DnaA_1merATP; activation*ATP*DnaA;
+
+   //dissociation:
+   reaction_2: DnaA_2merATP + 2water => 2DnaA_1merADP + 2H + 2PI; 0.0;
+   reaction_3: DnaA_3merATP + 3water => 3DnaA_1merADP + 3H + 3PI; 0.0;
+   reaction_4: DnaA_4merATP + 4water_1 => 4DnaA_1merADP + 4H_1 + 4PI_1; 0.0;
+   reaction_5: DnaA_5merATP + 5water_1 => 5DnaA_1merADP + 5H_1 + 5PI_1; 0.0;
+   reaction_6: DnaA_6merATP + 6water => 6DnaA_1merADP + 6H + 6PI; 0.0;
+   reaction_7: DnaA_7merATP + 7water_1 => 7DnaA_1merADP + 7H_1 + 7PI_1; 0.0;
+
+   //binding and polymerization
+   reaction_8: DnaA_1merATP => R1_ATP; kb2ATP*DnaA_1merATP/(cell*cooperativityFactor);
+   reaction_9: DnaA_1merATP => R2_ATP; kb2ATP*DnaA_1merATP/(cell*cooperativityFactor);
+   reaction_10: DnaA_1merATP => R3_ATP; kb2ATP*DnaA_1merATP/(cell*cooperativityFactor);
+   reaction_11: DnaA_1merATP => R4_ATP; kb1ATP*DnaA_1merATP/(cell*cooperativityFactor);
+   reaction_12: DnaA_1merATP => NonOriginHigh_ATP; kb1ATP*DnaA_1merATP/cell;
+   reaction_13: DnaA_1merATP => NonOriginMedium_ATP; kb2ATP*DnaA_1merATP/cell;
+   reaction_14: DnaA_1merADP => R1_ADP; kb2ADP*DnaA_1merADP/(cell*cooperativityFactor);
+   reaction_15: DnaA_1merADP => R2_ADP; kb2ADP*DnaA_1merADP/(cell*cooperativityFactor);
+   reaction_16: DnaA_1merADP => R3_ADP; kb2ADP*DnaA_1merADP/(cell*cooperativityFactor);
+   reaction_17: DnaA_1merADP => R4_ADP; kb1ADP*DnaA_1merADP/(cell*cooperativityFactor);
+   reaction_18: DnaA_1merADP => NonOriginHigh_ADP; kb1ADP*DnaA_1merADP/cell;
+   reaction_19: DnaA_1merADP => NonOriginMedium_ADP; kb2ADP*DnaA_1merADP/cell;
+
+   //displacing
+   reaction_20: R4_ATP => DnaA_1merATP; kd1ATP;
+   reaction_21: R3_ATP => DnaA_1merATP; kd1ATP;
+   reaction_22: R2_ATP => DnaA_1merATP; kd1ATP;
+   reaction_23: R1_ATP => DnaA_1merATP; kd1ATP;
+   reaction_24: NonOriginMedium_ATP => DnaA_1merATP; kd1ATP;
+   reaction_25: NonOriginHigh_ATP => DnaA_1merATP; kd1ATP;
+   reaction_26: R1_ADP => DnaA_1merADP; kd1ADP;
+   reaction_27: R2_ADP => DnaA_1merADP; kd1ADP;
+   reaction_28: R3_ADP => DnaA_1merADP; kd1ADP;
+   reaction_29: R4_ADP => DnaA_1merADP; kd1ADP;
+   reaction_30: NonOriginHigh_ADP => DnaA_1merADP; kd1ADP;
+   reaction_31: NonOriginMedium_ADP => DnaA_1merADP; kd1ADP;
+
+   //reactivation
+   reaction_32: ATP + DnaA_1merADP => ADP + DnaA_1merATP; min(min(DnaA_1merADP*k_Regen*membraneConc/(K_Regen_P4+membraneConc),DnaA_1merADP),ATP);
+
+
+   activation = 1.0;
+
+   //events
+   bindingEvent: at water*DnaA_2merATP*DnaA_3merATP*DnaA_4merATP*DnaA_5merATP*DnaA_6merATP*DnaA_7merATP<=0.0, t0 = true : binding = 1.0;
+   displacingEvent: at sometimes<0.0 : binding = 0.0 : displacing = 1.0;
+   dissociationEvent: at min(ATP,DnaA)<=0.0, t0 = true : activation = 0.0;
+   reactivationEvent: at sometimes<0.0, fromTrigger = true : displacing = 0.0 : reactivation = 1.0;
+   
+   //titles
+   DnaA_1merADP is "DnaA";
+   DnaA_1merATP is "DnaA";
+   DnaA_2merATP is "DnaA";
+   DnaA_3merATP is "DnaA";
+   DnaA_4merATP is "DnaA";
+   DnaA_5merATP is "DnaA";
+   DnaA_6merATP is "DnaA";
+   DnaA_7merATP is "DnaA";
+   H is "H+";
+   H_1 is "H+";
+   PI_1 is "PI";
+   water_1 is "water";
+end
