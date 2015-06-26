@@ -1,0 +1,139 @@
+function uniform(x,y)
+(x+y)/2;
+end
+
+function fractionalPart(x)
+  x - floor(x);
+end
+
+function mod(x,y)
+   x - y * floor(x / y);
+end
+
+function minFunc(x,y)
+  piecewise(x, x<y, y);
+end
+
+function maxFunc(x,y)
+  piecewise(y, x<y, x);
+end
+
+function randInt(x)
+  floor(uniform(0,1)*x);
+end
+
+function stochasticRound(x)
+  piecewise(floor(x)+1.0, uniform(0,1)<fractionalPart(x), floor(x));
+end
+
+model RepInit_BindAndPolymerization()
+
+compartment default;
+species MG_469_1MER_ADP__bound in default, MG_469_1MER_ADP__c in default, MG_469_1MER_ATP__bound in default, MG_469_1MER_ATP__c in default;
+var nAvo, kb1ATP, kb2ATP, cell_Volume, rate9merBind, rate8merBind, chromosome_R1, chromosmoe_R2, chromosome_R3, chromosome_R4, avgBindingRate;
+var maxBindATP, maxBindADP, numFreeDnaAATP, numFreeDnaAADPSites;
+var cSite, cState;
+
+var Rx_free;
+var Rx_1mer_ATP;
+var Rx_1mer_ADP;
+var Rx_2mer_ATP;
+var Rx_2mer_ADP;
+var Rx_3mer_ATP;
+var Rx_3mer_ADP;
+var Rx_4mer_ATP;
+var Rx_4mer_ADP;
+var Rx_5mer_ATP;
+var Rx_5mer_ADP;
+var Rx_6mer_ATP;
+var Rx_6mer_ADP;
+var Rx_7mer_ATP;
+var Rx_7mer_ADP;
+
+Rx_free = 0;
+Rx_1mer_ADP = 1;
+Rx_1mer_ATP = 2;
+Rx_2mer_ADP = 3;
+Rx_2mer_ATP = 4;
+Rx_3mer_ADP = 5;
+Rx_3mer_ATP = 6;
+Rx_4mer_ADP = 7;
+Rx_4mer_ATP = 8;
+Rx_5mer_ADP = 9;
+Rx_5mer_ATP = 10;
+Rx_6mer_ADP = 11;
+Rx_6mer_ATP = 12;
+Rx_7mer_ADP = 13;
+Rx_7mer_ATP = 14;
+
+//TODO: check this
+cSite = 70;
+cState = 20;
+
+################################################################################################################################################
+############################################ 1. Check DnaA_1mer_ATP availability ###############################################################
+numFreeDnaAATP = MG_469_1MER_ATP__c;
+//TODO
+
+################################################################################################################################################
+############################################ 2. Estimate max number of bindings ################################################################
+nAvo := 6.0221412927*1e23;
+kb1ATP := 25;
+kb1ATP := 0.6;
+rate9merBind := kb1ATP * 1e9 / 3600 / nAvo / cell_Volume;
+rate8merBind := kb2ATP * 1e9 / 3600 / nAvo / cell_Volume;
+
+// TODO: use real values of unbind 9mer and 8mer numbers instead of hardcoded constants
+avgBindingRate := ( 148 * rate9merBind + 2079 * rate8merBind ) / (2227 - MG_469_1MER_ADP__bound - MG_469_1MER_ATP__bound);
+// avgBindingRate = (rate9mer*numel(this.dnaABoxIndexs_9mer) + rate8mer*numel(this.dnaABoxIndexs_8mer)) / numel(this.dnaABoxStartPositions);
+
+# calculate cooperativity
+var complexSize = minFunc(chromosome_R1, minFunc(chromosome_R2, minFunc(chromosome_R3, chromosome_R4) ) );
+var coopR1, coopR2, coopR3, coopR4;
+//TODO add check for ATP/ADP
+coopR1 = piecewise(cSite, chromosome_R4 > complexSize, 1);
+coopR2 = piecewise(cSite, chromosome_R4 > complexSize && chromosome_R1 > complexSize, 1);
+coopR3 = piecewise(cSite, chromosome_R4 > complexSize && chromosome_R1 > complexSize, 1);
+coopR4 = piecewise(cSite, chromosome_R3 > complexSize || chromosome_R2 > complexSize || chromosome_R1 > complexSize, 1) + cState * complexSize;
+
+
+# calculate R1-R4 binding rates
+var bindRateR4, bindRateR1, bindRateR2, bindRateR3;
+bindRateR4 = rate9merBind * coopR4;
+bindRateR1 = rate8merBind * coopR1;
+bindRateR2 = rate8merBind * coopR2;
+bindRateR3 = rate8merBind * coopR3;
+
+var numFreeBindingSites;
+numFreeBindingSites= 2227 - MG_469_1MER_ATP__bound + 4 - piecewise(1, chromosome_R1 > 0, 0) - piecewise(1, chromosome_R2 > 0, 0) - piecewise(1, chromosome_R3 > 0, 0) - piecewise(1, chromosome_R4 > 0, 0);
+
+var maxBindATP, areReady;
+areReady = piecewise(1, chromosome_R1 + chromosome_R2 + chromosome_R3 + chromosome_R4 == 28, 0);
+maxBindATP = stochasticRound( minFunc( avgBindingRate * numFreeBindingSites * MG_469_1MER_ATP__c + areReady, minFunc( numFreeBindingSites, MG_469_1MER_ATP__c ) ) );
+
+
+
+
+################################################################################################################################################
+############################################ 3. Estimate upper bound of polymerization #########################################################
+//TODO
+
+
+
+
+################################################################################################################################################
+############################################ 4. Allocate DnaA-ATP ##############################################################################
+var totBindingRate, totPolRate, maxBinding;
+totBindingRate = avgBindingRate*numFreeBindingSites;
+totPolRate = 0; //TODO: summ of polATPRates
+maxBinding = minFunc( maxBindATP, stochasticRound( numFreeDnaAATP * totBindingRate / ( totBindingRate + totPolRate ) ) );
+
+
+################################################################################################################################################
+############################################ 5. Bind and Polymerize ############################################################################
+//TODO
+
+
+
+default is "BindAndPolymerization";
+end
