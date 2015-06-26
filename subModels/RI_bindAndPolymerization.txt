@@ -30,8 +30,8 @@ model RepInit_BindAndPolymerization()
 
 compartment default;
 species MG_469_1MER_ADP__bound in default, MG_469_1MER_ADP__c in default, MG_469_1MER_ATP__bound in default, MG_469_1MER_ATP__c in default;
-var nAvo, kb1ATP, kb2ATP, cell_Volume, rate9merBind, rate8merBind, chromosome_R1, chromosmoe_R2, chromosome_R3, chromosome_R4, avgBindingRate;
-var maxBindATP, maxBindADP, numFreeDnaAATP, numFreeDnaAADPSites;
+var nAvo, kb1ATP, kb2ATP, cell_Volume, chromosome_R1, chromosmoe_R2, chromosome_R3, chromosome_R4;
+var maxBindATP, numFreeDnaAATP;
 var cSite, cState;
 
 var Rx_free;
@@ -93,6 +93,7 @@ numFreeDnaAATP = MG_469_1MER_ATP__c;
 
 ################################################################################################################################################
 ############################################ 2. Estimate max number of bindings ################################################################
+var avgBindingRateATP, rate9merBindATP, rate8merBindATP;
 nAvo := 6.0221412927*1e23;
 kb1ATP := 25;
 kb2ATP := 0.6;
@@ -100,22 +101,22 @@ rate9merBindATP := kb1ATP * 1e9 / 3600 / nAvo / cell_Volume;
 rate8merBindATP := kb2ATP * 1e9 / 3600 / nAvo / cell_Volume;
 
 // TODO: use real values of unbind 9mer and 8mer numbers instead of hardcoded constants
-avgBindingRate := ( 148 * rate9merBindATP + 2079 * rate8merBindATP ) / (2227 - MG_469_1MER_ADP__bound - MG_469_1MER_ATP__bound);
+avgBindingRateATP := ( 148 * rate9merBindATP + 2079 * rate8merBindATP ) / (2227 - MG_469_1MER_ADP__bound - MG_469_1MER_ATP__bound);
 // avgBindingRate = (rate9mer*numel(this.dnaABoxIndexs_9mer) + rate8mer*numel(this.dnaABoxIndexs_8mer)) / numel(this.dnaABoxStartPositions);
 
 # calculate R1-R4 binding rates
-var bindRateR4, bindRateR1, bindRateR2, bindRateR3;
-bindRateR4 = rate9merBindATP * coopR4;
-bindRateR1 = rate8merBindATP * coopR1;
-bindRateR2 = rate8merBindATP * coopR2;
-bindRateR3 = rate8merBindATP * coopR3;
+var bindRateR4ATP, bindRateR1ATP, bindRateR2ATP, bindRateR3ATP;
+bindRateR4ATP = rate9merBindATP * coopR4;
+bindRateR1ATP = rate8merBindATP * coopR1;
+bindRateR2ATP = rate8merBindATP * coopR2;
+bindRateR3ATP = rate8merBindATP * coopR3;
 
-var numFreeBindingSites;
-numFreeBindingSites= 2227 - MG_469_1MER_ATP__bound + 4 - piecewise(1, chromosome_R1 > 0, 0) - piecewise(1, chromosome_R2 > 0, 0) - piecewise(1, chromosome_R3 > 0, 0) - piecewise(1, chromosome_R4 > 0, 0);
+var numFreeBindingSitesATP;
+numFreeBindingSitesATP = 2227 - MG_469_1MER_ATP__bound + 4 - piecewise(1, chromosome_R1 > 0, 0) - piecewise(1, chromosome_R2 > 0, 0) - piecewise(1, chromosome_R3 > 0, 0) - piecewise(1, chromosome_R4 > 0, 0);
 
 var maxBindATP, areReady;
 areReady = piecewise(1, sizeR1_ATP + sizeR2_ATP + sizeR3_ATP + sizeR4_ATP == 28, 0);
-maxBindATP = stochasticRound( minFunc( avgBindingRate * numFreeBindingSites * numFreeDnaAATP + areReady, minFunc( numFreeBindingSites, numFreeDnaAATP ) ) );
+maxBindATP = stochasticRound( minFunc( avgBindingRateATP * numFreeBindingSitesATP * numFreeDnaAATP + areReady, minFunc( numFreeBindingSitesATP, numFreeDnaAATP ) ) );
 
 
 ################################################################################################################################################
@@ -140,19 +141,14 @@ maxPolATP = stochasticRound( minFunc( numFreeDnaAATP*totPolRate, minFunc( numFre
 
 ################################################################################################################################################
 ############################################ 4. Allocate DnaA-ATP ##############################################################################
-var totBindingRate, maxBinding;
-totBindingRate = avgBindingRate*numFreeBindingSites;
-maxBinding = minFunc( maxBindATP, stochasticRound( numFreeDnaAATP * totBindingRate / ( totBindingRate + totPolRate ) ) );
+var totBindingRateATP, maxBindingATP;
+totBindingRateATP = avgBindingRateATP*numFreeBindingSitesATP;
+maxBindingATP = minFunc( maxBindATP, stochasticRound( numFreeDnaAATP * totBindingRateATP / ( totBindingRateATP + totPolRate ) ) );
 
 
 ################################################################################################################################################
 ############################################ 5. Bind and Polymerize ############################################################################
 //TODO
-
-
-
-################################################################################################################################################
-################################################################# ADP part #####################################################################
 
 default is "BindAndPolymerization";
 end
