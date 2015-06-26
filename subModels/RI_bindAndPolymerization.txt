@@ -70,6 +70,22 @@ Rx_7mer_ATP = 14;
 cSite = 70;
 cState = 20;
 
+
+# calculate ATP complex size (necessary for cooperativity & polymerization rates)
+var sizeR1_ATP, sizeR2_ATP, sizeR3_ATP, sizeR4_ATP;
+sizeR1_ATP = piecewise( chromosome_R1 / 2, mod( chromosome_R1, 2 ) == 0, floor( chromosome_R1 / 2 ) - 1 );
+sizeR2_ATP = piecewise( chromosome_R2 / 2, mod( chromosome_R2, 2 ) == 0, floor( chromosome_R2 / 2 ) - 1 );
+sizeR3_ATP = piecewise( chromosome_R3 / 2, mod( chromosome_R3, 2 ) == 0, floor( chromosome_R3 / 2 ) - 1 );
+sizeR4_ATP = piecewise( chromosome_R4 / 2, mod( chromosome_R4, 2 ) == 0, floor( chromosome_R4 / 2 ) - 1 );
+# calculate cooperativity
+var complexSize = minFunc(sizeR1_ATP, minFunc(sizeR2_ATP, minFunc(sizeR3_ATP, sizeR4_ATP) ) );
+var coopR1, coopR2, coopR3, coopR4;
+coopR1 = piecewise(cSite, sizeR4_ATP > complexSize, 1);
+coopR2 = piecewise(cSite, sizeR4_ATP > complexSize && sizeR1_ATP > complexSize, 1);
+coopR3 = piecewise(cSite, sizeR4_ATP > complexSize && sizeR1_ATP > complexSize, 1);
+coopR4 = piecewise(cSite, sizeR3_ATP > complexSize || sizeR2_ATP > complexSize || sizeR1_ATP > complexSize, 1) + cState * complexSize;
+################################################################################################################################################
+################################################################# ATP part #####################################################################
 ################################################################################################################################################
 ############################################ 1. Check DnaA_1mer_ATP availability ###############################################################
 numFreeDnaAATP = MG_469_1MER_ATP__c;
@@ -87,16 +103,6 @@ rate8merBind := kb2ATP * 1e9 / 3600 / nAvo / cell_Volume;
 avgBindingRate := ( 148 * rate9merBind + 2079 * rate8merBind ) / (2227 - MG_469_1MER_ADP__bound - MG_469_1MER_ATP__bound);
 // avgBindingRate = (rate9mer*numel(this.dnaABoxIndexs_9mer) + rate8mer*numel(this.dnaABoxIndexs_8mer)) / numel(this.dnaABoxStartPositions);
 
-# calculate cooperativity
-var complexSize = minFunc(chromosome_R1, minFunc(chromosome_R2, minFunc(chromosome_R3, chromosome_R4) ) );
-var coopR1, coopR2, coopR3, coopR4;
-//TODO add check for ATP/ADP
-coopR1 = piecewise(cSite, chromosome_R4 > complexSize, 1);
-coopR2 = piecewise(cSite, chromosome_R4 > complexSize && chromosome_R1 > complexSize, 1);
-coopR3 = piecewise(cSite, chromosome_R4 > complexSize && chromosome_R1 > complexSize, 1);
-coopR4 = piecewise(cSite, chromosome_R3 > complexSize || chromosome_R2 > complexSize || chromosome_R1 > complexSize, 1) + cState * complexSize;
-
-
 # calculate R1-R4 binding rates
 var bindRateR4, bindRateR1, bindRateR2, bindRateR3;
 bindRateR4 = rate9merBind * coopR4;
@@ -108,24 +114,33 @@ var numFreeBindingSites;
 numFreeBindingSites= 2227 - MG_469_1MER_ATP__bound + 4 - piecewise(1, chromosome_R1 > 0, 0) - piecewise(1, chromosome_R2 > 0, 0) - piecewise(1, chromosome_R3 > 0, 0) - piecewise(1, chromosome_R4 > 0, 0);
 
 var maxBindATP, areReady;
-areReady = piecewise(1, chromosome_R1 + chromosome_R2 + chromosome_R3 + chromosome_R4 == 28, 0);
+areReady = piecewise(1, sizeR1_ATP + sizeR2_ATP + sizeR3_ATP + sizeR4_ATP == 28, 0);
 maxBindATP = stochasticRound( minFunc( avgBindingRate * numFreeBindingSites * MG_469_1MER_ATP__c + areReady, minFunc( numFreeBindingSites, MG_469_1MER_ATP__c ) ) );
-
-
 
 
 ################################################################################################################################################
 ############################################ 3. Estimate upper bound of polymerization #########################################################
-//TODO
+var canStartPol;
+canStartPol = piecewise( 1, complexSize > 0, 0 );
 
+var polRange;
+polRange = minFunc( 6, maxFunc( 1, complexSize ) );
+var polRateR4, polRateR1, polRateR2, polRateR3, totPolRate;
+polRateR4 = piecewise( rate9merBind * coopR4, sizeR4_ATP == polRange, 0 );
+polRateR1 = piecewise( rate8merBind * coopR1, sizeR1_ATP == polRange, 0 );
+polRateR2 = piecewise( rate8merBind * coopR2, sizeR2_ATP == polRange, 0 );
+polRateR3 = piecewise( rate8merBind * coopR3, sizeR3_ATP == polRange, 0 );
+totPolRate = polRateR1 + polRateR2 + polRateR3 + polRateR4;
+var numFreePolSites = piecewise( 1, polRateR1 > 0, 0 ) + piecewise( 1, polRateR2 > 0, 0 ) + piecewise( 1, polRateR3 > 0, 0 ) + piecewise( 1, polRateR4 > 0, 0 );
 
+var maxPolATP;
+maxPolATP = stochasticRound( minFunc( numFreeDnaAATP*totPolRate, minFunc( numFreePolSites, numFreeDnaAATP ) ) );
 
 
 ################################################################################################################################################
 ############################################ 4. Allocate DnaA-ATP ##############################################################################
-var totBindingRate, totPolRate, maxBinding;
+var totBindingRate, maxBinding;
 totBindingRate = avgBindingRate*numFreeBindingSites;
-totPolRate = 0; //TODO: summ of polATPRates
 maxBinding = minFunc( maxBindATP, stochasticRound( numFreeDnaAATP * totBindingRate / ( totBindingRate + totPolRate ) ) );
 
 
@@ -134,6 +149,9 @@ maxBinding = minFunc( maxBindATP, stochasticRound( numFreeDnaAATP * totBindingRa
 //TODO
 
 
+
+################################################################################################################################################
+################################################################# ADP part #####################################################################
 
 default is "BindAndPolymerization";
 end
