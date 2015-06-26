@@ -95,27 +95,27 @@ numFreeDnaAATP = MG_469_1MER_ATP__c;
 ############################################ 2. Estimate max number of bindings ################################################################
 nAvo := 6.0221412927*1e23;
 kb1ATP := 25;
-kb1ATP := 0.6;
-rate9merBind := kb1ATP * 1e9 / 3600 / nAvo / cell_Volume;
-rate8merBind := kb2ATP * 1e9 / 3600 / nAvo / cell_Volume;
+kb2ATP := 0.6;
+rate9merBindATP := kb1ATP * 1e9 / 3600 / nAvo / cell_Volume;
+rate8merBindATP := kb2ATP * 1e9 / 3600 / nAvo / cell_Volume;
 
 // TODO: use real values of unbind 9mer and 8mer numbers instead of hardcoded constants
-avgBindingRate := ( 148 * rate9merBind + 2079 * rate8merBind ) / (2227 - MG_469_1MER_ADP__bound - MG_469_1MER_ATP__bound);
+avgBindingRate := ( 148 * rate9merBindATP + 2079 * rate8merBindATP ) / (2227 - MG_469_1MER_ADP__bound - MG_469_1MER_ATP__bound);
 // avgBindingRate = (rate9mer*numel(this.dnaABoxIndexs_9mer) + rate8mer*numel(this.dnaABoxIndexs_8mer)) / numel(this.dnaABoxStartPositions);
 
 # calculate R1-R4 binding rates
 var bindRateR4, bindRateR1, bindRateR2, bindRateR3;
-bindRateR4 = rate9merBind * coopR4;
-bindRateR1 = rate8merBind * coopR1;
-bindRateR2 = rate8merBind * coopR2;
-bindRateR3 = rate8merBind * coopR3;
+bindRateR4 = rate9merBindATP * coopR4;
+bindRateR1 = rate8merBindATP * coopR1;
+bindRateR2 = rate8merBindATP * coopR2;
+bindRateR3 = rate8merBindATP * coopR3;
 
 var numFreeBindingSites;
 numFreeBindingSites= 2227 - MG_469_1MER_ATP__bound + 4 - piecewise(1, chromosome_R1 > 0, 0) - piecewise(1, chromosome_R2 > 0, 0) - piecewise(1, chromosome_R3 > 0, 0) - piecewise(1, chromosome_R4 > 0, 0);
 
 var maxBindATP, areReady;
 areReady = piecewise(1, sizeR1_ATP + sizeR2_ATP + sizeR3_ATP + sizeR4_ATP == 28, 0);
-maxBindATP = stochasticRound( minFunc( avgBindingRate * numFreeBindingSites * MG_469_1MER_ATP__c + areReady, minFunc( numFreeBindingSites, MG_469_1MER_ATP__c ) ) );
+maxBindATP = stochasticRound( minFunc( avgBindingRate * numFreeBindingSites * numFreeDnaAATP + areReady, minFunc( numFreeBindingSites, numFreeDnaAATP ) ) );
 
 
 ################################################################################################################################################
@@ -126,12 +126,13 @@ canStartPol = piecewise( 1, complexSize > 0, 0 );
 var polRange;
 polRange = minFunc( 6, maxFunc( 1, complexSize ) );
 var polRateR4, polRateR1, polRateR2, polRateR3, totPolRate;
-polRateR4 = piecewise( rate9merBind * coopR4, sizeR4_ATP == polRange, 0 );
-polRateR1 = piecewise( rate8merBind * coopR1, sizeR1_ATP == polRange, 0 );
-polRateR2 = piecewise( rate8merBind * coopR2, sizeR2_ATP == polRange, 0 );
-polRateR3 = piecewise( rate8merBind * coopR3, sizeR3_ATP == polRange, 0 );
+polRateR4 = piecewise( rate9merBindATP * coopR4, sizeR4_ATP == polRange, 0 );
+polRateR1 = piecewise( rate8merBindATP * coopR1, sizeR1_ATP == polRange, 0 );
+polRateR2 = piecewise( rate8merBindATP * coopR2, sizeR2_ATP == polRange, 0 );
+polRateR3 = piecewise( rate8merBindATP * coopR3, sizeR3_ATP == polRange, 0 );
 totPolRate = polRateR1 + polRateR2 + polRateR3 + polRateR4;
-var numFreePolSites = piecewise( 1, polRateR1 > 0, 0 ) + piecewise( 1, polRateR2 > 0, 0 ) + piecewise( 1, polRateR3 > 0, 0 ) + piecewise( 1, polRateR4 > 0, 0 );
+var numFreePolSites;
+numFreePolSites = piecewise( 1, polRateR1 > 0, 0 ) + piecewise( 1, polRateR2 > 0, 0 ) + piecewise( 1, polRateR3 > 0, 0 ) + piecewise( 1, polRateR4 > 0, 0 );
 
 var maxPolATP;
 maxPolATP = stochasticRound( minFunc( numFreeDnaAATP*totPolRate, minFunc( numFreePolSites, numFreeDnaAATP ) ) );
