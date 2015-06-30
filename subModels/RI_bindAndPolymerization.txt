@@ -89,7 +89,8 @@ coopR4 = piecewise(cSite, sizeR3_ATP > complexSize || sizeR2_ATP > complexSize |
 ################################################################################################################################################
 ############################################ 1. Check DnaA_1mer_ATP availability ###############################################################
 numFreeDnaAATP = MG_469_1MER_ATP__c;
-//TODO
+var canStartBinding;
+canStartBinding = piecewise(1, numFreeDnaAATP > 0, 0 );
 
 ################################################################################################################################################
 ############################################ 2. Estimate max number of bindings ################################################################
@@ -148,7 +149,31 @@ maxBindingATP = minFunc( maxBindATP, stochasticRound( numFreeDnaAATP * totBindin
 
 ################################################################################################################################################
 ############################################ 5. Bind and Polymerize ############################################################################
-//TODO
+var bindingFinished;
+bindingFinished = 0;
+
+finishBindings: at ( maxBindingATP <= 0 || numFreeDnaAATP <= 0 ) : bindUnspecific = 0 : bindingFinished = 1;
+
+var canBindR1, canBindR2, canBindR3, canBindR4;
+canBindR1 = piecewise(1, bindRateR1ATP > 0, 0);
+canBindR2 = piecewise(1, bindRateR2ATP > 0, 0);
+canBindR3 = piecewise(1, bindRateR3ATP > 0, 0);
+canBindR4 = piecewise(1, bindRateR4ATP > 0, 0);
+
+// we need random samples to choose which sites will be bound with DnaA-ATP
+// for now we bind to R1-R4 if possible
+var bindUnspecific;
+bindUnspecific = 0;
+// TODO: fix case when (numFreeDnaAATP || maxBindingATP) < summ(canBindRx)
+startBind: at canStartBinding == 1 && maxBindingATP > 0 && numFreeDnaAATP > 0 : bindUnspecific = 1 : chromosome_R1 = chromosome_R1 + 2 * canBindR1 : chromosome_R2 = chromosome_R2 + 2 * canBindR2 : chromosome_R3 = chromosome_R3 + 2 * canBindR3 : chromosome_R4 = chromosome_R4 + 2 * canBindR4 : maxBindingATP = maxBindingATP - canBindR1 - canBindR2 - canBindR3 - canBindR4 : numFreeDnaAATP = numFreeDnaAATP - canBindR1 - canBindR2 - canBindR3 - canBindR4 : MG_469_1MER_ATP__c = numFreeDnaAATP : canStartBinding = 0;
+
+# part of unspecific sites
+var nBinds;
+startBindATP: at bindUnspecific == 1 && maxBindingATP > 0 && numFreeDnaAATP > 0 : nBinds = minFunc( maxBindingATP, numFreeDnaAATP ): bindUnspecific = 2;
+bindATP: at bindUnspecific == 2 : maxBindingATP = maxBindingATP - nBinds : numFreeDnaAATP = numFreeDnaAATP - nBinds : MG_469_1MER_ATP__bound = MG_469_1MER_ATP__bound + nBinds : MG_469_1MER_ATP__c = MG_469_1MER_ATP__c - nBinds;
+
+//TODO: polymerization
+
 
 default is "BindAndPolymerization";
 end
