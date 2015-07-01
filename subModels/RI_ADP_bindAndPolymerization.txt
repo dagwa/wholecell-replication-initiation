@@ -34,6 +34,7 @@ var nAvo, kb1ADP, kb2ADP, cell_Volume, chromosome_R1, chromosmoe_R2, chromosome_
 var maxBindADP, numFreeDnaAADP;
 var cSite, cState;
 var bindAndPolADP, displacing;
+var chromosome_R5;
 
 var Rx_free;
 var Rx_1mer_ATP;
@@ -143,9 +144,49 @@ maxBindingADP = minFunc( maxBindADP, stochasticRound( numFreeDnaAADP * totBindin
 
 ################################################################################################################################################
 ############################################ 5. Bind and Polymerize ############################################################################
-//TODO
+var bindingFinished;
+bindingFinished = 0;
+
+finishBindings: at ( maxBindingADP <= 0 || numFreeDnaAADP <= 0 ) : bindUnspecific = 0 : bindingFinished = 1;
+
+var canBindR1, canBindR2, canBindR3, canBindR4;
+canBindR1 = piecewise(1, bindRateR1ADP > 0, 0);
+canBindR2 = piecewise(1, bindRateR2ADP > 0, 0);
+canBindR3 = piecewise(1, bindRateR3ADP > 0, 0);
+canBindR4 = piecewise(1, bindRateR4ADP > 0, 0);
+
+// we need random samples to choose which sites will be bound with DnaA-ADP
+// for now we bind to R1-R4 with equal probability
+var bindUnspecific;
+bindUnspecific = 0;
+
+bindToR1: at canStartBinding == 1 && maxBindingADP > 0 && numFreeDnaAADP > 0 && canBindR1 > 0 : chromosome_R1 = chromosome_R1 + 1 : canBindR1 = 0 : numFreeDnaAADP = numFreeDnaAADP - 1 : maxBindingADP = maxBindingADP - 1;
+
+bindToR2: at canStartBinding == 1 && maxBindingADP > 0 && numFreeDnaAADP > 0 && canBindR2 > 0 : chromosome_R2 = chromosome_R2 + 1 : canBindR2 = 0 : numFreeDnaAADP = numFreeDnaAADP - 1 : maxBindingADP = maxBindingADP - 1;
+
+bindToR3: at canStartBinding == 1 && maxBindingADP > 0 && numFreeDnaAADP > 0 && canBindR3 > 0 : chromosome_R3 = chromosome_R3 + 1 : canBindR3 = 0 : numFreeDnaAADP = numFreeDnaAADP - 1 : maxBindingADP = maxBindingADP - 1;
+
+bindToR4: at canStartBinding == 1 && maxBindingADP > 0 && numFreeDnaAADP > 0 && canBindR4 > 0 : chromosome_R4 = chromosome_R4 + 1 : canBindR4 = 0 : numFreeDnaAADP = numFreeDnaAADP - 1 : maxBindingADP = maxBindingADP - 1;
+
+bindToR5: at canStartBinding == 1 && numFreeDnaAADP > 0 && areReady == 1 : chromosome_R5 = 1;
+
+finishBindToR1234 : at canStartBinding == 1 && bindingFinished == 0 && ( ( canBindR1 == 0 && canBindR2 == 0 && canBindR3 == 0 && canBindR4 == 0 ) || maxBindingADP <= 0 || numFreeDnaAADP <= 0 ) : canStartBinding = 0 : bindUnspecific = 1 : MG_469_1MER_ADP__c = numFreeDnaAADP;
+
+# part of unspecific sites
+var nBound;
+startBindADP: at bindUnspecific == 1 && maxBindingADP > 0 && numFreeDnaAADP > 0 : nBound = minFunc( maxBindingADP, numFreeDnaAADP ) : bindUnspecific = 2;
+bindADP: at bindUnspecific == 2 : maxBindingADP = maxBindingADP - nBound : numFreeDnaAADP = numFreeDnaAADP - nBound : MG_469_1MER_ADP__bound = MG_469_1MER_ADP__bound + nBound : MG_469_1MER_ADP__c = numFreeDnaAADP ;
 
 ########################### Polymerization #################################
+polymerizeR1 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAADP > 0 && maxPolADP > 0 && polRateR1 > 0 : chromosome_R1 = chromosome_R1 + 1 : numFreeDnaAADP = numFreeDnaAADP - 1 : maxPolADP = maxPolADP - 1 : polRateR1 = 0 ;
+
+polymerizeR2 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAADP > 0 && maxPolADP > 0 && polRateR2 > 0 : chromosome_R2 = chromosome_R2 + 1 : numFreeDnaAADP = numFreeDnaAADP - 1 : maxPolADP = maxPolADP - 1 : polRateR2 = 0 ;
+
+polymerizeR3 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAADP > 0 && maxPolADP > 0 && polRateR3 > 0 : chromosome_R3 = chromosome_R3 + 1 : numFreeDnaAADP = numFreeDnaAADP - 1 : maxPolADP = maxPolADP - 1 : polRateR3 = 0 ;
+
+polymerizeR4 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAADP > 0 && maxPolADP > 0 && polRateR4 > 0 : chromosome_R4 = chromosome_R4 + 1 : numFreeDnaAADP = numFreeDnaAADP - 1 : maxPolADP = maxPolADP - 1 : polRateR4 = 0 ;
+
+endEvent: at bindingFinished == 1 && ( maxPolADP <= 0 || numFreeDnaAADP <= 0 ) : MG_469_1MER_ADP__c = numFreeDnaAADP : bindAndPolADP = 0 : displacing = 1;
 
 
 default is "ADPBindAndPolymerization";
