@@ -33,6 +33,7 @@ species MG_469_1MER_ADP__bound in default, MG_469_1MER_ADP__c in default, MG_469
 var nAvo, kb1ATP, kb2ATP, cell_Volume, chromosome_R1, chromosmoe_R2, chromosome_R3, chromosome_R4;
 var maxBindATP, numFreeDnaAATP;
 var cSite, cState;
+var bindAndPolATP, bindAndPolADP;
 
 var Rx_free;
 var Rx_1mer_ATP;
@@ -66,10 +67,8 @@ Rx_6mer_ATP = 12;
 Rx_7mer_ADP = 13;
 Rx_7mer_ATP = 14;
 
-//TODO: check this
 cSite = 70;
 cState = 20;
-
 
 # calculate ATP complex size (necessary for cooperativity & polymerization rates)
 var sizeR1_ATP, sizeR2_ATP, sizeR3_ATP, sizeR4_ATP;
@@ -90,7 +89,7 @@ coopR4 = piecewise(cSite, sizeR3_ATP > complexSize || sizeR2_ATP > complexSize |
 ############################################ 1. Check DnaA_1mer_ATP availability ###############################################################
 numFreeDnaAATP = MG_469_1MER_ATP__c;
 var canStartBinding;
-canStartBinding = piecewise(1, numFreeDnaAATP > 0, 0 );
+canStartBinding = piecewise(1, numFreeDnaAATP > 0 && bindAndPolATP == 1, 0 );
 
 ################################################################################################################################################
 ############################################ 2. Estimate max number of bindings ################################################################
@@ -168,12 +167,19 @@ bindUnspecific = 0;
 startBind: at canStartBinding == 1 && maxBindingATP > 0 && numFreeDnaAATP > 0 : bindUnspecific = 1 : chromosome_R1 = chromosome_R1 + 2 * canBindR1 : chromosome_R2 = chromosome_R2 + 2 * canBindR2 : chromosome_R3 = chromosome_R3 + 2 * canBindR3 : chromosome_R4 = chromosome_R4 + 2 * canBindR4 : maxBindingATP = maxBindingATP - canBindR1 - canBindR2 - canBindR3 - canBindR4 : numFreeDnaAATP = numFreeDnaAATP - canBindR1 - canBindR2 - canBindR3 - canBindR4 : MG_469_1MER_ATP__c = numFreeDnaAATP : canStartBinding = 0;
 
 # part of unspecific sites
-var nBinds;
-startBindATP: at bindUnspecific == 1 && maxBindingATP > 0 && numFreeDnaAATP > 0 : nBinds = minFunc( maxBindingATP, numFreeDnaAATP ): bindUnspecific = 2;
-bindATP: at bindUnspecific == 2 : maxBindingATP = maxBindingATP - nBinds : numFreeDnaAATP = numFreeDnaAATP - nBinds : MG_469_1MER_ATP__bound = MG_469_1MER_ATP__bound + nBinds : MG_469_1MER_ATP__c = MG_469_1MER_ATP__c - nBinds;
+var nBound;
+startBindATP: at bindUnspecific == 1 && maxBindingATP > 0 && numFreeDnaAATP > 0 : nBound = minFunc( maxBindingATP, numFreeDnaAATP ) : bindUnspecific = 2;
+bindATP: at bindUnspecific == 2 : maxBindingATP = maxBindingATP - nBound : numFreeDnaAATP = numFreeDnaAATP - nBound : MG_469_1MER_ATP__bound = MG_469_1MER_ATP__bound + nBound : MG_469_1MER_ATP__c = MG_469_1MER_ATP__c - nBound;
 
-//TODO: polymerization
+polymerizeR1 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAATP > 0 && maxPolATP > 0 && polRateR1 > 0 : chromosome_R1 = chromosome_R1 + 2 : numFreeDnaAATP = numFreeDnaAATP - 1 : maxPolATP = maxPolATP - 1 ;
 
+polymerizeR2 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAATP > 0 && maxPolATP > 0 && polRateR2 > 0 : chromosome_R2 = chromosome_R2 + 2 : numFreeDnaAATP = numFreeDnaAATP - 1 : maxPolATP = maxPolATP - 1 ;
+
+polymerizeR3 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAATP > 0 && maxPolATP > 0 && polRateR3 > 0 : chromosome_R3 = chromosome_R3 + 2 : numFreeDnaAATP = numFreeDnaAATP - 1 : maxPolATP = maxPolATP - 1 ;
+
+polymerizeR4 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAATP > 0 && maxPolATP > 0 && polRateR4 > 0 : chromosome_R4 = chromosome_R4 + 2 : numFreeDnaAATP = numFreeDnaAATP - 1 : maxPolATP = maxPolATP - 1 ;
+
+endEvent: at bindingFinished == 1 && ( maxPolATP <= 0 || numFreeDnaAATP <= 0 ) : bindAndPolATP = 0 : bindAndPolADP = 1;
 
 default is "BindAndPolymerization";
 end
