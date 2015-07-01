@@ -77,8 +77,9 @@ sizeR1_ATP = piecewise( chromosome_R1 / 2, mod( chromosome_R1, 2 ) == 0, floor( 
 sizeR2_ATP = piecewise( chromosome_R2 / 2, mod( chromosome_R2, 2 ) == 0, floor( chromosome_R2 / 2 ) - 1 );
 sizeR3_ATP = piecewise( chromosome_R3 / 2, mod( chromosome_R3, 2 ) == 0, floor( chromosome_R3 / 2 ) - 1 );
 sizeR4_ATP = piecewise( chromosome_R4 / 2, mod( chromosome_R4, 2 ) == 0, floor( chromosome_R4 / 2 ) - 1 );
+var complexSize;
+complexSize = minFunc(sizeR1_ATP, minFunc(sizeR2_ATP, minFunc(sizeR3_ATP, sizeR4_ATP) ) );
 # calculate cooperativity
-var complexSize = minFunc(sizeR1_ATP, minFunc(sizeR2_ATP, minFunc(sizeR3_ATP, sizeR4_ATP) ) );
 var coopR1, coopR2, coopR3, coopR4;
 coopR1 = piecewise(cSite, sizeR4_ATP > complexSize, 1);
 coopR2 = piecewise(cSite, sizeR4_ATP > complexSize && sizeR1_ATP > complexSize, 1);
@@ -102,7 +103,7 @@ rate9merBindATP := kb1ATP * 1e9 / 3600 / nAvo / cell_Volume;
 rate8merBindATP := kb2ATP * 1e9 / 3600 / nAvo / cell_Volume;
 
 // TODO: use real values of unbind 9mer and 8mer numbers instead of hardcoded constants
-avgBindingRateATP := ( 148 * rate9merBindATP + 2079 * rate8merBindATP ) / (2227 - MG_469_1MER_ADP__bound - MG_469_1MER_ATP__bound);
+avgBindingRateATP = ( 148 * rate9merBindATP + 2079 * rate8merBindATP ) / (2227 - MG_469_1MER_ADP__bound - MG_469_1MER_ATP__bound);
 // avgBindingRate = (rate9mer*numel(this.dnaABoxIndexs_9mer) + rate8mer*numel(this.dnaABoxIndexs_8mer)) / numel(this.dnaABoxStartPositions);
 
 # calculate R1-R4 binding rates
