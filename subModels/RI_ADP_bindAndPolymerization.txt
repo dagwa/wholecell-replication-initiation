@@ -1,0 +1,193 @@
+function uniform(x,y)
+(x+y)/2;
+end
+
+function fractionalPart(x)
+  x - floor(x);
+end
+
+function mod(x,y)
+   x - y * floor(x / y);
+end
+
+function minFunc(x,y)
+  piecewise(x, x<y, y);
+end
+
+function maxFunc(x,y)
+  piecewise(y, x<y, x);
+end
+
+function randInt(x)
+  floor(uniform(0,1)*x);
+end
+
+function stochasticRound(x)
+  piecewise(floor(x)+1.0, uniform(0,1)<fractionalPart(x), floor(x));
+end
+
+model RepInit_ADP_BindAndPolymerization()
+
+compartment default;
+species MG_469_1MER_ADP__bound in default, MG_469_1MER_ADP__c in default, MG_469_1MER_ATP__bound in default, MG_469_1MER_ATP__c in default;
+var nAvo, kb1ADP, kb2ADP, cell_Volume, chromosome_R1, chromosmoe_R2, chromosome_R3, chromosome_R4;
+var maxBindADP, numFreeDnaAADP;
+var cSite, cState;
+var bindAndPolADP, displacing;
+var chromosome_R5;
+
+var Rx_free;
+var Rx_1mer_ATP;
+var Rx_1mer_ADP;
+var Rx_2mer_ATP;
+var Rx_2mer_ADP;
+var Rx_3mer_ATP;
+var Rx_3mer_ADP;
+var Rx_4mer_ATP;
+var Rx_4mer_ADP;
+var Rx_5mer_ATP;
+var Rx_5mer_ADP;
+var Rx_6mer_ATP;
+var Rx_6mer_ADP;
+var Rx_7mer_ATP;
+var Rx_7mer_ADP;
+
+Rx_free = 0;
+Rx_1mer_ADP = 1;
+Rx_1mer_ATP = 2;
+Rx_2mer_ADP = 3;
+Rx_2mer_ATP = 4;
+Rx_3mer_ADP = 5;
+Rx_3mer_ATP = 6;
+Rx_4mer_ADP = 7;
+Rx_4mer_ATP = 8;
+Rx_5mer_ADP = 9;
+Rx_5mer_ATP = 10;
+Rx_6mer_ADP = 11;
+Rx_6mer_ATP = 12;
+Rx_7mer_ADP = 13;
+Rx_7mer_ATP = 14;
+
+cSite = 70;
+cState = 20;
+
+
+################################################################################################################################################
+############################################ 1. Check DnaA_1mer_ADP availability ###############################################################
+numFreeDnaAADP = MG_469_1MER_ADP__c;
+var canStartBinding;
+canStartBinding = piecewise(1, numFreeDnaAADP > 0 && bindAndPolADP == 1, 0 );
+
+################################################################################################################################################
+############################################ 2. Estimate max number of bindings ################################################################
+var avgBindingRateADP, rate9merBindADP, rate8merBindADP;
+nAvo := 6.0221412927*1e23;
+kb1ADP := 2.5;
+kb2ADP := 0.61;
+rate9merBindADP := kb1ADP * 1e9 / 3600 / nAvo / cell_Volume;
+rate8merBindADP := kb2ADP * 1e9 / 3600 / nAvo / cell_Volume;
+
+// TODO: use real values of unbind 9mer and 8mer numbers instead of hardcoded constants
+avgBindingRateADP = ( 148 * rate9merBindADP + 2079 * rate8merBindADP ) / (2227 - MG_469_1MER_ADP__bound - MG_469_1MER_ATP__bound);
+// avgBindingRate = (rate9mer*numel(this.dnaABoxIndexs_9mer) + rate8mer*numel(this.dnaABoxIndexs_8mer)) / numel(this.dnaABoxStartPositions);
+
+# calculate R1-R4 binding rates
+var bindRateR4ADP, bindRateR1ADP, bindRateR2ADP, bindRateR3ADP;
+bindRateR4ADP = rate9merBindADP;
+bindRateR1ADP = rate8merBindADP;
+bindRateR2ADP = rate8merBindADP;
+bindRateR3ADP = rate8merBindADP;
+
+var numFreeBindingSitesADP;
+numFreeBindingSitesADP = 2227 - MG_469_1MER_ATP__bound - MG_469_1MER_ADP__bound + 4 - piecewise(1, chromosome_R1 > 0, 0) - piecewise(1, chromosome_R2 > 0, 0) - piecewise(1, chromosome_R3 > 0, 0) - piecewise(1, chromosome_R4 > 0, 0) + areReady;
+
+var maxBindADP, areReady;
+areReady = piecewise(1, ( chromosome_R1 + chromosome_R2 + chromosome_R3 + chromosome_R4 ) / 2 == 28, 0);
+maxBindADP = stochasticRound( minFunc( avgBindingRateADP * numFreeBindingSitesADP * numFreeDnaAADP + areReady, minFunc( numFreeBindingSitesADP, numFreeDnaAADP ) ) );
+
+################################################################################################################################################
+############################################ 3. Estimate upper bound of polymerization #########################################################
+# calculate complex size (necessary for polymerization rates)
+var sizeR1, sizeR2, sizeR3, sizeR4;
+sizeR1 = piecewise( chromosome_R1 / 2, mod( chromosome_R1, 2 ) == 0, floor( chromosome_R1 / 2 ) - 1 );
+sizeR2 = piecewise( chromosome_R2 / 2, mod( chromosome_R2, 2 ) == 0, floor( chromosome_R2 / 2 ) - 1 );
+sizeR3 = piecewise( chromosome_R3 / 2, mod( chromosome_R3, 2 ) == 0, floor( chromosome_R3 / 2 ) - 1 );
+sizeR4 = piecewise( chromosome_R4 / 2, mod( chromosome_R4, 2 ) == 0, floor( chromosome_R4 / 2 ) - 1 );
+var complexSize;
+complexSize = minFunc(sizeR1, minFunc(sizeR2, minFunc(sizeR3, sizeR4) ) );
+
+var canStartPol;
+canStartPol = piecewise( 1, complexSize > 0, 0 );
+
+var polRange;
+polRange = minFunc( 6, maxFunc( 1, complexSize ) );
+var polRateR4, polRateR1, polRateR2, polRateR3, totPolRate;
+polRateR4 = piecewise( rate9merBindADP, sizeR4 == polRange && mod( chromosome_R4, 2 ) == 0, 0 );
+polRateR1 = piecewise( rate8merBindADP, sizeR1 == polRange && mod( chromosome_R1, 2 ) == 0, 0 );
+polRateR2 = piecewise( rate8merBindADP, sizeR2 == polRange && mod( chromosome_R2, 2 ) == 0, 0 );
+polRateR3 = piecewise( rate8merBindADP, sizeR3 == polRange && mod( chromosome_R3, 2 ) == 0, 0 );
+totPolRate = polRateR1 + polRateR2 + polRateR3 + polRateR4;
+
+var numFreePolSites;
+numFreePolSites = piecewise( 1, polRateR1 > 0, 0 ) + piecewise( 1, polRateR2 > 0, 0 ) + piecewise( 1, polRateR3 > 0, 0 ) + piecewise( 1, polRateR4 > 0, 0 );
+
+var maxPolADP;
+maxPolADP = stochasticRound( minFunc( numFreeDnaAADP*totPolRate, minFunc( numFreePolSites, numFreeDnaAADP ) ) );
+
+
+################################################################################################################################################
+############################################ 4. Allocate DnaA-ADP ##############################################################################
+var totBindingRateADP, maxBindingADP;
+totBindingRateADP = avgBindingRateADP*numFreeBindingSitesADP;
+maxBindingADP = minFunc( maxBindADP, stochasticRound( numFreeDnaAADP * totBindingRateADP / ( totBindingRateADP + totPolRate ) ) );
+
+
+################################################################################################################################################
+############################################ 5. Bind and Polymerize ############################################################################
+var bindingFinished;
+bindingFinished = 0;
+
+finishBindings: at ( maxBindingADP <= 0 || numFreeDnaAADP <= 0 ) : bindUnspecific = 0 : bindingFinished = 1;
+
+var canBindR1, canBindR2, canBindR3, canBindR4;
+canBindR1 = piecewise(1, bindRateR1ADP > 0, 0);
+canBindR2 = piecewise(1, bindRateR2ADP > 0, 0);
+canBindR3 = piecewise(1, bindRateR3ADP > 0, 0);
+canBindR4 = piecewise(1, bindRateR4ADP > 0, 0);
+
+// we need random samples to choose which sites will be bound with DnaA-ADP
+// for now we bind to R1-R4 with equal probability
+var bindUnspecific;
+bindUnspecific = 0;
+
+bindToR1: at canStartBinding == 1 && maxBindingADP > 0 && numFreeDnaAADP > 0 && canBindR1 > 0 : chromosome_R1 = chromosome_R1 + 1 : canBindR1 = 0 : numFreeDnaAADP = numFreeDnaAADP - 1 : maxBindingADP = maxBindingADP - 1;
+
+bindToR2: at canStartBinding == 1 && maxBindingADP > 0 && numFreeDnaAADP > 0 && canBindR2 > 0 : chromosome_R2 = chromosome_R2 + 1 : canBindR2 = 0 : numFreeDnaAADP = numFreeDnaAADP - 1 : maxBindingADP = maxBindingADP - 1;
+
+bindToR3: at canStartBinding == 1 && maxBindingADP > 0 && numFreeDnaAADP > 0 && canBindR3 > 0 : chromosome_R3 = chromosome_R3 + 1 : canBindR3 = 0 : numFreeDnaAADP = numFreeDnaAADP - 1 : maxBindingADP = maxBindingADP - 1;
+
+bindToR4: at canStartBinding == 1 && maxBindingADP > 0 && numFreeDnaAADP > 0 && canBindR4 > 0 : chromosome_R4 = chromosome_R4 + 1 : canBindR4 = 0 : numFreeDnaAADP = numFreeDnaAADP - 1 : maxBindingADP = maxBindingADP - 1;
+
+bindToR5: at canStartBinding == 1 && numFreeDnaAADP > 0 && areReady == 1 : chromosome_R5 = 1;
+
+finishBindToR1234 : at canStartBinding == 1 && bindingFinished == 0 && ( ( canBindR1 == 0 && canBindR2 == 0 && canBindR3 == 0 && canBindR4 == 0 ) || maxBindingADP <= 0 || numFreeDnaAADP <= 0 ) : canStartBinding = 0 : bindUnspecific = 1 : MG_469_1MER_ADP__c = numFreeDnaAADP;
+
+# part of unspecific sites
+var nBound;
+startBindADP: at bindUnspecific == 1 && maxBindingADP > 0 && numFreeDnaAADP > 0 : nBound = minFunc( maxBindingADP, numFreeDnaAADP ) : bindUnspecific = 2;
+bindADP: at bindUnspecific == 2 : maxBindingADP = maxBindingADP - nBound : numFreeDnaAADP = numFreeDnaAADP - nBound : MG_469_1MER_ADP__bound = MG_469_1MER_ADP__bound + nBound : MG_469_1MER_ADP__c = numFreeDnaAADP ;
+
+########################### Polymerization #################################
+polymerizeR1 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAADP > 0 && maxPolADP > 0 && polRateR1 > 0 : chromosome_R1 = chromosome_R1 + 1 : numFreeDnaAADP = numFreeDnaAADP - 1 : maxPolADP = maxPolADP - 1 : polRateR1 = 0 ;
+
+polymerizeR2 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAADP > 0 && maxPolADP > 0 && polRateR2 > 0 : chromosome_R2 = chromosome_R2 + 1 : numFreeDnaAADP = numFreeDnaAADP - 1 : maxPolADP = maxPolADP - 1 : polRateR2 = 0 ;
+
+polymerizeR3 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAADP > 0 && maxPolADP > 0 && polRateR3 > 0 : chromosome_R3 = chromosome_R3 + 1 : numFreeDnaAADP = numFreeDnaAADP - 1 : maxPolADP = maxPolADP - 1 : polRateR3 = 0 ;
+
+polymerizeR4 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAADP > 0 && maxPolADP > 0 && polRateR4 > 0 : chromosome_R4 = chromosome_R4 + 1 : numFreeDnaAADP = numFreeDnaAADP - 1 : maxPolADP = maxPolADP - 1 : polRateR4 = 0 ;
+
+endEvent: at bindingFinished == 1 && ( maxPolADP <= 0 || numFreeDnaAADP <= 0 ) : MG_469_1MER_ADP__c = numFreeDnaAADP : bindAndPolADP = 0 : displacing = 1;
+
+
+default is "ADPBindAndPolymerization";
+end

@@ -31,138 +31,40 @@ var kd1ATP, kd1ADP, numBindingSites, chromosome_R1, chromosmoe_R2, chromosome_R3
 
 var displacing;
 
-var R1_free;
-var R1_1mer_ATP;
-var R1_1mer_ADP;
-var R1_2mer_ATP;
-var R1_2mer_ADP;
-var R1_3mer_ATP;
-var R1_3mer_ADP;
-var R1_4mer_ATP;
-var R1_4mer_ADP;
-var R1_5mer_ATP;
-var R1_5mer_ADP;
-var R1_6mer_ATP;
-var R1_6mer_ADP;
-var R1_7mer_ATP;
-var R1_7mer_ADP;
-
-var R2_free;
-var R2_1mer_ATP;
-var R2_1mer_ADP;
-var R2_2mer_ATP;
-var R2_2mer_ADP;
-var R2_3mer_ATP;
-var R2_3mer_ADP;
-var R2_4mer_ATP;
-var R2_4mer_ADP;
-var R2_5mer_ATP;
-var R2_5mer_ADP;
-var R2_6mer_ATP;
-var R2_6mer_ADP;
-var R2_7mer_ATP;
-var R2_7mer_ADP;
-
-var R3_free;
-var R3_1mer_ATP;
-var R3_1mer_ADP;
-var R3_2mer_ATP;
-var R3_2mer_ADP;
-var R3_3mer_ATP;
-var R3_3mer_ADP;
-var R3_4mer_ATP;
-var R3_4mer_ADP;
-var R3_5mer_ATP;
-var R3_5mer_ADP;
-var R3_6mer_ATP;
-var R3_6mer_ADP;
-var R3_7mer_ATP;
-var R3_7mer_ADP;
-
-var R4_free;
-var R4_1mer_ATP;
-var R4_1mer_ADP;
-var R4_2mer_ATP;
-var R4_2mer_ADP;
-var R4_3mer_ATP;
-var R4_3mer_ADP;
-var R4_4mer_ATP;
-var R4_4mer_ADP;
-var R4_5mer_ATP;
-var R4_5mer_ADP;
-var R4_6mer_ATP;
-var R4_6mer_ADP;
-var R4_7mer_ATP;
-var R4_7mer_ADP;
+var Rx_free;
+var Rx_1mer_ATP;
+var Rx_1mer_ADP;
+var Rx_2mer_ATP;
+var Rx_2mer_ADP;
+var Rx_3mer_ATP;
+var Rx_3mer_ADP;
+var Rx_4mer_ATP;
+var Rx_4mer_ADP;
+var Rx_5mer_ATP;
+var Rx_5mer_ADP;
+var Rx_6mer_ATP;
+var Rx_6mer_ADP;
+var Rx_7mer_ATP;
+var Rx_7mer_ADP;
 
 kd1ADP = 20;
 kd1ATP = 20;
 
-R1_free = 0;
-R1_1mer_ADP = 1;
-R1_1mer_ATP = 2;
-R1_2mer_ADP = 3;
-R1_2mer_ATP = 4;
-R1_3mer_ADP = 5;
-R1_3mer_ATP = 6;
-R1_4mer_ADP = 7;
-R1_4mer_ATP = 8;
-R1_5mer_ADP = 9;
-R1_5mer_ATP = 10;
-R1_6mer_ADP = 11;
-R1_6mer_ATP = 12;
-R1_7mer_ADP = 13;
-R1_7mer_ATP = 14;
-
-R2_free = 0;
-R2_1mer_ADP = 1;
-R2_1mer_ATP = 2;
-R2_2mer_ADP = 3;
-R2_2mer_ATP = 4;
-R2_3mer_ADP = 5;
-R2_3mer_ATP = 6;
-R2_4mer_ADP = 7;
-R2_4mer_ATP = 8;
-R2_5mer_ADP = 9;
-R2_5mer_ATP = 10;
-R2_6mer_ADP = 11;
-R2_6mer_ATP = 12;
-R2_7mer_ADP = 13;
-R2_7mer_ATP = 14;
-
-R3_free = 0;
-R3_1mer_ADP = 1;
-R3_1mer_ATP = 2;
-R3_2mer_ADP = 3;
-R3_2mer_ATP = 4;
-R3_3mer_ADP = 5;
-R3_3mer_ATP = 6;
-R3_4mer_ADP = 7;
-R3_4mer_ATP = 8;
-R3_5mer_ADP = 9;
-R3_5mer_ATP = 10;
-R3_6mer_ADP = 11;
-R3_6mer_ATP = 12;
-R3_7mer_ADP = 13;
-R3_7mer_ATP = 14;
-
-R4_free = 0;
-R4_1mer_ADP = 1;
-R4_1mer_ATP = 2;
-R4_2mer_ADP = 3;
-R4_2mer_ATP = 4;
-R4_3mer_ADP = 5;
-R4_3mer_ATP = 6;
-R4_4mer_ADP = 7;
-R4_4mer_ATP = 8;
-R4_5mer_ADP = 9;
-R4_5mer_ATP = 10;
-R4_6mer_ADP = 11;
-R4_6mer_ATP = 12;
-R4_7mer_ADP = 13;
-R4_7mer_ATP = 14;
-
-
+Rx_free = 0;
+Rx_1mer_ADP = 1;
+Rx_1mer_ATP = 2;
+Rx_2mer_ADP = 3;
+Rx_2mer_ATP = 4;
+Rx_3mer_ADP = 5;
+Rx_3mer_ATP = 6;
+Rx_4mer_ADP = 7;
+Rx_4mer_ATP = 8;
+Rx_5mer_ADP = 9;
+Rx_5mer_ATP = 10;
+Rx_6mer_ADP = 11;
+Rx_6mer_ATP = 12;
+Rx_7mer_ADP = 13;
+Rx_7mer_ATP = 14;
 
 
 # part on unspecific ATP and ADP
