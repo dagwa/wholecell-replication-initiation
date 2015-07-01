@@ -160,11 +160,19 @@ canBindR3 = piecewise(1, bindRateR3ATP > 0, 0);
 canBindR4 = piecewise(1, bindRateR4ATP > 0, 0);
 
 // we need random samples to choose which sites will be bound with DnaA-ATP
-// for now we bind to R1-R4 if possible
+// for now we bind to R1-R4 with equal probability
 var bindUnspecific;
 bindUnspecific = 0;
-// TODO: fix case when (numFreeDnaAATP || maxBindingATP) < summ(canBindRx)
-startBind: at canStartBinding == 1 && maxBindingATP > 0 && numFreeDnaAATP > 0 : bindUnspecific = 1 : chromosome_R1 = chromosome_R1 + 2 * canBindR1 : chromosome_R2 = chromosome_R2 + 2 * canBindR2 : chromosome_R3 = chromosome_R3 + 2 * canBindR3 : chromosome_R4 = chromosome_R4 + 2 * canBindR4 : maxBindingATP = maxBindingATP - canBindR1 - canBindR2 - canBindR3 - canBindR4 : numFreeDnaAATP = numFreeDnaAATP - canBindR1 - canBindR2 - canBindR3 - canBindR4 : MG_469_1MER_ATP__c = numFreeDnaAATP : canStartBinding = 0;
+
+bindToR1: at canStartBinding == 1 && maxBindingATP > 0 && numFreeDnaAATP > 0 && canBindR1 > 0 : chromosome_R1 = chromosome_R1 + 2 : canBindR1 = 0 : numFreeDnaAATP = numFreeDnaAATP - 1 : maxBindingATP = maxBindingATP - 1;
+
+bindToR2: at canStartBinding == 1 && maxBindingATP > 0 && numFreeDnaAATP > 0 && canBindR2 > 0 : chromosome_R2 = chromosome_R2 + 2 : canBindR2 = 0 : numFreeDnaAATP = numFreeDnaAATP - 1 : maxBindingATP = maxBindingATP - 1;
+
+bindToR3: at canStartBinding == 1 && maxBindingATP > 0 && numFreeDnaAATP > 0 && canBindR3 > 0 : chromosome_R3 = chromosome_R3 + 2 : canBindR3 = 0 : numFreeDnaAATP = numFreeDnaAATP - 1 : maxBindingATP = maxBindingATP - 1;
+
+bindToR4: at canStartBinding == 1 && maxBindingATP > 0 && numFreeDnaAATP > 0 && canBindR4 > 0 : chromosome_R4 = chromosome_R4 + 2 : canBindR4 = 0 : numFreeDnaAATP = numFreeDnaAATP - 1 : maxBindingATP = maxBindingATP - 1;
+
+finishBindToR1234 : at canStartBinding == 1 && bindingFinished == 0 && ( ( canBindR1 == 0 && canBindR2 == 0 && canBindR3 == 0 && canBindR4 == 0 ) || maxBindingATP <= 0 || numFreeDnaAATP <= 0 ) : canStartBinding = 0 : bindUnspecific = 1 : MG_469_1MER_ATP__c = numFreeDnaAATP;
 
 # part of unspecific sites
 var nBound;
