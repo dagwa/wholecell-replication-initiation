@@ -35,6 +35,7 @@ var maxBindATP, numFreeDnaAATP;
 var cSite, cState;
 # complexFinished --- flag to show that ATP is bound to R5 site
 var bindAndPolATP, bindAndPolADP, complexFinished;
+var chromosome_R5;
 
 var Rx_free;
 var Rx_1mer_ATP;
@@ -174,7 +175,7 @@ bindToR3: at canStartBinding == 1 && maxBindingATP > 0 && numFreeDnaAATP > 0 && 
 
 bindToR4: at canStartBinding == 1 && maxBindingATP > 0 && numFreeDnaAATP > 0 && canBindR4 > 0 : chromosome_R4 = chromosome_R4 + 2 : canBindR4 = 0 : numFreeDnaAATP = numFreeDnaAATP - 1 : maxBindingATP = maxBindingATP - 1;
 
-bindToR5: at canStartBinding == 1 && numFreeDnaAATP > 0 && areReady == 1 : complexFinished = 1;
+bindToR5: at canStartBinding == 1 && numFreeDnaAATP > 0 && areReady == 1 : complexFinished = 1 : chromosome_R5 = 2;
 
 finishBindToR1234 : at canStartBinding == 1 && bindingFinished == 0 && ( ( canBindR1 == 0 && canBindR2 == 0 && canBindR3 == 0 && canBindR4 == 0 ) || maxBindingATP <= 0 || numFreeDnaAATP <= 0 ) : canStartBinding = 0 : bindUnspecific = 1 : MG_469_1MER_ATP__c = numFreeDnaAATP;
 
