@@ -113,7 +113,7 @@ bindRateR2ATP = rate8merBindATP * coopR2;
 bindRateR3ATP = rate8merBindATP * coopR3;
 
 var numFreeBindingSitesATP;
-numFreeBindingSitesATP = 2227 - MG_469_1MER_ATP__bound + 4 - piecewise(1, chromosome_R1 > 0, 0) - piecewise(1, chromosome_R2 > 0, 0) - piecewise(1, chromosome_R3 > 0, 0) - piecewise(1, chromosome_R4 > 0, 0) + areReady;
+numFreeBindingSitesATP = 2227 - MG_469_1MER_ATP__bound - MG_469_1MER_ADP__bound + 4 - piecewise(1, chromosome_R1 > 0, 0) - piecewise(1, chromosome_R2 > 0, 0) - piecewise(1, chromosome_R3 > 0, 0) - piecewise(1, chromosome_R4 > 0, 0) + areReady;
 
 var maxBindATP, areReady;
 areReady = piecewise(1, ( chromosome_R1 + chromosome_R2 + chromosome_R3 + chromosome_R4 ) / 2 == 28, 0);
