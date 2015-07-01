@@ -1,0 +1,1948 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="RI_ADP_bindAndPolymerization" name="RepInit_ADP_BindAndPolymerization">
+    <listOfFunctionDefinitions>
+      <functionDefinition id="fractionalPart">
+        <annotation>
+          <distribution xmlns="http://sbml.org/annotations/distribution" defnition=""/>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>x</ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <ci>x</ci>
+              <apply>
+                <floor/>
+                <ci>x</ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="maxFunc">
+        <annotation>
+          <distribution xmlns="http://sbml.org/annotations/distribution" defnition=""/>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>x</ci>
+            </bvar>
+            <bvar>
+              <ci>y</ci>
+            </bvar>
+            <piecewise>
+              <piece>
+                <ci>y</ci>
+                <apply>
+                  <lt/>
+                  <ci>x</ci>
+                  <ci>y</ci>
+                </apply>
+              </piece>
+              <otherwise>
+                <ci>x</ci>
+              </otherwise>
+            </piecewise>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="minFunc">
+        <annotation>
+          <distribution xmlns="http://sbml.org/annotations/distribution" defnition=""/>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>x</ci>
+            </bvar>
+            <bvar>
+              <ci>y</ci>
+            </bvar>
+            <piecewise>
+              <piece>
+                <ci>x</ci>
+                <apply>
+                  <lt/>
+                  <ci>x</ci>
+                  <ci>y</ci>
+                </apply>
+              </piece>
+              <otherwise>
+                <ci>y</ci>
+              </otherwise>
+            </piecewise>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="mod">
+        <annotation>
+          <distribution xmlns="http://sbml.org/annotations/distribution" defnition=""/>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>x</ci>
+            </bvar>
+            <bvar>
+              <ci>y</ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <ci>x</ci>
+              <apply>
+                <times/>
+                <ci>y</ci>
+                <apply>
+                  <floor/>
+                  <apply>
+                    <divide/>
+                    <ci>x</ci>
+                    <ci>y</ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="randInt">
+        <annotation>
+          <distribution xmlns="http://sbml.org/annotations/distribution" defnition=""/>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>x</ci>
+            </bvar>
+            <apply>
+              <floor/>
+              <apply>
+                <times/>
+                <apply>
+                  <ci>uniform</ci>
+                  <cn>0</cn>
+                  <cn>1</cn>
+                </apply>
+                <ci>x</ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="stochasticRound">
+        <annotation>
+          <distribution xmlns="http://sbml.org/annotations/distribution" defnition=""/>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>x</ci>
+            </bvar>
+            <piecewise>
+              <piece>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <floor/>
+                    <ci>x</ci>
+                  </apply>
+                  <cn>1.0</cn>
+                </apply>
+                <apply>
+                  <lt/>
+                  <apply>
+                    <ci>uniform</ci>
+                    <cn>0</cn>
+                    <cn>1</cn>
+                  </apply>
+                  <apply>
+                    <ci>fractionalPart</ci>
+                    <ci>x</ci>
+                  </apply>
+                </apply>
+              </piece>
+              <otherwise>
+                <apply>
+                  <floor/>
+                  <ci>x</ci>
+                </apply>
+              </otherwise>
+            </piecewise>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="uniform">
+        <annotation>
+          <distribution xmlns="http://sbml.org/annotations/distribution" defnition="http://en.wikipedia.org/wiki/Uniform_distribution_(continous)"/>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>x</ci>
+            </bvar>
+            <bvar>
+              <ci>y</ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <plus/>
+                <ci>x</ci>
+                <ci>y</ci>
+              </apply>
+              <cn>2</cn>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfCompartments>
+      <compartment constant="false" id="default" name="ADPBindAndPolymerization" size="0.0" spatialDimensions="3"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ADP__bound" initialAmount="0.0"/>
+      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ADP__c" initialAmount="0.0"/>
+      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ATP__bound" initialAmount="0.0"/>
+      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ATP__c" initialAmount="0.0"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter constant="false" id="Rx_1mer_ADP" value="1.0"/>
+      <parameter constant="false" id="Rx_1mer_ATP" value="2.0"/>
+      <parameter constant="false" id="Rx_2mer_ADP" value="3.0"/>
+      <parameter constant="false" id="Rx_2mer_ATP" value="4.0"/>
+      <parameter constant="false" id="Rx_3mer_ADP" value="5.0"/>
+      <parameter constant="false" id="Rx_3mer_ATP" value="6.0"/>
+      <parameter constant="false" id="Rx_4mer_ADP" value="7.0"/>
+      <parameter constant="false" id="Rx_4mer_ATP" value="8.0"/>
+      <parameter constant="false" id="Rx_5mer_ADP" value="9.0"/>
+      <parameter constant="false" id="Rx_5mer_ATP" value="10.0"/>
+      <parameter constant="false" id="Rx_6mer_ADP" value="11.0"/>
+      <parameter constant="false" id="Rx_6mer_ATP" value="12.0"/>
+      <parameter constant="false" id="Rx_7mer_ADP" value="13.0"/>
+      <parameter constant="false" id="Rx_7mer_ATP" value="14.0"/>
+      <parameter constant="false" id="Rx_free" value="0.0"/>
+      <parameter constant="false" id="areReady" value="0.0"/>
+      <parameter constant="false" id="avgBindingRateADP" value="0.0"/>
+      <parameter constant="false" id="bindAndPolADP" value="0.0"/>
+      <parameter constant="false" id="bindRateR1ADP" value="0.0"/>
+      <parameter constant="false" id="bindRateR2ADP" value="0.0"/>
+      <parameter constant="false" id="bindRateR3ADP" value="0.0"/>
+      <parameter constant="false" id="bindRateR4ADP" value="0.0"/>
+      <parameter constant="false" id="bindUnspecific" value="0.0"/>
+      <parameter constant="false" id="bindingFinished" value="0.0"/>
+      <parameter constant="false" id="cSite" value="70.0"/>
+      <parameter constant="false" id="cState" value="20.0"/>
+      <parameter constant="false" id="canBindR1" value="0.0"/>
+      <parameter constant="false" id="canBindR2" value="0.0"/>
+      <parameter constant="false" id="canBindR3" value="0.0"/>
+      <parameter constant="false" id="canBindR4" value="0.0"/>
+      <parameter constant="false" id="canStartBinding" value="0.0"/>
+      <parameter constant="false" id="canStartPol" value="0.0"/>
+      <parameter constant="false" id="cell_Volume" value="0.0"/>
+      <parameter constant="false" id="chromosmoe_R2" value="0.0"/>
+      <parameter constant="false" id="chromosome_R1" value="0.0"/>
+      <parameter constant="false" id="chromosome_R2" value="0.0"/>
+      <parameter constant="false" id="chromosome_R3" value="0.0"/>
+      <parameter constant="false" id="chromosome_R4" value="0.0"/>
+      <parameter constant="false" id="chromosome_R5" value="0.0"/>
+      <parameter constant="false" id="complexSize" value="0.0"/>
+      <parameter constant="false" id="displacing" value="0.0"/>
+      <parameter constant="false" id="kb1ADP" value="0.0"/>
+      <parameter constant="false" id="kb2ADP" value="0.0"/>
+      <parameter constant="false" id="maxBindADP" value="0.0"/>
+      <parameter constant="false" id="maxBindingADP" value="0.0"/>
+      <parameter constant="false" id="maxPolADP" value="0.0"/>
+      <parameter constant="false" id="nAvo" value="0.0"/>
+      <parameter constant="false" id="nBound" value="0.0"/>
+      <parameter constant="false" id="numFreeBindingSitesADP" value="0.0"/>
+      <parameter constant="false" id="numFreeDnaAADP" value="0.0"/>
+      <parameter constant="false" id="numFreePolSites" value="0.0"/>
+      <parameter constant="false" id="polRange" value="0.0"/>
+      <parameter constant="false" id="polRateR1" value="0.0"/>
+      <parameter constant="false" id="polRateR2" value="0.0"/>
+      <parameter constant="false" id="polRateR3" value="0.0"/>
+      <parameter constant="false" id="polRateR4" value="0.0"/>
+      <parameter constant="false" id="rate8merBindADP" value="0.0"/>
+      <parameter constant="false" id="rate9merBindADP" value="0.0"/>
+      <parameter constant="false" id="sizeR1" value="0.0"/>
+      <parameter constant="false" id="sizeR2" value="0.0"/>
+      <parameter constant="false" id="sizeR3" value="0.0"/>
+      <parameter constant="false" id="sizeR4" value="0.0"/>
+      <parameter constant="false" id="totBindingRateADP" value="0.0"/>
+      <parameter constant="false" id="totPolRate" value="0.0"/>
+      <parameter constant="false" id="x" value="0.0"/>
+      <parameter constant="false" id="y" value="0.0"/>
+    </listOfParameters>
+    <listOfInitialAssignments>
+      <initialAssignment metaid="areReady_Initialization" symbol="areReady">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <piecewise>
+            <piece>
+              <cn>1</cn>
+              <apply>
+                <eq/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <plus/>
+                        <ci>chromosome_R1</ci>
+                        <ci>chromosome_R2</ci>
+                      </apply>
+                      <ci>chromosome_R3</ci>
+                    </apply>
+                    <ci>chromosome_R4</ci>
+                  </apply>
+                  <cn>2</cn>
+                </apply>
+                <cn>28</cn>
+              </apply>
+            </piece>
+            <otherwise>
+              <cn>0</cn>
+            </otherwise>
+          </piecewise>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="avgBindingRateADP_Initialization" symbol="avgBindingRateADP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <cn>148</cn>
+                <ci>rate9merBindADP</ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn>2079</cn>
+                <ci>rate8merBindADP</ci>
+              </apply>
+            </apply>
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <cn>2227</cn>
+                <ci>MG_469_1MER_ADP__bound</ci>
+              </apply>
+              <ci>MG_469_1MER_ATP__bound</ci>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="bindRateR1ADP_Initialization" symbol="bindRateR1ADP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>rate8merBindADP</ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="bindRateR2ADP_Initialization" symbol="bindRateR2ADP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>rate8merBindADP</ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="bindRateR3ADP_Initialization" symbol="bindRateR3ADP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>rate8merBindADP</ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="bindRateR4ADP_Initialization" symbol="bindRateR4ADP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>rate9merBindADP</ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="canBindR1_Initialization" symbol="canBindR1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <piecewise>
+            <piece>
+              <cn>1</cn>
+              <apply>
+                <gt/>
+                <ci>bindRateR1ADP</ci>
+                <cn>0</cn>
+              </apply>
+            </piece>
+            <otherwise>
+              <cn>0</cn>
+            </otherwise>
+          </piecewise>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="canBindR2_Initialization" symbol="canBindR2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <piecewise>
+            <piece>
+              <cn>1</cn>
+              <apply>
+                <gt/>
+                <ci>bindRateR2ADP</ci>
+                <cn>0</cn>
+              </apply>
+            </piece>
+            <otherwise>
+              <cn>0</cn>
+            </otherwise>
+          </piecewise>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="canBindR3_Initialization" symbol="canBindR3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <piecewise>
+            <piece>
+              <cn>1</cn>
+              <apply>
+                <gt/>
+                <ci>bindRateR3ADP</ci>
+                <cn>0</cn>
+              </apply>
+            </piece>
+            <otherwise>
+              <cn>0</cn>
+            </otherwise>
+          </piecewise>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="canBindR4_Initialization" symbol="canBindR4">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <piecewise>
+            <piece>
+              <cn>1</cn>
+              <apply>
+                <gt/>
+                <ci>bindRateR4ADP</ci>
+                <cn>0</cn>
+              </apply>
+            </piece>
+            <otherwise>
+              <cn>0</cn>
+            </otherwise>
+          </piecewise>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="canStartBinding_Initialization" symbol="canStartBinding">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <piecewise>
+            <piece>
+              <cn>1</cn>
+              <apply>
+                <and/>
+                <apply>
+                  <gt/>
+                  <ci>numFreeDnaAADP</ci>
+                  <cn>0</cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci>bindAndPolADP</ci>
+                  <cn>1</cn>
+                </apply>
+              </apply>
+            </piece>
+            <otherwise>
+              <cn>0</cn>
+            </otherwise>
+          </piecewise>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="canStartPol_Initialization" symbol="canStartPol">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <piecewise>
+            <piece>
+              <cn>1</cn>
+              <apply>
+                <gt/>
+                <ci>complexSize</ci>
+                <cn>0</cn>
+              </apply>
+            </piece>
+            <otherwise>
+              <cn>0</cn>
+            </otherwise>
+          </piecewise>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="complexSize_Initialization" symbol="complexSize">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <ci>minFunc</ci>
+            <ci>sizeR1</ci>
+            <apply>
+              <ci>minFunc</ci>
+              <ci>sizeR2</ci>
+              <apply>
+                <ci>minFunc</ci>
+                <ci>sizeR3</ci>
+                <ci>sizeR4</ci>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="maxBindADP_Initialization" symbol="maxBindADP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <ci>stochasticRound</ci>
+            <apply>
+              <ci>minFunc</ci>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <times/>
+                    <ci>avgBindingRateADP</ci>
+                    <ci>numFreeBindingSitesADP</ci>
+                  </apply>
+                  <ci>numFreeDnaAADP</ci>
+                </apply>
+                <ci>areReady</ci>
+              </apply>
+              <apply>
+                <ci>minFunc</ci>
+                <ci>numFreeBindingSitesADP</ci>
+                <ci>numFreeDnaAADP</ci>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="maxBindingADP_Initialization" symbol="maxBindingADP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <ci>minFunc</ci>
+            <ci>maxBindADP</ci>
+            <apply>
+              <ci>stochasticRound</ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci>numFreeDnaAADP</ci>
+                  <ci>totBindingRateADP</ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci>totBindingRateADP</ci>
+                  <ci>totPolRate</ci>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="maxPolADP_Initialization" symbol="maxPolADP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <ci>stochasticRound</ci>
+            <apply>
+              <ci>minFunc</ci>
+              <apply>
+                <times/>
+                <ci>numFreeDnaAADP</ci>
+                <ci>totPolRate</ci>
+              </apply>
+              <apply>
+                <ci>minFunc</ci>
+                <ci>numFreePolSites</ci>
+                <ci>numFreeDnaAADP</ci>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="numFreeBindingSitesADP_Initialization" symbol="numFreeBindingSitesADP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <minus/>
+                        <apply>
+                          <minus/>
+                          <cn>2227</cn>
+                          <ci>MG_469_1MER_ATP__bound</ci>
+                        </apply>
+                        <ci>MG_469_1MER_ADP__bound</ci>
+                      </apply>
+                      <cn>4</cn>
+                    </apply>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <gt/>
+                          <ci>chromosome_R1</ci>
+                          <cn>0</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                  </apply>
+                  <piecewise>
+                    <piece>
+                      <cn>1</cn>
+                      <apply>
+                        <gt/>
+                        <ci>chromosome_R2</ci>
+                        <cn>0</cn>
+                      </apply>
+                    </piece>
+                    <otherwise>
+                      <cn>0</cn>
+                    </otherwise>
+                  </piecewise>
+                </apply>
+                <piecewise>
+                  <piece>
+                    <cn>1</cn>
+                    <apply>
+                      <gt/>
+                      <ci>chromosome_R3</ci>
+                      <cn>0</cn>
+                    </apply>
+                  </piece>
+                  <otherwise>
+                    <cn>0</cn>
+                  </otherwise>
+                </piecewise>
+              </apply>
+              <piecewise>
+                <piece>
+                  <cn>1</cn>
+                  <apply>
+                    <gt/>
+                    <ci>chromosome_R4</ci>
+                    <cn>0</cn>
+                  </apply>
+                </piece>
+                <otherwise>
+                  <cn>0</cn>
+                </otherwise>
+              </piecewise>
+            </apply>
+            <ci>areReady</ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="numFreeDnaAADP_Initialization" symbol="numFreeDnaAADP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>MG_469_1MER_ADP__c</ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="numFreePolSites_Initialization" symbol="numFreePolSites">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <apply>
+              <plus/>
+              <apply>
+                <plus/>
+                <piecewise>
+                  <piece>
+                    <cn>1</cn>
+                    <apply>
+                      <gt/>
+                      <ci>polRateR1</ci>
+                      <cn>0</cn>
+                    </apply>
+                  </piece>
+                  <otherwise>
+                    <cn>0</cn>
+                  </otherwise>
+                </piecewise>
+                <piecewise>
+                  <piece>
+                    <cn>1</cn>
+                    <apply>
+                      <gt/>
+                      <ci>polRateR2</ci>
+                      <cn>0</cn>
+                    </apply>
+                  </piece>
+                  <otherwise>
+                    <cn>0</cn>
+                  </otherwise>
+                </piecewise>
+              </apply>
+              <piecewise>
+                <piece>
+                  <cn>1</cn>
+                  <apply>
+                    <gt/>
+                    <ci>polRateR3</ci>
+                    <cn>0</cn>
+                  </apply>
+                </piece>
+                <otherwise>
+                  <cn>0</cn>
+                </otherwise>
+              </piecewise>
+            </apply>
+            <piecewise>
+              <piece>
+                <cn>1</cn>
+                <apply>
+                  <gt/>
+                  <ci>polRateR4</ci>
+                  <cn>0</cn>
+                </apply>
+              </piece>
+              <otherwise>
+                <cn>0</cn>
+              </otherwise>
+            </piecewise>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="polRange_Initialization" symbol="polRange">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <ci>minFunc</ci>
+            <cn>6</cn>
+            <apply>
+              <ci>maxFunc</ci>
+              <cn>1</cn>
+              <ci>complexSize</ci>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="polRateR1_Initialization" symbol="polRateR1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <piecewise>
+            <piece>
+              <ci>rate8merBindADP</ci>
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci>sizeR1</ci>
+                  <ci>polRange</ci>
+                </apply>
+                <apply>
+                  <eq/>
+                  <apply>
+                    <ci>mod</ci>
+                    <ci>chromosome_R1</ci>
+                    <cn>2</cn>
+                  </apply>
+                  <cn>0</cn>
+                </apply>
+              </apply>
+            </piece>
+            <otherwise>
+              <cn>0</cn>
+            </otherwise>
+          </piecewise>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="polRateR2_Initialization" symbol="polRateR2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <piecewise>
+            <piece>
+              <ci>rate8merBindADP</ci>
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci>sizeR2</ci>
+                  <ci>polRange</ci>
+                </apply>
+                <apply>
+                  <eq/>
+                  <apply>
+                    <ci>mod</ci>
+                    <ci>chromosome_R2</ci>
+                    <cn>2</cn>
+                  </apply>
+                  <cn>0</cn>
+                </apply>
+              </apply>
+            </piece>
+            <otherwise>
+              <cn>0</cn>
+            </otherwise>
+          </piecewise>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="polRateR3_Initialization" symbol="polRateR3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <piecewise>
+            <piece>
+              <ci>rate8merBindADP</ci>
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci>sizeR3</ci>
+                  <ci>polRange</ci>
+                </apply>
+                <apply>
+                  <eq/>
+                  <apply>
+                    <ci>mod</ci>
+                    <ci>chromosome_R3</ci>
+                    <cn>2</cn>
+                  </apply>
+                  <cn>0</cn>
+                </apply>
+              </apply>
+            </piece>
+            <otherwise>
+              <cn>0</cn>
+            </otherwise>
+          </piecewise>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="polRateR4_Initialization" symbol="polRateR4">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <piecewise>
+            <piece>
+              <ci>rate9merBindADP</ci>
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci>sizeR4</ci>
+                  <ci>polRange</ci>
+                </apply>
+                <apply>
+                  <eq/>
+                  <apply>
+                    <ci>mod</ci>
+                    <ci>chromosome_R4</ci>
+                    <cn>2</cn>
+                  </apply>
+                  <cn>0</cn>
+                </apply>
+              </apply>
+            </piece>
+            <otherwise>
+              <cn>0</cn>
+            </otherwise>
+          </piecewise>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="sizeR1_Initialization" symbol="sizeR1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <piecewise>
+            <piece>
+              <apply>
+                <divide/>
+                <ci>chromosome_R1</ci>
+                <cn>2</cn>
+              </apply>
+              <apply>
+                <eq/>
+                <apply>
+                  <ci>mod</ci>
+                  <ci>chromosome_R1</ci>
+                  <cn>2</cn>
+                </apply>
+                <cn>0</cn>
+              </apply>
+            </piece>
+            <otherwise>
+              <apply>
+                <minus/>
+                <apply>
+                  <floor/>
+                  <apply>
+                    <divide/>
+                    <ci>chromosome_R1</ci>
+                    <cn>2</cn>
+                  </apply>
+                </apply>
+                <cn>1</cn>
+              </apply>
+            </otherwise>
+          </piecewise>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="sizeR2_Initialization" symbol="sizeR2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <piecewise>
+            <piece>
+              <apply>
+                <divide/>
+                <ci>chromosome_R2</ci>
+                <cn>2</cn>
+              </apply>
+              <apply>
+                <eq/>
+                <apply>
+                  <ci>mod</ci>
+                  <ci>chromosome_R2</ci>
+                  <cn>2</cn>
+                </apply>
+                <cn>0</cn>
+              </apply>
+            </piece>
+            <otherwise>
+              <apply>
+                <minus/>
+                <apply>
+                  <floor/>
+                  <apply>
+                    <divide/>
+                    <ci>chromosome_R2</ci>
+                    <cn>2</cn>
+                  </apply>
+                </apply>
+                <cn>1</cn>
+              </apply>
+            </otherwise>
+          </piecewise>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="sizeR3_Initialization" symbol="sizeR3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <piecewise>
+            <piece>
+              <apply>
+                <divide/>
+                <ci>chromosome_R3</ci>
+                <cn>2</cn>
+              </apply>
+              <apply>
+                <eq/>
+                <apply>
+                  <ci>mod</ci>
+                  <ci>chromosome_R3</ci>
+                  <cn>2</cn>
+                </apply>
+                <cn>0</cn>
+              </apply>
+            </piece>
+            <otherwise>
+              <apply>
+                <minus/>
+                <apply>
+                  <floor/>
+                  <apply>
+                    <divide/>
+                    <ci>chromosome_R3</ci>
+                    <cn>2</cn>
+                  </apply>
+                </apply>
+                <cn>1</cn>
+              </apply>
+            </otherwise>
+          </piecewise>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="sizeR4_Initialization" symbol="sizeR4">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <piecewise>
+            <piece>
+              <apply>
+                <divide/>
+                <ci>chromosome_R4</ci>
+                <cn>2</cn>
+              </apply>
+              <apply>
+                <eq/>
+                <apply>
+                  <ci>mod</ci>
+                  <ci>chromosome_R4</ci>
+                  <cn>2</cn>
+                </apply>
+                <cn>0</cn>
+              </apply>
+            </piece>
+            <otherwise>
+              <apply>
+                <minus/>
+                <apply>
+                  <floor/>
+                  <apply>
+                    <divide/>
+                    <ci>chromosome_R4</ci>
+                    <cn>2</cn>
+                  </apply>
+                </apply>
+                <cn>1</cn>
+              </apply>
+            </otherwise>
+          </piecewise>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="totBindingRateADP_Initialization" symbol="totBindingRateADP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci>avgBindingRateADP</ci>
+            <ci>numFreeBindingSitesADP</ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="totPolRate_Initialization" symbol="totPolRate">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <apply>
+              <plus/>
+              <apply>
+                <plus/>
+                <ci>polRateR1</ci>
+                <ci>polRateR2</ci>
+              </apply>
+              <ci>polRateR3</ci>
+            </apply>
+            <ci>polRateR4</ci>
+          </apply>
+        </math>
+      </initialAssignment>
+    </listOfInitialAssignments>
+    <listOfRules>
+      <assignmentRule metaid="kb1ADP_Assignment_rule" variable="kb1ADP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <cn>2.5</cn>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="kb2ADP_Assignment_rule" variable="kb2ADP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <cn>0.61</cn>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="nAvo_Assignment_rule" variable="nAvo">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <cn>6.0221412927</cn>
+            <cn>9.999999999999999E22</cn>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="rate8merBindADP_Assignment_rule" variable="rate8merBindADP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci>kb2ADP</ci>
+                  <cn>1.0E9</cn>
+                </apply>
+                <cn>3600</cn>
+              </apply>
+              <ci>nAvo</ci>
+            </apply>
+            <ci>cell_Volume</ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="rate9merBindADP_Assignment_rule" variable="rate9merBindADP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci>kb1ADP</ci>
+                  <cn>1.0E9</cn>
+                </apply>
+                <cn>3600</cn>
+              </apply>
+              <ci>nAvo</ci>
+            </apply>
+            <ci>cell_Volume</ci>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfEvents>
+      <event id="bindADP" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="false">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <eq/>
+              <ci>bindUnspecific</ci>
+              <cn>2</cn>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="maxBindingADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>maxBindingADP</ci>
+                <ci>nBound</ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="numFreeDnaAADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>numFreeDnaAADP</ci>
+                <ci>nBound</ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_1MER_ADP__bound">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci>MG_469_1MER_ADP__bound</ci>
+                <ci>nBound</ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_1MER_ADP__c">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci>numFreeDnaAADP</ci>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="bindToR1" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="false">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci>canStartBinding</ci>
+                    <cn>1</cn>
+                  </apply>
+                  <apply>
+                    <gt/>
+                    <ci>maxBindingADP</ci>
+                    <cn>0</cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <gt/>
+                  <ci>numFreeDnaAADP</ci>
+                  <cn>0</cn>
+                </apply>
+              </apply>
+              <apply>
+                <gt/>
+                <ci>canBindR1</ci>
+                <cn>0</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="chromosome_R1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci>chromosome_R1</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="canBindR1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="numFreeDnaAADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>numFreeDnaAADP</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="maxBindingADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>maxBindingADP</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="bindToR2" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="false">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci>canStartBinding</ci>
+                    <cn>1</cn>
+                  </apply>
+                  <apply>
+                    <gt/>
+                    <ci>maxBindingADP</ci>
+                    <cn>0</cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <gt/>
+                  <ci>numFreeDnaAADP</ci>
+                  <cn>0</cn>
+                </apply>
+              </apply>
+              <apply>
+                <gt/>
+                <ci>canBindR2</ci>
+                <cn>0</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="chromosome_R2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci>chromosome_R2</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="canBindR2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="numFreeDnaAADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>numFreeDnaAADP</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="maxBindingADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>maxBindingADP</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="bindToR3" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="false">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci>canStartBinding</ci>
+                    <cn>1</cn>
+                  </apply>
+                  <apply>
+                    <gt/>
+                    <ci>maxBindingADP</ci>
+                    <cn>0</cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <gt/>
+                  <ci>numFreeDnaAADP</ci>
+                  <cn>0</cn>
+                </apply>
+              </apply>
+              <apply>
+                <gt/>
+                <ci>canBindR3</ci>
+                <cn>0</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="chromosome_R3">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci>chromosome_R3</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="canBindR3">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="numFreeDnaAADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>numFreeDnaAADP</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="maxBindingADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>maxBindingADP</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="bindToR4" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="false">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci>canStartBinding</ci>
+                    <cn>1</cn>
+                  </apply>
+                  <apply>
+                    <gt/>
+                    <ci>maxBindingADP</ci>
+                    <cn>0</cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <gt/>
+                  <ci>numFreeDnaAADP</ci>
+                  <cn>0</cn>
+                </apply>
+              </apply>
+              <apply>
+                <gt/>
+                <ci>canBindR4</ci>
+                <cn>0</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="chromosome_R4">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci>chromosome_R4</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="canBindR4">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="numFreeDnaAADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>numFreeDnaAADP</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="maxBindingADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>maxBindingADP</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="bindToR5" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="false">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci>canStartBinding</ci>
+                  <cn>1</cn>
+                </apply>
+                <apply>
+                  <gt/>
+                  <ci>numFreeDnaAADP</ci>
+                  <cn>0</cn>
+                </apply>
+              </apply>
+              <apply>
+                <eq/>
+                <ci>areReady</ci>
+                <cn>1</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="chromosome_R5">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>1</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="endEvent" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="false">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <eq/>
+                <ci>bindingFinished</ci>
+                <cn>1</cn>
+              </apply>
+              <apply>
+                <or/>
+                <apply>
+                  <leq/>
+                  <ci>maxPolADP</ci>
+                  <cn>0</cn>
+                </apply>
+                <apply>
+                  <leq/>
+                  <ci>numFreeDnaAADP</ci>
+                  <cn>0</cn>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="MG_469_1MER_ADP__c">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci>numFreeDnaAADP</ci>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="bindAndPolADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="displacing">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>1</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="finishBindToR1234" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="false">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci>canStartBinding</ci>
+                  <cn>1</cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci>bindingFinished</ci>
+                  <cn>0</cn>
+                </apply>
+              </apply>
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <and/>
+                        <apply>
+                          <eq/>
+                          <ci>canBindR1</ci>
+                          <cn>0</cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci>canBindR2</ci>
+                          <cn>0</cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci>canBindR3</ci>
+                        <cn>0</cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci>canBindR4</ci>
+                      <cn>0</cn>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <leq/>
+                    <ci>maxBindingADP</ci>
+                    <cn>0</cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <leq/>
+                  <ci>numFreeDnaAADP</ci>
+                  <cn>0</cn>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="canStartBinding">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="bindUnspecific">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>1</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_1MER_ADP__c">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci>numFreeDnaAADP</ci>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="finishBindings" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="false">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <or/>
+              <apply>
+                <leq/>
+                <ci>maxBindingADP</ci>
+                <cn>0</cn>
+              </apply>
+              <apply>
+                <leq/>
+                <ci>numFreeDnaAADP</ci>
+                <cn>0</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="bindUnspecific">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="bindingFinished">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>1</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="polymerizeR1" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="false">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci>bindingFinished</ci>
+                      <cn>1</cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci>canStartPol</ci>
+                      <cn>1</cn>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <gt/>
+                    <ci>numFreeDnaAADP</ci>
+                    <cn>0</cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <gt/>
+                  <ci>maxPolADP</ci>
+                  <cn>0</cn>
+                </apply>
+              </apply>
+              <apply>
+                <gt/>
+                <ci>polRateR1</ci>
+                <cn>0</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="chromosome_R1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci>chromosome_R1</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="numFreeDnaAADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>numFreeDnaAADP</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="maxPolADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>maxPolADP</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="polRateR1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="polymerizeR2" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="false">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci>bindingFinished</ci>
+                      <cn>1</cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci>canStartPol</ci>
+                      <cn>1</cn>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <gt/>
+                    <ci>numFreeDnaAADP</ci>
+                    <cn>0</cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <gt/>
+                  <ci>maxPolADP</ci>
+                  <cn>0</cn>
+                </apply>
+              </apply>
+              <apply>
+                <gt/>
+                <ci>polRateR2</ci>
+                <cn>0</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="chromosome_R2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci>chromosome_R2</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="numFreeDnaAADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>numFreeDnaAADP</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="maxPolADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>maxPolADP</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="polRateR2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="polymerizeR3" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="false">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci>bindingFinished</ci>
+                      <cn>1</cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci>canStartPol</ci>
+                      <cn>1</cn>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <gt/>
+                    <ci>numFreeDnaAADP</ci>
+                    <cn>0</cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <gt/>
+                  <ci>maxPolADP</ci>
+                  <cn>0</cn>
+                </apply>
+              </apply>
+              <apply>
+                <gt/>
+                <ci>polRateR3</ci>
+                <cn>0</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="chromosome_R3">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci>chromosome_R3</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="numFreeDnaAADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>numFreeDnaAADP</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="maxPolADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>maxPolADP</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="polRateR3">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="polymerizeR4" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="false">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci>bindingFinished</ci>
+                      <cn>1</cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci>canStartPol</ci>
+                      <cn>1</cn>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <gt/>
+                    <ci>numFreeDnaAADP</ci>
+                    <cn>0</cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <gt/>
+                  <ci>maxPolADP</ci>
+                  <cn>0</cn>
+                </apply>
+              </apply>
+              <apply>
+                <gt/>
+                <ci>polRateR4</ci>
+                <cn>0</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="chromosome_R4">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci>chromosome_R4</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="numFreeDnaAADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>numFreeDnaAADP</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="maxPolADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <ci>maxPolADP</ci>
+                <cn>1</cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="polRateR4">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="startBindADP" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="false">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci>bindUnspecific</ci>
+                  <cn>1</cn>
+                </apply>
+                <apply>
+                  <gt/>
+                  <ci>maxBindingADP</ci>
+                  <cn>0</cn>
+                </apply>
+              </apply>
+              <apply>
+                <gt/>
+                <ci>numFreeDnaAADP</ci>
+                <cn>0</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="nBound">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <ci>minFunc</ci>
+                <ci>maxBindingADP</ci>
+                <ci>numFreeDnaAADP</ci>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="bindUnspecific">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>2</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+    </listOfEvents>
+  </model>
+</sbml>
