@@ -86,16 +86,59 @@ kb2ADP := 0.61;
 rate9merBindADP := kb1ADP * 1e9 / 3600 / nAvo / cell_Volume;
 rate8merBindADP := kb2ADP * 1e9 / 3600 / nAvo / cell_Volume;
 
-//TODO
+// TODO: use real values of unbind 9mer and 8mer numbers instead of hardcoded constants
+avgBindingRateADP = ( 148 * rate9merBindADP + 2079 * rate8merBindADP ) / (2227 - MG_469_1MER_ADP__bound - MG_469_1MER_ATP__bound);
+// avgBindingRate = (rate9mer*numel(this.dnaABoxIndexs_9mer) + rate8mer*numel(this.dnaABoxIndexs_8mer)) / numel(this.dnaABoxStartPositions);
+
+# calculate R1-R4 binding rates
+var bindRateR4ADP, bindRateR1ADP, bindRateR2ADP, bindRateR3ADP;
+bindRateR4ADP = rate9merBindADP;
+bindRateR1ADP = rate8merBindADP;
+bindRateR2ADP = rate8merBindADP;
+bindRateR3ADP = rate8merBindADP;
+
+var numFreeBindingSitesADP;
+numFreeBindingSitesADP = 2227 - MG_469_1MER_ATP__bound - MG_469_1MER_ADP__bound + 4 - piecewise(1, chromosome_R1 > 0, 0) - piecewise(1, chromosome_R2 > 0, 0) - piecewise(1, chromosome_R3 > 0, 0) - piecewise(1, chromosome_R4 > 0, 0) + areReady;
+
+var maxBindADP, areReady;
+areReady = piecewise(1, ( chromosome_R1 + chromosome_R2 + chromosome_R3 + chromosome_R4 ) / 2 == 28, 0);
+maxBindADP = stochasticRound( minFunc( avgBindingRateADP * numFreeBindingSitesADP * numFreeDnaAADP + areReady, minFunc( numFreeBindingSitesADP, numFreeDnaAADP ) ) );
 
 ################################################################################################################################################
 ############################################ 3. Estimate upper bound of polymerization #########################################################
-//TODO
+# calculate complex size (necessary for polymerization rates)
+var sizeR1, sizeR2, sizeR3, sizeR4;
+sizeR1 = piecewise( chromosome_R1 / 2, mod( chromosome_R1, 2 ) == 0, floor( chromosome_R1 / 2 ) - 1 );
+sizeR2 = piecewise( chromosome_R2 / 2, mod( chromosome_R2, 2 ) == 0, floor( chromosome_R2 / 2 ) - 1 );
+sizeR3 = piecewise( chromosome_R3 / 2, mod( chromosome_R3, 2 ) == 0, floor( chromosome_R3 / 2 ) - 1 );
+sizeR4 = piecewise( chromosome_R4 / 2, mod( chromosome_R4, 2 ) == 0, floor( chromosome_R4 / 2 ) - 1 );
+var complexSize;
+complexSize = minFunc(sizeR1, minFunc(sizeR2, minFunc(sizeR3, sizeR4) ) );
+
+var canStartPol;
+canStartPol = piecewise( 1, complexSize > 0, 0 );
+
+var polRange;
+polRange = minFunc( 6, maxFunc( 1, complexSize ) );
+var polRateR4, polRateR1, polRateR2, polRateR3, totPolRate;
+polRateR4 = piecewise( rate9merBindADP, sizeR4 == polRange && mod( chromosome_R4, 2 ) == 0, 0 );
+polRateR1 = piecewise( rate8merBindADP, sizeR1 == polRange && mod( chromosome_R1, 2 ) == 0, 0 );
+polRateR2 = piecewise( rate8merBindADP, sizeR2 == polRange && mod( chromosome_R2, 2 ) == 0, 0 );
+polRateR3 = piecewise( rate8merBindADP, sizeR3 == polRange && mod( chromosome_R3, 2 ) == 0, 0 );
+totPolRate = polRateR1 + polRateR2 + polRateR3 + polRateR4;
+
+var numFreePolSites;
+numFreePolSites = piecewise( 1, polRateR1 > 0, 0 ) + piecewise( 1, polRateR2 > 0, 0 ) + piecewise( 1, polRateR3 > 0, 0 ) + piecewise( 1, polRateR4 > 0, 0 );
+
+var maxPolADP;
+maxPolADP = stochasticRound( minFunc( numFreeDnaAADP*totPolRate, minFunc( numFreePolSites, numFreeDnaAADP ) ) );
 
 
 ################################################################################################################################################
 ############################################ 4. Allocate DnaA-ADP ##############################################################################
-//TODO
+var totBindingRateADP, maxBindingADP;
+totBindingRateADP = avgBindingRateADP*numFreeBindingSitesADP;
+maxBindingADP = minFunc( maxBindADP, stochasticRound( numFreeDnaAADP * totBindingRateADP / ( totBindingRateADP + totPolRate ) ) );
 
 
 ################################################################################################################################################
