@@ -1,0 +1,109 @@
+function uniform(x,y)
+(x+y)/2;
+end
+
+function fractionalPart(x)
+  x - floor(x);
+end
+
+function mod(x,y)
+   x - y * floor(x / y);
+end
+
+function minFunc(x,y)
+  piecewise(x, x<y, y);
+end
+
+function maxFunc(x,y)
+  piecewise(y, x<y, x);
+end
+
+function randInt(x)
+  floor(uniform(0,1)*x);
+end
+
+function stochasticRound(x)
+  piecewise(floor(x)+1.0, uniform(0,1)<fractionalPart(x), floor(x));
+end
+
+model RepInit_ADP_BindAndPolymerization()
+
+compartment default;
+species MG_469_1MER_ADP__bound in default, MG_469_1MER_ADP__c in default, MG_469_1MER_ATP__bound in default, MG_469_1MER_ATP__c in default;
+var nAvo, kb1ADP, kb2ADP, cell_Volume, chromosome_R1, chromosmoe_R2, chromosome_R3, chromosome_R4;
+var maxBindADP, numFreeDnaAADP;
+var cSite, cState;
+var bindAndPolADP, displacing;
+
+var Rx_free;
+var Rx_1mer_ATP;
+var Rx_1mer_ADP;
+var Rx_2mer_ATP;
+var Rx_2mer_ADP;
+var Rx_3mer_ATP;
+var Rx_3mer_ADP;
+var Rx_4mer_ATP;
+var Rx_4mer_ADP;
+var Rx_5mer_ATP;
+var Rx_5mer_ADP;
+var Rx_6mer_ATP;
+var Rx_6mer_ADP;
+var Rx_7mer_ATP;
+var Rx_7mer_ADP;
+
+Rx_free = 0;
+Rx_1mer_ADP = 1;
+Rx_1mer_ATP = 2;
+Rx_2mer_ADP = 3;
+Rx_2mer_ATP = 4;
+Rx_3mer_ADP = 5;
+Rx_3mer_ATP = 6;
+Rx_4mer_ADP = 7;
+Rx_4mer_ATP = 8;
+Rx_5mer_ADP = 9;
+Rx_5mer_ATP = 10;
+Rx_6mer_ADP = 11;
+Rx_6mer_ATP = 12;
+Rx_7mer_ADP = 13;
+Rx_7mer_ATP = 14;
+
+cSite = 70;
+cState = 20;
+
+
+################################################################################################################################################
+############################################ 1. Check DnaA_1mer_ADP availability ###############################################################
+numFreeDnaAADP = MG_469_1MER_ADP__c;
+var canStartBinding;
+canStartBinding = piecewise(1, numFreeDnaAADP > 0 && bindAndPolADP == 1, 0 );
+
+################################################################################################################################################
+############################################ 2. Estimate max number of bindings ################################################################
+var avgBindingRateADP, rate9merBindADP, rate8merBindADP;
+nAvo := 6.0221412927*1e23;
+kb1ADP := 2.5;
+kb2ADP := 0.61;
+rate9merBindADP := kb1ADP * 1e9 / 3600 / nAvo / cell_Volume;
+rate8merBindADP := kb2ADP * 1e9 / 3600 / nAvo / cell_Volume;
+
+//TODO
+
+################################################################################################################################################
+############################################ 3. Estimate upper bound of polymerization #########################################################
+//TODO
+
+
+################################################################################################################################################
+############################################ 4. Allocate DnaA-ADP ##############################################################################
+//TODO
+
+
+################################################################################################################################################
+############################################ 5. Bind and Polymerize ############################################################################
+//TODO
+
+########################### Polymerization #################################
+
+
+default is "ADPBindAndPolymerization";
+end
