@@ -82,7 +82,7 @@ var coopR1, coopR2, coopR3, coopR4;
 coopR1 = piecewise(cSite, sizeR4_ATP > complexSize, 1);
 coopR2 = piecewise(cSite, sizeR4_ATP > complexSize && sizeR1_ATP > complexSize, 1);
 coopR3 = piecewise(cSite, sizeR4_ATP > complexSize && sizeR1_ATP > complexSize, 1);
-coopR4 = piecewise(cSite, sizeR3_ATP > complexSize || sizeR2_ATP > complexSize || sizeR1_ATP > complexSize, 1) + cState * complexSize;
+coopR4 = piecewise(cSite, sizeR3_ATP > complexSize || sizeR2_ATP > complexSize || sizeR1_ATP > complexSize, 1) + cState * complexSize * piecewise(1, complexSize < 7, 0);
 ################################################################################################################################################
 ################################################################# ATP part #####################################################################
 ################################################################################################################################################
@@ -169,17 +169,18 @@ startBind: at canStartBinding == 1 && maxBindingATP > 0 && numFreeDnaAATP > 0 : 
 # part of unspecific sites
 var nBound;
 startBindATP: at bindUnspecific == 1 && maxBindingATP > 0 && numFreeDnaAATP > 0 : nBound = minFunc( maxBindingATP, numFreeDnaAATP ) : bindUnspecific = 2;
-bindATP: at bindUnspecific == 2 : maxBindingATP = maxBindingATP - nBound : numFreeDnaAATP = numFreeDnaAATP - nBound : MG_469_1MER_ATP__bound = MG_469_1MER_ATP__bound + nBound : MG_469_1MER_ATP__c = MG_469_1MER_ATP__c - nBound;
+bindATP: at bindUnspecific == 2 : maxBindingATP = maxBindingATP - nBound : numFreeDnaAATP = numFreeDnaAATP - nBound : MG_469_1MER_ATP__bound = MG_469_1MER_ATP__bound + nBound : MG_469_1MER_ATP__c = numFreeDnaAATP ;
 
-polymerizeR1 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAATP > 0 && maxPolATP > 0 && polRateR1 > 0 : chromosome_R1 = chromosome_R1 + 2 : numFreeDnaAATP = numFreeDnaAATP - 1 : maxPolATP = maxPolATP - 1 ;
+########################### Polymerization #################################
+polymerizeR1 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAATP > 0 && maxPolATP > 0 && polRateR1 > 0 : chromosome_R1 = chromosome_R1 + 2 : numFreeDnaAATP = numFreeDnaAATP - 1 : maxPolATP = maxPolATP - 1 : polRateR1 = 0 ;
 
-polymerizeR2 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAATP > 0 && maxPolATP > 0 && polRateR2 > 0 : chromosome_R2 = chromosome_R2 + 2 : numFreeDnaAATP = numFreeDnaAATP - 1 : maxPolATP = maxPolATP - 1 ;
+polymerizeR2 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAATP > 0 && maxPolATP > 0 && polRateR2 > 0 : chromosome_R2 = chromosome_R2 + 2 : numFreeDnaAATP = numFreeDnaAATP - 1 : maxPolATP = maxPolATP - 1 : polRateR2 = 0 ;
 
-polymerizeR3 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAATP > 0 && maxPolATP > 0 && polRateR3 > 0 : chromosome_R3 = chromosome_R3 + 2 : numFreeDnaAATP = numFreeDnaAATP - 1 : maxPolATP = maxPolATP - 1 ;
+polymerizeR3 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAATP > 0 && maxPolATP > 0 && polRateR3 > 0 : chromosome_R3 = chromosome_R3 + 2 : numFreeDnaAATP = numFreeDnaAATP - 1 : maxPolATP = maxPolATP - 1 : polRateR3 = 0 ;
 
-polymerizeR4 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAATP > 0 && maxPolATP > 0 && polRateR4 > 0 : chromosome_R4 = chromosome_R4 + 2 : numFreeDnaAATP = numFreeDnaAATP - 1 : maxPolATP = maxPolATP - 1 ;
+polymerizeR4 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAATP > 0 && maxPolATP > 0 && polRateR4 > 0 : chromosome_R4 = chromosome_R4 + 2 : numFreeDnaAATP = numFreeDnaAATP - 1 : maxPolATP = maxPolATP - 1 : polRateR4 = 0 ;
 
-endEvent: at bindingFinished == 1 && ( maxPolATP <= 0 || numFreeDnaAATP <= 0 ) : bindAndPolATP = 0 : bindAndPolADP = 1;
+endEvent: at bindingFinished == 1 && ( maxPolATP <= 0 || numFreeDnaAATP <= 0 ) : MG_469_1MER_ATP__c = numFreeDnaAATP : bindAndPolATP = 0 : bindAndPolADP = 1;
 
 default is "BindAndPolymerization";
 end
