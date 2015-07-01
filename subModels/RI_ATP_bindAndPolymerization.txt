@@ -26,7 +26,7 @@ function stochasticRound(x)
   piecewise(floor(x)+1.0, uniform(0,1)<fractionalPart(x), floor(x));
 end
 
-model RepInit_BindAndPolymerization()
+model RepInit_ATP_BindAndPolymerization()
 
 compartment default;
 species MG_469_1MER_ADP__bound in default, MG_469_1MER_ADP__c in default, MG_469_1MER_ATP__bound in default, MG_469_1MER_ATP__c in default;
@@ -190,5 +190,5 @@ polymerizeR4 : at bindingFinished == 1 && canStartPol == 1 && numFreeDnaAATP > 0
 
 endEvent: at bindingFinished == 1 && ( maxPolATP <= 0 || numFreeDnaAATP <= 0 ) : MG_469_1MER_ATP__c = numFreeDnaAATP : bindAndPolATP = 0 : bindAndPolADP = 1;
 
-default is "BindAndPolymerization";
+default is "ATPBindAndPolymerization";
 end
