@@ -30,7 +30,7 @@ model RepInit_ADP_BindAndPolymerization()
 
 compartment default;
 species MG_469_1MER_ADP__bound in default, MG_469_1MER_ADP__c in default, MG_469_1MER_ATP__bound in default, MG_469_1MER_ATP__c in default;
-var nAvo, kb1ADP, kb2ADP, cell_Volume, chromosome_R1, chromosmoe_R2, chromosome_R3, chromosome_R4;
+var nAvo, kb1ADP, kb2ADP, cell_Volume, chromosome_R1, chromosome_R2, chromosome_R3, chromosome_R4;
 var maxBindADP, numFreeDnaAADP;
 var cSite, cState;
 var bindAndPolADP, displacing;

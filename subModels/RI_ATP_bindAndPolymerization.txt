@@ -30,7 +30,7 @@ model RepInit_ATP_BindAndPolymerization()
 
 compartment default;
 species MG_469_1MER_ADP__bound in default, MG_469_1MER_ADP__c in default, MG_469_1MER_ATP__bound in default, MG_469_1MER_ATP__c in default;
-var nAvo, kb1ATP, kb2ATP, cell_Volume, chromosome_R1, chromosmoe_R2, chromosome_R3, chromosome_R4;
+var nAvo, kb1ATP, kb2ATP, cell_Volume, chromosome_R1, chromosome_R2, chromosome_R3, chromosome_R4;
 var maxBindATP, numFreeDnaAATP;
 var cSite, cState;
 # complexFinished --- flag to show that ATP is bound to R5 site
