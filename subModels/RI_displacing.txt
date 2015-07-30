@@ -27,7 +27,7 @@ model RepInit_Displacing()
   
 compartment default;
 species MG_469_1MER_ADP__bound in default, MG_469_1MER_ADP__c in default, MG_469_1MER_ATP__bound in default, MG_469_1MER_ATP__c in default;
-var kd1ATP, kd1ADP, numBindingSites, chromosome_R1, chromosmoe_R2, chromosome_R3, chromosome_R4;
+var kd1ATP, kd1ADP, numBindingSites, chromosome_R1, chromosome_R2, chromosome_R3, chromosome_R4;
 
 var displacing;
 
