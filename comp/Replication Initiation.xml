@@ -8,6 +8,42 @@
         <biouml:viewOptions autoLayout="true" dependencyEdges="false"/>
       </biouml:BIOUML>
     </annotation>
+    <listOfFunctionDefinitions>
+      <functionDefinition id="mod">
+        <annotation>
+          <distribution xmlns="http://sbml.org/annotations/distribution" defnition=""/>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:nodeInfo completeName="mod" height="0" title="mod" width="0" x="143" y="46"/>
+          </biouml:BIOUML>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>x</ci>
+            </bvar>
+            <bvar>
+              <ci>y</ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <ci>x</ci>
+              <apply>
+                <times/>
+                <ci>y</ci>
+                <apply>
+                  <floor/>
+                  <apply>
+                    <divide/>
+                    <ci>x</ci>
+                    <ci>y</ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
     <listOfCompartments>
       <compartment constant="false" id="default" name="Replication Initiation" size="1" spatialDimensions="3">
         <annotation>
@@ -165,7 +201,7 @@
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ADP__d__bound" initialAmount="0.0">
         <annotation>
           <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-            <biouml:nodeInfo completeName="MG_469_1MER_ADP__d__bound" height="40" title="MG_469_1MER_ADP__d__bound" width="70" x="492" y="1275"/>
+            <biouml:nodeInfo completeName="MG_469_1MER_ADP__d__bound" height="40" title="MG_469_1MER_ADP__d__bound" width="70" x="480" y="1350"/>
             <biouml:specieInfo type="macromolecule"/>
           </biouml:BIOUML>
         </annotation>
@@ -185,6 +221,13 @@
             </annotation>
           </comp:replacedElement>
           <comp:replacedElement comp:portRef="MG_469_1MER_ADP__bound_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0105">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ADP__bound_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0114">
             <annotation>
               <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
                 <biouml:edgeInfo type="undirected"/>
@@ -253,12 +296,19 @@
               </biouml:BIOUML>
             </annotation>
           </comp:replacedElement>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ATP__bound_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0113">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_2MER_1ATP_ADP__d__bound" initialAmount="0.0">
         <annotation>
           <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-            <biouml:nodeInfo completeName="MG_469_2MER_1ATP_ADP__d__bound" height="40" title="MG_469_2MER_1ATP_ADP__d__bound" width="70" x="483" y="1410"/>
+            <biouml:nodeInfo completeName="MG_469_2MER_1ATP_ADP__d__bound" height="40" title="MG_469_2MER_1ATP_ADP__d__bound" width="70" x="481" y="1415"/>
             <biouml:specieInfo type="macromolecule"/>
           </biouml:BIOUML>
         </annotation>
@@ -341,7 +391,7 @@
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_5MER_ATP__d__bound" initialAmount="0.0">
         <annotation>
           <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-            <biouml:nodeInfo completeName="MG_469_5MER_ATP__d__bound" height="40" title="MG_469_5MER_ATP__d__bound" width="70" x="449" y="1065"/>
+            <biouml:nodeInfo completeName="MG_469_5MER_ATP__d__bound" height="40" title="MG_469_5MER_ATP__d__bound" width="70" x="464" y="1065"/>
             <biouml:specieInfo type="macromolecule"/>
           </biouml:BIOUML>
         </annotation>
@@ -391,7 +441,7 @@
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_7MER_ATP__d__bound" initialAmount="0.0">
         <annotation>
           <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-            <biouml:nodeInfo completeName="MG_469_7MER_ATP__d__bound" height="40" title="MG_469_7MER_ATP__d__bound" width="70" x="462" y="1175"/>
+            <biouml:nodeInfo completeName="MG_469_7MER_ATP__d__bound" height="40" title="MG_469_7MER_ATP__d__bound" width="70" x="462" y="1190"/>
             <biouml:specieInfo type="macromolecule"/>
           </biouml:BIOUML>
         </annotation>
@@ -740,6 +790,47 @@
         </comp:listOfReplacedElements>
       </species>
     </listOfSpecies>
+    <listOfParameters>
+      <parameter constant="false" id="complexFinished" value="0.0"/>
+    </listOfParameters>
+    <listOfEvents>
+      <event id="event_finished" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <eq/>
+                <ci>complexFinished</ci>
+                <cn>1.0</cn>
+              </apply>
+              <apply>
+                <eq/>
+                <ci>bindAndPolADP</ci>
+                <cn>1.0</cn>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:nodeInfo completeName="event_finished" height="0" title="event_finished" width="0" x="130" y="120"/>
+          </biouml:BIOUML>
+        </annotation>
+        <listOfEventAssignments>
+          <eventAssignment variable="bindAndPolADP">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>0.0</cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="reactivation">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>1.0</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+    </listOfEvents>
     <comp:listOfSubmodels>
       <comp:submodel comp:id="RI_ADP_bindAndPolymerization" comp:modelRef="RI_ADP_bindAndPolymerization">
         <annotation>
