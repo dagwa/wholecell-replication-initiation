@@ -12,7 +12,7 @@
       <compartment constant="false" id="default" name="Replication Initiation" size="1" spatialDimensions="3">
         <annotation>
           <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-            <biouml:compartmentInfo color="rgba(0,0,0,0)" completeName="default" height="1740" isDefault="true" shape="0" title="Replication Initiation" width="2270" x="0" y="0"/>
+            <biouml:compartmentInfo color="rgba(0,0,0,0)" completeName="default" height="1740" isDefault="true" shape="0" title="Replication Initiation" width="2275" x="0" y="0"/>
           </biouml:BIOUML>
         </annotation>
       </compartment>
@@ -42,15 +42,15 @@
             <biouml:specieInfo type="macromolecule"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="ATP__c_port" comp:submodelRef="RI_reactivation" metaid="CONNECTION0050">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
         <comp:listOfReplacedElements>
           <comp:replacedElement comp:portRef="ATP__c_port" comp:submodelRef="RI_activation" metaid="CONNECTION0016">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+          <comp:replacedElement comp:portRef="ATP__c_port" comp:submodelRef="RI_reactivation" metaid="CONNECTION0050">
             <annotation>
               <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
                 <biouml:edgeInfo type="undirected"/>
@@ -66,27 +66,29 @@
             <biouml:specieInfo type="unspecified"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="cell_Volume_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0089">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
-        <comp:replacedBy comp:portRef="cell_Volume_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0090">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
-        <comp:replacedBy comp:portRef="cell_Volume_port" comp:submodelRef="RI_reactivation" metaid="CONNECTION0091">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
+        <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="cell_Volume_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0089">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+          <comp:replacedElement comp:portRef="cell_Volume_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0106">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+          <comp:replacedElement comp:portRef="cell_Volume_port" comp:submodelRef="RI_reactivation" metaid="CONNECTION0107">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+        </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="H2O__c" initialAmount="0.0" name="H2O">
         <annotation>
@@ -136,13 +138,6 @@
             </biouml:BIOUML>
           </annotation>
         </comp:replacedBy>
-        <comp:replacedBy comp:portRef="MG_469_1MER_ADP__c_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0063">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
         <comp:listOfReplacedElements>
           <comp:replacedElement comp:portRef="MG_469_1MER_ADP__c_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0059">
             <annotation>
@@ -158,6 +153,13 @@
               </biouml:BIOUML>
             </annotation>
           </comp:replacedElement>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ADP__c_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0091">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ADP__d__bound" initialAmount="0.0">
@@ -167,49 +169,37 @@
             <biouml:specieInfo type="macromolecule"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="DnaA_1mer_ADP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0071">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
-        <comp:replacedBy comp:portRef="MG_469_1MER_ADP__bound_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0087">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
+        <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="DnaA_1mer_ADP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0071">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ADP__bound_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0095">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ADP__bound_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0105">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+        </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ATP__c" initialAmount="0.0">
         <annotation>
           <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-            <biouml:nodeInfo completeName="MG_469_1MER_ATP__c" height="40" title="MG_469_1MER_ATP__c" width="70" x="1230" y="1685"/>
+            <biouml:nodeInfo completeName="MG_469_1MER_ATP__c" height="40" title="MG_469_1MER_ATP__c" width="70" x="1190" y="1665"/>
             <biouml:specieInfo type="macromolecule"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="MG_469_1MER_ATP__c_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0060">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
-        <comp:replacedBy comp:portRef="MG_469_1MER_ATP__c_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0062">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
-        <comp:replacedBy comp:portRef="DnaA_1mer_ATP__c_port" comp:submodelRef="RI_reactivation" metaid="CONNECTION0082">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
         <comp:listOfReplacedElements>
           <comp:replacedElement comp:portRef="MG_469_1MER_ATP__c_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0057">
             <annotation>
@@ -218,7 +208,28 @@
               </biouml:BIOUML>
             </annotation>
           </comp:replacedElement>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ATP__c_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0060">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
           <comp:replacedElement comp:portRef="DnaA_1mer_ATP__c_port" comp:submodelRef="RI_activation" metaid="CONNECTION0064">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ATP__c_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0090">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+          <comp:replacedElement comp:portRef="DnaA_1mer_ATP__c_port" comp:submodelRef="RI_reactivation" metaid="CONNECTION0104">
             <annotation>
               <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
                 <biouml:edgeInfo type="undirected"/>
@@ -234,13 +245,15 @@
             <biouml:specieInfo type="macromolecule"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="MG_469_1MER_ATP__bound_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0088">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
+        <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ATP__bound_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0088">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+        </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_2MER_1ATP_ADP__d__bound" initialAmount="0.0">
         <annotation>
@@ -257,13 +270,15 @@
             <biouml:specieInfo type="macromolecule"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="DnaA_2mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0065">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
+        <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="DnaA_2mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0065">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+        </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_3MER_2ATP_ADP__d__bound" initialAmount="0.0">
         <annotation>
@@ -280,13 +295,15 @@
             <biouml:specieInfo type="macromolecule"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="DnaA_3mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0066">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
+        <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="DnaA_3mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0066">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+        </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_4MER_3ATP_ADP__d__bound" initialAmount="0.0">
         <annotation>
@@ -303,13 +320,15 @@
             <biouml:specieInfo type="macromolecule"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="DnaA_4mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0067">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
+        <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="DnaA_4mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0067">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+        </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_5MER_4ATP_ADP__d__bound" initialAmount="0.0">
         <annotation>
@@ -326,13 +345,15 @@
             <biouml:specieInfo type="macromolecule"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="DnaA_5mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0068">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
+        <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="DnaA_5mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0068">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+        </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_6MER_5ATP_ADP__d__bound" initialAmount="0.0">
         <annotation>
@@ -349,13 +370,15 @@
             <biouml:specieInfo type="macromolecule"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="DnaA_6mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0069">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
+        <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="DnaA_6mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0069">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+        </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_7MER_6ATP_ADP__d__bound" initialAmount="0.0">
         <annotation>
@@ -372,13 +395,15 @@
             <biouml:specieInfo type="macromolecule"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="DnaA_7mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0070">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
+        <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="DnaA_7mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0070">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+        </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_MONOMER__c" initialAmount="0.0" name="DnaA">
         <annotation>
@@ -436,13 +461,15 @@
             <biouml:specieInfo type="unspecified"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="activation_port" comp:submodelRef="RI_activation" metaid="CONNECTION0093">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
+        <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="activation_port" comp:submodelRef="RI_activation" metaid="CONNECTION0093">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+        </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="bindAndPolADP" initialAmount="0.0">
         <annotation>
@@ -451,15 +478,15 @@
             <biouml:specieInfo type="unspecified"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="bindAndPolADP_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0099">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
         <comp:listOfReplacedElements>
           <comp:replacedElement comp:portRef="bindAndPolADP_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0098">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+          <comp:replacedElement comp:portRef="bindAndPolADP_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0099">
             <annotation>
               <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
                 <biouml:edgeInfo type="undirected"/>
@@ -475,14 +502,14 @@
             <biouml:specieInfo type="unspecified"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="bindAndPolATP_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0096">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
         <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="bindAndPolATP_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0096">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
           <comp:replacedElement comp:portRef="bindAndPolATP_port_1" comp:submodelRef="RI_dissociation" metaid="CONNECTION0097">
             <annotation>
               <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
@@ -530,22 +557,22 @@
             <biouml:specieInfo type="macromolecule"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="chromosome_R2_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0073">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
-        <comp:replacedBy comp:portRef="chromosome_R2_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0084">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
         <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="chromosome_R2_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0073">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
           <comp:replacedElement comp:portRef="chromosome_R2_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0079">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+          <comp:replacedElement comp:portRef="chromosome_R2_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0108">
             <annotation>
               <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
                 <biouml:edgeInfo type="undirected"/>
@@ -561,22 +588,22 @@
             <biouml:specieInfo type="macromolecule"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="chromosome_R3_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0074">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
-        <comp:replacedBy comp:portRef="chromosome_R3_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0085">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
         <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="chromosome_R3_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0074">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
           <comp:replacedElement comp:portRef="chromosome_R3_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0080">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+          <comp:replacedElement comp:portRef="chromosome_R3_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0109">
             <annotation>
               <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
                 <biouml:edgeInfo type="undirected"/>
@@ -588,26 +615,26 @@
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="chromosome_R4" initialAmount="0.0">
         <annotation>
           <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-            <biouml:nodeInfo completeName="chromosome_R4" height="40" title="chromosome_R4" width="70" x="2199" y="1135"/>
+            <biouml:nodeInfo completeName="chromosome_R4" height="40" title="chromosome_R4" width="70" x="2205" y="1130"/>
             <biouml:specieInfo type="macromolecule"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="chromosome_R4_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0075">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
-        <comp:replacedBy comp:portRef="chromosome_R4_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0086">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
         <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="chromosome_R4_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0075">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
           <comp:replacedElement comp:portRef="chromosome_R4_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0081">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+          <comp:replacedElement comp:portRef="chromosome_R4_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0110">
             <annotation>
               <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
                 <biouml:edgeInfo type="undirected"/>
@@ -623,20 +650,22 @@
             <biouml:specieInfo type="macromolecule"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="chromosome_R5_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0076">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
-        <comp:replacedBy comp:portRef="chromosome_R5_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0077">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
+        <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="chromosome_R5_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0076">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+          <comp:replacedElement comp:portRef="chromosome_R5_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0111">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+        </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="displacing" initialAmount="0.0">
         <annotation>
@@ -645,14 +674,14 @@
             <biouml:specieInfo type="unspecified"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="displacing_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0100">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
         <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="displacing_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0100">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
           <comp:replacedElement comp:portRef="displacing_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0101">
             <annotation>
               <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
@@ -665,24 +694,26 @@
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="dissociation" initialAmount="0.0">
         <annotation>
           <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-            <biouml:nodeInfo completeName="dissociation" height="40" title="dissociation" width="70" x="1065" y="1320"/>
+            <biouml:nodeInfo completeName="dissociation" height="40" title="dissociation" width="70" x="895" y="1310"/>
             <biouml:specieInfo type="unspecified"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="dissociation_port" comp:submodelRef="RI_activation" metaid="CONNECTION0094">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
-        <comp:replacedBy comp:portRef="dissociation_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0095">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
+        <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="dissociation_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0087">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+          <comp:replacedElement comp:portRef="dissociation_port" comp:submodelRef="RI_activation" metaid="CONNECTION0094">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+        </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="reactivation" initialAmount="0.0">
         <annotation>
@@ -691,14 +722,14 @@
             <biouml:specieInfo type="unspecified"/>
           </biouml:BIOUML>
         </annotation>
-        <comp:replacedBy comp:portRef="reactivation_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0102">
-          <annotation>
-            <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-              <biouml:edgeInfo type="undirected"/>
-            </biouml:BIOUML>
-          </annotation>
-        </comp:replacedBy>
         <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="reactivation_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0102">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
           <comp:replacedElement comp:portRef="reactivation_port" comp:submodelRef="RI_reactivation" metaid="CONNECTION0103">
             <annotation>
               <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
