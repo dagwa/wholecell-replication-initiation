@@ -2,53 +2,947 @@
 <sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" xmlns:comp="http://www.sbml.org/sbml/level3/version1/comp/version1" comp:required="true" level="3" version="1">
   <model id="Replication_Initiation" name="Replication Initiation">
     <annotation>
+      <sbgn xmlns:biouml="http://www.biouml.org/ns">
+        <nodes>
+          <node id="ADP__c" multimer="0" parent="" ref="ADP__c" title="ADP" type="macromolecule">
+            <nodeLayout height="40" width="70" x="1305" y="1515"/>
+          </node>
+          <node id="ATP__c" multimer="0" parent="" ref="ATP__c" title="ATP" type="macromolecule">
+            <nodeLayout height="40" width="70" x="1305" y="1445"/>
+          </node>
+          <node id="Geometry_volume" multimer="0" parent="" ref="Geometry_volume" type="unspecified">
+            <nodeLayout height="40" width="70" x="1831" y="305"/>
+          </node>
+          <node id="H2O__c" multimer="0" parent="" ref="H2O__c" title="H2O" type="macromolecule">
+            <nodeLayout height="40" width="70" x="1190" y="1325"/>
+          </node>
+          <node id="H__c" multimer="0" parent="" ref="H__c" title="H" type="macromolecule">
+            <nodeLayout height="40" width="70" x="1320" y="1250"/>
+          </node>
+          <node id="MG_469_1MER_ADP__c" multimer="0" parent="" ref="MG_469_1MER_ADP__c" type="macromolecule">
+            <nodeLayout height="40" width="70" x="1520" y="345"/>
+          </node>
+          <node id="MG_469_1MER_ADP__d__bound" multimer="0" parent="" ref="MG_469_1MER_ADP__d__bound" type="macromolecule">
+            <nodeLayout height="40" width="70" x="480" y="1350"/>
+          </node>
+          <node id="MG_469_1MER_ATP__c" multimer="0" parent="" ref="MG_469_1MER_ATP__c" type="macromolecule">
+            <nodeLayout height="40" width="70" x="1190" y="1665"/>
+          </node>
+          <node id="MG_469_1MER_ATP__d__bound" multimer="0" parent="" ref="MG_469_1MER_ATP__d__bound" type="macromolecule">
+            <nodeLayout height="40" width="70" x="465" y="785"/>
+          </node>
+          <node id="MG_469_2MER_1ATP_ADP__d__bound" multimer="0" parent="" ref="MG_469_2MER_1ATP_ADP__d__bound" type="macromolecule">
+            <nodeLayout height="40" width="70" x="481" y="1415"/>
+          </node>
+          <node id="MG_469_2MER_ATP__d__bound" multimer="0" parent="" ref="MG_469_2MER_ATP__d__bound" type="macromolecule">
+            <nodeLayout height="40" width="70" x="468" y="900"/>
+          </node>
+          <node id="MG_469_3MER_2ATP_ADP__d__bound" multimer="0" parent="" ref="MG_469_3MER_2ATP_ADP__d__bound" type="macromolecule">
+            <nodeLayout height="40" width="70" x="483" y="1465"/>
+          </node>
+          <node id="MG_469_3MER_ATP__d__bound" multimer="0" parent="" ref="MG_469_3MER_ATP__d__bound" type="macromolecule">
+            <nodeLayout height="40" width="70" x="468" y="960"/>
+          </node>
+          <node id="MG_469_4MER_3ATP_ADP__d__bound" multimer="0" parent="" ref="MG_469_4MER_3ATP_ADP__d__bound" type="macromolecule">
+            <nodeLayout height="40" width="70" x="482" y="1530"/>
+          </node>
+          <node id="MG_469_4MER_ATP__d__bound" multimer="0" parent="" ref="MG_469_4MER_ATP__d__bound" type="macromolecule">
+            <nodeLayout height="40" width="70" x="469" y="1010"/>
+          </node>
+          <node id="MG_469_5MER_4ATP_ADP__d__bound" multimer="0" parent="" ref="MG_469_5MER_4ATP_ADP__d__bound" type="macromolecule">
+            <nodeLayout height="40" width="70" x="482" y="1585"/>
+          </node>
+          <node id="MG_469_5MER_ATP__d__bound" multimer="0" parent="" ref="MG_469_5MER_ATP__d__bound" type="macromolecule">
+            <nodeLayout height="40" width="70" x="464" y="1065"/>
+          </node>
+          <node id="MG_469_6MER_5ATP_ADP__d__bound" multimer="0" parent="" ref="MG_469_6MER_5ATP_ADP__d__bound" type="macromolecule">
+            <nodeLayout height="40" width="70" x="482" y="1640"/>
+          </node>
+          <node id="MG_469_6MER_ATP__d__bound" multimer="0" parent="" ref="MG_469_6MER_ATP__d__bound" type="macromolecule">
+            <nodeLayout height="40" width="70" x="463" y="1120"/>
+          </node>
+          <node id="MG_469_7MER_6ATP_ADP__d__bound" multimer="0" parent="" ref="MG_469_7MER_6ATP_ADP__d__bound" type="macromolecule">
+            <nodeLayout height="40" width="70" x="483" y="1700"/>
+          </node>
+          <node id="MG_469_7MER_ATP__d__bound" multimer="0" parent="" ref="MG_469_7MER_ATP__d__bound" type="macromolecule">
+            <nodeLayout height="40" width="70" x="462" y="1190"/>
+          </node>
+          <node id="MG_469_MONOMER__c" multimer="0" parent="" ref="MG_469_MONOMER__c" title="DnaA" type="macromolecule">
+            <nodeLayout height="40" width="70" x="875" y="1400"/>
+          </node>
+          <node id="Mass_total" multimer="0" parent="" ref="Mass_total" type="unspecified">
+            <nodeLayout height="40" width="70" x="2032" y="1310"/>
+          </node>
+          <node id="PI__c" multimer="0" parent="" ref="PI__c" title="PI" type="macromolecule">
+            <nodeLayout height="40" width="70" x="1320" y="1210"/>
+          </node>
+          <node id="RI_ADP_bindAndPolymerization" parent="" ref="RI_ADP_bindAndPolymerization" type="subdiagram">
+            <nodeLayout height="400" width="355" x="1410" y="455"/>
+          </node>
+          <node accessType="public" id="MG_469_1MER_ADP__bound_port" orientation="left" parent="RI_ADP_bindAndPolymerization" ref="$default.MG_469_1MER_ADP__bound" title="MG_469_1MER_ADP__bound" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="1410" y="556"/>
+          </node>
+          <node accessType="public" id="MG_469_1MER_ADP__c_port" orientation="left" parent="RI_ADP_bindAndPolymerization" ref="$default.MG_469_1MER_ADP__c" title="MG_469_1MER_ADP__c" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="1410" y="706"/>
+          </node>
+          <node accessType="public" id="MG_469_1MER_ATP__bound_port" orientation="left" parent="RI_ADP_bindAndPolymerization" ref="$default.MG_469_1MER_ATP__bound" title="MG_469_1MER_ATP__bound" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="1410" y="526"/>
+          </node>
+          <node accessType="public" id="MG_469_1MER_ATP__c_port" orientation="left" parent="RI_ADP_bindAndPolymerization" ref="$default.MG_469_1MER_ATP__c" title="MG_469_1MER_ATP__c" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="1410" y="676"/>
+          </node>
+          <node accessType="public" id="bindAndPolADP_port" orientation="top" parent="RI_ADP_bindAndPolymerization" ref="bindAndPolADP" title="bindAndPolADP" type="contact connection port">
+            <nodeLayout height="0" orientation="top" width="0" x="1450" y="455"/>
+          </node>
+          <node accessType="public" id="cell_Volume_port" orientation="top" parent="RI_ADP_bindAndPolymerization" ref="cell_Volume" title="cell_Volume" type="contact connection port">
+            <nodeLayout height="0" orientation="top" width="0" x="1630" y="455"/>
+          </node>
+          <node accessType="public" id="chromosome_R1_port" orientation="right" parent="RI_ADP_bindAndPolymerization" ref="chromosome_R1" title="chromosome_R1" type="contact connection port">
+            <nodeLayout height="0" orientation="right" width="0" x="1646" y="791"/>
+          </node>
+          <node accessType="public" id="chromosome_R2_port" orientation="right" parent="RI_ADP_bindAndPolymerization" ref="chromosome_R2" title="chromosome_R2" type="contact connection port">
+            <nodeLayout height="0" orientation="right" width="0" x="1646" y="761"/>
+          </node>
+          <node accessType="public" id="chromosome_R3_port" orientation="right" parent="RI_ADP_bindAndPolymerization" ref="chromosome_R3" title="chromosome_R3" type="contact connection port">
+            <nodeLayout height="0" orientation="right" width="0" x="1646" y="731"/>
+          </node>
+          <node accessType="public" id="chromosome_R4_port" orientation="right" parent="RI_ADP_bindAndPolymerization" ref="chromosome_R4" title="chromosome_R4" type="contact connection port">
+            <nodeLayout height="0" orientation="right" width="0" x="1646" y="701"/>
+          </node>
+          <node accessType="public" id="chromosome_R5_port" orientation="right" parent="RI_ADP_bindAndPolymerization" ref="chromosome_R5" title="chromosome_R5" type="contact connection port">
+            <nodeLayout height="0" orientation="right" width="0" x="1646" y="671"/>
+          </node>
+          <node accessType="public" id="displacing_port" orientation="bottom" parent="RI_ADP_bindAndPolymerization" ref="displacing" title="displacing" type="contact connection port">
+            <nodeLayout height="0" orientation="bottom" width="0" x="1640" y="818"/>
+          </node>
+          <node id="RI_ADP_bindAndPolymerization_definition" parent="" ref="RI_ADP_bindAndPolymerization_definition" type="modelDefinition">
+            <nodeLayout height="150" width="150" x="0" y="0"/>
+            <nodePaint paint="rgba(0,0,0,0)"/>
+          </node>
+          <node id="RI_ATP_bindAndPolymerization" parent="" ref="RI_ATP_bindAndPolymerization" type="subdiagram">
+            <nodeLayout height="405" width="347" x="963" y="460"/>
+          </node>
+          <node accessType="public" id="MG_469_1MER_ADP__bound_port" orientation="right" parent="RI_ATP_bindAndPolymerization" ref="$default.MG_469_1MER_ADP__bound" title="MG_469_1MER_ADP__bound" type="contact connection port">
+            <nodeLayout height="0" orientation="right" width="0" x="1122" y="560"/>
+          </node>
+          <node accessType="public" id="MG_469_1MER_ADP__c_port" orientation="right" parent="RI_ATP_bindAndPolymerization" ref="$default.MG_469_1MER_ADP__c" title="MG_469_1MER_ADP__c" type="contact connection port">
+            <nodeLayout height="0" orientation="right" width="0" x="1151" y="710"/>
+          </node>
+          <node accessType="public" id="MG_469_1MER_ATP__bound_port" orientation="right" parent="RI_ATP_bindAndPolymerization" ref="$default.MG_469_1MER_ATP__bound" title="MG_469_1MER_ATP__bound" type="contact connection port">
+            <nodeLayout height="0" orientation="right" width="0" x="1124" y="530"/>
+          </node>
+          <node accessType="public" id="MG_469_1MER_ATP__c_port" orientation="right" parent="RI_ATP_bindAndPolymerization" ref="$default.MG_469_1MER_ATP__c" title="MG_469_1MER_ATP__c" type="contact connection port">
+            <nodeLayout height="0" orientation="right" width="0" x="1153" y="745"/>
+          </node>
+          <node accessType="public" id="bindAndPolADP_port" orientation="top" parent="RI_ATP_bindAndPolymerization" ref="bindAndPolADP" title="bindAndPolADP" type="contact connection port">
+            <nodeLayout height="0" orientation="top" width="0" x="1150" y="460"/>
+          </node>
+          <node accessType="public" id="bindAndPolATP_port" orientation="bottom" parent="RI_ATP_bindAndPolymerization" ref="bindAndPolATP" title="bindAndPolATP" type="contact connection port">
+            <nodeLayout height="0" orientation="bottom" width="0" x="1035" y="828"/>
+          </node>
+          <node accessType="public" id="cell_Volume_port" orientation="top" parent="RI_ATP_bindAndPolymerization" ref="cell_Volume" title="cell_Volume" type="contact connection port">
+            <nodeLayout height="0" orientation="top" width="0" x="1015" y="460"/>
+          </node>
+          <node accessType="public" id="chromosome_R1_port" orientation="left" parent="RI_ATP_bindAndPolymerization" ref="chromosome_R1" title="chromosome_R1" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="963" y="520"/>
+          </node>
+          <node accessType="public" id="chromosome_R2_port" orientation="left" parent="RI_ATP_bindAndPolymerization" ref="chromosome_R2" title="chromosome_R2" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="963" y="600"/>
+          </node>
+          <node accessType="public" id="chromosome_R3_port" orientation="left" parent="RI_ATP_bindAndPolymerization" ref="chromosome_R3" title="chromosome_R3" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="963" y="555"/>
+          </node>
+          <node accessType="public" id="chromosome_R4_port" orientation="left" parent="RI_ATP_bindAndPolymerization" ref="chromosome_R4" title="chromosome_R4" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="963" y="625"/>
+          </node>
+          <node accessType="public" id="chromosome_R5_port" orientation="left" parent="RI_ATP_bindAndPolymerization" ref="chromosome_R5" title="chromosome_R5" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="963" y="690"/>
+          </node>
+          <node accessType="public" id="complexFinished_port" orientation="left" parent="RI_ATP_bindAndPolymerization" ref="complexFinished" title="complexFinished" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="963" y="765"/>
+          </node>
+          <node id="RI_ATP_bindAndPolymerization_definition" parent="" ref="RI_ATP_bindAndPolymerization_definition" type="modelDefinition">
+            <nodeLayout height="150" width="150" x="0" y="0"/>
+            <nodePaint paint="rgba(0,0,0,0)"/>
+          </node>
+          <node id="RI_activation" parent="" ref="RI_activation" type="subdiagram">
+            <nodeLayout height="205" width="295" x="980" y="1385"/>
+          </node>
+          <node accessType="public" id="ATP__c_port" orientation="right" parent="RI_activation" ref="$ATP__c" title="ATP__c" type="contact connection port">
+            <nodeLayout height="0" orientation="right" width="0" x="1211" y="1450"/>
+          </node>
+          <node accessType="public" id="DnaA_1mer_ATP__c_port" orientation="bottom" parent="RI_activation" ref="$DnaA_1mer_ATP__c" title="DnaA_1mer_ATP__c" type="contact connection port">
+            <nodeLayout height="0" orientation="bottom" width="0" x="1060" y="1553"/>
+          </node>
+          <node accessType="public" id="DnaA__c_port" orientation="left" parent="RI_activation" ref="$DnaA__c" title="DnaA__c" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="980" y="1405"/>
+          </node>
+          <node accessType="public" id="activation_port" orientation="left" parent="RI_activation" ref="activation" title="activation" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="980" y="1460"/>
+          </node>
+          <node accessType="public" id="dissociation_port" orientation="top" parent="RI_activation" ref="dissociation" title="dissociation" type="contact connection port">
+            <nodeLayout height="0" orientation="top" width="0" x="1088" y="1385"/>
+          </node>
+          <node id="RI_activation_definition" parent="" ref="RI_activation_definition" type="modelDefinition">
+            <nodeLayout height="150" width="150" x="0" y="0"/>
+            <nodePaint paint="rgba(0,0,0,0)"/>
+          </node>
+          <node id="RI_displacing" parent="" ref="RI_displacing" type="subdiagram">
+            <nodeLayout height="335" width="341" x="1400" y="970"/>
+          </node>
+          <node accessType="public" id="MG_469_1MER_ADP__bound_port" orientation="left" parent="RI_displacing" ref="$default.MG_469_1MER_ADP__bound" title="MG_469_1MER_ADP__bound" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="1400" y="1195"/>
+          </node>
+          <node accessType="public" id="MG_469_1MER_ADP__c_port" orientation="left" parent="RI_displacing" ref="$default.MG_469_1MER_ADP__c" title="MG_469_1MER_ADP__c" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="1400" y="1065"/>
+          </node>
+          <node accessType="public" id="MG_469_1MER_ATP__bound_port" orientation="left" parent="RI_displacing" ref="$default.MG_469_1MER_ATP__bound" title="MG_469_1MER_ATP__bound" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="1400" y="1155"/>
+          </node>
+          <node accessType="public" id="MG_469_1MER_ATP__c_port" orientation="left" parent="RI_displacing" ref="$default.MG_469_1MER_ATP__c" title="MG_469_1MER_ATP__c" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="1400" y="1030"/>
+          </node>
+          <node accessType="public" id="chromosome_R1_port" orientation="right" parent="RI_displacing" ref="chromosome_R1" title="chromosome_R1" type="contact connection port">
+            <nodeLayout height="0" orientation="right" width="0" x="1622" y="1145"/>
+          </node>
+          <node accessType="public" id="chromosome_R2_port" orientation="right" parent="RI_displacing" ref="chromosome_R2" title="chromosome_R2" type="contact connection port">
+            <nodeLayout height="0" orientation="right" width="0" x="1622" y="1170"/>
+          </node>
+          <node accessType="public" id="chromosome_R3_port" orientation="right" parent="RI_displacing" ref="chromosome_R3" title="chromosome_R3" type="contact connection port">
+            <nodeLayout height="0" orientation="right" width="0" x="1622" y="1195"/>
+          </node>
+          <node accessType="public" id="chromosome_R4_port" orientation="right" parent="RI_displacing" ref="chromosome_R4" title="chromosome_R4" type="contact connection port">
+            <nodeLayout height="0" orientation="right" width="0" x="1622" y="1220"/>
+          </node>
+          <node accessType="public" id="displacing_port" orientation="top" parent="RI_displacing" ref="displacing" title="displacing" type="contact connection port">
+            <nodeLayout height="0" orientation="top" width="0" x="1640" y="970"/>
+          </node>
+          <node accessType="public" id="reactivation_port" orientation="bottom" parent="RI_displacing" ref="reactivation" title="reactivation" type="contact connection port">
+            <nodeLayout height="0" orientation="bottom" width="0" x="1460" y="1268"/>
+          </node>
+          <node id="RI_displacing_definition" parent="" ref="RI_displacing_definition" type="modelDefinition">
+            <nodeLayout height="150" width="150" x="0" y="0"/>
+            <nodePaint paint="rgba(0,0,0,0)"/>
+          </node>
+          <node id="RI_dissociation" parent="" ref="RI_dissociation" type="subdiagram">
+            <nodeLayout height="310" width="325" x="975" y="985"/>
+          </node>
+          <node accessType="public" id="DnaA_1mer_ADP_port" orientation="left" parent="RI_dissociation" ref="DnaA_1mer_ADP" title="DnaA_1mer_ADP" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="975" y="1030"/>
+          </node>
+          <node accessType="public" id="DnaA_2mer_ATP_port" orientation="left" parent="RI_dissociation" ref="DnaA_2mer_ATP" title="DnaA_2mer_ATP" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="975" y="1055"/>
+          </node>
+          <node accessType="public" id="DnaA_3mer_ATP_port" orientation="left" parent="RI_dissociation" ref="DnaA_3mer_ATP" title="DnaA_3mer_ATP" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="975" y="1080"/>
+          </node>
+          <node accessType="public" id="DnaA_4mer_ATP_port" orientation="left" parent="RI_dissociation" ref="DnaA_4mer_ATP" title="DnaA_4mer_ATP" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="975" y="1105"/>
+          </node>
+          <node accessType="public" id="DnaA_5mer_ATP_port" orientation="left" parent="RI_dissociation" ref="DnaA_5mer_ATP" title="DnaA_5mer_ATP" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="975" y="1150"/>
+          </node>
+          <node accessType="public" id="DnaA_6mer_ATP_port" orientation="left" parent="RI_dissociation" ref="DnaA_6mer_ATP" title="DnaA_6mer_ATP" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="975" y="1175"/>
+          </node>
+          <node accessType="public" id="DnaA_7mer_ATP_port" orientation="left" parent="RI_dissociation" ref="DnaA_7mer_ATP" title="DnaA_7mer_ATP" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="975" y="1200"/>
+          </node>
+          <node accessType="public" id="H_port" orientation="right" parent="RI_dissociation" ref="H" title="H" type="contact connection port">
+            <nodeLayout height="0" orientation="right" width="0" x="1269" y="1245"/>
+          </node>
+          <node accessType="public" id="Pi_port" orientation="right" parent="RI_dissociation" ref="Pi" title="Pi" type="contact connection port">
+            <nodeLayout height="0" orientation="right" width="0" x="1267" y="1220"/>
+          </node>
+          <node accessType="public" id="bindAndPolATP_port_1" orientation="top" parent="RI_dissociation" ref="bindAndPolATP" title="bindAndPolATP" type="contact connection port">
+            <nodeLayout height="0" orientation="top" width="0" x="1035" y="985"/>
+          </node>
+          <node accessType="public" id="dissociation_port" orientation="bottom" parent="RI_dissociation" ref="dissociation" title="dissociation" type="contact connection port">
+            <nodeLayout height="0" orientation="bottom" width="0" x="1083" y="1258"/>
+          </node>
+          <node accessType="public" id="water_port" orientation="bottom" parent="RI_dissociation" ref="water" title="water" type="contact connection port">
+            <nodeLayout height="0" orientation="bottom" width="0" x="1195" y="1258"/>
+          </node>
+          <node id="RI_dissociation_definition" parent="" ref="RI_dissociation_definition" type="modelDefinition">
+            <nodeLayout height="150" width="150" x="0" y="0"/>
+            <nodePaint paint="rgba(0,0,0,0)"/>
+          </node>
+          <node id="RI_reactivation" parent="" ref="RI_reactivation" type="subdiagram">
+            <nodeLayout height="200" width="330" x="1400" y="1390"/>
+          </node>
+          <node accessType="public" id="ADP__c_port" orientation="left" parent="RI_reactivation" ref="$ADP__c" title="ADP__c" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="1400" y="1525"/>
+          </node>
+          <node accessType="public" id="ATP__c_port" orientation="left" parent="RI_reactivation" ref="$ATP__c" title="ATP__c" type="contact connection port">
+            <nodeLayout height="0" orientation="left" width="0" x="1400" y="1450"/>
+          </node>
+          <node accessType="public" id="DnaA_1mer_ADP__c_port" orientation="bottom" parent="RI_reactivation" ref="$DnaA_1mer_ADP__c" title="DnaA_1mer_ADP__c" type="contact connection port">
+            <nodeLayout height="0" orientation="bottom" width="0" x="1585" y="1553"/>
+          </node>
+          <node accessType="public" id="DnaA_1mer_ATP__c_port" orientation="bottom" parent="RI_reactivation" ref="$DnaA_1mer_ATP__c" title="DnaA_1mer_ATP__c" type="contact connection port">
+            <nodeLayout height="0" orientation="bottom" width="0" x="1435" y="1553"/>
+          </node>
+          <node accessType="public" id="cell_Volume_port" orientation="top" parent="RI_reactivation" ref="cell_Volume" title="cell_Volume" type="contact connection port">
+            <nodeLayout height="0" orientation="top" width="0" x="1647" y="1390"/>
+          </node>
+          <node accessType="public" id="m_membrane_port" orientation="right" parent="RI_reactivation" ref="m_membrane" title="m_membrane" type="contact connection port">
+            <nodeLayout height="0" orientation="right" width="0" x="1629" y="1455"/>
+          </node>
+          <node accessType="public" id="reactivation_port" orientation="top" parent="RI_reactivation" ref="reactivation" title="reactivation" type="contact connection port">
+            <nodeLayout height="0" orientation="top" width="0" x="1460" y="1390"/>
+          </node>
+          <node id="RI_reactivation_definition" parent="" ref="RI_reactivation_definition" type="modelDefinition">
+            <nodeLayout height="150" width="150" x="0" y="0"/>
+            <nodePaint paint="rgba(0,0,0,0)"/>
+          </node>
+          <node id="activation" multimer="0" parent="" ref="activation" type="unspecified">
+            <nodeLayout height="40" width="70" x="860" y="1545"/>
+          </node>
+          <node id="bindAndPolADP" multimer="0" parent="" ref="bindAndPolADP" type="unspecified">
+            <nodeLayout height="40" width="70" x="1286" y="300"/>
+          </node>
+          <node id="bindAndPolATP" multimer="0" parent="" ref="bindAndPolATP" type="unspecified">
+            <nodeLayout height="40" width="70" x="1013" y="925"/>
+          </node>
+          <node id="chromosome_R1" multimer="0" parent="" ref="chromosome_R1" type="macromolecule">
+            <nodeLayout height="40" width="70" x="2199" y="1000"/>
+          </node>
+          <node id="chromosome_R2" multimer="0" parent="" ref="chromosome_R2" type="macromolecule">
+            <nodeLayout height="40" width="70" x="2194" y="1045"/>
+          </node>
+          <node id="chromosome_R3" multimer="0" parent="" ref="chromosome_R3" type="macromolecule">
+            <nodeLayout height="40" width="70" x="2200" y="1090"/>
+          </node>
+          <node id="chromosome_R4" multimer="0" parent="" ref="chromosome_R4" type="macromolecule">
+            <nodeLayout height="40" width="70" x="2205" y="1130"/>
+          </node>
+          <node id="chromosome_R5" multimer="0" parent="" ref="chromosome_R5" type="macromolecule">
+            <nodeLayout height="40" width="70" x="2190" y="865"/>
+          </node>
+          <node id="displacing" multimer="0" parent="" ref="displacing" type="unspecified">
+            <nodeLayout height="40" width="70" x="1625" y="890"/>
+          </node>
+          <node id="dissociation" multimer="0" parent="" ref="dissociation" type="unspecified">
+            <nodeLayout height="40" width="70" x="895" y="1310"/>
+          </node>
+          <node id="eventCopyFromRx" parent="" type="math-event">
+            <nodeLayout height="0" width="0" x="2442" y="164"/>
+          </node>
+          <node id="event_finished" parent="" type="math-event">
+            <nodeLayout height="0" width="0" x="2442" y="35"/>
+          </node>
+          <node id="reactivation" multimer="0" parent="" ref="reactivation" type="unspecified">
+            <nodeLayout height="40" width="70" x="1430" y="1325"/>
+          </node>
+        </nodes>
+        <edges>
+          <edge from="PI__c" id="CONNECTION0013" ref="CONNECTION0013" to="RI_dissociation.Pi_port" type="undirected-edge"/>
+          <edge from="H__c" id="CONNECTION0014" ref="CONNECTION0014" to="RI_dissociation.H_port" type="undirected-edge"/>
+          <edge from="H2O__c" id="CONNECTION0015" ref="CONNECTION0015" to="RI_dissociation.water_port" type="undirected-edge"/>
+          <edge from="ATP__c" id="CONNECTION0016" ref="CONNECTION0016" to="RI_activation.ATP__c_port" type="undirected-edge"/>
+          <edge from="MG_469_MONOMER__c" id="CONNECTION0046" ref="CONNECTION0046" to="RI_activation.DnaA__c_port" type="undirected-edge"/>
+          <edge from="ADP__c" id="CONNECTION0049" ref="CONNECTION0049" to="RI_reactivation.ADP__c_port" type="undirected-edge"/>
+          <edge from="ATP__c" id="CONNECTION0050" ref="CONNECTION0050" to="RI_reactivation.ATP__c_port" type="undirected-edge"/>
+          <edge from="MG_469_1MER_ATP__c" id="CONNECTION0057" ref="CONNECTION0057" to="RI_displacing.MG_469_1MER_ATP__c_port" type="undirected-edge"/>
+          <edge from="MG_469_1MER_ADP__c" id="CONNECTION0058" ref="CONNECTION0058" to="RI_displacing.MG_469_1MER_ADP__c_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="1620" y0="385"/>
+              <segment segmentType="lineTo" x0="1620" y0="393"/>
+              <segment segmentType="quadTo" x0="1620" y0="420"/>
+              <segment segmentType="lineTo" x0="1500" y0="420"/>
+              <segment segmentType="lineTo" x0="1440" y0="400"/>
+              <segment segmentType="quadTo" x0="1380" y0="400"/>
+              <segment segmentType="lineTo" x0="1380" y0="738"/>
+              <segment segmentType="lineTo" x0="1380" y0="908"/>
+              <segment segmentType="quadTo" x0="1380" y0="1077"/>
+              <segment segmentType="lineTo" x0="1390" y0="1077"/>
+              <segment segmentType="lineTo" x0="1400" y0="1077"/>
+            </path>
+          </edge>
+          <edge from="MG_469_1MER_ADP__c" id="CONNECTION0059" ref="CONNECTION0059" to="RI_ADP_bindAndPolymerization.MG_469_1MER_ADP__c_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="1410" y0="718"/>
+              <segment segmentType="lineTo" x0="1400" y0="718"/>
+              <segment segmentType="quadTo" x0="1370" y0="718"/>
+              <segment segmentType="lineTo" x0="1370" y0="519"/>
+              <segment segmentType="lineTo" x0="1390" y0="419"/>
+              <segment segmentType="quadTo" x0="1390" y0="320"/>
+              <segment segmentType="lineTo" x0="1505" y0="320"/>
+              <segment segmentType="lineTo" x0="1563" y0="320"/>
+              <segment segmentType="quadTo" x0="1620" y0="320"/>
+              <segment segmentType="lineTo" x0="1620" y0="332"/>
+              <segment segmentType="lineTo" x0="1620" y0="345"/>
+            </path>
+          </edge>
+          <edge from="MG_469_1MER_ATP__c" id="CONNECTION0060" ref="CONNECTION0060" to="RI_ADP_bindAndPolymerization.MG_469_1MER_ATP__c_port" type="undirected-edge"/>
+          <edge from="MG_469_1MER_ADP__c" id="CONNECTION0061" ref="CONNECTION0061" to="RI_reactivation.DnaA_1mer_ADP__c_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="1648" y0="1590"/>
+              <segment segmentType="lineTo" x0="1648" y0="1600"/>
+              <segment segmentType="quadTo" x0="1648" y0="1610"/>
+              <segment segmentType="lineTo" x0="1714" y0="1610"/>
+              <segment segmentType="lineTo" x0="1747" y0="1610"/>
+              <segment segmentType="quadTo" x0="1780" y0="1610"/>
+              <segment segmentType="lineTo" x0="1770" y0="985"/>
+              <segment segmentType="lineTo" x0="1770" y0="672"/>
+              <segment segmentType="quadTo" x0="1780" y0="360"/>
+              <segment segmentType="lineTo" x0="1759" y0="360"/>
+              <segment segmentType="lineTo" x0="1737" y0="360"/>
+            </path>
+          </edge>
+          <edge from="MG_469_1MER_ATP__c" id="CONNECTION0064" ref="CONNECTION0064" to="RI_activation.DnaA_1mer_ATP__c_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="1190" y0="1680"/>
+              <segment segmentType="lineTo" x0="1156" y0="1680"/>
+              <segment segmentType="quadTo" x0="1122" y0="1680"/>
+              <segment segmentType="lineTo" x0="1122" y0="1635"/>
+              <segment segmentType="lineTo" x0="1122" y0="1590"/>
+            </path>
+          </edge>
+          <edge from="MG_469_2MER_ATP__d__bound" id="CONNECTION0065" ref="CONNECTION0065" to="RI_dissociation.DnaA_2mer_ATP_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="759" y0="920"/>
+              <segment segmentType="lineTo" x0="765" y0="920"/>
+              <segment segmentType="quadTo" x0="770" y0="920"/>
+              <segment segmentType="lineTo" x0="770" y0="993"/>
+              <segment segmentType="lineTo" x0="770" y0="1030"/>
+              <segment segmentType="quadTo" x0="770" y0="1067"/>
+              <segment segmentType="lineTo" x0="872" y0="1067"/>
+              <segment segmentType="lineTo" x0="975" y0="1067"/>
+            </path>
+          </edge>
+          <edge from="MG_469_3MER_ATP__d__bound" id="CONNECTION0066" ref="CONNECTION0066" to="RI_dissociation.DnaA_3mer_ATP_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="759" y0="980"/>
+              <segment segmentType="lineTo" x0="855" y0="980"/>
+              <segment segmentType="quadTo" x0="950" y0="980"/>
+              <segment segmentType="lineTo" x0="950" y0="1036"/>
+              <segment segmentType="lineTo" x0="950" y0="1064"/>
+              <segment segmentType="quadTo" x0="950" y0="1092"/>
+              <segment segmentType="lineTo" x0="962" y0="1092"/>
+              <segment segmentType="lineTo" x0="975" y0="1092"/>
+            </path>
+          </edge>
+          <edge from="MG_469_4MER_ATP__d__bound" id="CONNECTION0067" ref="CONNECTION0067" to="RI_dissociation.DnaA_4mer_ATP_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="760" y0="1030"/>
+              <segment segmentType="lineTo" x0="770" y0="1030"/>
+              <segment segmentType="quadTo" x0="780" y0="1030"/>
+              <segment segmentType="lineTo" x0="780" y0="1073"/>
+              <segment segmentType="lineTo" x0="780" y0="1095"/>
+              <segment segmentType="quadTo" x0="780" y0="1117"/>
+              <segment segmentType="lineTo" x0="877" y0="1117"/>
+              <segment segmentType="lineTo" x0="975" y0="1117"/>
+            </path>
+          </edge>
+          <edge from="MG_469_5MER_ATP__d__bound" id="CONNECTION0068" ref="CONNECTION0068" to="RI_dissociation.DnaA_5mer_ATP_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="755" y0="1080"/>
+              <segment segmentType="lineTo" x0="763" y0="1080"/>
+              <segment segmentType="quadTo" x0="770" y0="1080"/>
+              <segment segmentType="lineTo" x0="770" y0="1121"/>
+              <segment segmentType="lineTo" x0="770" y0="1142"/>
+              <segment segmentType="quadTo" x0="770" y0="1162"/>
+              <segment segmentType="lineTo" x0="872" y0="1162"/>
+              <segment segmentType="lineTo" x0="975" y0="1162"/>
+            </path>
+          </edge>
+          <edge from="MG_469_6MER_ATP__d__bound" id="CONNECTION0069" ref="CONNECTION0069" to="RI_dissociation.DnaA_6mer_ATP_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="600" y0="1160"/>
+              <segment segmentType="lineTo" x0="600" y0="1165"/>
+              <segment segmentType="quadTo" x0="600" y0="1170"/>
+              <segment segmentType="lineTo" x0="775" y0="1170"/>
+              <segment segmentType="lineTo" x0="863" y0="1170"/>
+              <segment segmentType="quadTo" x0="950" y0="1170"/>
+              <segment segmentType="lineTo" x0="950" y0="1178"/>
+              <segment segmentType="lineTo" x0="950" y0="1183"/>
+              <segment segmentType="quadTo" x0="950" y0="1187"/>
+              <segment segmentType="lineTo" x0="962" y0="1187"/>
+              <segment segmentType="lineTo" x0="975" y0="1187"/>
+            </path>
+          </edge>
+          <edge from="MG_469_7MER_ATP__d__bound" id="CONNECTION0070" ref="CONNECTION0070" to="RI_dissociation.DnaA_7mer_ATP_port" type="undirected-edge"/>
+          <edge from="chromosome_R1" id="CONNECTION0072" ref="CONNECTION0072" to="RI_ATP_bindAndPolymerization.chromosome_R1_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="963" y0="532"/>
+              <segment segmentType="lineTo" x0="951" y0="532"/>
+              <segment segmentType="quadTo" x0="920" y0="532"/>
+              <segment segmentType="lineTo" x0="920" y0="726"/>
+              <segment segmentType="lineTo" x0="940" y0="823"/>
+              <segment segmentType="quadTo" x0="940" y0="920"/>
+              <segment segmentType="lineTo" x0="1255" y0="920"/>
+              <segment segmentType="lineTo" x0="1413" y0="920"/>
+              <segment segmentType="quadTo" x0="1570" y0="920"/>
+              <segment segmentType="lineTo" x0="1570" y0="935"/>
+              <segment segmentType="lineTo" x0="1570" y0="943"/>
+              <segment segmentType="quadTo" x0="1570" y0="950"/>
+              <segment segmentType="lineTo" x0="1920" y0="950"/>
+              <segment segmentType="lineTo" x0="2095" y0="950"/>
+              <segment segmentType="quadTo" x0="2270" y0="950"/>
+              <segment segmentType="lineTo" x0="2270" y0="975"/>
+              <segment segmentType="lineTo" x0="2270" y0="1000"/>
+            </path>
+          </edge>
+          <edge from="chromosome_R2" id="CONNECTION0073" ref="CONNECTION0073" to="RI_ATP_bindAndPolymerization.chromosome_R2_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="2194" y0="1060"/>
+              <segment segmentType="lineTo" x0="2182" y0="1060"/>
+              <segment segmentType="quadTo" x0="2170" y0="1060"/>
+              <segment segmentType="lineTo" x0="2170" y0="750"/>
+              <segment segmentType="lineTo" x0="2170" y0="595"/>
+              <segment segmentType="quadTo" x0="2170" y0="440"/>
+              <segment segmentType="lineTo" x0="1550" y0="440"/>
+              <segment segmentType="lineTo" x0="1240" y0="440"/>
+              <segment segmentType="quadTo" x0="930" y0="440"/>
+              <segment segmentType="lineTo" x0="930" y0="526"/>
+              <segment segmentType="lineTo" x0="930" y0="569"/>
+              <segment segmentType="quadTo" x0="930" y0="612"/>
+              <segment segmentType="lineTo" x0="946" y0="612"/>
+              <segment segmentType="lineTo" x0="963" y0="612"/>
+            </path>
+          </edge>
+          <edge from="chromosome_R3" id="CONNECTION0074" ref="CONNECTION0074" to="RI_ATP_bindAndPolymerization.chromosome_R3_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="2359" y0="1110"/>
+              <segment segmentType="lineTo" x0="2375" y0="1110"/>
+              <segment segmentType="quadTo" x0="2390" y0="1110"/>
+              <segment segmentType="lineTo" x0="2390" y0="760"/>
+              <segment segmentType="lineTo" x0="2390" y0="585"/>
+              <segment segmentType="quadTo" x0="2390" y0="410"/>
+              <segment segmentType="lineTo" x0="1655" y0="410"/>
+              <segment segmentType="lineTo" x0="1287" y0="410"/>
+              <segment segmentType="quadTo" x0="920" y0="410"/>
+              <segment segmentType="lineTo" x0="920" y0="488"/>
+              <segment segmentType="lineTo" x0="920" y0="528"/>
+              <segment segmentType="quadTo" x0="920" y0="567"/>
+              <segment segmentType="lineTo" x0="941" y0="567"/>
+              <segment segmentType="lineTo" x0="963" y0="567"/>
+            </path>
+          </edge>
+          <edge from="chromosome_R4" id="CONNECTION0075" ref="CONNECTION0075" to="RI_ATP_bindAndPolymerization.chromosome_R4_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="2364" y0="1150"/>
+              <segment segmentType="lineTo" x0="2372" y0="1150"/>
+              <segment segmentType="quadTo" x0="2380" y0="1150"/>
+              <segment segmentType="lineTo" x0="2380" y0="785"/>
+              <segment segmentType="lineTo" x0="2380" y0="602"/>
+              <segment segmentType="quadTo" x0="2380" y0="420"/>
+              <segment segmentType="lineTo" x0="1660" y0="420"/>
+              <segment segmentType="lineTo" x0="1300" y0="420"/>
+              <segment segmentType="quadTo" x0="940" y0="420"/>
+              <segment segmentType="lineTo" x0="940" y0="528"/>
+              <segment segmentType="lineTo" x0="940" y0="583"/>
+              <segment segmentType="quadTo" x0="940" y0="637"/>
+              <segment segmentType="lineTo" x0="951" y0="637"/>
+              <segment segmentType="lineTo" x0="963" y0="637"/>
+            </path>
+          </edge>
+          <edge from="chromosome_R5" id="CONNECTION0076" ref="CONNECTION0076" to="RI_ATP_bindAndPolymerization.chromosome_R5_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="2190" y0="880"/>
+              <segment segmentType="lineTo" x0="1560" y0="900"/>
+              <segment segmentType="quadTo" x0="930" y0="900"/>
+              <segment segmentType="lineTo" x0="930" y0="791"/>
+              <segment segmentType="lineTo" x0="930" y0="746"/>
+              <segment segmentType="quadTo" x0="930" y0="702"/>
+              <segment segmentType="lineTo" x0="946" y0="702"/>
+              <segment segmentType="lineTo" x0="963" y0="702"/>
+            </path>
+          </edge>
+          <edge from="chromosome_R1" id="CONNECTION0078" ref="CONNECTION0078" to="RI_displacing.chromosome_R1_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="1741" y0="1157"/>
+              <segment segmentType="lineTo" x0="1751" y0="1157"/>
+              <segment segmentType="quadTo" x0="1760" y0="1157"/>
+              <segment segmentType="lineTo" x0="1760" y0="1089"/>
+              <segment segmentType="lineTo" x0="1760" y0="1054"/>
+              <segment segmentType="quadTo" x0="1760" y0="1020"/>
+              <segment segmentType="lineTo" x0="1979" y0="1020"/>
+              <segment segmentType="lineTo" x0="2199" y0="1020"/>
+            </path>
+          </edge>
+          <edge from="chromosome_R2" id="CONNECTION0079" ref="CONNECTION0079" to="RI_displacing.chromosome_R2_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="1741" y0="1182"/>
+              <segment segmentType="lineTo" x0="1956" y0="1182"/>
+              <segment segmentType="quadTo" x0="2170" y0="1182"/>
+              <segment segmentType="lineTo" x0="2170" y0="1121"/>
+              <segment segmentType="lineTo" x0="2170" y0="1090"/>
+              <segment segmentType="quadTo" x0="2170" y0="1050"/>
+              <segment segmentType="lineTo" x0="2182" y0="1050"/>
+              <segment segmentType="lineTo" x0="2194" y0="1060"/>
+            </path>
+          </edge>
+          <edge from="chromosome_R3" id="CONNECTION0080" ref="CONNECTION0080" to="RI_displacing.chromosome_R3_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="1741" y0="1207"/>
+              <segment segmentType="lineTo" x0="1961" y0="1207"/>
+              <segment segmentType="quadTo" x0="2180" y0="1207"/>
+              <segment segmentType="lineTo" x0="2180" y0="1159"/>
+              <segment segmentType="lineTo" x0="2180" y0="1134"/>
+              <segment segmentType="quadTo" x0="2180" y0="1110"/>
+              <segment segmentType="lineTo" x0="2190" y0="1110"/>
+              <segment segmentType="lineTo" x0="2200" y0="1110"/>
+            </path>
+          </edge>
+          <edge from="chromosome_R4" id="CONNECTION0081" ref="CONNECTION0081" to="RI_displacing.chromosome_R4_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="2280" y0="1170"/>
+              <segment segmentType="lineTo" x0="2280" y0="1201"/>
+              <segment segmentType="quadTo" x0="2280" y0="1232"/>
+              <segment segmentType="lineTo" x0="2011" y0="1232"/>
+              <segment segmentType="lineTo" x0="1741" y0="1232"/>
+            </path>
+          </edge>
+          <edge from="chromosome_R1" id="CONNECTION0083" ref="CONNECTION0083" to="RI_ADP_bindAndPolymerization.chromosome_R1_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="2358" y0="1020"/>
+              <segment segmentType="lineTo" x0="2364" y0="1020"/>
+              <segment segmentType="quadTo" x0="2370" y0="1020"/>
+              <segment segmentType="lineTo" x0="2370" y0="912"/>
+              <segment segmentType="lineTo" x0="2370" y0="857"/>
+              <segment segmentType="quadTo" x0="2370" y0="803"/>
+              <segment segmentType="lineTo" x0="2068" y0="803"/>
+              <segment segmentType="lineTo" x0="1765" y0="803"/>
+            </path>
+          </edge>
+          <edge from="dissociation" id="CONNECTION0087" ref="CONNECTION0087" to="RI_dissociation.dissociation_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="950" y0="1350"/>
+              <segment segmentType="lineTo" x0="950" y0="1360"/>
+              <segment segmentType="quadTo" x0="950" y0="1370"/>
+              <segment segmentType="lineTo" x0="1035" y0="1370"/>
+              <segment segmentType="lineTo" x0="1078" y0="1370"/>
+              <segment segmentType="quadTo" x0="1121" y0="1370"/>
+              <segment segmentType="lineTo" x0="1121" y0="1333"/>
+              <segment segmentType="lineTo" x0="1121" y0="1295"/>
+            </path>
+          </edge>
+          <edge from="MG_469_1MER_ATP__d__bound" id="CONNECTION0088" ref="CONNECTION0088" to="RI_displacing.MG_469_1MER_ATP__bound_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="610" y0="825"/>
+              <segment segmentType="lineTo" x0="610" y0="853"/>
+              <segment segmentType="quadTo" x0="610" y0="880"/>
+              <segment segmentType="lineTo" x0="990" y0="880"/>
+              <segment segmentType="lineTo" x0="1180" y0="880"/>
+              <segment segmentType="quadTo" x0="1370" y0="880"/>
+              <segment segmentType="lineTo" x0="1370" y0="1023"/>
+              <segment segmentType="lineTo" x0="1370" y0="1095"/>
+              <segment segmentType="quadTo" x0="1370" y0="1167"/>
+              <segment segmentType="lineTo" x0="1385" y0="1167"/>
+              <segment segmentType="lineTo" x0="1400" y0="1167"/>
+            </path>
+          </edge>
+          <edge from="Geometry_volume" id="CONNECTION0089" ref="CONNECTION0089" to="RI_ADP_bindAndPolymerization.cell_Volume_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="1910" y0="345"/>
+              <segment segmentType="lineTo" x0="1910" y0="388"/>
+              <segment segmentType="quadTo" x0="1910" y0="430"/>
+              <segment segmentType="lineTo" x0="1790" y0="430"/>
+              <segment segmentType="lineTo" x0="1729" y0="430"/>
+              <segment segmentType="quadTo" x0="1669" y0="430"/>
+              <segment segmentType="lineTo" x0="1669" y0="442"/>
+              <segment segmentType="lineTo" x0="1669" y0="455"/>
+            </path>
+          </edge>
+          <edge from="MG_469_1MER_ATP__c" id="CONNECTION0090" ref="CONNECTION0090" to="RI_ATP_bindAndPolymerization.MG_469_1MER_ATP__c_port" type="undirected-edge"/>
+          <edge from="MG_469_1MER_ADP__c" id="CONNECTION0091" ref="CONNECTION0091" to="RI_ATP_bindAndPolymerization.MG_469_1MER_ADP__c_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="1310" y0="722"/>
+              <segment segmentType="lineTo" x0="1320" y0="722"/>
+              <segment segmentType="quadTo" x0="1330" y0="722"/>
+              <segment segmentType="lineTo" x0="1330" y0="541"/>
+              <segment segmentType="lineTo" x0="1330" y0="450"/>
+              <segment segmentType="quadTo" x0="1330" y0="360"/>
+              <segment segmentType="lineTo" x0="1425" y0="360"/>
+              <segment segmentType="lineTo" x0="1520" y0="360"/>
+            </path>
+          </edge>
+          <edge from="Mass_total" id="CONNECTION0092" ref="CONNECTION0092" to="RI_reactivation.m_membrane_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="1730" y0="1467"/>
+              <segment segmentType="lineTo" x0="1905" y0="1467"/>
+              <segment segmentType="quadTo" x0="2080" y0="1467"/>
+              <segment segmentType="lineTo" x0="2080" y0="1409"/>
+              <segment segmentType="lineTo" x0="2080" y0="1350"/>
+            </path>
+          </edge>
+          <edge from="activation" id="CONNECTION0093" ref="CONNECTION0093" to="RI_activation.activation_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="900" y0="1545"/>
+              <segment segmentType="lineTo" x0="900" y0="1508"/>
+              <segment segmentType="quadTo" x0="900" y0="1472"/>
+              <segment segmentType="lineTo" x0="940" y0="1472"/>
+              <segment segmentType="lineTo" x0="980" y0="1472"/>
+            </path>
+          </edge>
+          <edge from="dissociation" id="CONNECTION0094" ref="CONNECTION0094" to="RI_activation.dissociation_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="1010" y0="1330"/>
+              <segment segmentType="lineTo" x0="1068" y0="1330"/>
+              <segment segmentType="quadTo" x0="1126" y0="1330"/>
+              <segment segmentType="lineTo" x0="1126" y0="1357"/>
+              <segment segmentType="lineTo" x0="1126" y0="1385"/>
+            </path>
+          </edge>
+          <edge from="MG_469_1MER_ADP__d__bound" id="CONNECTION0095" ref="CONNECTION0095" to="RI_ADP_bindAndPolymerization.MG_469_1MER_ADP__bound_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="620" y0="1350"/>
+              <segment segmentType="lineTo" x0="620" y0="1340"/>
+              <segment segmentType="quadTo" x0="620" y0="1330"/>
+              <segment segmentType="lineTo" x0="530" y0="1330"/>
+              <segment segmentType="lineTo" x0="485" y0="1330"/>
+              <segment segmentType="quadTo" x0="440" y0="1330"/>
+              <segment segmentType="lineTo" x0="440" y0="880"/>
+              <segment segmentType="lineTo" x0="440" y0="655"/>
+              <segment segmentType="quadTo" x0="440" y0="430"/>
+              <segment segmentType="lineTo" x0="920" y0="430"/>
+              <segment segmentType="lineTo" x0="1160" y0="430"/>
+              <segment segmentType="quadTo" x0="1400" y0="430"/>
+              <segment segmentType="lineTo" x0="1400" y0="499"/>
+              <segment segmentType="lineTo" x0="1400" y0="534"/>
+              <segment segmentType="quadTo" x0="1400" y0="568"/>
+              <segment segmentType="lineTo" x0="1405" y0="568"/>
+              <segment segmentType="lineTo" x0="1410" y0="568"/>
+            </path>
+          </edge>
+          <edge from="bindAndPolATP" id="CONNECTION0096" ref="CONNECTION0096" to="RI_ATP_bindAndPolymerization.bindAndPolATP_port" type="undirected-edge"/>
+          <edge from="bindAndPolATP" id="CONNECTION0097" ref="CONNECTION0097" to="RI_dissociation.bindAndPolATP_port_1" type="undirected-edge"/>
+          <edge from="bindAndPolADP" id="CONNECTION0098" ref="CONNECTION0098" to="RI_ATP_bindAndPolymerization.bindAndPolADP_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="1198" y0="460"/>
+              <segment segmentType="lineTo" x0="1198" y0="390"/>
+              <segment segmentType="quadTo" x0="1198" y0="320"/>
+              <segment segmentType="lineTo" x0="1242" y0="320"/>
+              <segment segmentType="lineTo" x0="1286" y0="320"/>
+            </path>
+          </edge>
+          <edge from="bindAndPolADP" id="CONNECTION0099" ref="CONNECTION0099" to="RI_ADP_bindAndPolymerization.bindAndPolADP_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="1360" y0="340"/>
+              <segment segmentType="lineTo" x0="1360" y0="385"/>
+              <segment segmentType="quadTo" x0="1360" y0="450"/>
+              <segment segmentType="lineTo" x0="1429" y0="450"/>
+              <segment segmentType="lineTo" x0="1464" y0="430"/>
+              <segment segmentType="quadTo" x0="1498" y0="430"/>
+              <segment segmentType="lineTo" x0="1498" y0="442"/>
+              <segment segmentType="lineTo" x0="1498" y0="455"/>
+            </path>
+          </edge>
+          <edge from="displacing" id="CONNECTION0100" ref="CONNECTION0100" to="RI_ADP_bindAndPolymerization.displacing_port" type="undirected-edge"/>
+          <edge from="displacing" id="CONNECTION0101" ref="CONNECTION0101" to="RI_displacing.displacing_port" type="undirected-edge"/>
+          <edge from="reactivation" id="CONNECTION0102" ref="CONNECTION0102" to="RI_displacing.reactivation_port" type="undirected-edge"/>
+          <edge from="reactivation" id="CONNECTION0103" ref="CONNECTION0103" to="RI_reactivation.reactivation_port" type="undirected-edge"/>
+          <edge from="MG_469_1MER_ATP__c" id="CONNECTION0104" ref="CONNECTION0104" to="RI_reactivation.DnaA_1mer_ATP__c_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="1405" y0="1680"/>
+              <segment segmentType="lineTo" x0="1451" y0="1680"/>
+              <segment segmentType="quadTo" x0="1497" y0="1680"/>
+              <segment segmentType="lineTo" x0="1497" y0="1635"/>
+              <segment segmentType="lineTo" x0="1497" y0="1590"/>
+            </path>
+          </edge>
+          <edge from="MG_469_1MER_ADP__d__bound" id="CONNECTION0105" ref="CONNECTION0105" to="RI_displacing.MG_469_1MER_ADP__bound_port" type="undirected-edge"/>
+          <edge from="Geometry_volume" id="CONNECTION0106" ref="CONNECTION0106" to="RI_ATP_bindAndPolymerization.cell_Volume_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="1910" y0="305"/>
+              <segment segmentType="lineTo" x0="1910" y0="292"/>
+              <segment segmentType="quadTo" x0="1910" y0="280"/>
+              <segment segmentType="lineTo" x0="1482" y0="280"/>
+              <segment segmentType="lineTo" x0="1268" y0="280"/>
+              <segment segmentType="quadTo" x0="1054" y0="280"/>
+              <segment segmentType="lineTo" x0="1054" y0="370"/>
+              <segment segmentType="lineTo" x0="1054" y0="460"/>
+            </path>
+          </edge>
+          <edge from="Geometry_volume" id="CONNECTION0107" ref="CONNECTION0107" to="RI_reactivation.cell_Volume_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="2005" y0="320"/>
+              <segment segmentType="lineTo" x0="2013" y0="320"/>
+              <segment segmentType="quadTo" x0="2020" y0="320"/>
+              <segment segmentType="lineTo" x0="2020" y0="845"/>
+              <segment segmentType="lineTo" x0="2020" y0="1108"/>
+              <segment segmentType="quadTo" x0="2020" y0="1370"/>
+              <segment segmentType="lineTo" x0="1853" y0="1370"/>
+              <segment segmentType="lineTo" x0="1769" y0="1370"/>
+              <segment segmentType="quadTo" x0="1686" y0="1370"/>
+              <segment segmentType="lineTo" x0="1686" y0="1380"/>
+              <segment segmentType="lineTo" x0="1686" y0="1390"/>
+            </path>
+          </edge>
+          <edge from="chromosome_R2" id="CONNECTION0108" ref="CONNECTION0108" to="RI_ADP_bindAndPolymerization.chromosome_R2_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="2194" y0="1060"/>
+              <segment segmentType="lineTo" x0="1987" y0="1060"/>
+              <segment segmentType="quadTo" x0="1780" y0="1060"/>
+              <segment segmentType="lineTo" x0="1780" y0="917"/>
+              <segment segmentType="lineTo" x0="1780" y0="845"/>
+              <segment segmentType="quadTo" x0="1780" y0="773"/>
+              <segment segmentType="lineTo" x0="1773" y0="773"/>
+              <segment segmentType="lineTo" x0="1765" y0="773"/>
+            </path>
+          </edge>
+          <edge from="chromosome_R3" id="CONNECTION0109" ref="CONNECTION0109" to="RI_ADP_bindAndPolymerization.chromosome_R3_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="1765" y0="743"/>
+              <segment segmentType="lineTo" x0="2073" y0="743"/>
+              <segment segmentType="quadTo" x0="2380" y0="743"/>
+              <segment segmentType="lineTo" x0="2380" y0="931"/>
+              <segment segmentType="lineTo" x0="2380" y0="1026"/>
+              <segment segmentType="quadTo" x0="2380" y0="1120"/>
+              <segment segmentType="lineTo" x0="2370" y0="1120"/>
+              <segment segmentType="lineTo" x0="2359" y0="1120"/>
+            </path>
+          </edge>
+          <edge from="chromosome_R4" id="CONNECTION0110" ref="CONNECTION0110" to="RI_ADP_bindAndPolymerization.chromosome_R4_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="1765" y0="713"/>
+              <segment segmentType="lineTo" x0="1778" y0="713"/>
+              <segment segmentType="quadTo" x0="1790" y0="713"/>
+              <segment segmentType="lineTo" x0="1790" y0="931"/>
+              <segment segmentType="lineTo" x0="1790" y0="1041"/>
+              <segment segmentType="quadTo" x0="1790" y0="1150"/>
+              <segment segmentType="lineTo" x0="1997" y0="1150"/>
+              <segment segmentType="lineTo" x0="2205" y0="1150"/>
+            </path>
+          </edge>
+          <edge from="chromosome_R5" id="CONNECTION0111" ref="CONNECTION0111" to="RI_ADP_bindAndPolymerization.chromosome_R5_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="2260" y0="865"/>
+              <segment segmentType="lineTo" x0="2260" y0="774"/>
+              <segment segmentType="quadTo" x0="2260" y0="683"/>
+              <segment segmentType="lineTo" x0="2013" y0="683"/>
+              <segment segmentType="lineTo" x0="1765" y0="683"/>
+            </path>
+          </edge>
+          <edge from="RI_dissociation.DnaA_1mer_ADP_port" id="CONNECTION0112" ref="CONNECTION0112" to="MG_469_1MER_ADP__c" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="975" y0="1042"/>
+              <segment segmentType="lineTo" x0="942" y0="1042"/>
+              <segment segmentType="quadTo" x0="910" y0="1042"/>
+              <segment segmentType="lineTo" x0="910" y0="696"/>
+              <segment segmentType="lineTo" x0="910" y0="523"/>
+              <segment segmentType="quadTo" x0="910" y0="350"/>
+              <segment segmentType="lineTo" x0="1215" y0="350"/>
+              <segment segmentType="lineTo" x0="1520" y0="350"/>
+            </path>
+          </edge>
+          <edge from="MG_469_1MER_ATP__d__bound" id="CONNECTION0113" ref="CONNECTION0113" to="RI_ATP_bindAndPolymerization.MG_469_1MER_ATP__bound_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="756" y0="800"/>
+              <segment segmentType="lineTo" x0="763" y0="800"/>
+              <segment segmentType="quadTo" x0="770" y0="800"/>
+              <segment segmentType="lineTo" x0="770" y0="845"/>
+              <segment segmentType="lineTo" x0="770" y0="868"/>
+              <segment segmentType="quadTo" x0="770" y0="890"/>
+              <segment segmentType="lineTo" x0="1055" y0="890"/>
+              <segment segmentType="lineTo" x0="1198" y0="890"/>
+              <segment segmentType="quadTo" x0="1340" y0="890"/>
+              <segment segmentType="lineTo" x0="1340" y0="716"/>
+              <segment segmentType="lineTo" x0="1340" y0="629"/>
+              <segment segmentType="quadTo" x0="1340" y0="542"/>
+              <segment segmentType="lineTo" x0="1325" y0="542"/>
+              <segment segmentType="lineTo" x0="1310" y0="542"/>
+            </path>
+          </edge>
+          <edge from="MG_469_1MER_ADP__d__bound" id="CONNECTION0114" ref="CONNECTION0114" to="RI_ATP_bindAndPolymerization.MG_469_1MER_ADP__bound_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="1310" y0="572"/>
+              <segment segmentType="lineTo" x0="1330" y0="572"/>
+              <segment segmentType="quadTo" x0="1350" y0="572"/>
+              <segment segmentType="lineTo" x0="1350" y0="486"/>
+              <segment segmentType="lineTo" x0="1350" y0="443"/>
+              <segment segmentType="quadTo" x0="1350" y0="400"/>
+              <segment segmentType="lineTo" x0="885" y0="400"/>
+              <segment segmentType="lineTo" x0="652" y0="400"/>
+              <segment segmentType="quadTo" x0="420" y0="400"/>
+              <segment segmentType="lineTo" x0="420" y0="860"/>
+              <segment segmentType="lineTo" x0="420" y0="1090"/>
+              <segment segmentType="quadTo" x0="420" y0="1320"/>
+              <segment segmentType="lineTo" x0="520" y0="1320"/>
+              <segment segmentType="lineTo" x0="570" y0="1320"/>
+              <segment segmentType="quadTo" x0="620" y0="1320"/>
+              <segment segmentType="lineTo" x0="620" y0="1335"/>
+              <segment segmentType="lineTo" x0="620" y0="1350"/>
+            </path>
+          </edge>
+          <edge from="MG_469_1MER_ATP__d__bound" id="CONNECTION0115" ref="CONNECTION0115" to="RI_ADP_bindAndPolymerization.MG_469_1MER_ATP__bound_port" type="undirected-edge">
+            <path>
+              <segment segmentType="lineTo" x0="610" y0="785"/>
+              <segment segmentType="lineTo" x0="610" y0="597"/>
+              <segment segmentType="quadTo" x0="610" y0="410"/>
+              <segment segmentType="lineTo" x0="1000" y0="410"/>
+              <segment segmentType="lineTo" x0="1195" y0="410"/>
+              <segment segmentType="quadTo" x0="1390" y0="410"/>
+              <segment segmentType="lineTo" x0="1390" y0="474"/>
+              <segment segmentType="lineTo" x0="1390" y0="506"/>
+              <segment segmentType="quadTo" x0="1390" y0="538"/>
+              <segment segmentType="lineTo" x0="1400" y0="538"/>
+              <segment segmentType="lineTo" x0="1410" y0="538"/>
+            </path>
+          </edge>
+        </edges>
+        <viewOptions>
+          <propertyRef name="addSourceSink" value="true"/>
+          <propertyRef name="autoDeleteReactions" value="false"/>
+          <propertyRef name="autoLayout" value="true"/>
+          <propertyRef name="autoMoveReactions" value="false"/>
+          <propertyRef name="cloneBrush" value="gray"/>
+          <propertyRef name="cloneFont" value="Arial;0;12;white"/>
+          <propertyRef name="compartmentBrush" value="#F0F0F0"/>
+          <propertyRef name="compartmentPen" value="4.0;#969696;Solid"/>
+          <propertyRef name="compartmentTitleFont" value="Arial;1;13;black"/>
+          <propertyRef name="complexBrush" value="#5ABEC8:#3CB4BE"/>
+          <propertyRef name="connectionPen" value="1.0;black;Solid"/>
+          <propertyRef name="contactPortBrush" value="#999"/>
+          <propertyRef name="customTitleFont" value="Arial;1;18;black"/>
+          <propertyRef name="drawOnFly" value="false"/>
+          <propertyRef name="edgePen" value="1.0;#646464;Solid"/>
+          <propertyRef name="edgeTipBrush" value="#787878"/>
+          <propertyRef name="gridOptions" type="ru.biosoft.graphics.editor.GridOptions">
+            <propertyRef name="cellSize" value="20"/>
+            <propertyRef name="gridStyle" value="POINTS"/>
+            <propertyRef name="showGrid" value="true"/>
+            <propertyRef name="stepSize" value="5"/>
+            <propertyRef name="useDefault" value="true"/>
+          </propertyRef>
+          <propertyRef name="highlight1Brush" value="#CCF"/>
+          <propertyRef name="highlight2Brush" value="#FFCECE"/>
+          <propertyRef name="highlight3Brush" value="#FFCEFF"/>
+          <propertyRef name="inputPortBrush" value="green"/>
+          <propertyRef name="macromoleculeBrush" value="#EAFFD8:#D4FFAA"/>
+          <propertyRef name="modelDefBrush" value="#C6C6C6"/>
+          <propertyRef name="modelDefinitionPen" value="1.0;black;Dashed"/>
+          <propertyRef name="moduleBrush" value="#87CEFA"/>
+          <propertyRef name="modulePen" value="1.0;black;Solid"/>
+          <propertyRef name="nodePen" value="1.0;black;Solid"/>
+          <propertyRef name="nodeTitleFont" value="Arial;0;12;black"/>
+          <propertyRef name="nodeTitleLimit" value="1000"/>
+          <propertyRef name="noteLinkPen" value="1.0;#7C007C;Dashed"/>
+          <propertyRef name="nucleicBrush" value="#B4FFFF:#A0F0F0"/>
+          <propertyRef name="orientedReactions" value="false"/>
+          <propertyRef name="outputPortBrush" value="red"/>
+          <propertyRef name="perturbingBrush" value="#FFB4FF:#F0A0F0"/>
+          <propertyRef name="phenotypeBrush" value="#F0F0FF:#C8B4FF"/>
+          <propertyRef name="portTitleFont" value="Arial;0;12;black"/>
+          <propertyRef name="simpleChemicalBrush" value="#D282AA:#BE5A96"/>
+          <propertyRef name="sourceSinkBrush" value="#E15064"/>
+          <propertyRef name="sourceSinkSize" value="30;30"/>
+          <propertyRef name="unspecifiedBrush" value="#F5E164:#F5C80A"/>
+        </viewOptions>
+      </sbgn>
       <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
         <biouml:diagramInfo completeName="Replication Initiation"/>
         <biouml:simulationInfo completionTime="100.0" initialTime="0.0" timeIncrement="1.0"/>
         <biouml:viewOptions autoLayout="true" dependencyEdges="false"/>
       </biouml:BIOUML>
     </annotation>
-    <listOfFunctionDefinitions>
-      <functionDefinition id="mod">
-        <annotation>
-          <distribution xmlns="http://sbml.org/annotations/distribution" defnition=""/>
-          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-            <biouml:nodeInfo completeName="mod" height="0" title="mod" width="0" x="143" y="46"/>
-          </biouml:BIOUML>
-        </annotation>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <lambda>
-            <bvar>
-              <ci>x</ci>
-            </bvar>
-            <bvar>
-              <ci>y</ci>
-            </bvar>
-            <apply>
-              <minus/>
-              <ci>x</ci>
-              <apply>
-                <times/>
-                <ci>y</ci>
-                <apply>
-                  <floor/>
-                  <apply>
-                    <divide/>
-                    <ci>x</ci>
-                    <ci>y</ci>
-                  </apply>
-                </apply>
-              </apply>
-            </apply>
-          </lambda>
-        </math>
-      </functionDefinition>
-    </listOfFunctionDefinitions>
     <listOfCompartments>
       <compartment constant="false" id="default" name="Replication Initiation" size="1" spatialDimensions="3">
         <annotation>
           <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-            <biouml:compartmentInfo color="rgba(0,0,0,0)" completeName="default" height="1740" isDefault="true" shape="0" title="Replication Initiation" width="2275" x="0" y="0"/>
+            <biouml:compartmentInfo color="rgba(0,0,0,0)" completeName="default" height="1740" isDefault="true" shape="0" title="Replication Initiation" width="2442" x="0" y="0"/>
           </biouml:BIOUML>
         </annotation>
       </compartment>
@@ -196,6 +1090,13 @@
               </biouml:BIOUML>
             </annotation>
           </comp:replacedElement>
+          <comp:replacedElement comp:portRef="DnaA_1mer_ADP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0112">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ADP__d__bound" initialAmount="0.0">
@@ -206,13 +1107,6 @@
           </biouml:BIOUML>
         </annotation>
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="DnaA_1mer_ADP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0071">
-            <annotation>
-              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-                <biouml:edgeInfo type="undirected"/>
-              </biouml:BIOUML>
-            </annotation>
-          </comp:replacedElement>
           <comp:replacedElement comp:portRef="MG_469_1MER_ADP__bound_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0095">
             <annotation>
               <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
@@ -284,7 +1178,7 @@
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ATP__d__bound" initialAmount="0.0">
         <annotation>
           <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-            <biouml:nodeInfo completeName="MG_469_1MER_ATP__d__bound" height="40" title="MG_469_1MER_ATP__d__bound" width="70" x="467" y="850"/>
+            <biouml:nodeInfo completeName="MG_469_1MER_ATP__d__bound" height="40" title="MG_469_1MER_ATP__d__bound" width="70" x="465" y="785"/>
             <biouml:specieInfo type="macromolecule"/>
           </biouml:BIOUML>
         </annotation>
@@ -297,6 +1191,13 @@
             </annotation>
           </comp:replacedElement>
           <comp:replacedElement comp:portRef="MG_469_1MER_ATP__bound_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0113">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo type="undirected"/>
+              </biouml:BIOUML>
+            </annotation>
+          </comp:replacedElement>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ATP__bound_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0115">
             <annotation>
               <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
                 <biouml:edgeInfo type="undirected"/>
@@ -794,6 +1695,820 @@
       <parameter constant="false" id="complexFinished" value="0.0"/>
     </listOfParameters>
     <listOfEvents>
+      <event id="eventCopyFromRx" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <eq/>
+                <ci>bindAndPolADP</ci>
+                <cn>0</cn>
+              </apply>
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci>displacing</ci>
+                  <cn>1</cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci>reactivation</ci>
+                  <cn>1</cn>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:nodeInfo completeName="eventCopyFromRx" height="0" title="eventCopyFromRx" width="0" x="2442" y="164"/>
+          </biouml:BIOUML>
+        </annotation>
+        <listOfEventAssignments>
+          <eventAssignment variable="MG_469_2MER_ATP__d__bound">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R1</ci>
+                          <cn>4</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R2</ci>
+                          <cn>4</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                  </apply>
+                  <piecewise>
+                    <piece>
+                      <cn>1</cn>
+                      <apply>
+                        <eq/>
+                        <ci>chromosome_R3</ci>
+                        <cn>4</cn>
+                      </apply>
+                    </piece>
+                    <otherwise>
+                      <cn>0</cn>
+                    </otherwise>
+                  </piecewise>
+                </apply>
+                <piecewise>
+                  <piece>
+                    <cn>1</cn>
+                    <apply>
+                      <eq/>
+                      <ci>chromosome_R4</ci>
+                      <cn>4</cn>
+                    </apply>
+                  </piece>
+                  <otherwise>
+                    <cn>0</cn>
+                  </otherwise>
+                </piecewise>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_3MER_ATP__d__bound">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R1</ci>
+                          <cn>6</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R2</ci>
+                          <cn>6</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                  </apply>
+                  <piecewise>
+                    <piece>
+                      <cn>1</cn>
+                      <apply>
+                        <eq/>
+                        <ci>chromosome_R3</ci>
+                        <cn>6</cn>
+                      </apply>
+                    </piece>
+                    <otherwise>
+                      <cn>0</cn>
+                    </otherwise>
+                  </piecewise>
+                </apply>
+                <piecewise>
+                  <piece>
+                    <cn>1</cn>
+                    <apply>
+                      <eq/>
+                      <ci>chromosome_R4</ci>
+                      <cn>6</cn>
+                    </apply>
+                  </piece>
+                  <otherwise>
+                    <cn>0</cn>
+                  </otherwise>
+                </piecewise>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_4MER_ATP__d__bound">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R1</ci>
+                          <cn>8</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R2</ci>
+                          <cn>8</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                  </apply>
+                  <piecewise>
+                    <piece>
+                      <cn>1</cn>
+                      <apply>
+                        <eq/>
+                        <ci>chromosome_R3</ci>
+                        <cn>8</cn>
+                      </apply>
+                    </piece>
+                    <otherwise>
+                      <cn>0</cn>
+                    </otherwise>
+                  </piecewise>
+                </apply>
+                <piecewise>
+                  <piece>
+                    <cn>1</cn>
+                    <apply>
+                      <eq/>
+                      <ci>chromosome_R4</ci>
+                      <cn>8</cn>
+                    </apply>
+                  </piece>
+                  <otherwise>
+                    <cn>0</cn>
+                  </otherwise>
+                </piecewise>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_5MER_ATP__d__bound">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R1</ci>
+                          <cn>10</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R2</ci>
+                          <cn>10</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                  </apply>
+                  <piecewise>
+                    <piece>
+                      <cn>1</cn>
+                      <apply>
+                        <eq/>
+                        <ci>chromosome_R3</ci>
+                        <cn>10</cn>
+                      </apply>
+                    </piece>
+                    <otherwise>
+                      <cn>0</cn>
+                    </otherwise>
+                  </piecewise>
+                </apply>
+                <piecewise>
+                  <piece>
+                    <cn>1</cn>
+                    <apply>
+                      <eq/>
+                      <ci>chromosome_R4</ci>
+                      <cn>10</cn>
+                    </apply>
+                  </piece>
+                  <otherwise>
+                    <cn>0</cn>
+                  </otherwise>
+                </piecewise>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_6MER_ATP__d__bound">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R1</ci>
+                          <cn>12</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R2</ci>
+                          <cn>12</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                  </apply>
+                  <piecewise>
+                    <piece>
+                      <cn>1</cn>
+                      <apply>
+                        <eq/>
+                        <ci>chromosome_R3</ci>
+                        <cn>12</cn>
+                      </apply>
+                    </piece>
+                    <otherwise>
+                      <cn>0</cn>
+                    </otherwise>
+                  </piecewise>
+                </apply>
+                <piecewise>
+                  <piece>
+                    <cn>1</cn>
+                    <apply>
+                      <eq/>
+                      <ci>chromosome_R4</ci>
+                      <cn>12</cn>
+                    </apply>
+                  </piece>
+                  <otherwise>
+                    <cn>0</cn>
+                  </otherwise>
+                </piecewise>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_7MER_ATP__d__bound">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R1</ci>
+                          <cn>14</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R2</ci>
+                          <cn>14</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                  </apply>
+                  <piecewise>
+                    <piece>
+                      <cn>1</cn>
+                      <apply>
+                        <eq/>
+                        <ci>chromosome_R3</ci>
+                        <cn>14</cn>
+                      </apply>
+                    </piece>
+                    <otherwise>
+                      <cn>0</cn>
+                    </otherwise>
+                  </piecewise>
+                </apply>
+                <piecewise>
+                  <piece>
+                    <cn>1</cn>
+                    <apply>
+                      <eq/>
+                      <ci>chromosome_R4</ci>
+                      <cn>14</cn>
+                    </apply>
+                  </piece>
+                  <otherwise>
+                    <cn>0</cn>
+                  </otherwise>
+                </piecewise>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_2MER_1ATP_ADP__d__bound">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R1</ci>
+                          <cn>3</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R2</ci>
+                          <cn>3</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                  </apply>
+                  <piecewise>
+                    <piece>
+                      <cn>1</cn>
+                      <apply>
+                        <eq/>
+                        <ci>chromosome_R3</ci>
+                        <cn>3</cn>
+                      </apply>
+                    </piece>
+                    <otherwise>
+                      <cn>0</cn>
+                    </otherwise>
+                  </piecewise>
+                </apply>
+                <piecewise>
+                  <piece>
+                    <cn>1</cn>
+                    <apply>
+                      <eq/>
+                      <ci>chromosome_R4</ci>
+                      <cn>3</cn>
+                    </apply>
+                  </piece>
+                  <otherwise>
+                    <cn>0</cn>
+                  </otherwise>
+                </piecewise>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_3MER_2ATP_ADP__d__bound">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R1</ci>
+                          <cn>5</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R2</ci>
+                          <cn>5</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                  </apply>
+                  <piecewise>
+                    <piece>
+                      <cn>1</cn>
+                      <apply>
+                        <eq/>
+                        <ci>chromosome_R3</ci>
+                        <cn>5</cn>
+                      </apply>
+                    </piece>
+                    <otherwise>
+                      <cn>0</cn>
+                    </otherwise>
+                  </piecewise>
+                </apply>
+                <piecewise>
+                  <piece>
+                    <cn>1</cn>
+                    <apply>
+                      <eq/>
+                      <ci>chromosome_R4</ci>
+                      <cn>5</cn>
+                    </apply>
+                  </piece>
+                  <otherwise>
+                    <cn>0</cn>
+                  </otherwise>
+                </piecewise>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_4MER_3ATP_ADP__d__bound">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R1</ci>
+                          <cn>7</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R2</ci>
+                          <cn>7</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                  </apply>
+                  <piecewise>
+                    <piece>
+                      <cn>1</cn>
+                      <apply>
+                        <eq/>
+                        <ci>chromosome_R3</ci>
+                        <cn>7</cn>
+                      </apply>
+                    </piece>
+                    <otherwise>
+                      <cn>0</cn>
+                    </otherwise>
+                  </piecewise>
+                </apply>
+                <piecewise>
+                  <piece>
+                    <cn>1</cn>
+                    <apply>
+                      <eq/>
+                      <ci>chromosome_R4</ci>
+                      <cn>7</cn>
+                    </apply>
+                  </piece>
+                  <otherwise>
+                    <cn>0</cn>
+                  </otherwise>
+                </piecewise>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_5MER_4ATP_ADP__d__bound">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R1</ci>
+                          <cn>9</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R2</ci>
+                          <cn>9</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                  </apply>
+                  <piecewise>
+                    <piece>
+                      <cn>1</cn>
+                      <apply>
+                        <eq/>
+                        <ci>chromosome_R3</ci>
+                        <cn>9</cn>
+                      </apply>
+                    </piece>
+                    <otherwise>
+                      <cn>0</cn>
+                    </otherwise>
+                  </piecewise>
+                </apply>
+                <piecewise>
+                  <piece>
+                    <cn>1</cn>
+                    <apply>
+                      <eq/>
+                      <ci>chromosome_R4</ci>
+                      <cn>9</cn>
+                    </apply>
+                  </piece>
+                  <otherwise>
+                    <cn>0</cn>
+                  </otherwise>
+                </piecewise>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_6MER_5ATP_ADP__d__bound">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R1</ci>
+                          <cn>11</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R2</ci>
+                          <cn>11</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                  </apply>
+                  <piecewise>
+                    <piece>
+                      <cn>1</cn>
+                      <apply>
+                        <eq/>
+                        <ci>chromosome_R3</ci>
+                        <cn>11</cn>
+                      </apply>
+                    </piece>
+                    <otherwise>
+                      <cn>0</cn>
+                    </otherwise>
+                  </piecewise>
+                </apply>
+                <piecewise>
+                  <piece>
+                    <cn>1</cn>
+                    <apply>
+                      <eq/>
+                      <ci>chromosome_R4</ci>
+                      <cn>11</cn>
+                    </apply>
+                  </piece>
+                  <otherwise>
+                    <cn>0</cn>
+                  </otherwise>
+                </piecewise>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment variable="MG_469_7MER_6ATP_ADP__d__bound">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <plus/>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R1</ci>
+                          <cn>13</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                    <piecewise>
+                      <piece>
+                        <cn>1</cn>
+                        <apply>
+                          <eq/>
+                          <ci>chromosome_R2</ci>
+                          <cn>13</cn>
+                        </apply>
+                      </piece>
+                      <otherwise>
+                        <cn>0</cn>
+                      </otherwise>
+                    </piecewise>
+                  </apply>
+                  <piecewise>
+                    <piece>
+                      <cn>1</cn>
+                      <apply>
+                        <eq/>
+                        <ci>chromosome_R3</ci>
+                        <cn>13</cn>
+                      </apply>
+                    </piece>
+                    <otherwise>
+                      <cn>0</cn>
+                    </otherwise>
+                  </piecewise>
+                </apply>
+                <piecewise>
+                  <piece>
+                    <cn>1</cn>
+                    <apply>
+                      <eq/>
+                      <ci>chromosome_R4</ci>
+                      <cn>13</cn>
+                    </apply>
+                  </piece>
+                  <otherwise>
+                    <cn>0</cn>
+                  </otherwise>
+                </piecewise>
+              </apply>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
       <event id="event_finished" useValuesFromTriggerTime="true">
         <trigger initialValue="false" persistent="true">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -814,7 +2529,7 @@
         </trigger>
         <annotation>
           <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-            <biouml:nodeInfo completeName="event_finished" height="0" title="event_finished" width="0" x="130" y="120"/>
+            <biouml:nodeInfo completeName="event_finished" height="0" title="event_finished" width="0" x="2442" y="35"/>
           </biouml:BIOUML>
         </annotation>
         <listOfEventAssignments>
@@ -868,7 +2583,7 @@
         <annotation>
           <state id="SubdiagramState" title="SubdiagramState"/>
           <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
-            <biouml:compartmentInfo color="rgba(0,0,0,0)" height="310" shape="0" title="RI_dissociation" width="325" x="980" y="985"/>
+            <biouml:compartmentInfo color="rgba(0,0,0,0)" height="310" shape="0" title="RI_dissociation" width="325" x="975" y="985"/>
           </biouml:BIOUML>
         </annotation>
       </comp:submodel>
@@ -886,6 +2601,348 @@
     <comp:modelDefinition id="RI_ADP_bindAndPolymerization" name="RepInit_ADP_BindAndPolymerization">
       <annotation>
         <state id="SubdiagramState" title="SubdiagramState"/>
+        <sbgn xmlns:biouml="http://www.biouml.org/ns">
+          <nodes>
+            <node accessType="public" id="MG_469_1MER_ADP__bound_port" orientation="right" parent="" ref="$default.MG_469_1MER_ADP__bound" title="MG_469_1MER_ADP__bound" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="265" y="175"/>
+            </node>
+            <node accessType="public" id="MG_469_1MER_ADP__c_port" orientation="right" parent="" ref="$default.MG_469_1MER_ADP__c" title="MG_469_1MER_ADP__c" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="368" y="142"/>
+            </node>
+            <node accessType="public" id="MG_469_1MER_ATP__bound_port" orientation="right" parent="" ref="$default.MG_469_1MER_ATP__bound" title="MG_469_1MER_ATP__bound" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="408" y="111"/>
+            </node>
+            <node accessType="public" id="MG_469_1MER_ATP__c_port" orientation="right" parent="" ref="$default.MG_469_1MER_ATP__c" title="MG_469_1MER_ATP__c" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="450" y="210"/>
+            </node>
+            <node id="areReady_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="0"/>
+            </node>
+            <node id="avgBindingRateADP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="425"/>
+            </node>
+            <node id="bindADP" parent="" type="math-event">
+              <nodeLayout x="0" y="846"/>
+            </node>
+            <node accessType="public" id="bindAndPolADP_port" orientation="right" parent="" ref="bindAndPolADP" title="bindAndPolADP" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="746" y="111"/>
+            </node>
+            <node id="bindRateR1ADP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="825" y="0"/>
+            </node>
+            <node id="bindRateR2ADP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="825" y="370"/>
+            </node>
+            <node id="bindRateR3ADP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="825" y="740"/>
+            </node>
+            <node id="bindRateR4ADP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="1393"/>
+            </node>
+            <node id="bindToR1" parent="" type="math-event">
+              <nodeLayout x="1352" y="0"/>
+            </node>
+            <node id="bindToR2" parent="" type="math-event">
+              <nodeLayout x="1352" y="491"/>
+            </node>
+            <node id="bindToR3" parent="" type="math-event">
+              <nodeLayout x="1352" y="982"/>
+            </node>
+            <node id="bindToR4" parent="" type="math-event">
+              <nodeLayout x="0" y="1763"/>
+            </node>
+            <node id="bindToR5" parent="" type="math-event">
+              <nodeLayout x="810" y="1763"/>
+            </node>
+            <node id="canBindR1_Initialization" parent="" type="math-equation">
+              <nodeLayout x="1511" y="1763"/>
+            </node>
+            <node id="canBindR2_Initialization" parent="" type="math-equation">
+              <nodeLayout x="2162" y="0"/>
+            </node>
+            <node id="canBindR3_Initialization" parent="" type="math-equation">
+              <nodeLayout x="2162" y="398"/>
+            </node>
+            <node id="canBindR4_Initialization" parent="" type="math-equation">
+              <nodeLayout x="2162" y="796"/>
+            </node>
+            <node id="canStartBinding_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="2254"/>
+            </node>
+            <node id="canStartPol_Initialization" parent="" type="math-equation">
+              <nodeLayout x="2162" y="1194"/>
+            </node>
+            <node accessType="public" id="cell_Volume_port" orientation="right" parent="" ref="cell_Volume" title="cell_Volume" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="194" y="105"/>
+            </node>
+            <node accessType="public" id="chromosome_R1_port" orientation="right" parent="" ref="chromosome_R1" title="chromosome_R1" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="190" y="223"/>
+            </node>
+            <node accessType="public" id="chromosome_R2_port" orientation="right" parent="" ref="chromosome_R2" title="chromosome_R2" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="190" y="255"/>
+            </node>
+            <node accessType="public" id="chromosome_R3_port" orientation="right" parent="" ref="chromosome_R3" title="chromosome_R3" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="190" y="288"/>
+            </node>
+            <node accessType="public" id="chromosome_R4_port" orientation="right" parent="" ref="chromosome_R4" title="chromosome_R4" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="190" y="320"/>
+            </node>
+            <node accessType="public" id="chromosome_R5_port" orientation="right" parent="" ref="chromosome_R5" title="chromosome_R5" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="190" y="353"/>
+            </node>
+            <node id="complexSize_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="2652"/>
+            </node>
+            <node id="default" parent="" ref="default" title="ADPBindAndPolymerization" type="compartment">
+              <nodeLayout height="150" width="150" x="2727" y="2372"/>
+            </node>
+            <node id="MG_469_1MER_ADP__bound" multimer="0" parent="default" ref="default.MG_469_1MER_ADP__bound" type="macromolecule">
+              <nodeLayout height="40" width="262" x="2712" y="0"/>
+            </node>
+            <node id="MG_469_1MER_ADP__c" multimer="0" parent="default" ref="default.MG_469_1MER_ADP__c" type="macromolecule">
+              <nodeLayout height="40" width="217" x="2162" y="1592"/>
+            </node>
+            <node id="MG_469_1MER_ATP__bound" multimer="0" parent="default" ref="default.MG_469_1MER_ATP__bound" type="macromolecule">
+              <nodeLayout height="40" width="260" x="2162" y="1982"/>
+            </node>
+            <node id="MG_469_1MER_ATP__c" multimer="0" parent="default" ref="default.MG_469_1MER_ATP__c" type="macromolecule">
+              <nodeLayout height="40" width="215" x="2162" y="2372"/>
+            </node>
+            <node accessType="public" id="displacing_port" orientation="right" parent="" ref="displacing" title="displacing" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="45" y="123"/>
+            </node>
+            <node id="endEvent" parent="" type="math-event">
+              <nodeLayout x="0" y="3022"/>
+            </node>
+            <node id="finishBindToR1234" parent="" type="math-event">
+              <nodeLayout x="703" y="3022"/>
+            </node>
+            <node id="finishBindings" parent="" type="math-event">
+              <nodeLayout x="1901" y="3022"/>
+            </node>
+            <node id="fractionalPart" parent="" type="math-function">
+              <nodeLayout x="2511" y="3022"/>
+            </node>
+            <node id="kb1ADP_Assignment_rule" parent="" type="math-equation">
+              <nodeLayout x="3324" y="0"/>
+            </node>
+            <node id="kb2ADP_Assignment_rule" parent="" type="math-equation">
+              <nodeLayout x="0" y="3521"/>
+            </node>
+            <node id="maxBindADP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="3891"/>
+            </node>
+            <node id="maxBindingADP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="3743" y="0"/>
+            </node>
+            <node id="maxFunc" parent="" type="math-function">
+              <nodeLayout x="3324" y="389"/>
+            </node>
+            <node id="maxPolADP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="3324" y="759"/>
+            </node>
+            <node id="minFunc" parent="" type="math-function">
+              <nodeLayout x="3324" y="1129"/>
+            </node>
+            <node id="mod" parent="" type="math-function">
+              <nodeLayout x="3324" y="1499"/>
+            </node>
+            <node id="nAvo_Assignment_rule" parent="" type="math-equation">
+              <nodeLayout x="3324" y="1869"/>
+            </node>
+            <node id="numFreeBindingSitesADP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="4261"/>
+            </node>
+            <node id="numFreeDnaAADP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="3324" y="2239"/>
+            </node>
+            <node id="numFreePolSites_Initialization" parent="" type="math-equation">
+              <nodeLayout x="3324" y="2641"/>
+            </node>
+            <node id="polRange_Initialization" parent="" type="math-equation">
+              <nodeLayout x="3324" y="3039"/>
+            </node>
+            <node id="polRateR1_Initialization" parent="" type="math-equation">
+              <nodeLayout x="3324" y="3409"/>
+            </node>
+            <node id="polRateR2_Initialization" parent="" type="math-equation">
+              <nodeLayout x="3324" y="3815"/>
+            </node>
+            <node id="polRateR3_Initialization" parent="" type="math-equation">
+              <nodeLayout x="3324" y="4221"/>
+            </node>
+            <node id="polRateR4_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="4681"/>
+            </node>
+            <node id="polymerizeR1" parent="" type="math-event">
+              <nodeLayout x="4592" y="0"/>
+            </node>
+            <node id="polymerizeR2" parent="" type="math-event">
+              <nodeLayout x="4592" y="491"/>
+            </node>
+            <node id="polymerizeR3" parent="" type="math-event">
+              <nodeLayout x="4592" y="982"/>
+            </node>
+            <node id="polymerizeR4" parent="" type="math-event">
+              <nodeLayout x="4592" y="1473"/>
+            </node>
+            <node id="randInt" parent="" type="math-function">
+              <nodeLayout x="4592" y="1964"/>
+            </node>
+            <node id="rate8merBindADP_Assignment_rule" parent="" type="math-equation">
+              <nodeLayout x="4592" y="2334"/>
+            </node>
+            <node id="rate9merBindADP_Assignment_rule" parent="" type="math-equation">
+              <nodeLayout x="4592" y="2769"/>
+            </node>
+            <node id="sizeR1_Initialization" parent="" type="math-equation">
+              <nodeLayout x="4592" y="3204"/>
+            </node>
+            <node id="sizeR2_Initialization" parent="" type="math-equation">
+              <nodeLayout x="4592" y="3656"/>
+            </node>
+            <node id="sizeR3_Initialization" parent="" type="math-equation">
+              <nodeLayout x="4592" y="4108"/>
+            </node>
+            <node id="sizeR4_Initialization" parent="" type="math-equation">
+              <nodeLayout x="4592" y="4560"/>
+            </node>
+            <node id="startBindADP" parent="" type="math-event">
+              <nodeLayout x="0" y="5087"/>
+            </node>
+            <node id="stochasticRound" parent="" type="math-function">
+              <nodeLayout x="719" y="5087"/>
+            </node>
+            <node id="totBindingRateADP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="1563" y="5087"/>
+            </node>
+            <node id="totPolRate_Initialization" parent="" type="math-equation">
+              <nodeLayout x="2245" y="5087"/>
+            </node>
+            <node id="uniform" parent="" type="math-function">
+              <nodeLayout x="2885" y="5087"/>
+            </node>
+          </nodes>
+          <edges>
+            <edge from="default.MG_469_1MER_ADP__bound" id="MG_469_1MER_ADP__bound_port_link" to="MG_469_1MER_ADP__bound_port" type="portlink">
+              <path>
+                <segment segmentType="lineTo" x0="2840" y0="40"/>
+                <segment segmentType="lineTo" x0="2840" y0="116"/>
+                <segment segmentType="quadTo" x0="2840" y0="191"/>
+                <segment segmentType="lineTo" x0="1688" y0="191"/>
+                <segment segmentType="lineTo" x0="536" y0="191"/>
+              </path>
+            </edge>
+            <edge from="default.MG_469_1MER_ADP__c" id="MG_469_1MER_ADP__c_port_link" to="MG_469_1MER_ADP__c_port" type="portlink">
+              <path>
+                <segment segmentType="lineTo" x0="2162" y0="1610"/>
+                <segment segmentType="lineTo" x0="1071" y0="1610"/>
+                <segment segmentType="quadTo" x0="-20" y0="1610"/>
+                <segment segmentType="lineTo" x0="-20" y0="900"/>
+                <segment segmentType="lineTo" x0="-20" y0="545"/>
+                <segment segmentType="quadTo" x0="-20" y0="190"/>
+                <segment segmentType="lineTo" x0="110" y0="190"/>
+                <segment segmentType="lineTo" x0="175" y0="190"/>
+                <segment segmentType="quadTo" x0="240" y0="190"/>
+                <segment segmentType="lineTo" x0="240" y0="174"/>
+                <segment segmentType="lineTo" x0="240" y0="166"/>
+                <segment segmentType="quadTo" x0="240" y0="158"/>
+                <segment segmentType="lineTo" x0="304" y0="158"/>
+                <segment segmentType="lineTo" x0="368" y0="158"/>
+              </path>
+            </edge>
+            <edge from="default.MG_469_1MER_ATP__bound" id="MG_469_1MER_ATP__bound_port_link" to="MG_469_1MER_ATP__bound_port" type="portlink">
+              <path>
+                <segment segmentType="lineTo" x0="2422" y0="2000"/>
+                <segment segmentType="lineTo" x0="2431" y0="2000"/>
+                <segment segmentType="quadTo" x0="2440" y0="2000"/>
+                <segment segmentType="lineTo" x0="2440" y0="990"/>
+                <segment segmentType="lineTo" x0="2440" y0="485"/>
+                <segment segmentType="quadTo" x0="2440" y0="-20"/>
+                <segment segmentType="lineTo" x0="1485" y0="-20"/>
+                <segment segmentType="lineTo" x0="1007" y0="-20"/>
+                <segment segmentType="quadTo" x0="530" y0="-20"/>
+                <segment segmentType="lineTo" x0="530" y0="35"/>
+                <segment segmentType="lineTo" x0="530" y0="63"/>
+                <segment segmentType="quadTo" x0="530" y0="90"/>
+                <segment segmentType="lineTo" x0="455" y0="90"/>
+                <segment segmentType="lineTo" x0="417" y0="90"/>
+                <segment segmentType="quadTo" x0="380" y0="90"/>
+                <segment segmentType="lineTo" x0="380" y0="108"/>
+                <segment segmentType="lineTo" x0="380" y0="118"/>
+                <segment segmentType="quadTo" x0="380" y0="127"/>
+                <segment segmentType="lineTo" x0="394" y0="127"/>
+                <segment segmentType="lineTo" x0="408" y0="127"/>
+              </path>
+            </edge>
+            <edge from="default.MG_469_1MER_ATP__c" id="MG_469_1MER_ATP__c_port_link" to="MG_469_1MER_ATP__c_port" type="portlink">
+              <path>
+                <segment segmentType="lineTo" x0="2162" y0="2390"/>
+                <segment segmentType="lineTo" x0="2151" y0="2390"/>
+                <segment segmentType="quadTo" x0="2140" y0="2390"/>
+                <segment segmentType="lineTo" x0="2140" y0="1325"/>
+                <segment segmentType="lineTo" x0="2140" y0="792"/>
+                <segment segmentType="quadTo" x0="2140" y0="260"/>
+                <segment segmentType="lineTo" x0="1285" y0="260"/>
+                <segment segmentType="lineTo" x0="857" y0="260"/>
+                <segment segmentType="quadTo" x0="430" y0="260"/>
+                <segment segmentType="lineTo" x0="430" y0="243"/>
+                <segment segmentType="lineTo" x0="430" y0="234"/>
+                <segment segmentType="quadTo" x0="430" y0="226"/>
+                <segment segmentType="lineTo" x0="440" y0="226"/>
+                <segment segmentType="lineTo" x0="450" y0="226"/>
+              </path>
+            </edge>
+          </edges>
+          <viewOptions>
+            <propertyRef name="addSourceSink" value="true"/>
+            <propertyRef name="autoDeleteReactions" value="false"/>
+            <propertyRef name="autoLayout" value="true"/>
+            <propertyRef name="autoMoveReactions" value="false"/>
+            <propertyRef name="cloneBrush" value="gray"/>
+            <propertyRef name="cloneFont" value="Arial;0;12;white"/>
+            <propertyRef name="compartmentBrush" value="#F0F0F0"/>
+            <propertyRef name="compartmentPen" value="4.0;#969696;Solid"/>
+            <propertyRef name="compartmentTitleFont" value="Arial;1;13;black"/>
+            <propertyRef name="complexBrush" value="#5ABEC8:#3CB4BE"/>
+            <propertyRef name="connectionPen" value="1.0;black;Solid"/>
+            <propertyRef name="contactPortBrush" value="gray"/>
+            <propertyRef name="customTitleFont" value="Arial;1;18;black"/>
+            <propertyRef name="drawOnFly" value="false"/>
+            <propertyRef name="edgePen" value="1.0;#646464;Solid"/>
+            <propertyRef name="edgeTipBrush" value="#787878"/>
+            <propertyRef name="gridOptions" type="ru.biosoft.graphics.editor.GridOptions">
+              <propertyRef name="cellSize" value="20"/>
+              <propertyRef name="gridStyle" value="POINTS"/>
+              <propertyRef name="showGrid" value="true"/>
+              <propertyRef name="stepSize" value="5"/>
+              <propertyRef name="useDefault" value="true"/>
+            </propertyRef>
+            <propertyRef name="highlight1Brush" value="#CCF"/>
+            <propertyRef name="highlight2Brush" value="#FFCECE"/>
+            <propertyRef name="highlight3Brush" value="#FFCEFF"/>
+            <propertyRef name="inputPortBrush" value="green"/>
+            <propertyRef name="macromoleculeBrush" value="#EAFFD8:#D4FFAA"/>
+            <propertyRef name="modelDefBrush" value="#C6C6C6"/>
+            <propertyRef name="modelDefinitionPen" value="1.0;black;Dashed"/>
+            <propertyRef name="moduleBrush" value="#87CEFA"/>
+            <propertyRef name="modulePen" value="1.0;black;Solid"/>
+            <propertyRef name="nodePen" value="1.0;black;Solid"/>
+            <propertyRef name="nodeTitleFont" value="Arial;0;12;black"/>
+            <propertyRef name="nodeTitleLimit" value="1000"/>
+            <propertyRef name="noteLinkPen" value="1.0;#7C007C;Dashed"/>
+            <propertyRef name="nucleicBrush" value="#B4FFFF:#A0F0F0"/>
+            <propertyRef name="orientedReactions" value="false"/>
+            <propertyRef name="outputPortBrush" value="red"/>
+            <propertyRef name="perturbingBrush" value="#FFB4FF:#F0A0F0"/>
+            <propertyRef name="phenotypeBrush" value="#F0F0FF:#C8B4FF"/>
+            <propertyRef name="portTitleFont" value="Arial;0;18;#7A378B"/>
+            <propertyRef name="simpleChemicalBrush" value="#D282AA:#BE5A96"/>
+            <propertyRef name="sourceSinkBrush" value="#E15064"/>
+            <propertyRef name="sourceSinkSize" value="30;30"/>
+            <propertyRef name="unspecifiedBrush" value="#F5E164:#F5C80A"/>
+          </viewOptions>
+        </sbgn>
         <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
           <biouml:diagramInfo completeName="RI_ADP_bindAndPolymerization"/>
           <biouml:simulationInfo completionTime="100.0" initialTime="0.0" timeIncrement="1.0"/>
@@ -3152,6 +5209,371 @@
     <comp:modelDefinition id="RI_ATP_bindAndPolymerization" name="RepInit_ATP_BindAndPolymerization">
       <annotation>
         <state id="SubdiagramState" title="SubdiagramState"/>
+        <sbgn xmlns:biouml="http://www.biouml.org/ns">
+          <nodes>
+            <node accessType="public" id="MG_469_1MER_ADP__bound_port" orientation="right" parent="" ref="$default.MG_469_1MER_ADP__bound" title="MG_469_1MER_ADP__bound" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="260" y="353"/>
+            </node>
+            <node accessType="public" id="MG_469_1MER_ADP__c_port" orientation="right" parent="" ref="$default.MG_469_1MER_ADP__c" title="MG_469_1MER_ADP__c" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="621" y="180"/>
+            </node>
+            <node accessType="public" id="MG_469_1MER_ATP__bound_port" orientation="right" parent="" ref="$default.MG_469_1MER_ATP__bound" title="MG_469_1MER_ATP__bound" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="206" y="220"/>
+            </node>
+            <node accessType="public" id="MG_469_1MER_ATP__c_port" orientation="right" parent="" ref="$default.MG_469_1MER_ATP__c" title="MG_469_1MER_ATP__c" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="570" y="269"/>
+            </node>
+            <node id="areReady_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="0"/>
+            </node>
+            <node id="avgBindingRateATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="425"/>
+            </node>
+            <node id="bindATP" parent="" type="math-event">
+              <nodeLayout x="0" y="846"/>
+            </node>
+            <node accessType="public" id="bindAndPolADP_port" orientation="right" parent="" ref="bindAndPolADP" title="bindAndPolADP" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="255" y="133"/>
+            </node>
+            <node accessType="public" id="bindAndPolATP_port" orientation="right" parent="" ref="bindAndPolATP" title="bindAndPolATP" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="85" y="120"/>
+            </node>
+            <node id="bindRateR1ATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="825" y="0"/>
+            </node>
+            <node id="bindRateR2ATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="825" y="370"/>
+            </node>
+            <node id="bindRateR3ATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="825" y="740"/>
+            </node>
+            <node id="bindRateR4ATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="1393"/>
+            </node>
+            <node id="bindToR1" parent="" type="math-event">
+              <nodeLayout x="1395" y="0"/>
+            </node>
+            <node id="bindToR2" parent="" type="math-event">
+              <nodeLayout x="1395" y="491"/>
+            </node>
+            <node id="bindToR3" parent="" type="math-event">
+              <nodeLayout x="1395" y="982"/>
+            </node>
+            <node id="bindToR4" parent="" type="math-event">
+              <nodeLayout x="0" y="1763"/>
+            </node>
+            <node id="bindToR5" parent="" type="math-event">
+              <nodeLayout x="808" y="1763"/>
+            </node>
+            <node id="canBindR1_Initialization" parent="" type="math-equation">
+              <nodeLayout x="1508" y="1763"/>
+            </node>
+            <node id="canBindR2_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="2254"/>
+            </node>
+            <node id="canBindR3_Initialization" parent="" type="math-equation">
+              <nodeLayout x="549" y="2254"/>
+            </node>
+            <node id="canBindR4_Initialization" parent="" type="math-equation">
+              <nodeLayout x="1098" y="2254"/>
+            </node>
+            <node id="canStartBinding_Initialization" parent="" type="math-equation">
+              <nodeLayout x="2203" y="0"/>
+            </node>
+            <node id="canStartPol_Initialization" parent="" type="math-equation">
+              <nodeLayout x="2203" y="398"/>
+            </node>
+            <node accessType="public" id="cell_Volume_port" orientation="right" parent="" ref="cell_Volume" title="cell_Volume" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="-17" y="163"/>
+            </node>
+            <node accessType="public" id="chromosome_R1_port" orientation="right" parent="" ref="chromosome_R1" title="chromosome_R1" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="531" y="112"/>
+            </node>
+            <node accessType="public" id="chromosome_R2_port" orientation="right" parent="" ref="chromosome_R2" title="chromosome_R2" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="754" y="106"/>
+            </node>
+            <node accessType="public" id="chromosome_R3_port" orientation="right" parent="" ref="chromosome_R3" title="chromosome_R3" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="692" y="87"/>
+            </node>
+            <node accessType="public" id="chromosome_R4_port" orientation="right" parent="" ref="chromosome_R4" title="chromosome_R4" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="560" y="68"/>
+            </node>
+            <node accessType="public" id="chromosome_R5_port" orientation="right" parent="" ref="chromosome_R5" title="chromosome_R5" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="260" y="90"/>
+            </node>
+            <node accessType="public" id="complexFinished_port" orientation="right" parent="" ref="complexFinished" title="complexFinished" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="401" y="147"/>
+            </node>
+            <node id="complexSize_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="2652"/>
+            </node>
+            <node id="coopR1_Initialization" parent="" type="math-equation">
+              <nodeLayout x="2203" y="796"/>
+            </node>
+            <node id="coopR2_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="3030"/>
+            </node>
+            <node id="coopR3_Initialization" parent="" type="math-equation">
+              <nodeLayout x="2904" y="0"/>
+            </node>
+            <node id="coopR4_Initialization" parent="" type="math-equation">
+              <nodeLayout x="2203" y="1202"/>
+            </node>
+            <node id="default" parent="" ref="default" title="ATPBindAndPolymerization" type="compartment">
+              <nodeLayout height="150" width="150" x="2768" y="2778"/>
+            </node>
+            <node id="MG_469_1MER_ADP__bound" multimer="0" parent="default" ref="default.MG_469_1MER_ADP__bound" type="macromolecule">
+              <nodeLayout height="40" width="262" x="2203" y="1608"/>
+            </node>
+            <node id="MG_469_1MER_ADP__c" multimer="0" parent="default" ref="default.MG_469_1MER_ADP__c" type="macromolecule">
+              <nodeLayout height="40" width="217" x="2203" y="1998"/>
+            </node>
+            <node id="MG_469_1MER_ATP__bound" multimer="0" parent="default" ref="default.MG_469_1MER_ATP__bound" type="macromolecule">
+              <nodeLayout height="40" width="260" x="2203" y="2388"/>
+            </node>
+            <node id="MG_469_1MER_ATP__c" multimer="0" parent="default" ref="default.MG_469_1MER_ATP__c" type="macromolecule">
+              <nodeLayout height="40" width="215" x="2203" y="2778"/>
+            </node>
+            <node id="endEvent" parent="" type="math-event">
+              <nodeLayout x="0" y="3436"/>
+            </node>
+            <node id="finishBindToR1234" parent="" type="math-event">
+              <nodeLayout x="701" y="3436"/>
+            </node>
+            <node id="finishBindings" parent="" type="math-event">
+              <nodeLayout x="1897" y="3436"/>
+            </node>
+            <node id="fractionalPart" parent="" type="math-function">
+              <nodeLayout x="2505" y="3436"/>
+            </node>
+            <node id="kb1ATP_Assignment_rule" parent="" type="math-equation">
+              <nodeLayout x="3045" y="3436"/>
+            </node>
+            <node id="kb2ATP_Assignment_rule" parent="" type="math-equation">
+              <nodeLayout x="3627" y="0"/>
+            </node>
+            <node id="maxBindATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="3935"/>
+            </node>
+            <node id="maxBindingATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="4045" y="0"/>
+            </node>
+            <node id="maxFunc" parent="" type="math-function">
+              <nodeLayout x="3627" y="389"/>
+            </node>
+            <node id="maxPolATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="3627" y="759"/>
+            </node>
+            <node id="minFunc" parent="" type="math-function">
+              <nodeLayout x="3627" y="1129"/>
+            </node>
+            <node id="mod" parent="" type="math-function">
+              <nodeLayout x="3627" y="1499"/>
+            </node>
+            <node id="nAvo_Assignment_rule" parent="" type="math-equation">
+              <nodeLayout x="3627" y="1869"/>
+            </node>
+            <node id="numFreeBindingSitesATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="4305"/>
+            </node>
+            <node id="numFreeDnaAATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="3627" y="2239"/>
+            </node>
+            <node id="numFreePolSites_Initialization" parent="" type="math-equation">
+              <nodeLayout x="3627" y="2641"/>
+            </node>
+            <node id="polRange_Initialization" parent="" type="math-equation">
+              <nodeLayout x="3627" y="3039"/>
+            </node>
+            <node id="polRateR1_Initialization" parent="" type="math-equation">
+              <nodeLayout x="3627" y="3409"/>
+            </node>
+            <node id="polRateR2_Initialization" parent="" type="math-equation">
+              <nodeLayout x="3627" y="3815"/>
+            </node>
+            <node id="polRateR3_Initialization" parent="" type="math-equation">
+              <nodeLayout x="3627" y="4221"/>
+            </node>
+            <node id="polRateR4_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="4725"/>
+            </node>
+            <node id="polymerizeR1" parent="" type="math-event">
+              <nodeLayout x="4890" y="0"/>
+            </node>
+            <node id="polymerizeR2" parent="" type="math-event">
+              <nodeLayout x="4890" y="491"/>
+            </node>
+            <node id="polymerizeR3" parent="" type="math-event">
+              <nodeLayout x="4890" y="982"/>
+            </node>
+            <node id="polymerizeR4" parent="" type="math-event">
+              <nodeLayout x="4890" y="1473"/>
+            </node>
+            <node id="randInt" parent="" type="math-function">
+              <nodeLayout x="4890" y="1964"/>
+            </node>
+            <node id="rate8merBindATP_Assignment_rule" parent="" type="math-equation">
+              <nodeLayout x="4890" y="2334"/>
+            </node>
+            <node id="rate9merBindATP_Assignment_rule" parent="" type="math-equation">
+              <nodeLayout x="4890" y="2769"/>
+            </node>
+            <node id="sizeR1_ATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="4890" y="3204"/>
+            </node>
+            <node id="sizeR2_ATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="4890" y="3656"/>
+            </node>
+            <node id="sizeR3_ATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="4890" y="4108"/>
+            </node>
+            <node id="sizeR4_ATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="4890" y="4560"/>
+            </node>
+            <node id="startBindATP" parent="" type="math-event">
+              <nodeLayout x="0" y="5131"/>
+            </node>
+            <node id="stochasticRound" parent="" type="math-function">
+              <nodeLayout x="717" y="5131"/>
+            </node>
+            <node id="totBindingRateATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="1561" y="5131"/>
+            </node>
+            <node id="totPolRate_Initialization" parent="" type="math-equation">
+              <nodeLayout x="2240" y="5131"/>
+            </node>
+            <node id="uniform" parent="" type="math-function">
+              <nodeLayout x="2880" y="5131"/>
+            </node>
+          </nodes>
+          <edges>
+            <edge from="default.MG_469_1MER_ADP__bound" id="MG_469_1MER_ADP__bound_port_link" to="MG_469_1MER_ADP__bound_port" type="portlink">
+              <path>
+                <segment segmentType="lineTo" x0="2465" y0="1620"/>
+                <segment segmentType="lineTo" x0="2708" y0="1620"/>
+                <segment segmentType="quadTo" x0="2950" y0="1620"/>
+                <segment segmentType="lineTo" x0="2950" y0="975"/>
+                <segment segmentType="lineTo" x0="2950" y0="652"/>
+                <segment segmentType="quadTo" x0="2950" y0="330"/>
+                <segment segmentType="lineTo" x0="1595" y0="330"/>
+                <segment segmentType="lineTo" x0="917" y0="330"/>
+                <segment segmentType="quadTo" x0="240" y0="330"/>
+                <segment segmentType="lineTo" x0="240" y0="349"/>
+                <segment segmentType="lineTo" x0="240" y0="359"/>
+                <segment segmentType="quadTo" x0="240" y0="369"/>
+                <segment segmentType="lineTo" x0="250" y0="369"/>
+                <segment segmentType="lineTo" x0="260" y0="369"/>
+              </path>
+            </edge>
+            <edge from="default.MG_469_1MER_ADP__c" id="MG_469_1MER_ADP__c_port_link" to="MG_469_1MER_ADP__c_port" type="portlink">
+              <path>
+                <segment segmentType="lineTo" x0="2420" y0="2010"/>
+                <segment segmentType="lineTo" x0="2685" y0="2010"/>
+                <segment segmentType="quadTo" x0="2950" y0="2010"/>
+                <segment segmentType="lineTo" x0="2950" y0="1415"/>
+                <segment segmentType="lineTo" x0="2950" y0="1117"/>
+                <segment segmentType="quadTo" x0="2950" y0="820"/>
+                <segment segmentType="lineTo" x0="2700" y0="820"/>
+                <segment segmentType="lineTo" x0="2575" y0="820"/>
+                <segment segmentType="quadTo" x0="2450" y0="820"/>
+                <segment segmentType="lineTo" x0="2450" y0="525"/>
+                <segment segmentType="lineTo" x0="2450" y0="377"/>
+                <segment segmentType="quadTo" x0="2450" y0="230"/>
+                <segment segmentType="lineTo" x0="1525" y0="230"/>
+                <segment segmentType="lineTo" x0="1062" y0="230"/>
+                <segment segmentType="quadTo" x0="600" y0="230"/>
+                <segment segmentType="lineTo" x0="600" y0="213"/>
+                <segment segmentType="lineTo" x0="600" y0="204"/>
+                <segment segmentType="quadTo" x0="600" y0="196"/>
+                <segment segmentType="lineTo" x0="610" y0="196"/>
+                <segment segmentType="lineTo" x0="621" y0="196"/>
+              </path>
+            </edge>
+            <edge from="default.MG_469_1MER_ATP__bound" id="MG_469_1MER_ATP__bound_port_link" to="MG_469_1MER_ATP__bound_port" type="portlink">
+              <path>
+                <segment segmentType="lineTo" x0="2203" y0="2400"/>
+                <segment segmentType="lineTo" x0="1091" y0="2400"/>
+                <segment segmentType="quadTo" x0="-20" y0="2400"/>
+                <segment segmentType="lineTo" x0="-20" y0="1315"/>
+                <segment segmentType="lineTo" x0="-20" y0="772"/>
+                <segment segmentType="quadTo" x0="-20" y0="230"/>
+                <segment segmentType="lineTo" x0="80" y0="230"/>
+                <segment segmentType="lineTo" x0="130" y0="230"/>
+                <segment segmentType="quadTo" x0="180" y0="230"/>
+                <segment segmentType="lineTo" x0="180" y0="233"/>
+                <segment segmentType="quadTo" x0="180" y0="236"/>
+                <segment segmentType="lineTo" x0="193" y0="236"/>
+                <segment segmentType="lineTo" x0="206" y0="236"/>
+              </path>
+            </edge>
+            <edge from="default.MG_469_1MER_ATP__c" id="MG_469_1MER_ATP__c_port_link" to="MG_469_1MER_ATP__c_port" type="portlink">
+              <path>
+                <segment segmentType="lineTo" x0="2203" y0="2790"/>
+                <segment segmentType="lineTo" x0="2191" y0="2790"/>
+                <segment segmentType="quadTo" x0="2180" y0="2790"/>
+                <segment segmentType="lineTo" x0="2180" y0="1555"/>
+                <segment segmentType="lineTo" x0="2180" y0="937"/>
+                <segment segmentType="quadTo" x0="2180" y0="320"/>
+                <segment segmentType="lineTo" x0="1365" y0="320"/>
+                <segment segmentType="lineTo" x0="957" y0="320"/>
+                <segment segmentType="quadTo" x0="550" y0="320"/>
+                <segment segmentType="lineTo" x0="550" y0="303"/>
+                <segment segmentType="lineTo" x0="550" y0="294"/>
+                <segment segmentType="quadTo" x0="550" y0="285"/>
+                <segment segmentType="lineTo" x0="560" y0="285"/>
+                <segment segmentType="lineTo" x0="570" y0="285"/>
+              </path>
+            </edge>
+          </edges>
+          <viewOptions>
+            <propertyRef name="addSourceSink" value="true"/>
+            <propertyRef name="autoDeleteReactions" value="false"/>
+            <propertyRef name="autoLayout" value="true"/>
+            <propertyRef name="autoMoveReactions" value="false"/>
+            <propertyRef name="cloneBrush" value="gray"/>
+            <propertyRef name="cloneFont" value="Arial;0;12;white"/>
+            <propertyRef name="compartmentBrush" value="#F0F0F0"/>
+            <propertyRef name="compartmentPen" value="4.0;#969696;Solid"/>
+            <propertyRef name="compartmentTitleFont" value="Arial;1;13;black"/>
+            <propertyRef name="complexBrush" value="#5ABEC8:#3CB4BE"/>
+            <propertyRef name="connectionPen" value="1.0;black;Solid"/>
+            <propertyRef name="contactPortBrush" value="gray"/>
+            <propertyRef name="customTitleFont" value="Arial;1;18;black"/>
+            <propertyRef name="drawOnFly" value="false"/>
+            <propertyRef name="edgePen" value="1.0;#646464;Solid"/>
+            <propertyRef name="edgeTipBrush" value="#787878"/>
+            <propertyRef name="gridOptions" type="ru.biosoft.graphics.editor.GridOptions">
+              <propertyRef name="cellSize" value="20"/>
+              <propertyRef name="gridStyle" value="POINTS"/>
+              <propertyRef name="showGrid" value="true"/>
+              <propertyRef name="stepSize" value="5"/>
+              <propertyRef name="useDefault" value="true"/>
+            </propertyRef>
+            <propertyRef name="highlight1Brush" value="#CCF"/>
+            <propertyRef name="highlight2Brush" value="#FFCECE"/>
+            <propertyRef name="highlight3Brush" value="#FFCEFF"/>
+            <propertyRef name="inputPortBrush" value="green"/>
+            <propertyRef name="macromoleculeBrush" value="#EAFFD8:#D4FFAA"/>
+            <propertyRef name="modelDefBrush" value="#C6C6C6"/>
+            <propertyRef name="modelDefinitionPen" value="1.0;black;Dashed"/>
+            <propertyRef name="moduleBrush" value="#87CEFA"/>
+            <propertyRef name="modulePen" value="1.0;black;Solid"/>
+            <propertyRef name="nodePen" value="1.0;black;Solid"/>
+            <propertyRef name="nodeTitleFont" value="Arial;0;12;black"/>
+            <propertyRef name="nodeTitleLimit" value="1000"/>
+            <propertyRef name="noteLinkPen" value="1.0;#7C007C;Dashed"/>
+            <propertyRef name="nucleicBrush" value="#B4FFFF:#A0F0F0"/>
+            <propertyRef name="orientedReactions" value="false"/>
+            <propertyRef name="outputPortBrush" value="red"/>
+            <propertyRef name="perturbingBrush" value="#FFB4FF:#F0A0F0"/>
+            <propertyRef name="phenotypeBrush" value="#F0F0FF:#C8B4FF"/>
+            <propertyRef name="portTitleFont" value="Arial;0;18;#7A378B"/>
+            <propertyRef name="simpleChemicalBrush" value="#D282AA:#BE5A96"/>
+            <propertyRef name="sourceSinkBrush" value="#E15064"/>
+            <propertyRef name="sourceSinkSize" value="30;30"/>
+            <propertyRef name="unspecifiedBrush" value="#F5E164:#F5C80A"/>
+          </viewOptions>
+        </sbgn>
         <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
           <biouml:diagramInfo completeName="RI_ATP_bindAndPolymerization"/>
           <biouml:simulationInfo completionTime="100.0" initialTime="0.0" timeIncrement="1.0"/>
@@ -5605,6 +8027,134 @@
     <comp:modelDefinition id="RI_activation" name="RepInit_Activation">
       <annotation>
         <state id="SubdiagramState" title="SubdiagramState"/>
+        <sbgn xmlns:biouml="http://www.biouml.org/ns">
+          <nodes>
+            <node id="ATP__c" multimer="0" parent="" ref="ATP__c" type="macromolecule">
+              <nodeLayout height="40" width="76" x="0" y="0"/>
+            </node>
+            <node accessType="public" id="ATP__c_port" orientation="right" parent="" ref="$ATP__c" title="ATP__c" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="317" y="81"/>
+            </node>
+            <node id="DnaA_1mer_ATP__c" multimer="0" parent="" ref="DnaA_1mer_ATP__c" type="macromolecule">
+              <nodeLayout height="40" width="188" x="0" y="390"/>
+            </node>
+            <node accessType="public" id="DnaA_1mer_ATP__c_port" orientation="right" parent="" ref="$DnaA_1mer_ATP__c" title="DnaA_1mer_ATP__c" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="512" y="83"/>
+            </node>
+            <node id="DnaA__c" multimer="0" parent="" ref="DnaA__c" type="macromolecule">
+              <nodeLayout height="40" width="87" x="538" y="0"/>
+            </node>
+            <node accessType="public" id="DnaA__c_port" orientation="right" parent="" ref="$DnaA__c" title="DnaA__c" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="367" y="200"/>
+            </node>
+            <node id="activationEvent" parent="" type="math-event">
+              <nodeLayout x="0" y="780"/>
+            </node>
+            <node accessType="public" id="activation_port" orientation="right" parent="" ref="activation" title="activation" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="579" y="247"/>
+            </node>
+            <node accessType="public" id="dissociation_port" orientation="right" parent="" ref="dissociation" title="dissociation" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="177" y="205"/>
+            </node>
+            <node id="endActivation" parent="" type="math-event">
+              <nodeLayout x="975" y="0"/>
+            </node>
+            <node id="minActivations_Initialization" parent="" type="math-equation">
+              <nodeLayout x="606" y="451"/>
+            </node>
+            <node id="minFunc" parent="" type="math-function">
+              <nodeLayout x="606" y="829"/>
+            </node>
+          </nodes>
+          <edges>
+            <edge from="ATP__c" id="ATP__c_port_link" to="ATP__c_port" type="portlink">
+              <path>
+                <segment segmentType="lineTo" x0="30" y0="40"/>
+                <segment segmentType="lineTo" x0="30" y0="69"/>
+                <segment segmentType="quadTo" x0="30" y0="97"/>
+                <segment segmentType="lineTo" x0="173" y0="97"/>
+                <segment segmentType="lineTo" x0="317" y0="97"/>
+              </path>
+            </edge>
+            <edge from="DnaA_1mer_ATP__c" id="DnaA_1mer_ATP__c_port_link" to="DnaA_1mer_ATP__c_port" type="portlink">
+              <path>
+                <segment segmentType="lineTo" x0="188" y0="410"/>
+                <segment segmentType="lineTo" x0="339" y0="410"/>
+                <segment segmentType="quadTo" x0="490" y0="410"/>
+                <segment segmentType="lineTo" x0="490" y0="255"/>
+                <segment segmentType="lineTo" x0="490" y0="177"/>
+                <segment segmentType="quadTo" x0="490" y0="99"/>
+                <segment segmentType="lineTo" x0="501" y0="99"/>
+                <segment segmentType="lineTo" x0="512" y0="99"/>
+              </path>
+            </edge>
+            <edge from="DnaA__c" id="DnaA__c_port_link" to="DnaA__c_port" type="portlink">
+              <path>
+                <segment segmentType="lineTo" x0="538" y0="20"/>
+                <segment segmentType="lineTo" x0="414" y0="20"/>
+                <segment segmentType="quadTo" x0="290" y0="20"/>
+                <segment segmentType="lineTo" x0="290" y0="55"/>
+                <segment segmentType="lineTo" x0="290" y0="73"/>
+                <segment segmentType="quadTo" x0="290" y0="90"/>
+                <segment segmentType="lineTo" x0="295" y0="90"/>
+                <segment segmentType="quadTo" x0="300" y0="90"/>
+                <segment segmentType="lineTo" x0="300" y0="153"/>
+                <segment segmentType="lineTo" x0="300" y0="185"/>
+                <segment segmentType="quadTo" x0="300" y0="216"/>
+                <segment segmentType="lineTo" x0="333" y0="216"/>
+                <segment segmentType="lineTo" x0="367" y0="216"/>
+              </path>
+            </edge>
+          </edges>
+          <viewOptions>
+            <propertyRef name="addSourceSink" value="true"/>
+            <propertyRef name="autoDeleteReactions" value="false"/>
+            <propertyRef name="autoLayout" value="true"/>
+            <propertyRef name="autoMoveReactions" value="false"/>
+            <propertyRef name="cloneBrush" value="gray"/>
+            <propertyRef name="cloneFont" value="Arial;0;12;white"/>
+            <propertyRef name="compartmentBrush" value="#F0F0F0"/>
+            <propertyRef name="compartmentPen" value="4.0;#969696;Solid"/>
+            <propertyRef name="compartmentTitleFont" value="Arial;1;13;black"/>
+            <propertyRef name="complexBrush" value="#5ABEC8:#3CB4BE"/>
+            <propertyRef name="connectionPen" value="1.0;black;Solid"/>
+            <propertyRef name="contactPortBrush" value="gray"/>
+            <propertyRef name="customTitleFont" value="Arial;1;18;black"/>
+            <propertyRef name="drawOnFly" value="false"/>
+            <propertyRef name="edgePen" value="1.0;#646464;Solid"/>
+            <propertyRef name="edgeTipBrush" value="#787878"/>
+            <propertyRef name="gridOptions" type="ru.biosoft.graphics.editor.GridOptions">
+              <propertyRef name="cellSize" value="20"/>
+              <propertyRef name="gridStyle" value="POINTS"/>
+              <propertyRef name="showGrid" value="true"/>
+              <propertyRef name="stepSize" value="5"/>
+              <propertyRef name="useDefault" value="true"/>
+            </propertyRef>
+            <propertyRef name="highlight1Brush" value="#CCF"/>
+            <propertyRef name="highlight2Brush" value="#FFCECE"/>
+            <propertyRef name="highlight3Brush" value="#FFCEFF"/>
+            <propertyRef name="inputPortBrush" value="green"/>
+            <propertyRef name="macromoleculeBrush" value="#EAFFD8:#D4FFAA"/>
+            <propertyRef name="modelDefBrush" value="#C6C6C6"/>
+            <propertyRef name="modelDefinitionPen" value="1.0;black;Dashed"/>
+            <propertyRef name="moduleBrush" value="#87CEFA"/>
+            <propertyRef name="modulePen" value="1.0;black;Solid"/>
+            <propertyRef name="nodePen" value="1.0;black;Solid"/>
+            <propertyRef name="nodeTitleFont" value="Arial;0;12;black"/>
+            <propertyRef name="nodeTitleLimit" value="1000"/>
+            <propertyRef name="noteLinkPen" value="1.0;#7C007C;Dashed"/>
+            <propertyRef name="nucleicBrush" value="#B4FFFF:#A0F0F0"/>
+            <propertyRef name="orientedReactions" value="false"/>
+            <propertyRef name="outputPortBrush" value="red"/>
+            <propertyRef name="perturbingBrush" value="#FFB4FF:#F0A0F0"/>
+            <propertyRef name="phenotypeBrush" value="#F0F0FF:#C8B4FF"/>
+            <propertyRef name="portTitleFont" value="Arial;0;18;#7A378B"/>
+            <propertyRef name="simpleChemicalBrush" value="#D282AA:#BE5A96"/>
+            <propertyRef name="sourceSinkBrush" value="#E15064"/>
+            <propertyRef name="sourceSinkSize" value="30;30"/>
+            <propertyRef name="unspecifiedBrush" value="#F5E164:#F5C80A"/>
+          </viewOptions>
+        </sbgn>
         <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
           <biouml:diagramInfo completeName="RI_activation"/>
           <biouml:simulationInfo completionTime="100.0" initialTime="0.0" timeIncrement="1.0"/>
@@ -5813,6 +8363,258 @@
     <comp:modelDefinition id="RI_displacing" name="RepInit_Displacing">
       <annotation>
         <state id="SubdiagramState" title="SubdiagramState"/>
+        <sbgn xmlns:biouml="http://www.biouml.org/ns">
+          <nodes>
+            <node id="CheckR1" parent="" type="math-event">
+              <nodeLayout x="0" y="0"/>
+            </node>
+            <node id="CheckR2" parent="" type="math-event">
+              <nodeLayout x="0" y="459"/>
+            </node>
+            <node id="CheckR3" parent="" type="math-event">
+              <nodeLayout x="0" y="918"/>
+            </node>
+            <node id="CheckR4" parent="" type="math-event">
+              <nodeLayout x="986" y="0"/>
+            </node>
+            <node accessType="public" id="MG_469_1MER_ADP__bound_port" orientation="right" parent="" ref="$default.MG_469_1MER_ADP__bound" title="MG_469_1MER_ADP__bound" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="154" y="152"/>
+            </node>
+            <node accessType="public" id="MG_469_1MER_ADP__c_port" orientation="right" parent="" ref="$default.MG_469_1MER_ADP__c" title="MG_469_1MER_ADP__c" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="98" y="239"/>
+            </node>
+            <node accessType="public" id="MG_469_1MER_ATP__bound_port" orientation="right" parent="" ref="$default.MG_469_1MER_ATP__bound" title="MG_469_1MER_ATP__bound" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="511" y="162"/>
+            </node>
+            <node accessType="public" id="MG_469_1MER_ATP__c_port" orientation="right" parent="" ref="$default.MG_469_1MER_ATP__c" title="MG_469_1MER_ATP__c" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="624" y="270"/>
+            </node>
+            <node id="RemoveR1ADP" parent="" type="math-event">
+              <nodeLayout x="986" y="459"/>
+            </node>
+            <node id="RemoveR1ATP" parent="" type="math-event">
+              <nodeLayout x="0" y="1377"/>
+            </node>
+            <node id="RemoveR2ADP" parent="" type="math-event">
+              <nodeLayout x="986" y="974"/>
+            </node>
+            <node id="RemoveR2ATP" parent="" type="math-event">
+              <nodeLayout x="0" y="1892"/>
+            </node>
+            <node id="RemoveR3ADP" parent="" type="math-event">
+              <nodeLayout x="986" y="1489"/>
+            </node>
+            <node id="RemoveR3ATP" parent="" type="math-event">
+              <nodeLayout x="1972" y="0"/>
+            </node>
+            <node id="RemoveR4ADP" parent="" type="math-event">
+              <nodeLayout x="1972" y="515"/>
+            </node>
+            <node id="RemoveR4ATP" parent="" type="math-event">
+              <nodeLayout x="1972" y="1030"/>
+            </node>
+            <node id="RemoveUnspecificSites" parent="" type="math-event">
+              <nodeLayout x="1972" y="1545"/>
+            </node>
+            <node accessType="public" id="chromosome_R1_port" orientation="right" parent="" ref="chromosome_R1" title="chromosome_R1" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="285" y="298"/>
+            </node>
+            <node accessType="public" id="chromosome_R2_port" orientation="right" parent="" ref="chromosome_R2" title="chromosome_R2" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="432" y="397"/>
+            </node>
+            <node accessType="public" id="chromosome_R3_port" orientation="right" parent="" ref="chromosome_R3" title="chromosome_R3" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="450" y="300"/>
+            </node>
+            <node accessType="public" id="chromosome_R4_port" orientation="right" parent="" ref="chromosome_R4" title="chromosome_R4" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="275" y="375"/>
+            </node>
+            <node id="default" parent="" ref="default" title="Displacing" type="compartment">
+              <nodeLayout height="150" width="150" x="2743" y="0"/>
+            </node>
+            <node id="MG_469_1MER_ADP__bound" multimer="0" parent="default" ref="default.MG_469_1MER_ADP__bound" type="macromolecule">
+              <nodeLayout height="40" width="262" x="0" y="2407"/>
+            </node>
+            <node id="MG_469_1MER_ADP__c" multimer="0" parent="default" ref="default.MG_469_1MER_ADP__c" type="macromolecule">
+              <nodeLayout height="40" width="217" x="612" y="2407"/>
+            </node>
+            <node id="MG_469_1MER_ATP__bound" multimer="0" parent="default" ref="default.MG_469_1MER_ATP__bound" type="macromolecule">
+              <nodeLayout height="40" width="260" x="1179" y="2407"/>
+            </node>
+            <node id="MG_469_1MER_ATP__c" multimer="0" parent="default" ref="default.MG_469_1MER_ATP__c" type="macromolecule">
+              <nodeLayout height="40" width="215" x="1789" y="2407"/>
+            </node>
+            <node id="displacingDnaAADP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="2797"/>
+            </node>
+            <node id="displacingDnaAATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="3208"/>
+            </node>
+            <node accessType="public" id="displacing_port" orientation="right" parent="" ref="displacing" title="displacing" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="498" y="237"/>
+            </node>
+            <node id="endEvent" parent="" type="math-event">
+              <nodeLayout x="3243" y="0"/>
+            </node>
+            <node id="fractionalPart" parent="" type="math-function">
+              <nodeLayout x="2743" y="500"/>
+            </node>
+            <node id="minFunc" parent="" type="math-function">
+              <nodeLayout x="2743" y="870"/>
+            </node>
+            <node id="minRxState_Initialization" parent="" type="math-equation">
+              <nodeLayout x="2743" y="1240"/>
+            </node>
+            <node id="mod" parent="" type="math-function">
+              <nodeLayout x="2743" y="1618"/>
+            </node>
+            <node id="randInt" parent="" type="math-function">
+              <nodeLayout x="2743" y="1988"/>
+            </node>
+            <node accessType="public" id="reactivation_port" orientation="right" parent="" ref="reactivation" title="reactivation" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="43" y="193"/>
+            </node>
+            <node id="stochRoundR1ADP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="2743" y="2358"/>
+            </node>
+            <node id="stochRoundR1ATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="2743" y="2747"/>
+            </node>
+            <node id="stochRoundR2ADP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="3340" y="2747"/>
+            </node>
+            <node id="stochRoundR2ATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="3340" y="3136"/>
+            </node>
+            <node id="stochRoundR3ADP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="3619"/>
+            </node>
+            <node id="stochRoundR3ATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="599" y="3619"/>
+            </node>
+            <node id="stochRoundR4ADP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="1196" y="3619"/>
+            </node>
+            <node id="stochRoundR4ATP_Initialization" parent="" type="math-equation">
+              <nodeLayout x="1795" y="3619"/>
+            </node>
+            <node id="stochasticRound" parent="" type="math-function">
+              <nodeLayout x="2392" y="3619"/>
+            </node>
+            <node id="uniform" parent="" type="math-function">
+              <nodeLayout x="3236" y="3619"/>
+            </node>
+          </nodes>
+          <edges>
+            <edge from="default.MG_469_1MER_ADP__bound" id="MG_469_1MER_ADP__bound_port_link" to="MG_469_1MER_ADP__bound_port" type="portlink">
+              <path>
+                <segment segmentType="lineTo" x0="0" y0="2420"/>
+                <segment segmentType="lineTo" x0="-15" y0="2420"/>
+                <segment segmentType="quadTo" x0="-30" y0="2420"/>
+                <segment segmentType="lineTo" x0="-30" y0="1294"/>
+                <segment segmentType="lineTo" x0="-30" y0="731"/>
+                <segment segmentType="quadTo" x0="-30" y0="168"/>
+                <segment segmentType="lineTo" x0="62" y0="168"/>
+                <segment segmentType="lineTo" x0="154" y0="168"/>
+              </path>
+            </edge>
+            <edge from="default.MG_469_1MER_ADP__c" id="MG_469_1MER_ADP__c_port_link" to="MG_469_1MER_ADP__c_port" type="portlink">
+              <path>
+                <segment segmentType="lineTo" x0="720" y0="2407"/>
+                <segment segmentType="lineTo" x0="720" y0="2393"/>
+                <segment segmentType="quadTo" x0="720" y0="2380"/>
+                <segment segmentType="lineTo" x0="350" y0="2380"/>
+                <segment segmentType="lineTo" x0="165" y0="2380"/>
+                <segment segmentType="quadTo" x0="-20" y0="2380"/>
+                <segment segmentType="lineTo" x0="-20" y0="1318"/>
+                <segment segmentType="lineTo" x0="-20" y0="786"/>
+                <segment segmentType="quadTo" x0="-20" y0="255"/>
+                <segment segmentType="lineTo" x0="39" y0="255"/>
+                <segment segmentType="lineTo" x0="98" y0="255"/>
+              </path>
+            </edge>
+            <edge from="default.MG_469_1MER_ATP__bound" id="MG_469_1MER_ATP__bound_port_link" to="MG_469_1MER_ATP__bound_port" type="portlink">
+              <path>
+                <segment segmentType="lineTo" x0="1439" y0="2420"/>
+                <segment segmentType="lineTo" x0="1445" y0="2420"/>
+                <segment segmentType="quadTo" x0="1450" y0="2420"/>
+                <segment segmentType="lineTo" x0="1450" y0="1315"/>
+                <segment segmentType="lineTo" x0="1450" y0="762"/>
+                <segment segmentType="quadTo" x0="1450" y0="210"/>
+                <segment segmentType="lineTo" x0="970" y0="210"/>
+                <segment segmentType="lineTo" x0="730" y0="210"/>
+                <segment segmentType="quadTo" x0="490" y0="210"/>
+                <segment segmentType="lineTo" x0="490" y0="194"/>
+                <segment segmentType="lineTo" x0="490" y0="186"/>
+                <segment segmentType="quadTo" x0="490" y0="178"/>
+                <segment segmentType="lineTo" x0="500" y0="178"/>
+                <segment segmentType="lineTo" x0="511" y0="178"/>
+              </path>
+            </edge>
+            <edge from="default.MG_469_1MER_ATP__c" id="MG_469_1MER_ATP__c_port_link" to="MG_469_1MER_ATP__c_port" type="portlink">
+              <path>
+                <segment segmentType="lineTo" x0="1890" y0="2407"/>
+                <segment segmentType="lineTo" x0="1890" y0="1328"/>
+                <segment segmentType="quadTo" x0="1890" y0="250"/>
+                <segment segmentType="lineTo" x0="1245" y0="250"/>
+                <segment segmentType="lineTo" x0="922" y0="250"/>
+                <segment segmentType="quadTo" x0="600" y0="250"/>
+                <segment segmentType="lineTo" x0="600" y0="268"/>
+                <segment segmentType="lineTo" x0="600" y0="277"/>
+                <segment segmentType="quadTo" x0="600" y0="286"/>
+                <segment segmentType="lineTo" x0="612" y0="286"/>
+                <segment segmentType="lineTo" x0="624" y0="286"/>
+              </path>
+            </edge>
+          </edges>
+          <viewOptions>
+            <propertyRef name="addSourceSink" value="true"/>
+            <propertyRef name="autoDeleteReactions" value="false"/>
+            <propertyRef name="autoLayout" value="true"/>
+            <propertyRef name="autoMoveReactions" value="false"/>
+            <propertyRef name="cloneBrush" value="gray"/>
+            <propertyRef name="cloneFont" value="Arial;0;12;white"/>
+            <propertyRef name="compartmentBrush" value="#F0F0F0"/>
+            <propertyRef name="compartmentPen" value="4.0;#969696;Solid"/>
+            <propertyRef name="compartmentTitleFont" value="Arial;1;13;black"/>
+            <propertyRef name="complexBrush" value="#5ABEC8:#3CB4BE"/>
+            <propertyRef name="connectionPen" value="1.0;black;Solid"/>
+            <propertyRef name="contactPortBrush" value="gray"/>
+            <propertyRef name="customTitleFont" value="Arial;1;18;black"/>
+            <propertyRef name="drawOnFly" value="false"/>
+            <propertyRef name="edgePen" value="1.0;#646464;Solid"/>
+            <propertyRef name="edgeTipBrush" value="#787878"/>
+            <propertyRef name="gridOptions" type="ru.biosoft.graphics.editor.GridOptions">
+              <propertyRef name="cellSize" value="20"/>
+              <propertyRef name="gridStyle" value="POINTS"/>
+              <propertyRef name="showGrid" value="true"/>
+              <propertyRef name="stepSize" value="5"/>
+              <propertyRef name="useDefault" value="true"/>
+            </propertyRef>
+            <propertyRef name="highlight1Brush" value="#CCF"/>
+            <propertyRef name="highlight2Brush" value="#FFCECE"/>
+            <propertyRef name="highlight3Brush" value="#FFCEFF"/>
+            <propertyRef name="inputPortBrush" value="green"/>
+            <propertyRef name="macromoleculeBrush" value="#EAFFD8:#D4FFAA"/>
+            <propertyRef name="modelDefBrush" value="#C6C6C6"/>
+            <propertyRef name="modelDefinitionPen" value="1.0;black;Dashed"/>
+            <propertyRef name="moduleBrush" value="#87CEFA"/>
+            <propertyRef name="modulePen" value="1.0;black;Solid"/>
+            <propertyRef name="nodePen" value="1.0;black;Solid"/>
+            <propertyRef name="nodeTitleFont" value="Arial;0;12;black"/>
+            <propertyRef name="nodeTitleLimit" value="1000"/>
+            <propertyRef name="noteLinkPen" value="1.0;#7C007C;Dashed"/>
+            <propertyRef name="nucleicBrush" value="#B4FFFF:#A0F0F0"/>
+            <propertyRef name="orientedReactions" value="false"/>
+            <propertyRef name="outputPortBrush" value="red"/>
+            <propertyRef name="perturbingBrush" value="#FFB4FF:#F0A0F0"/>
+            <propertyRef name="phenotypeBrush" value="#F0F0FF:#C8B4FF"/>
+            <propertyRef name="portTitleFont" value="Arial;0;18;#7A378B"/>
+            <propertyRef name="simpleChemicalBrush" value="#D282AA:#BE5A96"/>
+            <propertyRef name="sourceSinkBrush" value="#E15064"/>
+            <propertyRef name="sourceSinkSize" value="30;30"/>
+            <propertyRef name="unspecifiedBrush" value="#F5E164:#F5C80A"/>
+          </viewOptions>
+        </sbgn>
         <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
           <biouml:diagramInfo completeName="RI_displacing"/>
           <biouml:simulationInfo completionTime="100.0" initialTime="0.0" timeIncrement="1.0"/>
@@ -7326,6 +10128,143 @@
     <comp:modelDefinition id="RI_dissociation" name="RepInit_Dissociation">
       <annotation>
         <state id="SubdiagramState" title="SubdiagramState"/>
+        <sbgn xmlns:biouml="http://www.biouml.org/ns">
+          <nodes>
+            <node accessType="public" id="DnaA_1mer_ADP_port" orientation="right" parent="" ref="DnaA_1mer_ADP" title="DnaA_1mer_ADP" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="321" y="78"/>
+            </node>
+            <node id="DnaA_2mer_ATP_internal_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="0"/>
+            </node>
+            <node accessType="public" id="DnaA_2mer_ATP_port" orientation="right" parent="" ref="DnaA_2mer_ATP" title="DnaA_2mer_ATP" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="415" y="152"/>
+            </node>
+            <node id="DnaA_3mer_ATP_internal_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="394"/>
+            </node>
+            <node accessType="public" id="DnaA_3mer_ATP_port" orientation="right" parent="" ref="DnaA_3mer_ATP" title="DnaA_3mer_ATP" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="564" y="113"/>
+            </node>
+            <node id="DnaA_4mer_ATP_internal_Initialization" parent="" type="math-equation">
+              <nodeLayout x="531" y="0"/>
+            </node>
+            <node accessType="public" id="DnaA_4mer_ATP_port" orientation="right" parent="" ref="DnaA_4mer_ATP" title="DnaA_4mer_ATP" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="690" y="190"/>
+            </node>
+            <node id="DnaA_5mer_ATP_internal_Initialization" parent="" type="math-equation">
+              <nodeLayout x="531" y="394"/>
+            </node>
+            <node accessType="public" id="DnaA_5mer_ATP_port" orientation="right" parent="" ref="DnaA_5mer_ATP" title="DnaA_5mer_ATP" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="579" y="240"/>
+            </node>
+            <node id="DnaA_6mer_ATP_internal_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="788"/>
+            </node>
+            <node accessType="public" id="DnaA_6mer_ATP_port" orientation="right" parent="" ref="DnaA_6mer_ATP" title="DnaA_6mer_ATP" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="420" y="197"/>
+            </node>
+            <node id="DnaA_7mer_ATP_internal_Initialization" parent="" type="math-equation">
+              <nodeLayout x="531" y="788"/>
+            </node>
+            <node accessType="public" id="DnaA_7mer_ATP_port" orientation="right" parent="" ref="DnaA_7mer_ATP" title="DnaA_7mer_ATP" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="782" y="133"/>
+            </node>
+            <node accessType="public" id="H_port" orientation="right" parent="" ref="H" title="H" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="155" y="55"/>
+            </node>
+            <node accessType="public" id="Pi_port" orientation="right" parent="" ref="Pi" title="Pi" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="225" y="90"/>
+            </node>
+            <node accessType="public" id="bindAndPolATP_port_1" orientation="right" parent="" ref="bindAndPolATP" title="bindAndPolATP" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="305" y="227"/>
+            </node>
+            <node id="dissociationEvent" parent="" type="math-event">
+              <nodeLayout x="0" y="1182"/>
+            </node>
+            <node accessType="public" id="dissociation_port" orientation="right" parent="" ref="dissociation" title="dissociation" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="205" y="130"/>
+            </node>
+            <node id="endDissociation" parent="" type="math-event">
+              <nodeLayout x="1331" y="0"/>
+            </node>
+            <node id="nMonomers_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="1977"/>
+            </node>
+            <node id="numberGenerator" parent="" type="math-event">
+              <nodeLayout x="1331" y="435"/>
+            </node>
+            <node id="remove2mer" parent="" type="math-event">
+              <nodeLayout x="1898" y="0"/>
+            </node>
+            <node id="remove3mer" parent="" type="math-event">
+              <nodeLayout x="1331" y="870"/>
+            </node>
+            <node id="remove4mer" parent="" type="math-event">
+              <nodeLayout x="1331" y="1385"/>
+            </node>
+            <node id="remove5mer" parent="" type="math-event">
+              <nodeLayout x="0" y="2371"/>
+            </node>
+            <node id="remove6mer" parent="" type="math-event">
+              <nodeLayout x="1331" y="1900"/>
+            </node>
+            <node id="remove7mer" parent="" type="math-event">
+              <nodeLayout x="0" y="2886"/>
+            </node>
+            <node accessType="public" id="water_port" orientation="right" parent="" ref="water" title="water" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="75" y="80"/>
+            </node>
+          </nodes>
+          <edges/>
+          <viewOptions>
+            <propertyRef name="addSourceSink" value="true"/>
+            <propertyRef name="autoDeleteReactions" value="false"/>
+            <propertyRef name="autoLayout" value="true"/>
+            <propertyRef name="autoMoveReactions" value="false"/>
+            <propertyRef name="cloneBrush" value="gray"/>
+            <propertyRef name="cloneFont" value="Arial;0;12;white"/>
+            <propertyRef name="compartmentBrush" value="#F0F0F0"/>
+            <propertyRef name="compartmentPen" value="4.0;#969696;Solid"/>
+            <propertyRef name="compartmentTitleFont" value="Arial;1;13;black"/>
+            <propertyRef name="complexBrush" value="#5ABEC8:#3CB4BE"/>
+            <propertyRef name="connectionPen" value="1.0;black;Solid"/>
+            <propertyRef name="contactPortBrush" value="gray"/>
+            <propertyRef name="customTitleFont" value="Arial;1;18;black"/>
+            <propertyRef name="drawOnFly" value="false"/>
+            <propertyRef name="edgePen" value="1.0;#646464;Solid"/>
+            <propertyRef name="edgeTipBrush" value="#787878"/>
+            <propertyRef name="gridOptions" type="ru.biosoft.graphics.editor.GridOptions">
+              <propertyRef name="cellSize" value="20"/>
+              <propertyRef name="gridStyle" value="POINTS"/>
+              <propertyRef name="showGrid" value="true"/>
+              <propertyRef name="stepSize" value="5"/>
+              <propertyRef name="useDefault" value="true"/>
+            </propertyRef>
+            <propertyRef name="highlight1Brush" value="#CCF"/>
+            <propertyRef name="highlight2Brush" value="#FFCECE"/>
+            <propertyRef name="highlight3Brush" value="#FFCEFF"/>
+            <propertyRef name="inputPortBrush" value="green"/>
+            <propertyRef name="macromoleculeBrush" value="#EAFFD8:#D4FFAA"/>
+            <propertyRef name="modelDefBrush" value="#C6C6C6"/>
+            <propertyRef name="modelDefinitionPen" value="1.0;black;Dashed"/>
+            <propertyRef name="moduleBrush" value="#87CEFA"/>
+            <propertyRef name="modulePen" value="1.0;black;Solid"/>
+            <propertyRef name="nodePen" value="1.0;black;Solid"/>
+            <propertyRef name="nodeTitleFont" value="Arial;0;12;black"/>
+            <propertyRef name="nodeTitleLimit" value="1000"/>
+            <propertyRef name="noteLinkPen" value="1.0;#7C007C;Dashed"/>
+            <propertyRef name="nucleicBrush" value="#B4FFFF:#A0F0F0"/>
+            <propertyRef name="orientedReactions" value="false"/>
+            <propertyRef name="outputPortBrush" value="red"/>
+            <propertyRef name="perturbingBrush" value="#FFB4FF:#F0A0F0"/>
+            <propertyRef name="phenotypeBrush" value="#F0F0FF:#C8B4FF"/>
+            <propertyRef name="portTitleFont" value="Arial;0;18;#7A378B"/>
+            <propertyRef name="simpleChemicalBrush" value="#D282AA:#BE5A96"/>
+            <propertyRef name="sourceSinkBrush" value="#E15064"/>
+            <propertyRef name="sourceSinkSize" value="30;30"/>
+            <propertyRef name="unspecifiedBrush" value="#F5E164:#F5C80A"/>
+          </viewOptions>
+        </sbgn>
         <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
           <biouml:diagramInfo completeName="RI_dissociation"/>
           <biouml:simulationInfo completionTime="100.0" initialTime="0.0" timeIncrement="1.0"/>
@@ -8338,6 +11277,154 @@
     <comp:modelDefinition id="RI_reactivation" name="RepInit_Reactivation">
       <annotation>
         <state id="SubdiagramState" title="SubdiagramState"/>
+        <sbgn xmlns:biouml="http://www.biouml.org/ns">
+          <nodes>
+            <node id="ADP__c" multimer="0" parent="" ref="ADP__c" type="macromolecule">
+              <nodeLayout height="40" width="78" x="0" y="0"/>
+            </node>
+            <node accessType="public" id="ADP__c_port" orientation="right" parent="" ref="$ADP__c" title="ADP__c" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="582" y="189"/>
+            </node>
+            <node id="ATP__c" multimer="0" parent="" ref="ATP__c" type="macromolecule">
+              <nodeLayout height="40" width="76" x="0" y="390"/>
+            </node>
+            <node accessType="public" id="ATP__c_port" orientation="right" parent="" ref="$ATP__c" title="ATP__c" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="228" y="111"/>
+            </node>
+            <node id="DnaA_1mer_ADP__c" multimer="0" parent="" ref="DnaA_1mer_ADP__c" type="macromolecule">
+              <nodeLayout height="40" width="190" x="428" y="0"/>
+            </node>
+            <node accessType="public" id="DnaA_1mer_ADP__c_port" orientation="right" parent="" ref="$DnaA_1mer_ADP__c" title="DnaA_1mer_ADP__c" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="219" y="88"/>
+            </node>
+            <node id="DnaA_1mer_ATP__c" multimer="0" parent="" ref="DnaA_1mer_ATP__c" type="macromolecule">
+              <nodeLayout height="40" width="188" x="426" y="390"/>
+            </node>
+            <node accessType="public" id="DnaA_1mer_ATP__c_port" orientation="right" parent="" ref="$DnaA_1mer_ATP__c" title="DnaA_1mer_ATP__c" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="241" y="177"/>
+            </node>
+            <node accessType="public" id="cell_Volume_port" orientation="right" parent="" ref="cell_Volume" title="cell_Volume" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="49" y="163"/>
+            </node>
+            <node id="endReactivation" parent="" type="math-event">
+              <nodeLayout x="0" y="780"/>
+            </node>
+            <node id="fractionalPart" parent="" type="math-function">
+              <nodeLayout x="968" y="0"/>
+            </node>
+            <node accessType="public" id="m_membrane_port" orientation="right" parent="" ref="m_membrane" title="m_membrane" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="42" y="103"/>
+            </node>
+            <node id="membraneConc_Assignment_rule" parent="" type="math-equation">
+              <nodeLayout x="968" y="370"/>
+            </node>
+            <node id="minFunc" parent="" type="math-function">
+              <nodeLayout x="0" y="1215"/>
+            </node>
+            <node id="numRegenerations_Initialization" parent="" type="math-equation">
+              <nodeLayout x="0" y="1585"/>
+            </node>
+            <node id="reactivationEvent" parent="" type="math-event">
+              <nodeLayout x="1508" y="0"/>
+            </node>
+            <node accessType="public" id="reactivation_port" orientation="right" parent="" ref="reactivation" title="reactivation" type="contact connection port">
+              <nodeLayout height="0" orientation="right" width="0" x="324" y="122"/>
+            </node>
+            <node id="stochasticRound" parent="" type="math-function">
+              <nodeLayout x="999" y="775"/>
+            </node>
+          </nodes>
+          <edges>
+            <edge from="ADP__c" id="ADP__c_port_link" to="ADP__c_port" type="portlink">
+              <path>
+                <segment segmentType="lineTo" x0="30" y0="40"/>
+                <segment segmentType="lineTo" x0="30" y0="50"/>
+                <segment segmentType="quadTo" x0="30" y0="60"/>
+                <segment segmentType="lineTo" x0="295" y0="60"/>
+                <segment segmentType="lineTo" x0="428" y0="60"/>
+                <segment segmentType="quadTo" x0="560" y0="60"/>
+                <segment segmentType="lineTo" x0="560" y0="132"/>
+                <segment segmentType="lineTo" x0="560" y0="169"/>
+                <segment segmentType="quadTo" x0="560" y0="205"/>
+                <segment segmentType="lineTo" x0="571" y0="205"/>
+                <segment segmentType="lineTo" x0="582" y0="205"/>
+              </path>
+            </edge>
+            <edge from="ATP__c" id="ATP__c_port_link" to="ATP__c_port" type="portlink"/>
+            <edge from="DnaA_1mer_ADP__c" id="DnaA_1mer_ADP__c_port_link" to="DnaA_1mer_ADP__c_port" type="portlink">
+              <path>
+                <segment segmentType="lineTo" x0="428" y0="20"/>
+                <segment segmentType="lineTo" x0="309" y0="20"/>
+                <segment segmentType="quadTo" x0="190" y0="20"/>
+                <segment segmentType="lineTo" x0="190" y0="62"/>
+                <segment segmentType="lineTo" x0="190" y0="83"/>
+                <segment segmentType="quadTo" x0="190" y0="104"/>
+                <segment segmentType="lineTo" x0="204" y0="104"/>
+                <segment segmentType="lineTo" x0="219" y0="104"/>
+              </path>
+            </edge>
+            <edge from="DnaA_1mer_ATP__c" id="DnaA_1mer_ATP__c_port_link" to="DnaA_1mer_ATP__c_port" type="portlink">
+              <path>
+                <segment segmentType="lineTo" x0="426" y0="410"/>
+                <segment segmentType="lineTo" x0="323" y0="410"/>
+                <segment segmentType="quadTo" x0="220" y0="410"/>
+                <segment segmentType="lineTo" x0="220" y0="302"/>
+                <segment segmentType="lineTo" x0="220" y0="247"/>
+                <segment segmentType="quadTo" x0="220" y0="193"/>
+                <segment segmentType="lineTo" x0="230" y0="193"/>
+                <segment segmentType="lineTo" x0="241" y0="193"/>
+              </path>
+            </edge>
+          </edges>
+          <viewOptions>
+            <propertyRef name="addSourceSink" value="true"/>
+            <propertyRef name="autoDeleteReactions" value="false"/>
+            <propertyRef name="autoLayout" value="true"/>
+            <propertyRef name="autoMoveReactions" value="false"/>
+            <propertyRef name="cloneBrush" value="gray"/>
+            <propertyRef name="cloneFont" value="Arial;0;12;white"/>
+            <propertyRef name="compartmentBrush" value="#F0F0F0"/>
+            <propertyRef name="compartmentPen" value="4.0;#969696;Solid"/>
+            <propertyRef name="compartmentTitleFont" value="Arial;1;13;black"/>
+            <propertyRef name="complexBrush" value="#5ABEC8:#3CB4BE"/>
+            <propertyRef name="connectionPen" value="1.0;black;Solid"/>
+            <propertyRef name="contactPortBrush" value="gray"/>
+            <propertyRef name="customTitleFont" value="Arial;1;18;black"/>
+            <propertyRef name="drawOnFly" value="false"/>
+            <propertyRef name="edgePen" value="1.0;#646464;Solid"/>
+            <propertyRef name="edgeTipBrush" value="#787878"/>
+            <propertyRef name="gridOptions" type="ru.biosoft.graphics.editor.GridOptions">
+              <propertyRef name="cellSize" value="20"/>
+              <propertyRef name="gridStyle" value="POINTS"/>
+              <propertyRef name="showGrid" value="true"/>
+              <propertyRef name="stepSize" value="5"/>
+              <propertyRef name="useDefault" value="true"/>
+            </propertyRef>
+            <propertyRef name="highlight1Brush" value="#CCF"/>
+            <propertyRef name="highlight2Brush" value="#FFCECE"/>
+            <propertyRef name="highlight3Brush" value="#FFCEFF"/>
+            <propertyRef name="inputPortBrush" value="green"/>
+            <propertyRef name="macromoleculeBrush" value="#EAFFD8:#D4FFAA"/>
+            <propertyRef name="modelDefBrush" value="#C6C6C6"/>
+            <propertyRef name="modelDefinitionPen" value="1.0;black;Dashed"/>
+            <propertyRef name="moduleBrush" value="#87CEFA"/>
+            <propertyRef name="modulePen" value="1.0;black;Solid"/>
+            <propertyRef name="nodePen" value="1.0;black;Solid"/>
+            <propertyRef name="nodeTitleFont" value="Arial;0;12;black"/>
+            <propertyRef name="nodeTitleLimit" value="1000"/>
+            <propertyRef name="noteLinkPen" value="1.0;#7C007C;Dashed"/>
+            <propertyRef name="nucleicBrush" value="#B4FFFF:#A0F0F0"/>
+            <propertyRef name="orientedReactions" value="false"/>
+            <propertyRef name="outputPortBrush" value="red"/>
+            <propertyRef name="perturbingBrush" value="#FFB4FF:#F0A0F0"/>
+            <propertyRef name="phenotypeBrush" value="#F0F0FF:#C8B4FF"/>
+            <propertyRef name="portTitleFont" value="Arial;0;18;#7A378B"/>
+            <propertyRef name="simpleChemicalBrush" value="#D282AA:#BE5A96"/>
+            <propertyRef name="sourceSinkBrush" value="#E15064"/>
+            <propertyRef name="sourceSinkSize" value="30;30"/>
+            <propertyRef name="unspecifiedBrush" value="#F5E164:#F5C80A"/>
+          </viewOptions>
+        </sbgn>
         <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
           <biouml:diagramInfo completeName="RI_reactivation"/>
           <biouml:simulationInfo completionTime="100.0" initialTime="0.0" timeIncrement="1.0"/>
