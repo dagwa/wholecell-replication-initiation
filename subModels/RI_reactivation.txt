@@ -1,5 +1,8 @@
+function uniform(x,y)
+(x+y)/2;
+end
 function stochasticRound(x)
-piecewise(floor(x)+1.0,random()<fractionalPart(x),floor(x));
+piecewise(floor(x)+1.0,uniform(0,1)<fractionalPart(x),floor(x));
 end
 function minFunc(x,y)
 piecewise(x,x<y,y);
