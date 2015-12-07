@@ -7,111 +7,113 @@
     <listOfSpecies>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="ADP__c" initialAmount="0.0" name="ADP">
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="ADP__c_port" comp:submodelRef="RI_reactivation" metaid="CONNECTION0049"/>
+          <comp:replacedElement comp:portRef="ADP__c_port" comp:submodelRef="RI_reactivation" metaid="CONNECTION0077"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="ATP__c" initialAmount="0.0" name="ATP">
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="ATP__c_port" comp:submodelRef="RI_activation" metaid="CONNECTION0016"/>
-          <comp:replacedElement comp:portRef="ATP__c_port" comp:submodelRef="RI_reactivation" metaid="CONNECTION0050"/>
+          <comp:replacedElement comp:portRef="ATP__c_port" comp:submodelRef="RI_activation" metaid="CONNECTION0070"/>
+          <comp:replacedElement comp:portRef="ATP__c_port" comp:submodelRef="RI_reactivation" metaid="CONNECTION0071"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="Geometry_volume" initialAmount="0.0">
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="cell_Volume_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0089"/>
-          <comp:replacedElement comp:portRef="cell_Volume_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0106"/>
-          <comp:replacedElement comp:portRef="cell_Volume_port" comp:submodelRef="RI_reactivation" metaid="CONNECTION0107"/>
+          <comp:replacedElement comp:portRef="cell_Volume_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0089"/>
+          <comp:replacedElement comp:portRef="cell_Volume_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0090"/>
+          <comp:replacedElement comp:portRef="cell_Volume_port" comp:submodelRef="RI_reactivation" metaid="CONNECTION0091"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="H2O__c" initialAmount="0.0" name="H2O">
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="water_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0015"/>
+          <comp:replacedElement comp:portRef="water_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0084"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="H__c" initialAmount="0.0" name="H">
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="H_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0014"/>
+          <comp:replacedElement comp:portRef="H_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0086"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ADP__c" initialAmount="0.0">
-        <comp:replacedBy comp:portRef="MG_469_1MER_ADP__c_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0058"/>
-        <comp:replacedBy comp:portRef="MG_469_1MER_ADP__c_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0059"/>
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="DnaA_1mer_ADP__c_port" comp:submodelRef="RI_reactivation" metaid="CONNECTION0061"/>
-          <comp:replacedElement comp:portRef="MG_469_1MER_ADP__c_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0091"/>
-          <comp:replacedElement comp:portRef="DnaA_1mer_ADP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0112"/>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ADP__c_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0092"/>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ADP__c_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0094"/>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ADP__c_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0095"/>
+          <comp:replacedElement comp:portRef="DnaA_1mer_ADP__c_port" comp:submodelRef="RI_reactivation" metaid="CONNECTION0106"/>
+          <comp:replacedElement comp:portRef="DnaA_1mer_ADP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0118"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ADP__d__bound" initialAmount="0.0">
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="MG_469_1MER_ADP__bound_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0095"/>
-          <comp:replacedElement comp:portRef="MG_469_1MER_ADP__bound_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0105"/>
           <comp:replacedElement comp:portRef="MG_469_1MER_ADP__bound_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0114"/>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ADP__bound_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0115"/>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ADP__bound_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0117"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ATP__c" initialAmount="0.0">
-        <comp:replacedBy comp:portRef="MG_469_1MER_ATP__c_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0057"/>
-        <comp:replacedBy comp:portRef="MG_469_1MER_ATP__c_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0060"/>
-        <comp:replacedBy comp:portRef="MG_469_1MER_ATP__c_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0090"/>
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="DnaA_1mer_ATP__c_port" comp:submodelRef="RI_activation" metaid="CONNECTION0064"/>
-          <comp:replacedElement comp:portRef="DnaA_1mer_ATP__c_port" comp:submodelRef="RI_reactivation" metaid="CONNECTION0104"/>
+          <comp:replacedElement comp:portRef="DnaA_1mer_ATP__c_port" comp:submodelRef="RI_activation" metaid="CONNECTION0078"/>
+          <comp:replacedElement comp:portRef="DnaA_1mer_ATP__c_port" comp:submodelRef="RI_reactivation" metaid="CONNECTION0082"/>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ATP__c_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0099"/>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ATP__c_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0104"/>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ATP__c_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0105"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_1MER_ATP__d__bound" initialAmount="0.0">
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="MG_469_1MER_ATP__bound_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0088"/>
-          <comp:replacedElement comp:portRef="MG_469_1MER_ATP__bound_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0113"/>
-          <comp:replacedElement comp:portRef="MG_469_1MER_ATP__bound_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0115"/>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ATP__bound_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0107"/>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ATP__bound_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0112"/>
+          <comp:replacedElement comp:portRef="MG_469_1MER_ATP__bound_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0113"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_2MER_1ATP_ADP__d__bound" initialAmount="0.0"/>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_2MER_ATP__d__bound" initialAmount="0.0">
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="DnaA_2mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0065"/>
+          <comp:replacedElement comp:portRef="DnaA_2mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0121"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_3MER_2ATP_ADP__d__bound" initialAmount="0.0"/>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_3MER_ATP__d__bound" initialAmount="0.0">
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="DnaA_3mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0066"/>
+          <comp:replacedElement comp:portRef="DnaA_3mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0122"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_4MER_3ATP_ADP__d__bound" initialAmount="0.0"/>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_4MER_ATP__d__bound" initialAmount="0.0">
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="DnaA_4mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0067"/>
+          <comp:replacedElement comp:portRef="DnaA_4mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0123"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_5MER_4ATP_ADP__d__bound" initialAmount="0.0"/>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_5MER_ATP__d__bound" initialAmount="0.0">
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="DnaA_5mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0068"/>
+          <comp:replacedElement comp:portRef="DnaA_5mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0124"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_6MER_5ATP_ADP__d__bound" initialAmount="0.0"/>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_6MER_ATP__d__bound" initialAmount="0.0">
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="DnaA_6mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0069"/>
+          <comp:replacedElement comp:portRef="DnaA_6mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0125"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_7MER_6ATP_ADP__d__bound" initialAmount="0.0"/>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_7MER_ATP__d__bound" initialAmount="0.0">
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="DnaA_7mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0070"/>
+          <comp:replacedElement comp:portRef="DnaA_7mer_ATP_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0126"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="MG_469_MONOMER__c" initialAmount="0.0" name="DnaA">
-        <comp:replacedBy comp:portRef="DnaA__c_port" comp:submodelRef="RI_activation" metaid="CONNECTION0046"/>
+        <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="DnaA__c_port" comp:submodelRef="RI_activation" metaid="CONNECTION0069"/>
+        </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="Mass_total" initialAmount="0.0">
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="m_membrane_port" comp:submodelRef="RI_reactivation" metaid="CONNECTION0092"/>
+          <comp:replacedElement comp:portRef="m_membrane_port" comp:submodelRef="RI_reactivation" metaid="CONNECTION0088"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="PI__c" initialAmount="0.0" name="PI">
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="Pi_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0013"/>
+          <comp:replacedElement comp:portRef="Pi_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0085"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="activation" initialAmount="0.0">
@@ -122,20 +124,19 @@
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="bindAndPolADP" initialAmount="0.0">
         <comp:listOfReplacedElements>
           <comp:replacedElement comp:portRef="bindAndPolADP_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0098"/>
-          <comp:replacedElement comp:portRef="bindAndPolADP_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0099"/>
+          <comp:replacedElement comp:portRef="bindAndPolADP_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0120"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="bindAndPolATP" initialAmount="0.0">
-        <comp:replacedBy comp:portRef="bindAndPolATP_port_1" comp:submodelRef="RI_dissociation" metaid="CONNECTION0097"/>
         <comp:listOfReplacedElements>
           <comp:replacedElement comp:portRef="bindAndPolATP_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0096"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="chromosome_R1" initialAmount="0.0">
-        <comp:replacedBy comp:portRef="chromosome_R1_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0072"/>
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="chromosome_R1_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0078"/>
+          <comp:replacedElement comp:portRef="chromosome_R1_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0072"/>
           <comp:replacedElement comp:portRef="chromosome_R1_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0083"/>
+          <comp:replacedElement comp:portRef="chromosome_R1_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0119"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="chromosome_R2" initialAmount="0.0">
@@ -146,14 +147,16 @@
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="chromosome_R3" initialAmount="0.0">
-        <comp:replacedBy comp:portRef="chromosome_R3_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0074"/>
-        <comp:replacedBy comp:portRef="chromosome_R3_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0080"/>
-        <comp:replacedBy comp:portRef="chromosome_R3_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0109"/>
+        <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="chromosome_R3_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0074"/>
+          <comp:replacedElement comp:portRef="chromosome_R3_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0080"/>
+          <comp:replacedElement comp:portRef="chromosome_R3_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0109"/>
+        </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="chromosome_R4" initialAmount="0.0">
-        <comp:replacedBy comp:portRef="chromosome_R4_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0081"/>
         <comp:listOfReplacedElements>
           <comp:replacedElement comp:portRef="chromosome_R4_port" comp:submodelRef="RI_ATP_bindAndPolymerization" metaid="CONNECTION0075"/>
+          <comp:replacedElement comp:portRef="chromosome_R4_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0081"/>
           <comp:replacedElement comp:portRef="chromosome_R4_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0110"/>
         </comp:listOfReplacedElements>
       </species>
@@ -164,13 +167,15 @@
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="displacing" initialAmount="0.0">
-        <comp:replacedBy comp:portRef="displacing_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0100"/>
-        <comp:replacedBy comp:portRef="displacing_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0101"/>
+        <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="displacing_port" comp:submodelRef="RI_ADP_bindAndPolymerization" metaid="CONNECTION0100"/>
+          <comp:replacedElement comp:portRef="displacing_port" comp:submodelRef="RI_displacing" metaid="CONNECTION0101"/>
+        </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="dissociation" initialAmount="0.0">
-        <comp:replacedBy comp:portRef="dissociation_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0087"/>
         <comp:listOfReplacedElements>
-          <comp:replacedElement comp:portRef="dissociation_port" comp:submodelRef="RI_activation" metaid="CONNECTION0094"/>
+          <comp:replacedElement comp:portRef="dissociation_port" comp:submodelRef="RI_dissociation" metaid="CONNECTION0087"/>
+          <comp:replacedElement comp:portRef="dissociation_port" comp:submodelRef="RI_activation" metaid="CONNECTION0116"/>
         </comp:listOfReplacedElements>
       </species>
       <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="reactivation" initialAmount="0.0">
@@ -181,6 +186,7 @@
       </species>
     </listOfSpecies>
     <listOfParameters>
+      <parameter constant="false" id="DnaA_3mer_ATP" value="0.0"/>
       <parameter constant="false" id="complexFinished" value="0.0"/>
       <parameter constant="false" id="unknown" value="0.0"/>
     </listOfParameters>
@@ -2980,18 +2986,18 @@
         </event>
       </listOfEvents>
       <comp:listOfPorts>
-        <comp:port comp:id="MG_469_1MER_ADP__bound_port" comp:idRef="MG_469_1MER_ADP__bound"/>
-        <comp:port comp:id="MG_469_1MER_ADP__c_port" comp:idRef="MG_469_1MER_ADP__c"/>
-        <comp:port comp:id="MG_469_1MER_ATP__bound_port" comp:idRef="MG_469_1MER_ATP__bound"/>
-        <comp:port comp:id="MG_469_1MER_ATP__c_port" comp:idRef="MG_469_1MER_ATP__c"/>
-        <comp:port comp:id="bindAndPolADP_port" comp:idRef="bindAndPolADP"/>
-        <comp:port comp:id="cell_Volume_port" comp:idRef="cell_Volume"/>
-        <comp:port comp:id="chromosome_R1_port" comp:idRef="chromosome_R1"/>
-        <comp:port comp:id="chromosome_R2_port" comp:idRef="chromosome_R2"/>
-        <comp:port comp:id="chromosome_R3_port" comp:idRef="chromosome_R3"/>
-        <comp:port comp:id="chromosome_R4_port" comp:idRef="chromosome_R4"/>
-        <comp:port comp:id="chromosome_R5_port" comp:idRef="chromosome_R5"/>
-        <comp:port comp:id="displacing_port" comp:idRef="displacing"/>
+        <comp:port comp:id="MG_469_1MER_ADP__bound_port" comp:idRef="MG_469_1MER_ADP__bound" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="MG_469_1MER_ADP__c_port" comp:idRef="MG_469_1MER_ADP__c" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="MG_469_1MER_ATP__bound_port" comp:idRef="MG_469_1MER_ATP__bound" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="MG_469_1MER_ATP__c_port" comp:idRef="MG_469_1MER_ATP__c" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="bindAndPolADP_port" comp:idRef="bindAndPolADP" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="cell_Volume_port" comp:idRef="cell_Volume" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="chromosome_R1_port" comp:idRef="chromosome_R1" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="chromosome_R2_port" comp:idRef="chromosome_R2" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="chromosome_R3_port" comp:idRef="chromosome_R3" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="chromosome_R4_port" comp:idRef="chromosome_R4" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="chromosome_R5_port" comp:idRef="chromosome_R5" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="displacing_port" comp:idRef="displacing" sboTerm="SBO:0000599"/>
       </comp:listOfPorts>
     </comp:modelDefinition>
     <comp:modelDefinition id="RI_ATP_bindAndPolymerization" name="RepInit_ATP_BindAndPolymerization">
@@ -5104,19 +5110,19 @@
         </event>
       </listOfEvents>
       <comp:listOfPorts>
-        <comp:port comp:id="MG_469_1MER_ADP__bound_port" comp:idRef="MG_469_1MER_ADP__bound"/>
-        <comp:port comp:id="MG_469_1MER_ADP__c_port" comp:idRef="MG_469_1MER_ADP__c"/>
-        <comp:port comp:id="MG_469_1MER_ATP__bound_port" comp:idRef="MG_469_1MER_ATP__bound"/>
-        <comp:port comp:id="MG_469_1MER_ATP__c_port" comp:idRef="MG_469_1MER_ATP__c"/>
-        <comp:port comp:id="bindAndPolADP_port" comp:idRef="bindAndPolADP"/>
-        <comp:port comp:id="bindAndPolATP_port" comp:idRef="bindAndPolATP"/>
-        <comp:port comp:id="cell_Volume_port" comp:idRef="cell_Volume"/>
-        <comp:port comp:id="chromosome_R1_port" comp:idRef="chromosome_R1"/>
-        <comp:port comp:id="chromosome_R2_port" comp:idRef="chromosome_R2"/>
-        <comp:port comp:id="chromosome_R3_port" comp:idRef="chromosome_R3"/>
-        <comp:port comp:id="chromosome_R4_port" comp:idRef="chromosome_R4"/>
-        <comp:port comp:id="chromosome_R5_port" comp:idRef="chromosome_R5"/>
-        <comp:port comp:id="complexFinished_port" comp:idRef="complexFinished"/>
+        <comp:port comp:id="MG_469_1MER_ADP__bound_port" comp:idRef="MG_469_1MER_ADP__bound" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="MG_469_1MER_ADP__c_port" comp:idRef="MG_469_1MER_ADP__c" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="MG_469_1MER_ATP__bound_port" comp:idRef="MG_469_1MER_ATP__bound" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="MG_469_1MER_ATP__c_port" comp:idRef="MG_469_1MER_ATP__c" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="bindAndPolADP_port" comp:idRef="bindAndPolADP" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="bindAndPolATP_port" comp:idRef="bindAndPolATP" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="cell_Volume_port" comp:idRef="cell_Volume" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="chromosome_R1_port" comp:idRef="chromosome_R1" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="chromosome_R2_port" comp:idRef="chromosome_R2" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="chromosome_R3_port" comp:idRef="chromosome_R3" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="chromosome_R4_port" comp:idRef="chromosome_R4" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="chromosome_R5_port" comp:idRef="chromosome_R5" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="complexFinished_port" comp:idRef="complexFinished" sboTerm="SBO:0000599"/>
       </comp:listOfPorts>
     </comp:modelDefinition>
     <comp:modelDefinition id="RI_activation" name="RepInit_Activation">
@@ -5267,11 +5273,11 @@
         </event>
       </listOfEvents>
       <comp:listOfPorts>
-        <comp:port comp:id="ATP__c_port" comp:idRef="ATP__c"/>
-        <comp:port comp:id="DnaA_1mer_ATP__c_port" comp:idRef="DnaA_1mer_ATP__c"/>
-        <comp:port comp:id="DnaA__c_port" comp:idRef="DnaA__c"/>
-        <comp:port comp:id="activation_port" comp:idRef="activation"/>
-        <comp:port comp:id="dissociation_port" comp:idRef="dissociation"/>
+        <comp:port comp:id="ATP__c_port" comp:idRef="ATP__c" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="DnaA_1mer_ATP__c_port" comp:idRef="DnaA_1mer_ATP__c" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="DnaA__c_port" comp:idRef="DnaA__c" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="activation_port" comp:idRef="activation" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="dissociation_port" comp:idRef="dissociation" sboTerm="SBO:0000599"/>
       </comp:listOfPorts>
     </comp:modelDefinition>
     <comp:modelDefinition id="RI_displacing" name="RepInit_Displacing">
@@ -6590,19 +6596,45 @@
         </event>
       </listOfEvents>
       <comp:listOfPorts>
-        <comp:port comp:id="MG_469_1MER_ADP__bound_port" comp:idRef="MG_469_1MER_ADP__bound"/>
-        <comp:port comp:id="MG_469_1MER_ADP__c_port" comp:idRef="MG_469_1MER_ADP__c"/>
-        <comp:port comp:id="MG_469_1MER_ATP__bound_port" comp:idRef="MG_469_1MER_ATP__bound"/>
-        <comp:port comp:id="MG_469_1MER_ATP__c_port" comp:idRef="MG_469_1MER_ATP__c"/>
-        <comp:port comp:id="chromosome_R1_port" comp:idRef="chromosome_R1"/>
-        <comp:port comp:id="chromosome_R2_port" comp:idRef="chromosome_R2"/>
-        <comp:port comp:id="chromosome_R3_port" comp:idRef="chromosome_R3"/>
-        <comp:port comp:id="chromosome_R4_port" comp:idRef="chromosome_R4"/>
-        <comp:port comp:id="displacing_port" comp:idRef="displacing"/>
-        <comp:port comp:id="reactivation_port" comp:idRef="reactivation"/>
+        <comp:port comp:id="MG_469_1MER_ADP__bound_port" comp:idRef="MG_469_1MER_ADP__bound" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="MG_469_1MER_ADP__c_port" comp:idRef="MG_469_1MER_ADP__c" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="MG_469_1MER_ATP__bound_port" comp:idRef="MG_469_1MER_ATP__bound" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="MG_469_1MER_ATP__c_port" comp:idRef="MG_469_1MER_ATP__c" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="chromosome_R1_port" comp:idRef="chromosome_R1" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="chromosome_R2_port" comp:idRef="chromosome_R2" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="chromosome_R3_port" comp:idRef="chromosome_R3" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="chromosome_R4_port" comp:idRef="chromosome_R4" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="displacing_port" comp:idRef="displacing" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="reactivation_port" comp:idRef="reactivation" sboTerm="SBO:0000599"/>
       </comp:listOfPorts>
     </comp:modelDefinition>
     <comp:modelDefinition id="RI_dissociation" name="RepInit_Dissociation">
+      <listOfFunctionDefinitions>
+        <functionDefinition id="uniform">
+          <annotation>
+            <distribution xmlns="http://sbml.org/annotations/distribution" defnition="http://en.wikipedia.org/wiki/Uniform_distribution_(continous)"/>
+          </annotation>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <lambda>
+              <bvar>
+                <ci>x</ci>
+              </bvar>
+              <bvar>
+                <ci>y</ci>
+              </bvar>
+              <apply>
+                <divide/>
+                <apply>
+                  <plus/>
+                  <ci>x</ci>
+                  <ci>y</ci>
+                </apply>
+                <cn>2.0</cn>
+              </apply>
+            </lambda>
+          </math>
+        </functionDefinition>
+      </listOfFunctionDefinitions>
       <listOfParameters>
         <parameter constant="false" id="DnaA_1mer_ADP" value="0.0"/>
         <parameter constant="false" id="DnaA_2mer_ATP" value="0.0"/>
@@ -6892,16 +6924,24 @@
           <trigger initialValue="false" persistent="false">
             <math xmlns="http://www.w3.org/1998/Math/MathML">
               <apply>
-                <and/>
+                <or/>
                 <apply>
                   <eq/>
                   <ci>nMonomers</ci>
                   <cn>0.0</cn>
                 </apply>
                 <apply>
-                  <eq/>
-                  <ci>dissociation</ci>
-                  <cn>1.0</cn>
+                  <and/>
+                  <apply>
+                    <lt/>
+                    <ci>water</ci>
+                    <ci>nMonomers</ci>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci>dissociation</ci>
+                    <cn>1.0</cn>
+                  </apply>
                 </apply>
               </apply>
             </math>
@@ -6948,7 +6988,9 @@
                       <times/>
                       <cn>6.0</cn>
                       <apply>
-                        <ci>random</ci>
+                        <ci>uniform</ci>
+                        <cn>0.0</cn>
+                        <cn>1.0</cn>
                       </apply>
                     </apply>
                   </apply>
@@ -7512,18 +7554,18 @@
         </event>
       </listOfEvents>
       <comp:listOfPorts>
-        <comp:port comp:id="DnaA_1mer_ADP_port" comp:idRef="DnaA_1mer_ADP"/>
-        <comp:port comp:id="DnaA_2mer_ATP_port" comp:idRef="DnaA_2mer_ATP"/>
-        <comp:port comp:id="DnaA_3mer_ATP_port" comp:idRef="DnaA_3mer_ATP"/>
-        <comp:port comp:id="DnaA_4mer_ATP_port" comp:idRef="DnaA_4mer_ATP"/>
-        <comp:port comp:id="DnaA_5mer_ATP_port" comp:idRef="DnaA_5mer_ATP"/>
-        <comp:port comp:id="DnaA_6mer_ATP_port" comp:idRef="DnaA_6mer_ATP"/>
-        <comp:port comp:id="DnaA_7mer_ATP_port" comp:idRef="DnaA_7mer_ATP"/>
-        <comp:port comp:id="H_port" comp:idRef="H"/>
-        <comp:port comp:id="Pi_port" comp:idRef="Pi"/>
-        <comp:port comp:id="bindAndPolATP_port_1" comp:idRef="bindAndPolATP"/>
-        <comp:port comp:id="dissociation_port" comp:idRef="dissociation"/>
-        <comp:port comp:id="water_port" comp:idRef="water"/>
+        <comp:port comp:id="DnaA_1mer_ADP_port" comp:idRef="DnaA_1mer_ADP" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="DnaA_2mer_ATP_port" comp:idRef="DnaA_2mer_ATP" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="DnaA_3mer_ATP_port" comp:idRef="DnaA_3mer_ATP" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="DnaA_4mer_ATP_port" comp:idRef="DnaA_4mer_ATP" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="DnaA_5mer_ATP_port" comp:idRef="DnaA_5mer_ATP" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="DnaA_6mer_ATP_port" comp:idRef="DnaA_6mer_ATP" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="DnaA_7mer_ATP_port" comp:idRef="DnaA_7mer_ATP" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="H_port" comp:idRef="H" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="Pi_port" comp:idRef="Pi" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="bindAndPolATP_port" comp:idRef="bindAndPolATP" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="dissociation_port" comp:idRef="dissociation" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="water_port" comp:idRef="water" sboTerm="SBO:0000599"/>
       </comp:listOfPorts>
     </comp:modelDefinition>
     <comp:modelDefinition id="RI_reactivation" name="RepInit_Reactivation">
@@ -7598,7 +7640,9 @@
                   <apply>
                     <lt/>
                     <apply>
-                      <ci>random</ci>
+                      <ci>uniform</ci>
+                      <cn>0.0</cn>
+                      <cn>1.0</cn>
                     </apply>
                     <apply>
                       <ci>fractionalPart</ci>
@@ -7613,6 +7657,30 @@
                   </apply>
                 </otherwise>
               </piecewise>
+            </lambda>
+          </math>
+        </functionDefinition>
+        <functionDefinition id="uniform">
+          <annotation>
+            <distribution xmlns="http://sbml.org/annotations/distribution" defnition="http://en.wikipedia.org/wiki/Uniform_distribution_(continous)"/>
+          </annotation>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <lambda>
+              <bvar>
+                <ci>x</ci>
+              </bvar>
+              <bvar>
+                <ci>y</ci>
+              </bvar>
+              <apply>
+                <divide/>
+                <apply>
+                  <plus/>
+                  <ci>x</ci>
+                  <ci>y</ci>
+                </apply>
+                <cn>2.0</cn>
+              </apply>
             </lambda>
           </math>
         </functionDefinition>
@@ -7772,13 +7840,13 @@
         </event>
       </listOfEvents>
       <comp:listOfPorts>
-        <comp:port comp:id="ADP__c_port" comp:idRef="ADP__c"/>
-        <comp:port comp:id="ATP__c_port" comp:idRef="ATP__c"/>
-        <comp:port comp:id="DnaA_1mer_ADP__c_port" comp:idRef="DnaA_1mer_ADP__c"/>
-        <comp:port comp:id="DnaA_1mer_ATP__c_port" comp:idRef="DnaA_1mer_ATP__c"/>
-        <comp:port comp:id="cell_Volume_port" comp:idRef="cell_Volume"/>
-        <comp:port comp:id="m_membrane_port" comp:idRef="m_membrane"/>
-        <comp:port comp:id="reactivation_port" comp:idRef="reactivation"/>
+        <comp:port comp:id="ADP__c_port" comp:idRef="ADP__c" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="ATP__c_port" comp:idRef="ATP__c" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="DnaA_1mer_ADP__c_port" comp:idRef="DnaA_1mer_ADP__c" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="DnaA_1mer_ATP__c_port" comp:idRef="DnaA_1mer_ATP__c" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="cell_Volume_port" comp:idRef="cell_Volume" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="m_membrane_port" comp:idRef="m_membrane" sboTerm="SBO:0000599"/>
+        <comp:port comp:id="reactivation_port" comp:idRef="reactivation" sboTerm="SBO:0000599"/>
       </comp:listOfPorts>
     </comp:modelDefinition>
   </comp:listOfModelDefinitions>
