@@ -3,7 +3,7 @@ piecewise(x,x<y,y);
 end
 model RepInit_Activation()
    species ATP__c, DnaA_1mer_ATP__c, DnaA__c;
-   var activation, dissociation, minActivations, x, y;
+   var activation, dissociation, minActivations;
 
    minActivations = minFunc(ATP__c,DnaA__c);
 

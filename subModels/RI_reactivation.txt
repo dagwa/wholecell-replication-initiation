@@ -12,7 +12,7 @@ x-floor(x);
 end
 model RepInit_Reactivation()
    species ADP__c, ATP__c, DnaA_1mer_ADP__c, DnaA_1mer_ATP__c;
-   var  K_Regen_P4, cell_Volume, k_Regen, m_membrane, membraneConc, numRegenerations, reactivation, x, y;
+   var  K_Regen_P4, cell_Volume, k_Regen, m_membrane, membraneConc, numRegenerations, reactivation;
 
    K_Regen_P4 = 0.018;
    k_Regen = 2.3026;
